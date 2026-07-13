@@ -1,0 +1,23 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/draft/server-card.json",
+  "serverInfo": {
+    "name": "vladimir-izhmukov",
+    "title": "База знаний Владимира Ижмукова",
+    "version": "1.0.0",
+    "description": "Программный доступ к библиотеке Владимир Ижмуков: поиск материалов, чтение гайдов, вопросы хаба.",
+    "websiteUrl": "https://vladimir-izhmukov.ru"
+  },
+  "transport": {
+    "type": "streamable-http",
+    "url": "https://vladimir-izhmukov.ru"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    },
+    "resources": {
+      "listChanged": false
+    }
+  },
+  "documentationUrl": "https://vladimir-izhmukov.ru"
+}

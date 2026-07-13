@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://vladimir-izhmukov.ru",
+      "service-doc": [
+        {
+          "href": "https://vladimir-izhmukov.ru",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://vladimir-izhmukov.ru/health",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

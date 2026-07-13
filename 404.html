@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Страница не найдена — Владимир Ижмуков</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0E1012;color:#fff;font-family:'Inter Tight',system-ui,-apple-system,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+.brand{display:flex;align-items:center;font-weight:600;font-size:20px;letter-spacing:-.02em;margin-bottom:44px}
+.brand .sq{width:9px;height:9px;background:#bff03a;display:inline-block;margin:0 6px}
+.code{font-weight:800;font-size:104px;line-height:1;letter-spacing:-.04em}
+.code span{color:#bff03a}
+h1{font-weight:700;font-size:24px;margin:18px 0 8px;letter-spacing:-.02em}
+p{color:rgba(255,255,255,.6);font-size:16px;max-width:440px;margin-bottom:32px;line-height:1.5}
+.row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+a.btn{text-decoration:none;font-weight:700;font-size:15px;padding:13px 26px;border-radius:10px;transition:opacity .15s}
+a.btn:hover{opacity:.85}
+a.primary{background:#bff03a;color:#0E1012}
+a.ghost{border:1.5px solid rgba(255,255,255,.25);color:#fff}
+.hint{margin-top:26px;font-size:13px;color:rgba(255,255,255,.4)}
+</style></head>
+<body>
+<div class="brand">владимир<span class="sq"></span>ижмуков</div>
+<div class="code">4<span>0</span>4</div>
+<h1>Страница не найдена</h1>
+<p>Похоже, такой страницы нет или адрес изменился. Вернём вас на главную.</p>
+<div class="row">
+<a class="btn primary" href="/">На главную</a>
+<a class="btn ghost" href="/library/">Все гайды и статьи</a>
+</div>
+<div class="hint">Автоматически вернём на главную через несколько секунд…</div>
+<script>setTimeout(function(){location.replace("/")},6000)</script>
+</body></html>

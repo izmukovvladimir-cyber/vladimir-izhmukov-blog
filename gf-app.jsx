@@ -29,6 +29,22 @@ const CTA_TEXT = FUNNEL.ctaText || "Вступить в сообщество";
 const FUNNEL_URL = (FUNNEL.targetUrl || "https://edgelab.space").replace(/\/+$/, "");
 const FUNNEL_OFFER = FUNNEL.offerText || "Закрытое AI-комьюнити: библиотека скиллов, живой чат, эфиры по средам.";
 
+// The community chrome (wednesday-stream strip, «closed AI community», «cancel in
+// one click», live member count) describes the DEFAULT EdgeLab product. A brand
+// that ships its own categories runs its own funnel, so this copy must never
+// render under someone else's name — it would promise a product they don't sell.
+// Same white-label marker the rest of the file already uses (see BRAND_CATS).
+const COMMUNITY_UI = !BRAND_CATS;
+const CTA_TITLE = FUNNEL.ctaTitle || "Дальше – вместе с сообществом";
+const CTA_SUB = FUNNEL.ctaSub || "Гайд прочитан. Внедрять – проще не в одиночку, а в закрытом AI-комьюнити.";
+const CTA_BULLETS = (FUNNEL.bullets && FUNNEL.bullets.length) ? FUNNEL.bullets : [
+  "Библиотека готовых скиллов и юзкейсов для Claude и Codex",
+  "Живой чат, где общаются и люди, и их агенты",
+  "Эфиры по средам и готовые решения под реальные задачи",
+];
+// Empty string in the config removes the fine print entirely.
+const CTA_FINE = FUNNEL.ctaFine !== undefined ? FUNNEL.ctaFine : "Мгновенный доступ. Отмена в один клик.";
+
 // Home-hero niche texts (white-label M1 step 5) — the niche layer of the home
 // page reads from config; EdgeLab literals are the fallbacks.
 const HOME = BRAND.home || {};
@@ -80,10 +96,14 @@ const START_DEFAULT = "statya";
 function currentTouch() {
   try {
     if (typeof location === "undefined") return "";
-    const path = location.pathname.replace(/\/+$/, "");
-    const hash = (location.hash || "").replace(/^#\/?/, "");
-    const m = path.match(/\/guides\/([^/]+)/) || hash.match(/guides?\/([^/?#]+)/);
-    return m ? m[1].replace(/\.html$/, "") : "";
+    const m = location.pathname.replace(/\/+$/, "").match(/\/guides\/([^/]+)/);
+    if (m) return m[1].replace(/\.html$/, "");
+    // Mobile screens prerender as mobile.html#<slug> and ship as /m/… with the
+    // route baked into window.__GF_ROUTE, so neither carries /guides/ in the
+    // path at build time. Both hold a bare slug or a reserved screen name.
+    const hash = (location.hash || "").replace(/^#\/?/, "").split(/[?&]/)[0];
+    const route = hash || (typeof window !== "undefined" && window.__GF_ROUTE) || "";
+    return Object.prototype.hasOwnProperty.call(START_MAP, route) ? route : "";
   } catch (_) { return ""; }
 }
 const startFor = (touch) => START_MAP[touch] || START_DEFAULT;
@@ -309,7 +329,7 @@ function Header({ dark, util, search = false, night, onToggle, cur = "claude" })
           </div>
         </div>
       </div>
-      {util && (
+      {util && COMMUNITY_UI && (
         <div className="gp-util">
           <span className="grp"><span><span className="sq"></span>16 ГАЙДОВ</span><span>· MCP</span><span>· CLAUDE CODE</span><span>· АВТОМАТИЗАЦИЯ ВИДЕО</span></span>
           <span className="spacer"></span>
@@ -347,6 +367,15 @@ function BannerCard({ dark }) {
 }
 function BannerDark() {
   if (!FUNNEL_ON) return null;
+  if (!COMMUNITY_UI) {
+    return (
+      <div className="ban-dark">
+        <span className="gp-eyebrow lime"><span className="dot"></span>{BRAND_UPPER_NB}</span>
+        <span>{FUNNEL_OFFER}</span>
+        <span className="spacer"></span>
+      </div>
+    );
+  }
   return (
     <div className="ban-dark">
       <span className="gp-eyebrow lime"><span className="live-dot"></span>ЭФИР В СРЕДУ</span>
@@ -371,7 +400,7 @@ function Sidebar({ mini, group, items, active }) {
           ? <a key={i} href={GUIDE_HREF(slug)} className={cls}>{label}</a>
           : <span key={i} className={cls}>{label}</span>;
       })}
-      {mini && FUNNEL_ON && (
+      {mini && FUNNEL_ON && COMMUNITY_UI && (
         <div className="gp-side-mini">
           <div className="h"><span className="live-dot"></span>Что внутри Space</div>
           <ul>
@@ -392,18 +421,16 @@ function CtaDark({ grid, social }) {
   return (
     <div className={"cta-dark" + (grid ? " grid" : "")}>
       <div className="cta-brand"><Logo /></div>
-      <div className="ttl">Дальше – вместе с сообществом</div>
-      <div className="sub">Гайд прочитан. Внедрять – проще не в одиночку, а в закрытом AI-комьюнити.</div>
+      <div className="ttl">{CTA_TITLE}</div>
+      <div className="sub">{CTA_SUB}</div>
       <div className="cta-bullets">
-        <div className="b"><span className="m"></span>Библиотека готовых скиллов и юзкейсов для Claude и Codex</div>
-        <div className="b"><span className="m"></span>Живой чат, где общаются и люди, и их агенты</div>
-        <div className="b"><span className="m"></span>Эфиры по средам и готовые решения под реальные задачи</div>
+        {CTA_BULLETS.map((b, i) => <div className="b" key={i}><span className="m"></span>{b}</div>)}
       </div>
       <div className="cta-foot">
-        <a className="cta-btn" href={utm("cta")}>Вступить в {BRAND_NB} →</a>
-        <span className="cta-fine">Мгновенный доступ. Отмена в один клик.</span>
+        <a className="cta-btn" href={utm("cta")}>{COMMUNITY_UI ? <React.Fragment>Вступить в {BRAND_NB} →</React.Fragment> : `${CTA_TEXT} →`}</a>
+        {CTA_FINE && <span className="cta-fine">{CTA_FINE}</span>}
       </div>
-      {social && (
+      {social && COMMUNITY_UI && (
         <div className="cta-social"><span className="live-dot"></span>В чате сейчас 320+ участников и их агенты</div>
       )}
     </div>
@@ -414,16 +441,14 @@ function CtaLime() {
   return (
     <div className="cta-lime">
       <span className="gp-eyebrow"><span className="dot" style={{ background: "var(--ink)" }}></span>{BRAND_UPPER_NB}</span>
-      <div className="ttl">Дальше – вместе с сообществом</div>
-      <div className="sub">Гайд прочитан. Внедрять – проще не в одиночку, а в закрытом AI-комьюнити.</div>
+      <div className="ttl">{CTA_TITLE}</div>
+      <div className="sub">{CTA_SUB}</div>
       <div className="cta-bullets">
-        <div className="b"><span className="m"></span>Библиотека готовых скиллов и юзкейсов для Claude и Codex</div>
-        <div className="b"><span className="m"></span>Живой чат, где общаются и люди, и их агенты</div>
-        <div className="b"><span className="m"></span>Эфиры по средам и готовые решения под реальные задачи</div>
+        {CTA_BULLETS.map((b, i) => <div className="b" key={i}><span className="m"></span>{b}</div>)}
       </div>
       <div className="cta-foot">
-        <a className="cta-btn" href={utm("cta")}>Вступить в {BRAND_NB} →</a>
-        <span className="cta-fine">Мгновенный доступ. Отмена в один клик.</span>
+        <a className="cta-btn" href={utm("cta")}>{COMMUNITY_UI ? <React.Fragment>Вступить в {BRAND_NB} →</React.Fragment> : `${CTA_TEXT} →`}</a>
+        {CTA_FINE && <span className="cta-fine">{CTA_FINE}</span>}
       </div>
     </div>
   );
@@ -1006,9 +1031,9 @@ function MobileC({ initialTheme, scroll, demoScrolled }) {
         </div>
         {FUNNEL_ON && (
         <div className="m-banner">
-          <span className="live-dot"></span>
-          <span className="m-banner-txt">Закрытое AI-комьюнити {BRAND_NAME}</span>
-          <a className="m-banner-cta" href={utm("banner")}>Вступить →</a>
+          {COMMUNITY_UI && <span className="live-dot"></span>}
+          <span className="m-banner-txt">{COMMUNITY_UI ? `Закрытое AI-комьюнити ${BRAND_NAME}` : CTA_TITLE}</span>
+          <a className="m-banner-cta" href={utm("banner")}>{COMMUNITY_UI ? "Вступить →" : "Забрать →"}</a>
         </div>
         )}
         <div className="m-content">
@@ -1031,15 +1056,16 @@ function MobileC({ initialTheme, scroll, demoScrolled }) {
           {FUNNEL_ON && (
           <div className="m-cta">
             <div className="cta-brand"><Logo /></div>
-            <div className="ttl">Дальше – вместе</div>
-            <div className="sub">Внедрять проще в закрытом комьюнити.</div>
+            <div className="ttl">{COMMUNITY_UI ? "Дальше – вместе" : CTA_TITLE}</div>
+            <div className="sub">{COMMUNITY_UI ? "Внедрять проще в закрытом комьюнити." : CTA_SUB}</div>
             <div className="cta-bullets">
-              <div className="b"><span className="m"></span>Готовые скиллы и юзкейсы</div>
-              <div className="b"><span className="m"></span>Живой чат с людьми и агентами</div>
-              <div className="b"><span className="m"></span>Эфиры по средам</div>
+              {(COMMUNITY_UI
+                ? ["Готовые скиллы и юзкейсы", "Живой чат с людьми и агентами", "Эфиры по средам"]
+                : CTA_BULLETS
+              ).map((b, i) => <div className="b" key={i}><span className="m"></span>{b}</div>)}
             </div>
             <a className="btn" href={utm("cta")}>{CTA_TEXT} →</a>
-            <div className="price">Отмена в один клик</div>
+            {CTA_FINE && <div className="price">{COMMUNITY_UI ? "Отмена в один клик" : CTA_FINE}</div>}
           </div>
           )}
         </div>
@@ -1066,9 +1092,9 @@ function MobileArticle({ article, initialTheme }) {
         <PortalHead cur={a.cur} mobile={true} night={night} onToggle={() => flipTheme(setTheme)} />
         {FUNNEL_ON && (
         <div className="m-banner">
-          <span className="live-dot"></span>
-          <span className="m-banner-txt">Эфир в среду · закрытое AI-комьюнити</span>
-          <a className="m-banner-cta" href={utm("banner")}>Вступить →</a>
+          {COMMUNITY_UI && <span className="live-dot"></span>}
+          <span className="m-banner-txt">{COMMUNITY_UI ? "Эфир в среду · закрытое AI-комьюнити" : CTA_TITLE}</span>
+          <a className="m-banner-cta" href={utm("banner")}>{COMMUNITY_UI ? "Вступить →" : "Забрать →"}</a>
         </div>
         )}
         <div className="m-content">
@@ -1100,8 +1126,8 @@ function MobileArticle({ article, initialTheme }) {
           {FUNNEL_ON && (
           <div className="m-cta">
             <div className="cta-brand"><Logo /></div>
-            <div className="ttl">Дальше – вместе с сообществом</div>
-            <div className="sub">Внедрять проще в закрытом AI-комьюнити.</div>
+            <div className="ttl">{CTA_TITLE}</div>
+            <div className="sub">{COMMUNITY_UI ? "Внедрять проще в закрытом AI-комьюнити." : CTA_SUB}</div>
             <a className="btn" href={utm("cta")}>{CTA_TEXT} →</a>
           </div>
           )}

@@ -35,6 +35,12 @@ const FUNNEL_OFFER = FUNNEL.offerText || "Закрытое AI-комьюнити
 // render under someone else's name — it would promise a product they don't sell.
 // Same white-label marker the rest of the file already uses (see BRAND_CATS).
 const COMMUNITY_UI = !BRAND_CATS;
+// Library hero copy — EdgeLab's default describes ITS catalogue (Claude Code,
+// video automation), which is meaningless on a brand that ships other content.
+const LIB = BRAND.library || {};
+const LIB_EYEBROW = LIB.eyebrow || "БИБЛИОТЕКА ГАЙДОВ";
+const LIB_TITLE = LIB.title || "Гайды по AI-агентам";
+const LIB_LEAD = LIB.lead || "Claude Code, дизайн, база знаний и автоматизация видео. Найди нужный за секунды — поиском, категориями или по уровню.";
 const CTA_TITLE = FUNNEL.ctaTitle || "Дальше – вместе с сообществом";
 const CTA_SUB = FUNNEL.ctaSub || "Гайд прочитан. Внедрять – проще не в одиночку, а в закрытом AI-комьюнити.";
 const CTA_BULLETS = (FUNNEL.bullets && FUNNEL.bullets.length) ? FUNNEL.bullets : [
@@ -265,8 +271,11 @@ const PAGES = BRAND_CATS
 const GF_BASE = "";
 const GUIDE_HREF = (slug) => `/guides/${slug}/`;
 const P = (key) => PAGES[key];
+// White-label nav drops the «Гайды» + «Статьи» pair: that split is EdgeLab's
+// (technical guides vs readable articles). A brand whose library is one content
+// type would show two labels leading to the same list.
 const NAV = BRAND_CATS
-  ? [["home", "Главная"], ["library", "Гайды"], ["articles", "Статьи"], ...BRAND_CATS.map((c) => [c.id, c.name]), ["about", "О проекте"]]
+  ? [["home", "Главная"], ["library", (BRAND.library && BRAND.library.nav) || "Гайды"], ...BRAND_CATS.map((c) => [c.id, c.name]), ["about", "О проекте"]]
   : [["home", "Главная"], ["library", "Гайды"], ["articles", "Статьи"], ["claude", "Claude Code"], ["hermes", "Hermes"], ["codex", "Codex"], ["about", "О проекте"]];
 function NavLinks({ cur }) {
   return (
@@ -1417,9 +1426,9 @@ function Catalog({ initialTheme, mobile, initialCmdk }) {
       <div className={"cat gp dir-c theme-" + theme}>
         <PortalHead cur="library" mobile={mobile} night={night} onToggle={() => flipTheme(setTheme)} />
         <div className="cat-hero">
-          <span className="gp-eyebrow"><span className="dot"></span>БИБЛИОТЕКА ГАЙДОВ</span>
-          <h1>Гайды по AI-агентам</h1>
-          <p className="lead">Claude Code, дизайн, база знаний и автоматизация видео. Найди нужный за секунды — поиском, категориями или по уровню.</p>
+          <span className="gp-eyebrow"><span className="dot"></span>{LIB_EYEBROW}</span>
+          <h1>{LIB_TITLE}</h1>
+          <p className="lead">{LIB_LEAD}</p>
           <div className="cat-searchbar">
             <span className="ic">⌕</span>
             <input

@@ -174,8 +174,12 @@ function Byline({ meta }) {
 const TG = (BRAND.telegram && BRAND.telegram.channelUrl) || "https://t.me/dashi_agent";
 const TG_NAME = (BRAND.telegram && BRAND.telegram.channelName) || "Записки AI-энтузиаста";
 // funnel docs + landing anchors — готовые ссылки с edgelab.space (footer)
-const DOC_PRIVACY = (FUNNEL.docs && FUNNEL.docs.privacy) || "https://drive.google.com/file/d/1hUEZbJBCdTQcpBqy_OAd8EupZwY9Xpx1/view";
-const DOC_OFFER = (FUNNEL.docs && FUNNEL.docs.offer) || "https://drive.google.com/file/d/1i6XeY6SMcuA4uYYxBVpxEPN_EI_AeIH6/view";
+// Legal docs are per-brand and MUST come from the brand config. A hardcoded
+// fallback here published EdgeLab's documents (another sole proprietor's name
+// and tax id) on this white-labelled site. No config -> no docs column.
+const DOC_PRIVACY = (FUNNEL.docs && FUNNEL.docs.privacy) || "";
+const DOC_OFFER = (FUNNEL.docs && FUNNEL.docs.offer) || "";
+const HAS_DOCS = Boolean(DOC_PRIVACY || DOC_OFFER);
 const ELS_STREAMS = `${FUNNEL_URL}/#streams`;
 const ELS_COMMUNITY = `${FUNNEL_URL}/#community`;
 function TelegramButton() {
@@ -888,11 +892,13 @@ function Footer() {
             <a href={TG} target="_blank" rel="noopener">Канал «{TG_NAME}»</a>
             <a href={P("about")}>О проекте</a>
           </div>
-          <div className="col">
-            <div className="h">Документы</div>
-            <a href={DOC_PRIVACY} target="_blank" rel="noopener">Политика конфиденциальности</a>
-            <a href={DOC_OFFER} target="_blank" rel="noopener">Договор оферты</a>
-          </div>
+          {HAS_DOCS && (
+            <div className="col">
+              <div className="h">Документы</div>
+              {DOC_PRIVACY && <a href={DOC_PRIVACY} target="_blank" rel="noopener">Политика конфиденциальности</a>}
+              {DOC_OFFER && <a href={DOC_OFFER} target="_blank" rel="noopener">Договор оферты</a>}
+            </div>
+          )}
         </div>
       </div>
       <div className="gp-foot-bottom">
@@ -994,7 +1000,7 @@ function MobileC({ initialTheme, scroll, demoScrolled }) {
           <div className="m-foot-cols">
             <div className="col"><div className="h">Гайды</div>{BRAND_CATS ? BRAND_CATS.map((c) => <a key={c.id} href={P(c.id)}>{c.name}</a>) : <React.Fragment><a href={P("claude")}>Claude Code</a><a href={P("codex")}>Codex</a><a href={P("hermes")}>Hermes</a></React.Fragment>}</div>
             {FUNNEL_ON && <div className="col"><div className="h">{BRAND_NAME}</div><a href={utm("footer")}>Перейти →</a>{!BRAND_CATS && <a href={ELS_STREAMS} target="_blank" rel="noopener">Эфиры</a>}</div>}
-            <div className="col"><div className="h">Документы</div><a href={DOC_PRIVACY} target="_blank" rel="noopener">Политика</a><a href={DOC_OFFER} target="_blank" rel="noopener">Оферта</a></div>
+            {HAS_DOCS && <div className="col"><div className="h">Документы</div>{DOC_PRIVACY && <a href={DOC_PRIVACY} target="_blank" rel="noopener">Политика</a>}{DOC_OFFER && <a href={DOC_OFFER} target="_blank" rel="noopener">Оферта</a>}</div>}
           </div>
           <div className="m-foot-bottom">© 2026 {LEGAL_NAME.toUpperCase()}<br />{LEGAL_ENTITY}</div>
         </div>

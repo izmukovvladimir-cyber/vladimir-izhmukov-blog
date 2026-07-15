@@ -51,7 +51,45 @@ const FUNNEL_HOST = (() => {
 })();
 
 const SLUG = "claude-code-setup";
-const utm = (m) => `${FUNNEL_URL}/?utm_source=guides&utm_medium=${m}&utm_campaign=space&utm_content=${SLUG}`;
+
+// --- Telegram funnel -----------------------------------------------------------
+// When the funnel target is a Telegram bot, UTM query params are dead weight:
+// Telegram hands the bot ONLY the `start` payload and drops everything else. So
+// the CTA carries `?start=<branch>` instead, which both triggers /start (a bare
+// t.me/<bot>/ link opens a silent chat for anyone who already started the bot)
+// and tells us which article delivered the reader.
+const FUNNEL_IS_TELEGRAM = FUNNEL_HOST === "t.me";
+const FUNNEL_PATH = (() => {
+  try { return new URL(FUNNEL_URL).pathname.replace(/\/+$/, ""); } catch (_) { return ""; }
+})();
+// Blog guide slug -> bot branch. Each branch hands over a magnet that continues
+// the article the reader just finished. Unmapped pages fall back to the general
+// entry branch.
+const START_MAP = {
+  "podpischiki-instagram-s-nulya": "nulya",
+  "reels-bez-semok-neyrosetyami": "video",
+  "neyroseti-dlya-kontenta-spisok": "zamena",
+  "pochemu-reels-ne-nabirayut": "ohvat",
+  "kak-sdelat-virusnyy-reels": "scenario",
+  "kontent-plan-na-nedelyu": "algoritm",
+  "prodavat-cherez-blog": "product",
+};
+const START_DEFAULT = "statya";
+// Current article slug, read from the URL at render AND at click time, so the
+// link is right both in the prerendered HTML and after client-side navigation.
+function currentTouch() {
+  try {
+    if (typeof location === "undefined") return "";
+    const path = location.pathname.replace(/\/+$/, "");
+    const hash = (location.hash || "").replace(/^#\/?/, "");
+    const m = path.match(/\/guides\/([^/]+)/) || hash.match(/guides?\/([^/?#]+)/);
+    return m ? m[1].replace(/\.html$/, "") : "";
+  } catch (_) { return ""; }
+}
+const startFor = (touch) => START_MAP[touch] || START_DEFAULT;
+const utm = (m) => (FUNNEL_IS_TELEGRAM
+  ? `${FUNNEL_URL}?start=${startFor(currentTouch())}`
+  : `${FUNNEL_URL}/?utm_source=guides&utm_medium=${m}&utm_campaign=space&utm_content=${SLUG}`);
 
 // UTM forwarding (prince 2026-06-17): a visitor who arrives from the IG bio link
 // (?utm_source=instagram…) must keep that origin across blog navigation, and the
@@ -85,6 +123,16 @@ function wireUTMForward() {
     const touch = gm
       ? gm[1]
       : (path === "" || /\/index\.html$/.test(path) ? "home" : (path.split("/").pop() || "home").replace(/\.html$/, ""));
+    // Telegram bot funnel: rewrite to the branch of the article clicked FROM and
+    // strip any query junk. Only the bot link itself — channel/profile links on
+    // t.me must stay untouched.
+    if (FUNNEL_IS_TELEGRAM) {
+      if (u.pathname.replace(/\/+$/, "") !== FUNNEL_PATH) return;
+      u.search = "";
+      u.searchParams.set("start", startFor(touch));
+      a.href = u.toString();
+      return;
+    }
     let inb = null;
     try { inb = JSON.parse(sessionStorage.getItem("els_inbound_utm") || "null"); } catch (_) {}
     // First-touch origin (e.g. instagram/bio) when the visitor arrived with a UTM,

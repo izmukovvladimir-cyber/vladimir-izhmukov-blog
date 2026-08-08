@@ -1,8 +1,15 @@
-/* read-through tracker — blog.edgelab.space guide/article pages only.
+/* read-through tracker — guide/article pages only.
    Fires scroll-depth milestones (25/50/75/100%) ONCE per page load into:
-     • Yandex.Metrika (109832554): reachGoal scroll_N + notBounce at 75% («дочитал»
-       → fixes the single-page «время на странице = 0» / bounce problem)
-     • GA4: scroll_depth event with percent_scrolled + content_group
+     • Yandex.Metrika: reachGoal scroll_N, plus at 75% reachGoal read75 («дочитал»)
+       and notBounce — the pair that fixes the single-page «время на странице = 0»
+       / bounce problem.
+     • GA4 (only when the brand configures a GA4 stream): scroll_depth event with
+       percent_scrolled + content_group.
+   The Metrika counter id is NOT hardcoded: it rides in on the injecting tag as
+   data-ym (build-seo.mjs writes brand.analytics.metrika there). A hardcoded id
+   silently misses when the brand's counter changes — calls to a counter that was
+   never init'ed on the page are swallowed by Metrika, so the whole read-through
+   measurement dies without a single error. No id → the Metrika branch is a no-op.
    content_group (article|guide) comes from <body data-content-group>.
    No bundler — plain browser JS. Guarded so it is a no-op during prerender
    (Playwright snapshot has no ym/gtag and this script is injected post-snapshot). */
@@ -11,7 +18,21 @@
   if (window.__gfScrollBound) return; // survive a React re-mount on the same doc
   window.__gfScrollBound = true;
 
-  var YM = 109832554;
+  // currentScript is the tag being executed (valid for a classic defer script);
+  // the querySelector fallback covers a dynamically inserted/async copy, where
+  // currentScript is null.
+  function counterId() {
+    var tag = document.currentScript;
+    var raw = tag && tag.getAttribute ? tag.getAttribute("data-ym") : null;
+    if (!raw) {
+      var found = document.querySelector("script[data-ym]");
+      raw = found ? found.getAttribute("data-ym") : null;
+    }
+    if (!raw || !/^\d+$/.test(raw)) return 0;
+    return parseInt(raw, 10);
+  }
+
+  var YM = counterId();
   var marks = [25, 50, 75, 100];
   var fired = {};
   var cg =
@@ -41,9 +62,12 @@
       if (p >= m && !fired[m]) {
         fired[m] = true;
         try {
-          if (typeof window.ym === "function") {
+          if (YM && typeof window.ym === "function") {
             window.ym(YM, "reachGoal", "scroll_" + m);
-            if (m === 75) window.ym(YM, "notBounce");
+            if (m === 75) {
+              window.ym(YM, "reachGoal", "read75");
+              window.ym(YM, "notBounce");
+            }
           }
         } catch (e) {}
         try {

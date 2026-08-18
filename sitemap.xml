@@ -133,6 +133,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/scenariy-dlya-rilsa/</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/tenevoy-ban-instagram-proverka/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>

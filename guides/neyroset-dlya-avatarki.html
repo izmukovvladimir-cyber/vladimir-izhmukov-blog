@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<script data-gfmr>(function(){try{if(location.search.indexOf('nomobile')>-1)return;var p=location.pathname;if(/^\/m\//.test(p))return;var sw=Math.min(screen.width,screen.height);if(!(sw<=640))return;p=p.replace(/(^|\/)index\.html$|\.html$/,'$1');var t=null,g=p.match(/^\/guides\/([^\/.]+)\/?$/);if(g){t='/m/guides/'+g[1]+'.html';}else if(p==='/'||p===''){t='/m/';}else{var m=p.match(/^\/([^\/.]+)\/?$/);if(m&&['instagram','neyroseti','kontent','about','library'].indexOf(m[1])>-1){t='/m/'+m[1]+'.html';}}if(t){location.replace(t+location.search+location.hash);}}catch(e){}})();</script>
+<link data-gfmr-alt rel="alternate" media="only screen and (max-width: 640px)" href="https://blog.vladimir-izhmukov.ru/m/guides/neyroset-dlya-avatarki.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются — Владимир Ижмуков</title>
+<meta name="description" content="Аватарка нейросетью для блога и мессенджеров: как получить похожее на себя лицо, какие запросы работают, что проверить перед установкой и чем портрет отличается от картинки-заглушки.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:#FAF7F2; }
+  .standalone-c { width:100%; }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются">
+<meta property="og:description" content="Аватарка нейросетью для блога и мессенджеров: как получить похожее на себя лицо, какие запросы работают, что проверить перед установкой и чем портрет отличается от картинки-заглушки.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-08T06:20:00Z">
+<meta property="article:modified_time" content="2026-09-08T06:20:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются">
+<meta name="twitter:description" content="Аватарка нейросетью для блога и мессенджеров: как получить похожее на себя лицо, какие запросы работают, что проверить перед установкой и чем портрет отличается от картинки-заглушки.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-avatarki.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/#article",
+      "headline": "Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются",
+      "description": "Аватарка нейросетью для блога и мессенджеров: как получить похожее на себя лицо, какие запросы работают, что проверить перед установкой и чем портрет отличается от картинки-заглушки.",
+      "datePublished": "2026-09-08T06:20:00Z",
+      "dateModified": "2026-09-08T06:20:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, oformlenie-profilya",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются Владимир Ижмуков · автор системы роста Instagram через короткие ролики Аватарка это первое, что видит человек, и решение о подписке он принимает быстрее, чем успевает прочитать ваше описание. При этом хорошая съёмка стоит денег и требует свободного дня, а профиль нужно оформить сегодня. Генератор изображений закрывает задачу за вечер, но с одной оговоркой, которая портит большинство попыток. Машина легко рисует красивое лицо и почти так же легко рисует чужое лицо. Человек, который потом придёт к вам на прямой эфир, увидит другого. Ниже порядок, который даёт похожий на вас портрет и файлы под все площадки сразу. Проверено 8 сентября 2026 года: порядок применялся на своих аккаунтах и на профилях учеников. Главное правило: похожесть важнее красоты Аватарка решает две задачи. Она показывает, что за профилем живой человек, и она делает вас узнаваемым при встрече, в эфире, на конференции, в чужих сторис. Отсюда простое правило. Портрет, который красивее вас на две головы, работает против вас: он поднимает ожидание, а живая встреча его роняет. Берите вариант, в котором вас узнают. Из этого же правила следует запрет на цепочку. Не подавайте машине её собственный результат как исходник для следующей генерации. С каждым кругом лицо уезжает от оригинала, и через три шага на аватарке стоит незнакомый человек. Шаг 1. Исходные фото Соберите от трёх до шести своих фотографий. Требования простые. 1. Разные ракурсы: анфас, полуоборот, профиль. 2. Ровный свет на лице, без жёстких теней и без контрового солнца. 3. Свежие снимки, за последний год, иначе портрет будет похож на вас пятилетней давности. 4. Без очков с бликами, без кепки, без другого человека в кадре. 5. Разрешение от 1000 пикселей по короткой стороне. Шесть фотографий дают заметно более похожий результат, чем одна. Это самый дешёвый способ поднять качество, и он ничего не стоит. Шаг 2. Запросы под разные типы аватарки Тип портрета выбирается под то, что вы продаёте. Ниже заготовки, в которые подставляются ваши данные, все с обязательными ограничениями против пластикового вида. - Портрет того же реального человека с референсных фото, точное сохранение черт лица. Поясной кадр, спокойная уверенная поза, лёгкая закрытая улыбка. Одежда: тёмный однотонный свитер. Фон: студийный серый, ровный. Мягкий направленный свет слева. Естественная кожа с видимыми порами, лёгкая natural асимметрия, зерно плёнки, без ретуши, без пластики, не глянцевая обложка - Портрет того же реального человека с референсных фото, точное сохранение черт лица. Крупный кадр по плечи, взгляд в камеру, спокойное лицо. Фон: рабочее пространство в лёгком размытии, дневной свет из окна. Естественная кожа, поры, зерно, без сглаживания - Портрет того же реального человека, живой кадр в движении: идёт по улице, оборачивается, лёгкая улыбка. Фон: город с прохожими, без сильного размытия. Пасмурный мягкий свет. Документальная подача, натуральные цвета, зерно - Портрет того же реального человека, вертикальный кадр для профиля: лицо занимает центральную треть, вокруг свободное поле, нейтральный однотонный фон под обрезку в круг Последний вариант стоит генерировать всегда: аватарка обрезается в круг, и портрет, снятый под прямоугольник, теряет лоб или подбородок. Шаг 3. Проверки перед установкой Четыре проверки, каждая занимает минуту. 1. Узнаваемость. Покажите портрет двум людям, которые знают вас лично, и спросите, вы ли это. Ответ с паузой означает, что портрет пошёл в сторону. 2. Круг. Обрежьте картинку в круг и посмотрите, ничего ли не срезано по краям. 3. Мелкий размер. Уменьшите до сорока пикселей и посмотрите на телефоне. Лицо обязано остаться лицом, узнаваемым даже в этом размере. 4. Руки и уши. Именно там генераторы ошибаются чаще всего: лишний палец, съехавшая серьга, странная форма уха. Отдельно проверьте одежду и фон на надписи. Машина любит дорисовывать буквы на футболках и вывесках, и эти буквы почти всегда бессмысленные. Шаг 4. Файлы под площадки Один портрет расходится по нескольким местам, подготовьте файлы сразу. | Место | Размер файла | Кадр | На что смотреть | |---|---|---|---| | Instagram, Telegram | от 1000 на 1000 | поясной, лицо в центральной трети | запас по краям под круглую обрезку | | YouTube | от 800 на 800 | по плечи, крупнее обычного | аватар показывается мелко, детали пропадают | | Сайт и почта | горизонтальный, от 1600 по ширине | со свободным полем справа | место под имя и должность | | Презентации, договоры | от 1200 на 1200 | сдержанный, нейтральный фон | без улицы и посторонних предметов | | Исходник в архив | максимальный из генератора | полный кадр | пригодится для перекадрирования через полгода | Держите исходник в максимальном размере. Через полгода вы захотите перекадрировать, и лучше делать это из оригинала. Шаг 5. Когда портрет из нейросети не подходит Есть случаи, где машинный портрет проигрывает обычной съёмке на телефон. Первый случай это ниша, где доверие строится на живости:…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются",
+      "description": "Аватарка нейросетью для блога и мессенджеров: как получить похожее на себя лицо, какие запросы работают, что проверить перед установкой и чем портрет отличается от картинки-заглушки.",
+      "inLanguage": "ru",
+      "supply": [],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Шаг 1. Исходные фото",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Шаг 2. Запросы под разные типы аватарки",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Шаг 3. Проверки перед установкой",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Шаг 4. Файлы под площадки",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Шаг 5. Когда портрет из нейросети не подходит",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-avatarki/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Насколько похожим получается лицо",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "При шести хороших исходниках и прямом требовании сохранить черты сходство обычно достаточное, чтобы вас узнали. Точность падает на профильных ракурсах и при сильном изменении причёски."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли ставить такой портрет на документы",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "На договоры и презентации да, на документы, удостоверяющие личность, нет. Там нужна обычная фотография по требованиям организации."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько вариантов генерировать",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Двадцать кадров дают три-четыре пригодных. Отбирайте по узнаваемости, а красоту оценивайте во вторую очередь."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чем аватарка отличается от обложки",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Аватарка работает в круге сорока пикселей и держит одно лицо, обложка работает в ленте и держит крупный заголовок. Требования к ним разные, про вторые есть отдельный разбор про обложки нейросетью."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что ещё оформить, кроме аватарки",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Профиль читается целиком: портрет, имя, описание, закреплённые материалы. Порядок сборки с нуля разобран в материале про первых подписчиков, а общие правила работы с генератором изображений лежат в статье про генерацию изображений."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=6193f96196" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="standalone-c"><div class="gp dir-c theme-light"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><nav class="gp-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" aria-label="Сменить тему" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><a class="gp-headbtn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте <span class="ar">→</span></a></div></div></div><div class="ban-dark"><span class="gp-eyebrow lime"><span class="dot"></span>ВЛАДИМИР&nbsp;ИЖМУКОВ</span><span>Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.</span><span class="spacer"></span></div><div class="gp-layout"><div class="gp-sidebar"><div class="gp-side-group">Claude Code · 17</div><a href="/guides/generaciya-video-po-tekstu/" class="gp-side-item">Генерация видео по тексту в 2026: как это работает и чем сделать</a><a href="/guides/ii-agenty-dlya-biznesa/" class="gp-side-item">ИИ-агенты для бизнеса в 2026: что это на самом деле и с чего начать</a><a href="/guides/kak-sdelat-video-neyrosetyu/" class="gp-side-item">Как сделать видео нейросетью в 2026: пошагово с телефона</a><a href="/guides/kak-zarabotat-na-neyrosetyah/" class="gp-side-item">Как заработать на нейросетях в 2026: честные способы, цифры и границы</a><a href="/guides/neyroset-dlya-avatarki/" class="gp-side-item active">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</a><a href="/guides/neyroset-dlya-dizayna/" class="gp-side-item">Нейросеть для дизайна: что она делает за вас, а что придётся доделать руками</a><a href="/guides/neyroset-dlya-foto/" class="gp-side-item">Нейросеть для фото: обработать своё, улучшить старое, сгенерировать новое</a><a href="/guides/neyroset-dlya-infografiki/" class="gp-side-item">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</a><a href="/guides/neyroset-dlya-logotipa/" class="gp-side-item">Нейросеть для логотипа: как получить знак, который не стыдно поставить на профиль</a><a href="/guides/neyroset-dlya-montazha-video/" class="gp-side-item">Нейросеть для монтажа видео в 2026: что она делает сама и где нужны руки</a><a href="/guides/neyroset-dlya-oblozhek/" class="gp-side-item">Нейросеть для обложек: как собрать картинку, на которую нажимают</a><a href="/guides/neyroset-dlya-prezentaciy/" class="gp-side-item">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</a><a href="/guides/neyroset-dlya-reklamy/" class="gp-side-item">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</a><a href="/guides/neyroset-dlya-rils/" class="gp-side-item">Нейросеть для Рилс в 2026: какие берут под каждую часть ролика</a><a href="/guides/neyroset-dlya-sayta/" class="gp-side-item">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</a><a href="/guides/neyroseti-dlya-marketinga/" class="gp-side-item">Нейросети для маркетинга в 2026: по каждой задаче отдельно</a><a href="/guides/promty-dlya-video/" class="gp-side-item">Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling</a></div><div class="gp-content read-article"><div class="gp-bc">Статьи</div><div class="gp-h1row"><h1 class="gp-h1">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</h1><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="gp-desc">Аватарка нейросетью для блога и мессенджеров: как получить похожее на себя лицо, какие запросы работают, что проверить перед установкой и чем портрет отличается от картинки-заглушки.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Аватарка это первое, что видит человек, и решение о подписке он принимает быстрее, чем успевает прочитать ваше описание. При этом хорошая съёмка стоит денег и требует свободного дня, а профиль нужно оформить сегодня.</p>
+<p>Генератор изображений закрывает задачу за вечер, но с одной оговоркой, которая портит большинство попыток. Машина легко рисует красивое лицо и почти так же легко рисует чужое лицо. Человек, который потом придёт к вам на прямой эфир, увидит другого. Ниже порядок, который даёт похожий на вас портрет и файлы под все площадки сразу.</p>
+<p>Проверено 8 сентября 2026 года: порядок применялся на своих аккаунтах и на профилях учеников.</p>
+<h2 id="sec-0">Главное правило: похожесть важнее красоты</h2>
+<p>Аватарка решает две задачи. Она показывает, что за профилем живой человек, и она делает вас узнаваемым при встрече, в эфире, на конференции, в чужих сторис.</p>
+<p>Отсюда простое правило. Портрет, который красивее вас на две головы, работает против вас: он поднимает ожидание, а живая встреча его роняет. Берите вариант, в котором вас узнают.</p>
+<p>Из этого же правила следует запрет на цепочку. Не подавайте машине её собственный результат как исходник для следующей генерации. С каждым кругом лицо уезжает от оригинала, и через три шага на аватарке стоит незнакомый человек.</p>
+<h2 id="sec-1">Шаг 1. Исходные фото</h2>
+<p>Соберите от трёх до шести своих фотографий. Требования простые.</p>
+<ol><li>Разные ракурсы: анфас, полуоборот, профиль.</li><li>Ровный свет на лице, без жёстких теней и без контрового солнца.</li><li>Свежие снимки, за последний год, иначе портрет будет похож на вас пятилетней давности.</li><li>Без очков с бликами, без кепки, без другого человека в кадре.</li><li>Разрешение от 1000 пикселей по короткой стороне.</li></ol>
+<p>Шесть фотографий дают заметно более похожий результат, чем одна. Это самый дешёвый способ поднять качество, и он ничего не стоит.</p>
+<h2 id="sec-2">Шаг 2. Запросы под разные типы аватарки</h2>
+<p>Тип портрета выбирается под то, что вы продаёте. Ниже заготовки, в которые подставляются ваши данные, все с обязательными ограничениями против пластикового вида.</p>
+<ul><li><code>Портрет того же реального человека с референсных фото, точное сохранение черт лица. Поясной кадр, спокойная уверенная поза, лёгкая закрытая улыбка. Одежда: тёмный однотонный свитер. Фон: студийный серый, ровный. Мягкий направленный свет слева. Естественная кожа с видимыми порами, лёгкая natural асимметрия, зерно плёнки, без ретуши, без пластики, не глянцевая обложка</code></li><li><code>Портрет того же реального человека с референсных фото, точное сохранение черт лица. Крупный кадр по плечи, взгляд в камеру, спокойное лицо. Фон: рабочее пространство в лёгком размытии, дневной свет из окна. Естественная кожа, поры, зерно, без сглаживания</code></li><li><code>Портрет того же реального человека, живой кадр в движении: идёт по улице, оборачивается, лёгкая улыбка. Фон: город с прохожими, без сильного размытия. Пасмурный мягкий свет. Документальная подача, натуральные цвета, зерно</code></li><li><code>Портрет того же реального человека, вертикальный кадр для профиля: лицо занимает центральную треть, вокруг свободное поле, нейтральный однотонный фон под обрезку в круг</code></li></ul>
+<p>Последний вариант стоит генерировать всегда: аватарка обрезается в круг, и портрет, снятый под прямоугольник, теряет лоб или подбородок.</p>
+<h2 id="sec-3">Шаг 3. Проверки перед установкой</h2>
+<p>Четыре проверки, каждая занимает минуту.</p>
+<ol><li>Узнаваемость. Покажите портрет двум людям, которые знают вас лично, и спросите, вы ли это. Ответ с паузой означает, что портрет пошёл в сторону.</li><li>Круг. Обрежьте картинку в круг и посмотрите, ничего ли не срезано по краям.</li><li>Мелкий размер. Уменьшите до сорока пикселей и посмотрите на телефоне. Лицо обязано остаться лицом, узнаваемым даже в этом размере.</li><li>Руки и уши. Именно там генераторы ошибаются чаще всего: лишний палец, съехавшая серьга, странная форма уха.</li></ol>
+<p>Отдельно проверьте одежду и фон на надписи. Машина любит дорисовывать буквы на футболках и вывесках, и эти буквы почти всегда бессмысленные.</p>
+<h2 id="sec-4">Шаг 4. Файлы под площадки</h2>
+<p>Один портрет расходится по нескольким местам, подготовьте файлы сразу.</p>
+<table class="gp-table"><thead><tr><th>Место</th><th>Размер файла</th><th>Кадр</th><th>На что смотреть</th></tr></thead><tbody><tr><td>Instagram, Telegram</td><td>от 1000 на 1000</td><td>поясной, лицо в центральной трети</td><td>запас по краям под круглую обрезку</td></tr><tr><td>YouTube</td><td>от 800 на 800</td><td>по плечи, крупнее обычного</td><td>аватар показывается мелко, детали пропадают</td></tr><tr><td>Сайт и почта</td><td>горизонтальный, от 1600 по ширине</td><td>со свободным полем справа</td><td>место под имя и должность</td></tr><tr><td>Презентации, договоры</td><td>от 1200 на 1200</td><td>сдержанный, нейтральный фон</td><td>без улицы и посторонних предметов</td></tr><tr><td>Исходник в архив</td><td>максимальный из генератора</td><td>полный кадр</td><td>пригодится для перекадрирования через полгода</td></tr></tbody></table>
+<p>Держите исходник в максимальном размере. Через полгода вы захотите перекадрировать, и лучше делать это из оригинала.</p>
+<h2 id="sec-5">Шаг 5. Когда портрет из нейросети не подходит</h2>
+<p>Есть случаи, где машинный портрет проигрывает обычной съёмке на телефон.</p>
+<p>Первый случай это ниша, где доверие строится на живости: психология, медицина, работа с детьми. Там аудитория читает идеальный портрет как дистанцию.</p>
+<p>Второй случай это активные прямые эфиры. Если вы каждую неделю выходите в кадр живьём, аватарка обязана совпадать с тем, что видят в эфире, вплоть до причёски.</p>
+<p>Третий случай это команда. Когда на сайте пять человек, портреты должны быть сняты в одном свете и стиле, и проще снять всех подряд, чем догонять единый стиль генерациями.</p>
+<h2 id="sec-6">Чек-лист перед установкой</h2>
+<p>Пройдите по списку один раз, и портрет можно ставить.</p>
+<ol><li>Исходники были ваши настоящие фото, минимум три ракурса.</li><li>Двое знакомых узнали вас без паузы.</li><li>Круглая обрезка ничего не срезала.</li><li>В размере сорока пикселей лицо читается.</li><li>Руки, уши и украшения без искажений.</li><li>На одежде и фоне нет выдуманных надписей.</li><li>Кожа с порами и зерном, без пластикового сглаживания.</li><li>Собраны три сборки: квадрат, горизонталь, архивный исходник.</li></ol>
+<h2 id="sec-7">Частые ошибки</h2>
+<h3>Цепочка генераций от сгенерированного лица</h3>
+<p>Каждый круг уводит черты дальше от оригинала. Исходником всегда служат ваши настоящие фотографии.</p>
+<h3>Слишком сильная ретушь</h3>
+<p>Гладкая кожа без пор читается как искусственная картинка, и доверие падает. Просите поры, зерно и лёгкую асимметрию прямо в запросе.</p>
+<h3>Портрет под прямоугольник</h3>
+<p>Площадки режут аватар в круг. Кадр без запаса по краям теряет часть лица.</p>
+<h3>Один вариант на все места</h3>
+<p>Для мелкого аватара нужен крупный кадр, для сайта другой. Соберите три сборки из одной съёмки.</p>
+<h3>Аватарка не совпадает с содержанием блога</h3>
+<p>Строгий деловой портрет над лентой домашних роликов создаёт разрыв. Портрет выбирается под то, что человек увидит дальше.</p>
+<h2 id="sec-8">Частые вопросы</h2>
+<h3>Насколько похожим получается лицо</h3>
+<p>При шести хороших исходниках и прямом требовании сохранить черты сходство обычно достаточное, чтобы вас узнали. Точность падает на профильных ракурсах и при сильном изменении причёски.</p>
+<h3>Можно ли ставить такой портрет на документы</h3>
+<p>На договоры и презентации да, на документы, удостоверяющие личность, нет. Там нужна обычная фотография по требованиям организации.</p>
+<h3>Сколько вариантов генерировать</h3>
+<p>Двадцать кадров дают три-четыре пригодных. Отбирайте по узнаваемости, а красоту оценивайте во вторую очередь.</p>
+<h3>Чем аватарка отличается от обложки</h3>
+<p>Аватарка работает в круге сорока пикселей и держит одно лицо, обложка работает в ленте и держит крупный заголовок. Требования к ним разные, про вторые есть отдельный разбор про <a href="/guides/neyroset-dlya-oblozhek/">обложки нейросетью</a>.</p>
+<h3>Что ещё оформить, кроме аватарки</h3>
+<p>Профиль читается целиком: портрет, имя, описание, закреплённые материалы. Порядок сборки с нуля разобран в материале про <a href="/guides/podpischiki-instagram-s-nulya/">первых подписчиков</a>, а общие правила работы с генератором изображений лежат в статье про <a href="/guides/neyroset-dlya-generacii-izobrazheniy/">генерацию изображений</a>.</p>
+<h2 id="sec-9">Что делать дальше</h2>
+<p>Оформление профиля занимает вечер и дальше работает само. Подписки же приносит то, что человек увидит после клика по аватарке: регулярные ролики, из которых понятно, чем вы полезны.</p>
+<p>Соберите портрет по порядку выше и переходите к контенту. Как собирать короткие ролики нейросетью и приводить людей в профиль каждый день, разобрано <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">в подробной статье про метод</a>.</p></div><div class="cta-dark grid"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><div class="cta-bullets"><div class="b"><span class="m"></span>Готовые промпты под Reels, хуки и длинные описания</div><div class="b"><span class="m"></span>Разборы, почему одни ролики залетают, а другие нет</div><div class="b"><span class="m"></span>Гайды по нейросетям для контента, коротко и по делу</div></div><div class="cta-foot"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-reklamy/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</span><span class="rc-desc">Реклама с нейросетью по шагам: где машина ускоряет работу, как писать запросы под…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-logotipa/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для логотипа: как получить знак, который не стыдно поставить на профиль</span><span class="rc-desc">Логотип машиной для личного бренда и небольшой компании: чем генератор помогает, где он…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-infografiki/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</span><span class="rc-desc">Инфографика машиной для карточек, презентаций и постов: где генератор помогает, где…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-sayta/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</span><span class="rc-desc">Лендинг, блог и страница продажи с помощью нейросети: с чего начинать, какие запросы…</span></a></div></section><div class="gp-docsnav"><a class="gp-navcard" href="/guides/kak-zarabotat-na-neyrosetyah/"><div class="l">← Предыдущий</div><div class="t">Как заработать на нейросетях в 2026: честные способы, цифры и границы</div></a><a class="gp-navcard next" href="/guides/neyroset-dlya-dizayna/"><div class="l">Следующий →</div><div class="t">Нейросеть для дизайна: что она делает за вас, а что придётся доделать руками</div></a></div></div><div class="gp-toc"><div class="h">На странице</div><a href="#sec-0" class="active">Главное правило: похожесть важнее красоты</a><a href="#sec-1" class="">Шаг 1. Исходные фото</a><a href="#sec-2" class="">Шаг 2. Запросы под разные типы аватарки</a><a href="#sec-3" class="">Шаг 3. Проверки перед установкой</a><a href="#sec-4" class="">Шаг 4. Файлы под площадки</a><a href="#sec-5" class="">Шаг 5. Когда портрет из нейросети не подходит</a><a href="#sec-6" class="">Чек-лист перед установкой</a><a href="#sec-7" class="">Частые ошибки</a><a href="#sec-8" class="">Частые вопросы</a><a href="#sec-9" class="">Что делать дальше</a></div></div><footer class="gp-footer"><div class="gp-foot-inner"><div class="gp-foot-main"><div class="gp-foot-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><p>Гайды, статьи и разборы по темам: Instagram и рост, Нейросети для контента, Контент и воронки. От Владимир Ижмуков и канала «AI Realshift».</p></div><div class="gp-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a><a href="/library/">Все гайды</a></div><div class="col"><div class="h">Владимир Ижмуков</div><a href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><div class="col"><div class="h">Контакты</div><a href="https://t.me/Ai_realshift" target="_blank" rel="noopener">Канал «AI Realshift»</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика конфиденциальности</a></div></div></div><div class="gp-foot-bottom"><span>© 2026 ВЛАДИМИР ИЖМУКОВ</span><span class="spacer"></span><span>Владимир Ижмуков</span></div></div></footer></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=1a388f3f9c"></script>
+  <script>window.__GF_BASE = "";</script>
+  <script>window.__GF_VIEW = "guide";</script>
+  <script>window.__GF_SLUG = "neyroset-dlya-avatarki";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<script data-gfmr>(function(){try{if(location.search.indexOf('nomobile')>-1)return;var p=location.pathname;if(/^\/m\//.test(p))return;var sw=Math.min(screen.width,screen.height);if(!(sw<=640))return;p=p.replace(/(^|\/)index\.html$|\.html$/,'$1');var t=null,g=p.match(/^\/guides\/([^\/.]+)\/?$/);if(g){t='/m/guides/'+g[1]+'.html';}else if(p==='/'||p===''){t='/m/';}else{var m=p.match(/^\/([^\/.]+)\/?$/);if(m&&['instagram','neyroseti','kontent','about','library'].indexOf(m[1])>-1){t='/m/'+m[1]+'.html';}}if(t){location.replace(t+location.search+location.hash);}}catch(e){}})();</script>
+<link data-gfmr-alt rel="alternate" media="only screen and (max-width: 640px)" href="https://blog.vladimir-izhmukov.ru/m/guides/neyroset-dlya-tablic.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ — Владимир Ижмуков</title>
+<meta name="description" content="Работа с таблицами через нейросеть: как подать данные, какие запросы дают разбор вместо пересказа, как собрать формулу для Google Таблиц и где машина считает неверно.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:#FAF7F2; }
+  .standalone-c { width:100%; }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ">
+<meta property="og:description" content="Работа с таблицами через нейросеть: как подать данные, какие запросы дают разбор вместо пересказа, как собрать формулу для Google Таблиц и где машина считает неверно.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-09T05:00:00Z">
+<meta property="article:modified_time" content="2026-09-09T05:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ">
+<meta name="twitter:description" content="Работа с таблицами через нейросеть: как подать данные, какие запросы дают разбор вместо пересказа, как собрать формулу для Google Таблиц и где машина считает неверно.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-tablic.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/#article",
+      "headline": "Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ",
+      "description": "Работа с таблицами через нейросеть: как подать данные, какие запросы дают разбор вместо пересказа, как собрать формулу для Google Таблиц и где машина считает неверно.",
+      "datePublished": "2026-09-09T05:00:00Z",
+      "dateModified": "2026-09-09T05:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, analitika",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ Владимир Ижмуков · автор системы роста Instagram через короткие ролики Таблица появляется у каждого, кто ведёт блог или продаёт: выгрузка охватов, список заявок, отчёт рекламного кабинета, список расходов за месяц. Файл есть, а вывода из него нет, потому что на разбор нужен либо навык, либо человек, которому за это платят. Модель закрывает эту работу за один вечер, но большинство попыток заканчивается ничем по одной причине. Человек загружает файл и пишет «проанализируй». В ответ приходит гладкий пересказ содержимого: столько строк, такие столбцы, средние значения. Читать приятно, решать по этому нечего. Ниже порядок, который даёт разбор с выводом, и отдельно места, где машину проверять обязательно. Проверено 9 сентября 2026 года на своих выгрузках из рекламного кабинета и таблицы заявок. Главное правило: сначала вопрос, потом файл Модель отвечает ровно на тот вопрос, который вы задали. «Проанализируй» это не вопрос, поэтому и ответ выходит ни о чём. Рабочий порядок обратный привычному. Сначала напишите одним предложением, какое решение вы собираетесь принять по этой таблице. Потом подавайте файл. Сравните две формулировки на одних и тех же данных. Слабая: «Вот выгрузка по рекламе, проанализируй». Рабочая: «Мне нужно решить, какие три объявления выключить завтра. Вот выгрузка за 14 дней. Найди объявления, где расход растёт, а заявки падают, и покажи их отдельным списком с цифрами». Вторая формулировка возвращает список из четырёх строк, по которому можно действовать сегодня. Шаг 1. Подготовка выгрузки Машина спотыкается на грязных данных так же, как человек, поэтому пять минут подготовки экономят час переписки. 1. Уберите объединённые ячейки. Модель читает их как пустые, и половина строк уезжает. 2. Оставьте один заголовок, в первой строке. Двухэтажные шапки читаются неверно почти всегда. 3. Приведите даты к одному виду. Смесь 01.09.2026 и 2026-09-01 в одном столбце ломает сортировку по времени. 4. Уберите итоговые строки снизу. Иначе они попадут в расчёт как обычная запись и завысят сумму. 5. Оставьте только те столбцы, которые нужны под ваш вопрос. Выгрузка на сорок столбцов расходует внимание модели на лишнее. Файл до тысячи строк удобно подавать целиком. Если строк десятки тысяч, выгрузите отдельно сводку по дням и работайте с ней, а к сырым данным возвращайтесь точечно. Шаг 2. Запрос на разбор Этот запрос подставляется под любую выгрузку, меняются только первые две строки. - Решение, которое мне нужно принять: [что именно решаете]. Данные: [что за таблица, за какой период, что означает каждый столбец]. Сделай по порядку: Назови три числа, которые в этих данных важнее остальных для моего решения, и объясни почему именно они. Покажи, что изменилось за период: где рост, где падение, в процентах и в абсолютных значениях. Найди строки, которые выпадают из общей картины, и назови их отдельным списком. Скажи, чего в этих данных не хватает, чтобы ответ был надёжным. Дай вывод одним абзацем: что я делаю по итогу. Не пересказывай содержимое таблицы. Если данных для вывода мало, скажи об этом прямо. Пункт четыре здесь самый ценный и его чаще всего убирают. Он заставляет модель назвать слепое пятно, вместо того чтобы уверенно достроить недостающее. Шаг 3. Запрос на формулу Вторая частая задача это формула, которую лень собирать руками. Тут работает другой порядок: опишите структуру данных, и результат соберётся сам. - У меня Google Таблица. Лист «Заявки», строка заголовков первая. Столбец A дата в формате ДД.ММ.ГГГГ, столбец B источник текстом, столбец C сумма числом, столбец D статус текстом. Нужна формула, которая считает сумму по столбцу C за прошлый календарный месяц, только для строк, где источник равен «Instagram», а статус равен «Оплачено». Дай формулу для Google Таблиц, объясни каждый аргумент одной строкой и скажи, что сломается, если в столбце C окажется текст вместо числа. Три вещи, которые надо назвать всегда: точные имена листа и столбцов, формат данных в каждом, и площадку. Формулы Google Таблиц и Excel расходятся в разделителях и в части функций, поэтому «сделай формулу» без указания площадки даёт вариант, который у вас не заработает. Шаг 4. Проверка чисел Здесь начинается граница, за которой доверять нельзя. Модель уверенно ошибается в арифметике на длинных столбцах и делает это спокойным тоном. Три проверки закрывают почти весь риск. 1. Возьмите одно число из ответа и пересчитайте его в самой таблице обычной формулой. Сошлось значит метод верный. 2. Спросите то же самое второй раз в новом окне, другой формулировкой. Разошлось значит считать надо руками. 3. Проверьте края: первую и последнюю дату периода. Модель часто теряет граничный день. Правило простое. Модель хорошо ищет закономерность и плохо считает сумму. Разбор берите у неё, итоговые цифры считайте формулой. Шаг 5. Регулярный отчёт Когда разбор пригодился один раз, его стоит превратить в повторяющийся. Соберите один текст, в котором описаны структура вашей выгрузки и…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ",
+      "description": "Работа с таблицами через нейросеть: как подать данные, какие запросы дают разбор вместо пересказа, как собрать формулу для Google Таблиц и где машина считает неверно.",
+      "inLanguage": "ru",
+      "supply": [],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Шаг 1. Подготовка выгрузки",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Шаг 2. Запрос на разбор",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Шаг 3. Запрос на формулу",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Шаг 4. Проверка чисел",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Шаг 5. Регулярный отчёт",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=6193f96196" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="standalone-c"><div class="gp dir-c theme-light"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><nav class="gp-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" aria-label="Сменить тему" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><a class="gp-headbtn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте <span class="ar">→</span></a></div></div></div><div class="ban-dark"><span class="gp-eyebrow lime"><span class="dot"></span>ВЛАДИМИР&nbsp;ИЖМУКОВ</span><span>Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.</span><span class="spacer"></span></div><div class="gp-layout"><div class="gp-sidebar"><div class="gp-side-group">Claude Code · 20</div><a href="/guides/generaciya-video-po-tekstu/" class="gp-side-item">Генерация видео по тексту в 2026: как это работает и чем сделать</a><a href="/guides/ii-agenty-dlya-biznesa/" class="gp-side-item">ИИ-агенты для бизнеса в 2026: что это на самом деле и с чего начать</a><a href="/guides/kak-sdelat-video-neyrosetyu/" class="gp-side-item">Как сделать видео нейросетью в 2026: пошагово с телефона</a><a href="/guides/kak-zarabotat-na-neyrosetyah/" class="gp-side-item">Как заработать на нейросетях в 2026: честные способы, цифры и границы</a><a href="/guides/neyroset-dlya-avatarki/" class="gp-side-item">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</a><a href="/guides/neyroset-dlya-dizayna/" class="gp-side-item">Нейросеть для дизайна: что она делает за вас, а что придётся доделать руками</a><a href="/guides/neyroset-dlya-foto/" class="gp-side-item">Нейросеть для фото: обработать своё, улучшить старое, сгенерировать новое</a><a href="/guides/neyroset-dlya-infografiki/" class="gp-side-item">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</a><a href="/guides/neyroset-dlya-logotipa/" class="gp-side-item">Нейросеть для логотипа: как получить знак, который не стыдно поставить на профиль</a><a href="/guides/neyroset-dlya-montazha-video/" class="gp-side-item">Нейросеть для монтажа видео в 2026: что она делает сама и где нужны руки</a><a href="/guides/neyroset-dlya-oblozhek/" class="gp-side-item">Нейросеть для обложек: как собрать картинку, на которую нажимают</a><a href="/guides/neyroset-dlya-otzyvov/" class="gp-side-item">Нейросеть для отзывов: как собрать их у клиентов, разобрать и превратить в контент</a><a href="/guides/neyroset-dlya-prezentaciy/" class="gp-side-item">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</a><a href="/guides/neyroset-dlya-reklamy/" class="gp-side-item">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</a><a href="/guides/neyroset-dlya-rils/" class="gp-side-item">Нейросеть для Рилс в 2026: какие берут под каждую часть ролика</a><a href="/guides/neyroset-dlya-sayta/" class="gp-side-item">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</a><a href="/guides/neyroset-dlya-tablic/" class="gp-side-item active">Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ</a><a href="/guides/neyroseti-dlya-marketinga/" class="gp-side-item">Нейросети для маркетинга в 2026: по каждой задаче отдельно</a><a href="/guides/oblozhka-dlya-video/" class="gp-side-item">Как сделать обложку для видео: разбор кликабельной обложки и запросы под неё</a><a href="/guides/promty-dlya-video/" class="gp-side-item">Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling</a></div><div class="gp-content read-article"><div class="gp-bc">Статьи</div><div class="gp-h1row"><h1 class="gp-h1">Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ</h1><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="gp-desc">Работа с таблицами через нейросеть: как подать данные, какие запросы дают разбор вместо пересказа, как собрать формулу для Google Таблиц и где машина считает неверно.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Таблица появляется у каждого, кто ведёт блог или продаёт: выгрузка охватов, список заявок, отчёт рекламного кабинета, список расходов за месяц. Файл есть, а вывода из него нет, потому что на разбор нужен либо навык, либо человек, которому за это платят.</p>
+<p>Модель закрывает эту работу за один вечер, но большинство попыток заканчивается ничем по одной причине. Человек загружает файл и пишет «проанализируй». В ответ приходит гладкий пересказ содержимого: столько строк, такие столбцы, средние значения. Читать приятно, решать по этому нечего.</p>
+<p>Ниже порядок, который даёт разбор с выводом, и отдельно места, где машину проверять обязательно.</p>
+<p>Проверено 9 сентября 2026 года на своих выгрузках из рекламного кабинета и таблицы заявок.</p>
+<h2 id="sec-0">Главное правило: сначала вопрос, потом файл</h2>
+<p>Модель отвечает ровно на тот вопрос, который вы задали. «Проанализируй» это не вопрос, поэтому и ответ выходит ни о чём.</p>
+<p>Рабочий порядок обратный привычному. Сначала напишите одним предложением, какое решение вы собираетесь принять по этой таблице. Потом подавайте файл.</p>
+<p>Сравните две формулировки на одних и тех же данных.</p>
+<p>Слабая: «Вот выгрузка по рекламе, проанализируй».</p>
+<p>Рабочая: «Мне нужно решить, какие три объявления выключить завтра. Вот выгрузка за 14 дней. Найди объявления, где расход растёт, а заявки падают, и покажи их отдельным списком с цифрами».</p>
+<p>Вторая формулировка возвращает список из четырёх строк, по которому можно действовать сегодня.</p>
+<h2 id="sec-1">Шаг 1. Подготовка выгрузки</h2>
+<p>Машина спотыкается на грязных данных так же, как человек, поэтому пять минут подготовки экономят час переписки.</p>
+<ol><li>Уберите объединённые ячейки. Модель читает их как пустые, и половина строк уезжает.</li><li>Оставьте один заголовок, в первой строке. Двухэтажные шапки читаются неверно почти всегда.</li><li>Приведите даты к одному виду. Смесь <code>01.09.2026</code> и <code>2026-09-01</code> в одном столбце ломает сортировку по времени.</li><li>Уберите итоговые строки снизу. Иначе они попадут в расчёт как обычная запись и завысят сумму.</li><li>Оставьте только те столбцы, которые нужны под ваш вопрос. Выгрузка на сорок столбцов расходует внимание модели на лишнее.</li></ol>
+<p>Файл до тысячи строк удобно подавать целиком. Если строк десятки тысяч, выгрузите отдельно сводку по дням и работайте с ней, а к сырым данным возвращайтесь точечно.</p>
+<h2 id="sec-2">Шаг 2. Запрос на разбор</h2>
+<p>Этот запрос подставляется под любую выгрузку, меняются только первые две строки.</p>
+<ul><li><code>Решение, которое мне нужно принять: [что именно решаете]. Данные: [что за таблица, за какой период, что означает каждый столбец]. Сделай по порядку: Назови три числа, которые в этих данных важнее остальных для моего решения, и объясни почему именно они. Покажи, что изменилось за период: где рост, где падение, в процентах и в абсолютных значениях. Найди строки, которые выпадают из общей картины, и назови их отдельным списком. Скажи, чего в этих данных не хватает, чтобы ответ был надёжным. Дай вывод одним абзацем: что я делаю по итогу. Не пересказывай содержимое таблицы. Если данных для вывода мало, скажи об этом прямо.</code></li></ul>
+<p>Пункт четыре здесь самый ценный и его чаще всего убирают. Он заставляет модель назвать слепое пятно, вместо того чтобы уверенно достроить недостающее.</p>
+<h2 id="sec-3">Шаг 3. Запрос на формулу</h2>
+<p>Вторая частая задача это формула, которую лень собирать руками. Тут работает другой порядок: опишите структуру данных, и результат соберётся сам.</p>
+<ul><li><code>У меня Google Таблица. Лист «Заявки», строка заголовков первая. Столбец A дата в формате ДД.ММ.ГГГГ, столбец B источник текстом, столбец C сумма числом, столбец D статус текстом. Нужна формула, которая считает сумму по столбцу C за прошлый календарный месяц, только для строк, где источник равен «Instagram», а статус равен «Оплачено». Дай формулу для Google Таблиц, объясни каждый аргумент одной строкой и скажи, что сломается, если в столбце C окажется текст вместо числа.</code></li></ul>
+<p>Три вещи, которые надо назвать всегда: точные имена листа и столбцов, формат данных в каждом, и площадку. Формулы Google Таблиц и Excel расходятся в разделителях и в части функций, поэтому «сделай формулу» без указания площадки даёт вариант, который у вас не заработает.</p>
+<h2 id="sec-4">Шаг 4. Проверка чисел</h2>
+<p>Здесь начинается граница, за которой доверять нельзя. Модель уверенно ошибается в арифметике на длинных столбцах и делает это спокойным тоном.</p>
+<p>Три проверки закрывают почти весь риск.</p>
+<ol><li>Возьмите одно число из ответа и пересчитайте его в самой таблице обычной формулой. Сошлось значит метод верный.</li><li>Спросите то же самое второй раз в новом окне, другой формулировкой. Разошлось значит считать надо руками.</li><li>Проверьте края: первую и последнюю дату периода. Модель часто теряет граничный день.</li></ol>
+<p>Правило простое. Модель хорошо ищет закономерность и плохо считает сумму. Разбор берите у неё, итоговые цифры считайте формулой.</p>
+<h2 id="sec-5">Шаг 5. Регулярный отчёт</h2>
+<p>Когда разбор пригодился один раз, его стоит превратить в повторяющийся.</p>
+<p>Соберите один текст, в котором описаны структура вашей выгрузки и пять вопросов из шага два. Сохраните его отдельным файлом. Дальше каждую неделю вы подставляете свежую таблицу к тому же тексту, и ответы приходят в одинаковой форме, а значит их можно сравнивать между собой.</p>
+<p>Сравнимость и есть главная польза. Один разбор показывает картину, десять одинаковых разборов показывают движение.</p>
+<h2 id="sec-6">Чек-лист перед тем, как считать ответ готовым</h2>
+<ol><li>Вопрос сформулирован через решение, которое вы принимаете по этим данным.</li><li>Объединённые ячейки убраны, шапка одна, даты в одном формате.</li><li>Итоговые строки удалены из выгрузки.</li><li>В ответе есть пункт про нехватку данных.</li><li>Одно число из ответа пересчитано формулой в самой таблице.</li><li>Границы периода проверены отдельно.</li><li>Формула запрошена с указанием площадки и точных имён столбцов.</li></ol>
+<h2 id="sec-7">Частые ошибки</h2>
+<p><b>Просят «красиво оформить таблицу».</b> Оформление делается средствами самой таблицы. Вы получите текстовое описание того, как могло бы выглядеть форматирование, и потратите ход впустую.</p>
+<p><b>Подают скриншот вместо файла.</b> По картинке модель читает числа с ошибками, особенно мелкий шрифт и разделители разрядов. Подавайте выгрузку текстом или файлом.</p>
+<p><b>Верят проценту без базы.</b> «Рост на 60%» ничего не значит, пока не сказано, от какого числа. Требуйте абсолютные значения рядом с процентами, это одна строка в запросе.</p>
+<p><b>Смешивают периоды разной длины.</b> Сравнение недели с месяцем даёт вывод, который выглядит убедительно и при этом неверен. Приводите периоды к одинаковой длине до подачи.</p>
+<p><b>Отдают персональные данные.</b> Телефоны, почты и имена клиентов из выгрузки уберите до загрузки. Для разбора они не нужны ни в одном из сценариев выше.</p>
+<h2 id="sec-8">Частые вопросы</h2>
+<p><b>Какая модель лучше справляется с таблицами?</b> Разница между сильными моделями здесь меньше, чем разница между хорошим и плохим запросом. Начните с той, которой уже пользуетесь, и переносите вопрос из шага два без изменений.</p>
+<p><b>Можно ли давать модели доступ к самой Google Таблице?</b> Такие связки существуют, и они удобны для регулярных отчётов. Для разовой задачи проще выгрузить файл: меньше настройки и меньше прав отдаёте наружу.</p>
+<p><b>Почему ответ на один и тот же файл отличается?</b> Модель не считает детерминированно, поэтому формулировки и акценты плывут. Устойчивую часть ответа дают конкретные вопросы. Общая просьба разобрать каждый раз даёт разное.</p>
+<p><b>Что делать, если таблица на сто тысяч строк?</b> Сначала сведите её в таблице до сводки по дням или по источникам, потом подавайте сводку. Модель хорошо работает с агрегатом и плохо с сырым массивом такого размера.</p>
+<p><b>Можно ли доверить ей финансовый отчёт?</b> Разбор да, итоговые цифры нет. Любое число, которое пойдёт в отчёт или в налоговую, пересчитывается формулой и проверяется человеком.</p>
+<h2 id="sec-9">Что делать дальше</h2>
+<p>Начните с одной таблицы, которая лежит у вас без выводов дольше месяца. Задайте по ней вопрос через решение, прогоните через запрос из шага два и пересчитайте одно число руками.</p>
+<p>Если данные, которые вы разбираете, это охваты и заявки из блога, дальше пригодится разбор самих метрик: <a href="/guides/neyroseti-dlya-marketinga/">нейросеть для аналитики блога</a> и <a href="/guides/promty-dlya-neyrosetey/">промпты для нейросетей</a>, там лежат готовые формулировки под контентные задачи.</p>
+<p>Полный набор запросов под работу с данными и контентом, вместе с разбором воронки, я собрал в наборе СТАРТ: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">посмотреть состав и забрать</a>.</p></div><div class="cta-dark grid"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><div class="cta-bullets"><div class="b"><span class="m"></span>Готовые промпты под Reels, хуки и длинные описания</div><div class="b"><span class="m"></span>Разборы, почему одни ролики залетают, а другие нет</div><div class="b"><span class="m"></span>Гайды по нейросетям для контента, коротко и по делу</div></div><div class="cta-foot"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/oblozhka-dlya-video/"><span class="rc-type">Статья</span><span class="rc-title">Как сделать обложку для видео: разбор кликабельной обложки и запросы под неё</span><span class="rc-desc">Обложка для видео на YouTube и в Instagram: из чего она состоит, какой размер брать…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-otzyvov/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для отзывов: как собрать их у клиентов, разобрать и превратить в контент</span><span class="rc-desc">Отзывы через нейросеть без выдумывания: запросы для сбора у реальных клиентов, разбор…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-avatarki/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</span><span class="rc-desc">Аватарка нейросетью для блога и мессенджеров: как получить похожее на себя лицо, какие…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-reklamy/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</span><span class="rc-desc">Реклама с нейросетью по шагам: где машина ускоряет работу, как писать запросы под…</span></a></div></section><div class="gp-docsnav"><a class="gp-navcard" href="/guides/neyroset-dlya-sayta/"><div class="l">← Предыдущий</div><div class="t">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</div></a><a class="gp-navcard next" href="/guides/neyroseti-dlya-marketinga/"><div class="l">Следующий →</div><div class="t">Нейросети для маркетинга в 2026: по каждой задаче отдельно</div></a></div></div><div class="gp-toc"><div class="h">На странице</div><a href="#sec-0" class="active">Главное правило: сначала вопрос, потом файл</a><a href="#sec-1" class="">Шаг 1. Подготовка выгрузки</a><a href="#sec-2" class="">Шаг 2. Запрос на разбор</a><a href="#sec-3" class="">Шаг 3. Запрос на формулу</a><a href="#sec-4" class="">Шаг 4. Проверка чисел</a><a href="#sec-5" class="">Шаг 5. Регулярный отчёт</a><a href="#sec-6" class="">Чек-лист перед тем, как считать ответ готовым</a><a href="#sec-7" class="">Частые ошибки</a><a href="#sec-8" class="">Частые вопросы</a><a href="#sec-9" class="">Что делать дальше</a></div></div><footer class="gp-footer"><div class="gp-foot-inner"><div class="gp-foot-main"><div class="gp-foot-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><p>Гайды, статьи и разборы по темам: Instagram и рост, Нейросети для контента, Контент и воронки. От Владимир Ижмуков и канала «AI Realshift».</p></div><div class="gp-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a><a href="/library/">Все гайды</a></div><div class="col"><div class="h">Владимир Ижмуков</div><a href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><div class="col"><div class="h">Контакты</div><a href="https://t.me/Ai_realshift" target="_blank" rel="noopener">Канал «AI Realshift»</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика конфиденциальности</a></div></div></div><div class="gp-foot-bottom"><span>© 2026 ВЛАДИМИР ИЖМУКОВ</span><span class="spacer"></span><span>Владимир Ижмуков</span></div></div></footer></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=928cfd28f5"></script>
+  <script>window.__GF_BASE = "";</script>
+  <script>window.__GF_VIEW = "guide";</script>
+  <script>window.__GF_SLUG = "neyroset-dlya-tablic";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

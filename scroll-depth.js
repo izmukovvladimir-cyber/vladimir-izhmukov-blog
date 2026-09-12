@@ -96,3 +96,50 @@
   if (document.readyState === "interactive" || document.readyState === "complete") check();
   else document.addEventListener("DOMContentLoaded", check);
 })();
+
+/* outbound-click tracker — same pages, same counter (read from data-ym).
+   Fires ONCE per click into Yandex.Metrika:
+     • blog_bot_click    — a link into the Telegram bot (t.me/izhmukov777_bot)
+     • blog_tarify_click — a link to the pricing page or to any funnel landing
+   Goals 612273915 / 612273916 on counter 110633946, created 2026-09-12.
+   Delegated on document so it also covers links rendered after load. */
+(function () {
+  if (typeof window === "undefined" || !window.document) return;
+  if (window.__gfOutboundBound) return;
+  window.__gfOutboundBound = true;
+
+  function counterId() {
+    var tag =
+      document.currentScript ||
+      document.querySelector('script[src*="scroll-depth.js"][data-ym]');
+    var id = tag && tag.getAttribute ? tag.getAttribute("data-ym") : null;
+    return id ? Number(id) : 0;
+  }
+  var YM = counterId();
+
+  function goalFor(href) {
+    if (!href) return null;
+    if (/izhmukov777_bot|t\.me\//i.test(href)) return "blog_bot_click";
+    if (/\/tarify\/|\/reels-chatgpt\/|\/nabor-start\/|\/guide-/i.test(href))
+      return "blog_tarify_click";
+    return null;
+  }
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      try {
+        var el = e.target;
+        if (!el || !el.closest) return;
+        var a = el.closest("a[href]");
+        if (!a) return;
+        var goal = goalFor(a.getAttribute("href") || a.href || "");
+        if (!goal) return;
+        if (typeof window.ym === "function" && YM) window.ym(YM, "reachGoal", goal);
+        if (typeof window.gtag === "function")
+          window.gtag("event", goal, { page_path: location.pathname });
+      } catch (err) {}
+    },
+    true
+  );
+})();

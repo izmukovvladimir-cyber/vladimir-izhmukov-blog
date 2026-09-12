@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Стихи нейросетью под задачу: запрос с размером и рифмой, поздравление на праздник, текст песни, разбор слабых мест машинной поэзии и чек-лист правки перед публикацией.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух">
+<meta property="og:description" content="Стихи нейросетью под задачу: запрос с размером и рифмой, поздравление на праздник, текст песни, разбор слабых мест машинной поэзии и чек-лист правки перед публикацией.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-12T09:50:00Z">
+<meta property="article:modified_time" content="2026-09-12T09:50:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух">
+<meta name="twitter:description" content="Стихи нейросетью под задачу: запрос с размером и рифмой, поздравление на праздник, текст песни, разбор слабых мест машинной поэзии и чек-лист правки перед публикацией.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-stihov.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/#article",
+      "headline": "Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух",
+      "description": "Стихи нейросетью под задачу: запрос с размером и рифмой, поздравление на праздник, текст песни, разбор слабых мест машинной поэзии и чек-лист правки перед публикацией.",
+      "datePublished": "2026-09-12T09:50:00Z",
+      "dateModified": "2026-09-12T09:50:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, kontent",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух Владимир Ижмуков · автор системы роста Instagram через короткие ролики Машина рифмует хорошо и почти всегда одинаково. Просьба «напиши стихотворение про маму» даёт гладкий текст со словами «тепло», «забота» и «родная», который годится ровно никуда. Решает тут количество конкретики, которую вы положили в запрос. Ниже порядок, которым я получаю стихи для подписей, поздравлений и текстов под ролики. Проверено 12 сентября 2026 года. Чем машинный стих отличается от живого | Признак | Машина без настройки | Живой текст | |---|---|---| | Образы | Общие: свет, тепло, дорога | Конкретные: запах антоновки на веранде | | Рифма | Точная и предсказуемая | Смешанная, иногда нарочно неточная | | Ритм | Ровный от первой до последней строки | С паузами и сбоями там, где нужен акцент | | Финал | Итог в лоб | Образ, который остаётся после точки | Вывод простой: конкретику в текст приносите вы. Модель разложит её по строкам. Шаг 1. Соберите сырьё до запроса Прежде чем открывать чат, выпишите пять вещей: 1. Повод. День рождения, юбилей, свадьба, признание, финал ролика. 2. Кому. Возраст, чем занимается, как вы к нему обращаетесь. 3. Три детали , которых нет ни у кого другого. Привычка, фраза, случай, предмет. 4. Настроение. Тёплое, шуточное, торжественное, грустное. 5. Куда пойдёт текст. Открытка, тост вслух, подпись под постом, песня. Именно третий пункт превращает шаблон в стихотворение про конкретного человека. Шаг 2. Запрос, в котором задана форма «Напиши стихотворение. Повод: 60 лет отцу. О ком: работал водителем 35 лет, чинит всё в доме сам, говорит „разберёмся“ на любую беду, держит гараж как музей. Настроение: тёплое, с лёгкой улыбкой, без пафоса. Куда: читать вслух за столом. Форма: 4 четверостишия, перекрёстная рифма, четырёхстопный ямб. Запреты: слова „судьба“, „года летят“, „золотой юбилей“, общие слова про тепло и заботу. Условие: в каждом четверостишии есть одна конкретная деталь из списка выше. Дай три разных варианта, каждый со своим образом. Перестановка слов вариантом не считается.» Блок запретов работает сильнее всего остального. Он выбивает из текста именно те обороты, по которым машинный стих узнают с первой строки. Шаг 3. Размер и рифма словами Модель понимает поэтические термины, и это экономит круги правок. | Что просите | Как звучит | Куда годится | |---|---|---| | Четырёхстопный ямб | «Мой дядя самых честных правил» | Поздравление, длинный текст | | Хорей | «Буря мглою небо кроет» | Детское, бодрое, шуточное | | Верлибр без рифмы | Свободные строки | Подпись под фото, признание | | Частушка | Четыре строки, задорный ритм | Корпоратив, шутка | Не знаете названий, опишите на слух: «строки короткие, ударение на первый слог, читается бодро». Шаг 4. Песня собирается иначе, чем стих Текст песни требует повторяемой структуры, поэтому в запросе она называется прямо: два куплета, припев, бридж. «Напиши текст песни в жанре поп-рок. Тема: возвращение в родной город после десяти лет. Структура: куплет 1, припев, куплет 2, припев, бридж, припев. Куплет 8 строк, припев 4 строки и повторяется дословно. Припев обязан содержать одну фразу, которая запоминается с первого раза. Язык простой, разговорный, без книжных слов.» Дальше текст читается вслух под ритм. Строка, на которой сбивается дыхание, переписывается независимо от того, как она выглядит на бумаге. Шаг 5. Четыре правки, после которых виден живой автор 1. Замените два прилагательных на предметы. «Добрая улыбка» слабее, чем «улыбка через щербинку». 2. Сломайте одну рифму нарочно. Идеальная рифма во всех строфах выдаёт машину. 3. Уберите итоговую мораль. Последнее четверостишие часто объясняет то, что уже сказано образами. 4. Прочитайте вслух целиком. Спотыкание на строке важнее любой теории. Чек-лист перед тем, как отправлять 1. В тексте есть хотя бы три детали, которые знаете только вы и адресат. 2. Прочитано вслух от начала до конца без запинки. 3. Нет слов из списка запретов: судьба, года летят, тепло души. 4. Длина подходит формату: для тоста три четверостишия, для открытки два. 5. Имя и факты проверены. Машина спокойно перепутает профессию и возраст. Частые ошибки Просьба «напиши красивое стихотворение» Красота это не задача. Задача это повод, адресат, детали и форма. Первый вариант в дело Первый ответ модели почти всегда самый средний. Три варианта и сборка лучшего из них занимают те же пять минут. Длинный текст на праздник Стихотворение длиннее четырёх четверостиший вслух не слушают. Режьте до трёх. Проверка фактов пропущена Модель уверенно напишет про тридцать лет стажа там, где их двадцать. Факты читаются глазами перед отправкой. Одинаковые стихи всем подряд Один запрос без деталей даст всем одинаковый текст со сменой имени. Пять минут на детали решают это полностью. Частые вопросы Может ли нейросеть написать стихи в стиле конкретного поэта Стилизация получается узнаваемой по ритму и лексике. Публиковать её как текст самого поэта нельзя, а использовать как приём для…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух",
+      "description": "Стихи нейросетью под задачу: запрос с размером и рифмой, поздравление на праздник, текст песни, разбор слабых мест машинной поэзии и чек-лист правки перед публикацией.",
+      "inLanguage": "ru",
+      "supply": [],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Шаг 1. Соберите сырьё до запроса",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Шаг 2. Запрос, в котором задана форма",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Шаг 3. Размер и рифма словами",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Шаг 4. Песня собирается иначе, чем стих",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Шаг 5. Четыре правки, после которых виден живой автор",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Может ли нейросеть написать стихи в стиле конкретного поэта",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Стилизация получается узнаваемой по ритму и лексике. Публиковать её как текст самого поэта нельзя, а использовать как приём для поздравления вполне уместно."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Кому принадлежат права на машинный стих",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Вопрос решается по законам вашей страны и до конца не закрыт нигде. Для поздравления и подписи под постом это неважно, для коммерческого использования сверьтесь с юристом."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему рифмы получаются простыми",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Модель тянется к частым парам слов. Лечится запретом на банальные рифмы прямо в запросе и просьбой использовать неточную рифму."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как сделать стих смешным",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Попросите приём: преувеличение, неожиданный поворот в последней строке, бытовая деталь вместо высокого слова. Слово «смешное» без приёма даёт натужный юмор."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Подойдёт ли такой текст для короткого ролика",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, и это одно из лучших применений. Четыре строки под видеоряд держат внимание, потому что зритель дослушивает рифму до конца. Если стихи нужны под музыку, дальше идёт отдельная работа, я разобрал её в материале про нейросеть для песни."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=6193f96196" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-bc">Статьи</div><h1 class="m-h1">Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Стихи нейросетью под задачу: запрос с размером и рифмой, поздравление на праздник, текст песни, разбор слабых мест машинной поэзии и чек-лист правки перед публикацией.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Машина рифмует хорошо и почти всегда одинаково. Просьба «напиши стихотворение про маму» даёт гладкий текст со словами «тепло», «забота» и «родная», который годится ровно никуда. Решает тут количество конкретики, которую вы положили в запрос.</p>
+<p>Ниже порядок, которым я получаю стихи для подписей, поздравлений и текстов под ролики.</p>
+<p>Проверено 12 сентября 2026 года.</p>
+<h2 id="sec-0">Чем машинный стих отличается от живого</h2>
+<table class="gp-table"><thead><tr><th>Признак</th><th>Машина без настройки</th><th>Живой текст</th></tr></thead><tbody><tr><td>Образы</td><td>Общие: свет, тепло, дорога</td><td>Конкретные: запах антоновки на веранде</td></tr><tr><td>Рифма</td><td>Точная и предсказуемая</td><td>Смешанная, иногда нарочно неточная</td></tr><tr><td>Ритм</td><td>Ровный от первой до последней строки</td><td>С паузами и сбоями там, где нужен акцент</td></tr><tr><td>Финал</td><td>Итог в лоб</td><td>Образ, который остаётся после точки</td></tr></tbody></table>
+<p>Вывод простой: конкретику в текст приносите вы. Модель разложит её по строкам.</p>
+<h2 id="sec-1">Шаг 1. Соберите сырьё до запроса</h2>
+<p>Прежде чем открывать чат, выпишите пять вещей:</p>
+<ol><li><b>Повод.</b> День рождения, юбилей, свадьба, признание, финал ролика.</li><li><b>Кому.</b> Возраст, чем занимается, как вы к нему обращаетесь.</li><li><b>Три детали</b>, которых нет ни у кого другого. Привычка, фраза, случай, предмет.</li><li><b>Настроение.</b> Тёплое, шуточное, торжественное, грустное.</li><li><b>Куда пойдёт текст.</b> Открытка, тост вслух, подпись под постом, песня.</li></ol>
+<p>Именно третий пункт превращает шаблон в стихотворение про конкретного человека.</p>
+<h2 id="sec-2">Шаг 2. Запрос, в котором задана форма</h2>
+<p>«Напиши стихотворение. Повод: 60 лет отцу. О ком: работал водителем 35 лет, чинит всё в доме сам, говорит „разберёмся“ на любую беду, держит гараж как музей. Настроение: тёплое, с лёгкой улыбкой, без пафоса. Куда: читать вслух за столом. Форма: 4 четверостишия, перекрёстная рифма, четырёхстопный ямб. Запреты: слова „судьба“, „года летят“, „золотой юбилей“, общие слова про тепло и заботу. Условие: в каждом четверостишии есть одна конкретная деталь из списка выше. Дай три разных варианта, каждый со своим образом. Перестановка слов вариантом не считается.»</p>
+<p>Блок запретов работает сильнее всего остального. Он выбивает из текста именно те обороты, по которым машинный стих узнают с первой строки.</p>
+<h2 id="sec-3">Шаг 3. Размер и рифма словами</h2>
+<p>Модель понимает поэтические термины, и это экономит круги правок.</p>
+<table class="gp-table"><thead><tr><th>Что просите</th><th>Как звучит</th><th>Куда годится</th></tr></thead><tbody><tr><td>Четырёхстопный ямб</td><td>«Мой дядя самых честных правил»</td><td>Поздравление, длинный текст</td></tr><tr><td>Хорей</td><td>«Буря мглою небо кроет»</td><td>Детское, бодрое, шуточное</td></tr><tr><td>Верлибр без рифмы</td><td>Свободные строки</td><td>Подпись под фото, признание</td></tr><tr><td>Частушка</td><td>Четыре строки, задорный ритм</td><td>Корпоратив, шутка</td></tr></tbody></table>
+<p>Не знаете названий, опишите на слух: «строки короткие, ударение на первый слог, читается бодро».</p>
+<h2 id="sec-4">Шаг 4. Песня собирается иначе, чем стих</h2>
+<p>Текст песни требует повторяемой структуры, поэтому в запросе она называется прямо: два куплета, припев, бридж.</p>
+<p>«Напиши текст песни в жанре поп-рок. Тема: возвращение в родной город после десяти лет. Структура: куплет 1, припев, куплет 2, припев, бридж, припев. Куплет 8 строк, припев 4 строки и повторяется дословно. Припев обязан содержать одну фразу, которая запоминается с первого раза. Язык простой, разговорный, без книжных слов.»</p>
+<p>Дальше текст читается вслух под ритм. Строка, на которой сбивается дыхание, переписывается независимо от того, как она выглядит на бумаге.</p>
+<h2 id="sec-5">Шаг 5. Четыре правки, после которых виден живой автор</h2>
+<ol><li><b>Замените два прилагательных на предметы.</b> «Добрая улыбка» слабее, чем «улыбка через щербинку».</li><li><b>Сломайте одну рифму нарочно.</b> Идеальная рифма во всех строфах выдаёт машину.</li><li><b>Уберите итоговую мораль.</b> Последнее четверостишие часто объясняет то, что уже сказано образами.</li><li><b>Прочитайте вслух целиком.</b> Спотыкание на строке важнее любой теории.</li></ol>
+<h2 id="sec-6">Чек-лист перед тем, как отправлять</h2>
+<ol><li>В тексте есть хотя бы три детали, которые знаете только вы и адресат.</li><li>Прочитано вслух от начала до конца без запинки.</li><li>Нет слов из списка запретов: судьба, года летят, тепло души.</li><li>Длина подходит формату: для тоста три четверостишия, для открытки два.</li><li>Имя и факты проверены. Машина спокойно перепутает профессию и возраст.</li></ol>
+<h2 id="sec-7">Частые ошибки</h2>
+<h3>Просьба «напиши красивое стихотворение»</h3>
+<p>Красота это не задача. Задача это повод, адресат, детали и форма.</p>
+<h3>Первый вариант в дело</h3>
+<p>Первый ответ модели почти всегда самый средний. Три варианта и сборка лучшего из них занимают те же пять минут.</p>
+<h3>Длинный текст на праздник</h3>
+<p>Стихотворение длиннее четырёх четверостиший вслух не слушают. Режьте до трёх.</p>
+<h3>Проверка фактов пропущена</h3>
+<p>Модель уверенно напишет про тридцать лет стажа там, где их двадцать. Факты читаются глазами перед отправкой.</p>
+<h3>Одинаковые стихи всем подряд</h3>
+<p>Один запрос без деталей даст всем одинаковый текст со сменой имени. Пять минут на детали решают это полностью.</p>
+<h2 id="sec-8">Частые вопросы</h2>
+<h3>Может ли нейросеть написать стихи в стиле конкретного поэта</h3>
+<p>Стилизация получается узнаваемой по ритму и лексике. Публиковать её как текст самого поэта нельзя, а использовать как приём для поздравления вполне уместно.</p>
+<h3>Кому принадлежат права на машинный стих</h3>
+<p>Вопрос решается по законам вашей страны и до конца не закрыт нигде. Для поздравления и подписи под постом это неважно, для коммерческого использования сверьтесь с юристом.</p>
+<h3>Почему рифмы получаются простыми</h3>
+<p>Модель тянется к частым парам слов. Лечится запретом на банальные рифмы прямо в запросе и просьбой использовать неточную рифму.</p>
+<h3>Как сделать стих смешным</h3>
+<p>Попросите приём: преувеличение, неожиданный поворот в последней строке, бытовая деталь вместо высокого слова. Слово «смешное» без приёма даёт натужный юмор.</p>
+<h3>Подойдёт ли такой текст для короткого ролика</h3>
+<p>Да, и это одно из лучших применений. Четыре строки под видеоряд держат внимание, потому что зритель дослушивает рифму до конца.</p>
+<p>Если стихи нужны под музыку, дальше идёт отдельная работа, я разобрал её в материале про <a href="/guides/neyroset-dlya-pesni/">нейросеть для песни</a>.</p>
+<h2 id="sec-9">Что делать дальше</h2>
+<p>Возьмите ближайший повод и соберите по шагу 1 пять строк сырья про конкретного человека. Дальше запрос из шага 2 отдаёт готовый текст за минуту, и вам остаётся правка из шага 5.</p>
+<p>Если стих идёт в подпись под ролик или в блог, то дальше работает уже механика площадки: хук в первой строке, одна мысль и один призыв. Мою систему работы с короткими роликами и воронкой под кодовое слово я собрал в отдельный разбор: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-koda/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для кода: как человек без образования программиста собирает рабочие инструменты</span><span class="rc-desc">Пишем код нейросетью с нуля: выбор инструмента, техзадание, которое модель понимает…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-perevoda/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для перевода: как перевести текст и видео так, чтобы звучало по-человечески</span><span class="rc-desc">Перевод нейросетью для текста, роликов и субтитров: порядок работы, готовые запросы с…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-dogovora/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для договора: как составить и проверить документ</span><span class="rc-desc">Договор с помощью нейросети: структура и обязательные разделы, промпты для составления…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-komiksa/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для комикса: от идеи до готовых страниц</span><span class="rc-desc">Комикс через нейросеть: сценарий и раскадровка, единый стиль, один и тот же герой на…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=f6cc685a44"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "neyroset-dlya-stihov";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

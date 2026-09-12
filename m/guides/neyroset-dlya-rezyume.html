@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для резюме: как собрать сильный отклик за вечер — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Резюме с помощью нейросети: структура по блокам, формулировки достижений через цифры, подгонка под вакансию, сопроводительное письмо, проверка на роботов-рекрутеров и типовые ошибки.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для резюме: как собрать сильный отклик за вечер">
+<meta property="og:description" content="Резюме с помощью нейросети: структура по блокам, формулировки достижений через цифры, подгонка под вакансию, сопроводительное письмо, проверка на роботов-рекрутеров и типовые ошибки.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для резюме: как собрать сильный отклик за вечер">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-12T10:20:00Z">
+<meta property="article:modified_time" content="2026-09-12T10:20:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для резюме: как собрать сильный отклик за вечер">
+<meta name="twitter:description" content="Резюме с помощью нейросети: структура по блокам, формулировки достижений через цифры, подгонка под вакансию, сопроводительное письмо, проверка на роботов-рекрутеров и типовые ошибки.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-rezyume.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/#article",
+      "headline": "Нейросеть для резюме: как собрать сильный отклик за вечер",
+      "description": "Резюме с помощью нейросети: структура по блокам, формулировки достижений через цифры, подгонка под вакансию, сопроводительное письмо, проверка на роботов-рекрутеров и типовые ошибки.",
+      "datePublished": "2026-09-12T10:20:00Z",
+      "dateModified": "2026-09-12T10:20:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для резюме: как собрать сильный отклик за вечер Владимир Ижмуков · автор системы роста Instagram через короткие ролики Рекрутер смотрит резюме шесть-семь секунд. За это время он ищет три вещи: подходит ли ваш опыт под задачу, есть ли измеримый результат, понятно ли написано. Нейросеть закрывает третий пункт полностью и сильно помогает со вторым. Ниже порядок, по которому резюме собирается за вечер, и промпты, которые можно скопировать как есть. Проверено 12 сентября 2026 года. Что сделать до первого промпта Модель не знает вашу биографию, поэтому пустой запрос «напиши резюме маркетолога» вернёт шаблон ни о ком. Сначала соберите сырьё, на это уходит минут двадцать. 1. Места работы: компания, должность, месяцы, три-четыре задачи по каждому. 2. Цифры: сколько, за сколько, насколько выросло или упало. Даже приблизительные. 3. Инструменты и программы, которыми пользовались руками. 4. Обучение и сертификаты с датами. 5. Текст вакансии, на которую целитесь. Эти пять блоков и есть то, что вы отдаёте модели. Дальше начинается работа. Шаг 1. Черновик по блокам «Ты рекрутер с десятилетним опытом найма в \u003cотрасль . Ниже мои сырые данные о работе. Собери резюме из блоков: шапка (должность и одна строка позиционирования), ключевые навыки списком из 8 пунктов, опыт работы по местам от последнего к первому, образование, дополнительная информация. Каждый пункт опыта пиши формулой: что делал, каким инструментом, какой результат. Пустых слов вроде „ответственный и целеустремлённый“ не пиши вовсе. Данные: \u003cвставить пять блоков » Модель вернёт скелет. Он ещё не готов к отправке, это заготовка. Шаг 2. Достижения через цифры Здесь резюме выигрывает или проигрывает. Сравните два способа сказать одно и то же: | Обычная формулировка | Формулировка с результатом | |---|---| | Занимался продвижением в соцсетях | Вырастил аккаунт с 1 000 до 12 000 подписчиков за 5 месяцев без рекламного бюджета | | Работал с клиентской базой | Вернул 140 спящих клиентов рассылкой, выручка месяца выросла на 18% | | Участвовал в разработке | Собрал модуль отчётов, время сборки отчёта упало с 40 минут до 3 | | Вёл документооборот | Перевёл 600 договоров в электронный формат, согласование сократилось вдвое | Промпт, который превращает первую колонку во вторую: «Вот мои обязанности с прошлой работы. По каждой задай мне один уточняющий вопрос, который поможет найти измеримый результат. Вопросы задавай по одному, жди мой ответ. Когда соберёшь цифры, перепиши каждую обязанность формулой „действие, инструмент, результат в числах“.» Режим вопросов работает лучше, чем просьба «сделай красиво»: модель вытаскивает из вас факты, которые вы сами считали неважными. Шаг 3. Подгонка под вакансию Одно резюме на все отклики это потеря половины откликов. Правка занимает пять минут на вакансию. «Вот текст вакансии и вот моё резюме. 1. Выпиши 10 требований вакансии по важности. 2. Отметь, какие из них моё резюме закрывает явно, какие неявно, какие не закрывает вовсе. 3. Перепиши шапку и блок навыков так, чтобы неявно закрытые стали явными. Опыта, которого у меня нет, не придумывай ни в одной строке.» Последняя строка обязательна. Модель охотно дописывает навыки, которых у вас нет, и на собеседовании это вскрывается за минуту. Шаг 4. Как читает робот Крупные компании прогоняют отклики через программы отбора, которые ищут в тексте слова из вакансии. Отсюда несколько простых правил. - Названия должностей пишите общепринятые, без внутренних титулов вроде «евангелист роста». - Ключевые слова вакансии повторяйте в тексте своими предложениями. - Таблицы, колонки, текст внутри картинок и хитрые шрифты роботы читают плохо. Простая разметка надёжнее. - Файл отправляйте в PDF, если в вакансии не сказано иначе, и назовите его своим именем и должностью. - Аббревиатуры расшифровывайте один раз. Отдельный запрос под эту задачу: «Проверь моё резюме как программа автоматического отбора. Выпиши, какие ключевые требования вакансии в тексте НЕ встречаются вовсе. Предложи, куда их вписать естественно, без списка слов через запятую.» Шаг 5. Сопроводительное письмо Письмо на три абзаца читают чаще, чем на страницу. «Напиши сопроводительное письмо на 900 знаков. Первый абзац: почему именно эта компания и эта задача, опирайся на текст вакансии. Второй абзац: один мой самый близкий к задаче результат с цифрой. Третий абзац: короткое предложение следующего шага. Без „здравствуйте, меня зовут“ и без перечисления всего резюме.» Чего делать не стоит Отправлять машинный текст без правки Гладкий безликий текст рекрутер отличает, и он читается как отписка. Пройдитесь по каждой строке и верните свои слова там, где формулировка звучит чужой. Писать навыки, которых нет Проверяется на первом же собеседовании техническим вопросом. Делать резюме на четыре страницы Одна страница для опыта до пяти лет, две для более длинного пути. Оставлять общие слова «Стрессоустойчивый, коммуникабельный, ответственный» занимают место и не говорят ни о чём. Использовать одно резюме на все отклики Пять минут подгонки под…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для резюме: как собрать сильный отклик за вечер",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Нейросеть для резюме: как собрать сильный отклик за вечер",
+      "description": "Резюме с помощью нейросети: структура по блокам, формулировки достижений через цифры, подгонка под вакансию, сопроводительное письмо, проверка на роботов-рекрутеров и типовые ошибки.",
+      "inLanguage": "ru",
+      "supply": [],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Шаг 1. Черновик по блокам",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Шаг 2. Достижения через цифры",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Шаг 3. Подгонка под вакансию",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Шаг 4. Как читает робот",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Шаг 5. Сопроводительное письмо",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-rezyume/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Заметит ли рекрутер, что резюме писала нейросеть",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Заметит, если текст остался безликим. Ваши цифры, названия проектов и живые формулировки делают его вашим."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какая модель лучше подходит",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для резюме хватает любой сильной модели. Важнее качество исходных данных, которые вы в неё загрузили."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужно ли фото",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для России обычно да, спокойный портрет на нейтральном фоне. Для откликов в западные компании чаще нет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что писать, если опыта нет вовсе",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Учебные проекты, стажировки, волонтёрство, собственные работы. Формула та же: задача, инструмент, результат."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как объяснить перерыв в работе",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Одной честной строкой и без оправданий: учёба, семейные обстоятельства, собственный проект. Дыра без объяснения вызывает больше вопросов, чем объяснённая. Фото для резюме и делового профиля собирается отдельно, это разобрано в материале про нейросеть для аватарки."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=6193f96196" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-bc">Статьи</div><h1 class="m-h1">Нейросеть для резюме: как собрать сильный отклик за вечер</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Резюме с помощью нейросети: структура по блокам, формулировки достижений через цифры, подгонка под вакансию, сопроводительное письмо, проверка на роботов-рекрутеров и типовые ошибки.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Рекрутер смотрит резюме шесть-семь секунд. За это время он ищет три вещи: подходит ли ваш опыт под задачу, есть ли измеримый результат, понятно ли написано. Нейросеть закрывает третий пункт полностью и сильно помогает со вторым.</p>
+<p>Ниже порядок, по которому резюме собирается за вечер, и промпты, которые можно скопировать как есть.</p>
+<p>Проверено 12 сентября 2026 года.</p>
+<h2 id="sec-0">Что сделать до первого промпта</h2>
+<p>Модель не знает вашу биографию, поэтому пустой запрос «напиши резюме маркетолога» вернёт шаблон ни о ком. Сначала соберите сырьё, на это уходит минут двадцать.</p>
+<ol><li>Места работы: компания, должность, месяцы, три-четыре задачи по каждому.</li><li>Цифры: сколько, за сколько, насколько выросло или упало. Даже приблизительные.</li><li>Инструменты и программы, которыми пользовались руками.</li><li>Обучение и сертификаты с датами.</li><li>Текст вакансии, на которую целитесь.</li></ol>
+<p>Эти пять блоков и есть то, что вы отдаёте модели. Дальше начинается работа.</p>
+<h2 id="sec-1">Шаг 1. Черновик по блокам</h2>
+<p>«Ты рекрутер с десятилетним опытом найма в &lt;отрасль&gt;. Ниже мои сырые данные о работе. Собери резюме из блоков: шапка (должность и одна строка позиционирования), ключевые навыки списком из 8 пунктов, опыт работы по местам от последнего к первому, образование, дополнительная информация. Каждый пункт опыта пиши формулой: что делал, каким инструментом, какой результат. Пустых слов вроде „ответственный и целеустремлённый“ не пиши вовсе. Данные: &lt;вставить пять блоков&gt;»</p>
+<p>Модель вернёт скелет. Он ещё не готов к отправке, это заготовка.</p>
+<h2 id="sec-2">Шаг 2. Достижения через цифры</h2>
+<p>Здесь резюме выигрывает или проигрывает. Сравните два способа сказать одно и то же:</p>
+<table class="gp-table"><thead><tr><th>Обычная формулировка</th><th>Формулировка с результатом</th></tr></thead><tbody><tr><td>Занимался продвижением в соцсетях</td><td>Вырастил аккаунт с 1 000 до 12 000 подписчиков за 5 месяцев без рекламного бюджета</td></tr><tr><td>Работал с клиентской базой</td><td>Вернул 140 спящих клиентов рассылкой, выручка месяца выросла на 18%</td></tr><tr><td>Участвовал в разработке</td><td>Собрал модуль отчётов, время сборки отчёта упало с 40 минут до 3</td></tr><tr><td>Вёл документооборот</td><td>Перевёл 600 договоров в электронный формат, согласование сократилось вдвое</td></tr></tbody></table>
+<p>Промпт, который превращает первую колонку во вторую:</p>
+<p>«Вот мои обязанности с прошлой работы. По каждой задай мне один уточняющий вопрос, который поможет найти измеримый результат. Вопросы задавай по одному, жди мой ответ. Когда соберёшь цифры, перепиши каждую обязанность формулой „действие, инструмент, результат в числах“.»</p>
+<p>Режим вопросов работает лучше, чем просьба «сделай красиво»: модель вытаскивает из вас факты, которые вы сами считали неважными.</p>
+<h2 id="sec-3">Шаг 3. Подгонка под вакансию</h2>
+<p>Одно резюме на все отклики это потеря половины откликов. Правка занимает пять минут на вакансию.</p>
+<p>«Вот текст вакансии и вот моё резюме. 1. Выпиши 10 требований вакансии по важности. 2. Отметь, какие из них моё резюме закрывает явно, какие неявно, какие не закрывает вовсе. 3. Перепиши шапку и блок навыков так, чтобы неявно закрытые стали явными. Опыта, которого у меня нет, не придумывай ни в одной строке.»</p>
+<p>Последняя строка обязательна. Модель охотно дописывает навыки, которых у вас нет, и на собеседовании это вскрывается за минуту.</p>
+<h2 id="sec-4">Шаг 4. Как читает робот</h2>
+<p>Крупные компании прогоняют отклики через программы отбора, которые ищут в тексте слова из вакансии. Отсюда несколько простых правил.</p>
+<ul><li>Названия должностей пишите общепринятые, без внутренних титулов вроде «евангелист роста».</li><li>Ключевые слова вакансии повторяйте в тексте своими предложениями.</li><li>Таблицы, колонки, текст внутри картинок и хитрые шрифты роботы читают плохо. Простая разметка надёжнее.</li><li>Файл отправляйте в PDF, если в вакансии не сказано иначе, и назовите его своим именем и должностью.</li><li>Аббревиатуры расшифровывайте один раз.</li></ul>
+<p>Отдельный запрос под эту задачу:</p>
+<p>«Проверь моё резюме как программа автоматического отбора. Выпиши, какие ключевые требования вакансии в тексте НЕ встречаются вовсе. Предложи, куда их вписать естественно, без списка слов через запятую.»</p>
+<h2 id="sec-5">Шаг 5. Сопроводительное письмо</h2>
+<p>Письмо на три абзаца читают чаще, чем на страницу.</p>
+<p>«Напиши сопроводительное письмо на 900 знаков. Первый абзац: почему именно эта компания и эта задача, опирайся на текст вакансии. Второй абзац: один мой самый близкий к задаче результат с цифрой. Третий абзац: короткое предложение следующего шага. Без „здравствуйте, меня зовут“ и без перечисления всего резюме.»</p>
+<h2 id="sec-6">Чего делать не стоит</h2>
+<h3>Отправлять машинный текст без правки</h3>
+<p>Гладкий безликий текст рекрутер отличает, и он читается как отписка. Пройдитесь по каждой строке и верните свои слова там, где формулировка звучит чужой.</p>
+<h3>Писать навыки, которых нет</h3>
+<p>Проверяется на первом же собеседовании техническим вопросом.</p>
+<h3>Делать резюме на четыре страницы</h3>
+<p>Одна страница для опыта до пяти лет, две для более длинного пути.</p>
+<h3>Оставлять общие слова</h3>
+<p>«Стрессоустойчивый, коммуникабельный, ответственный» занимают место и не говорят ни о чём.</p>
+<h3>Использовать одно резюме на все отклики</h3>
+<p>Пять минут подгонки под вакансию поднимают отклик ощутимо сильнее, чем красивое оформление.</p>
+<h2 id="sec-7">Частые вопросы</h2>
+<h3>Заметит ли рекрутер, что резюме писала нейросеть</h3>
+<p>Заметит, если текст остался безликим. Ваши цифры, названия проектов и живые формулировки делают его вашим.</p>
+<h3>Какая модель лучше подходит</h3>
+<p>Для резюме хватает любой сильной модели. Важнее качество исходных данных, которые вы в неё загрузили.</p>
+<h3>Нужно ли фото</h3>
+<p>Для России обычно да, спокойный портрет на нейтральном фоне. Для откликов в западные компании чаще нет.</p>
+<h3>Что писать, если опыта нет вовсе</h3>
+<p>Учебные проекты, стажировки, волонтёрство, собственные работы. Формула та же: задача, инструмент, результат.</p>
+<h3>Как объяснить перерыв в работе</h3>
+<p>Одной честной строкой и без оправданий: учёба, семейные обстоятельства, собственный проект. Дыра без объяснения вызывает больше вопросов, чем объяснённая.</p>
+<p>Фото для резюме и делового профиля собирается отдельно, это разобрано в материале про <a href="/guides/neyroset-dlya-avatarki/">нейросеть для аватарки</a>.</p>
+<h2 id="sec-8">Что делать дальше</h2>
+<p>Соберите пять блоков исходных данных, прогоните черновик по шагам выше и сделайте отдельную версию под каждую из трёх ближайших вакансий. Это вечер работы и заметно другой отклик.</p>
+<p>Тот же принцип работает при продаже собственной услуги: сначала факты и результат в цифрах, потом упаковка. Как я собираю на этом поток заявок через короткие ролики, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-dogovora/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для договора: как составить и проверить документ</span><span class="rc-desc">Договор с помощью нейросети: структура и обязательные разделы, промпты для составления…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-komiksa/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для комикса: от идеи до готовых страниц</span><span class="rc-desc">Комикс через нейросеть: сценарий и раскадровка, единый стиль, один и тот же герой на…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-otkrytki/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для открытки: как сделать поздравление, которое сохранят</span><span class="rc-desc">Открытка через нейросеть за десять минут: промпты под день рождения, свадьбу и…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-diploma/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для диплома: план, главы и защита без провала</span><span class="rc-desc">Дипломная работа с нейросетью: выбор темы и плана, работа с источниками, черновики…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=f6cc685a44"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "neyroset-dlya-rezyume";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

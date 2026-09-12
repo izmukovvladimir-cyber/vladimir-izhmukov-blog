@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Карусель в Телеграме с телефона и с компьютера: как собрать альбом до десяти фото, добавить подпись, поставить порядок картинок, отложить публикацию и что делать, когда файлы уходят по одному.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением">
+<meta property="og:description" content="Карусель в Телеграме с телефона и с компьютера: как собрать альбом до десяти фото, добавить подпись, поставить порядок картинок, отложить публикацию и что делать, когда файлы уходят по одному.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-12T09:40:00Z">
+<meta property="article:modified_time" content="2026-09-12T09:40:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением">
+<meta name="twitter:description" content="Карусель в Телеграме с телефона и с компьютера: как собрать альбом до десяти фото, добавить подпись, поставить порядок картинок, отложить публикацию и что делать, когда файлы уходят по одному.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/karusel-v-telegram.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/#article",
+      "headline": "Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением",
+      "description": "Карусель в Телеграме с телефона и с компьютера: как собрать альбом до десяти фото, добавить подпись, поставить порядок картинок, отложить публикацию и что делать, когда файлы уходят по одному.",
+      "datePublished": "2026-09-12T09:40:00Z",
+      "dateModified": "2026-09-12T09:40:00Z",
+      "inLanguage": "ru",
+      "keywords": "kontent, instagram",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/",
+      "articleSection": "Контент и воронки",
+      "articleBody": "Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением Владимир Ижмуков · автор системы роста Instagram через короткие ролики Карусель в Телеграме называется альбомом. Это пост, где несколько картинок лежат одним сообщением и листаются внутри него, а подпись стоит общая. Собирается он за минуту, и при этом половина каналов до сих пор шлёт картинки по одной, из-за чего лента превращается в простыню. Ниже порядок для телефона и для компьютера, вместе с местами, где чаще всего ломается. Проверено 12 сентября 2026 года на своих каналах. Что такое альбом и почему он выигрывает у пачки отдельных фото | Форма поста | Как выглядит в ленте | Что с подписью | |---|---|---| | Альбом (карусель) | Одно сообщение, картинки листаются | Одна общая подпись под пачкой | | Отдельные фото подряд | Столько сообщений, сколько картинок | Подпись у каждой или ни у одной | Разница видна на числах уведомлений: альбом это одно уведомление подписчику, десять отдельных картинок это десять. Второй вариант отписывает людей быстрее любого плохого текста. В одном альбоме помещается до десяти файлов. Фото и видео можно смешивать в одном сообщении. Шаг 1. Сборка с телефона 1. Откройте канал и нажмите скрепку. 2. Выберите первую картинку, затем остальные по порядку. Номер на каждой показывает место в карусели. 3. Проверьте, что вверху выбран режим группировки. В Телеграме он называется «Сгруппировать» и включён по умолчанию. 4. Напишите подпись в поле снизу. Она одна на весь альбом. 5. Отправьте. Порядок слайдов задаётся порядком нажатий. Первое нажатие становится обложкой, и переставить картинки после отправки нельзя, поэтому обложку выбираем осознанно. Шаг 2. Сборка с компьютера 1. Перетащите файлы в окно канала пачкой либо нажмите скрепку и выделите их. 2. В открывшемся окне проверьте переключатель «Сгруппировать в один альбом». 3. Добавьте подпись в поле под превью. 4. Нажмите отправить. На компьютере порядок правится мышью прямо в окне отправки, и это единственное место, где его вообще можно поменять до публикации. Шаг 3. Подпись, которая работает - Лимит подписи под альбомом 1024 знака. Длинный текст придётся резать или выносить отдельным сообщением. - Первая строка видна в списке чатов, поэтому она делает всю работу по клику. - Ссылку кладите в конец, отдельной строкой. Внутри абзаца её пропускают. - Один призыв на пост. Два призыва делят внимание пополам и оба остаются невыполненными. Шаг 4. Отложенная публикация Телеграм умеет ставить альбом в очередь, и это лучший режим для канала с расписанием. 1. Соберите альбом и напишите подпись. 2. Нажмите на кнопку отправки и удерживайте её. 3. Выберите «Отправить позже» и укажите дату со временем. Отложенные посты лежат в отдельной папке канала, их можно править и удалять до момента выхода. Для канала, который ведут несколько человек, это единственный способ не выкладывать пачкой всё подряд в один вечер. Шаг 5. Слайды, из которых собирается хорошая карусель Форма поста уже верная, дальше решает содержание. Схема, которая у меня работает на всех площадках сразу: 1. Обложка. Крупный заголовок во всю ширину, одно ключевое слово выделено цветом. 2. Слайды с сутью. Один слайд, одна мысль. Текст размером, который читается с телефона без увеличения. 3. Предпоследний слайд. Что человек получит и как это забрать. 4. Последний слайд. Кодовое слово крупно и призыв написать его в сообщения. Ту же карусель после сборки я выкладываю в Instagram, и одна работа закрывает две площадки. Как собираются слайды под короткие ролики и карусели, разбираю в статье идеи для рилсов. Частые поломки и что с ними делать Файлы ушли по одному сообщению Выключен режим группировки либо файлы отправлялись не одной пачкой. На компьютере проверьте галочку «Сгруппировать», на телефоне выделяйте все картинки до нажатия отправки. Картинки встали в другом порядке Порядок берётся из последовательности выбора. На телефоне снимите выделение целиком и выберите заново, начиная с обложки. Подпись обрезалась Сработал лимит 1024 знака. Короткая подпись под альбомом плюс развёрнутый текст следующим сообщением решают это без потери смысла. Качество картинок просело Телеграм сжимает изображения при обычной отправке. Отправка файлом сохраняет качество, при этом альбом из файлов листается так же. Видео и фото не собрались вместе Такой альбом собирается только при отправке одной пачкой. Добавление видео к уже отправленному альбому невозможно. Чек-лист перед публикацией 1. Картинок в альбоме до десяти, обложка стоит первой. 2. Подпись укладывается в 1024 знака, первая строка цепляет. 3. Ссылка стоит отдельной строкой в конце. 4. Призыв один. 5. Пост поставлен на своё время. Общая куча вечером работает хуже. Частые вопросы Сколько фото помещается в одну карусель До десяти файлов в одном сообщении. Нужно больше, значит собираются два альбома подряд, и лучше развести их по времени. Можно ли добавить фото в уже опубликованный альбом Нет. Правится только подпись. Состав альбома после отправки фиксирован, поэтому проверяйте порядок…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Контент и воронки",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением",
+      "description": "Карусель в Телеграме с телефона и с компьютера: как собрать альбом до десяти фото, добавить подпись, поставить порядок картинок, отложить публикацию и что делать, когда файлы уходят по одному.",
+      "inLanguage": "ru",
+      "supply": [],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Шаг 1. Сборка с телефона",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Шаг 2. Сборка с компьютера",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Шаг 3. Подпись, которая работает",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Шаг 4. Отложенная публикация",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Шаг 5. Слайды, из которых собирается хорошая карусель",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/karusel-v-telegram/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Сколько фото помещается в одну карусель",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "До десяти файлов в одном сообщении. Нужно больше, значит собираются два альбома подряд, и лучше развести их по времени."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли добавить фото в уже опубликованный альбом",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. Правится только подпись. Состав альбома после отправки фиксирован, поэтому проверяйте порядок до публикации."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как сделать карусель в обычном чате",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Точно так же. Альбом работает в личных переписках, группах и каналах одинаково."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему в карусели пропало видео",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Видео долго загружалось и ушло отдельным сообщением. Дождитесь полной загрузки всех файлов до нажатия отправки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что лучше заходит, карусель или один длинный пост",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Карусель держит внимание дольше: человек листает и тратит на пост больше времени. Длинный текст выигрывает там, где важна одна цельная мысль без картинок."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=6193f96196" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="cur" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-bc">Статьи</div><h1 class="m-h1">Как сделать карусель в Телеграм: пост из нескольких фото одним сообщением</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Карусель в Телеграме с телефона и с компьютера: как собрать альбом до десяти фото, добавить подпись, поставить порядок картинок, отложить публикацию и что делать, когда файлы уходят по одному.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Карусель в Телеграме называется альбомом. Это пост, где несколько картинок лежат одним сообщением и листаются внутри него, а подпись стоит общая. Собирается он за минуту, и при этом половина каналов до сих пор шлёт картинки по одной, из-за чего лента превращается в простыню.</p>
+<p>Ниже порядок для телефона и для компьютера, вместе с местами, где чаще всего ломается.</p>
+<p>Проверено 12 сентября 2026 года на своих каналах.</p>
+<h2 id="sec-0">Что такое альбом и почему он выигрывает у пачки отдельных фото</h2>
+<table class="gp-table"><thead><tr><th>Форма поста</th><th>Как выглядит в ленте</th><th>Что с подписью</th></tr></thead><tbody><tr><td>Альбом (карусель)</td><td>Одно сообщение, картинки листаются</td><td>Одна общая подпись под пачкой</td></tr><tr><td>Отдельные фото подряд</td><td>Столько сообщений, сколько картинок</td><td>Подпись у каждой или ни у одной</td></tr></tbody></table>
+<p>Разница видна на числах уведомлений: альбом это одно уведомление подписчику, десять отдельных картинок это десять. Второй вариант отписывает людей быстрее любого плохого текста.</p>
+<p>В одном альбоме помещается до десяти файлов. Фото и видео можно смешивать в одном сообщении.</p>
+<h2 id="sec-1">Шаг 1. Сборка с телефона</h2>
+<ol><li>Откройте канал и нажмите скрепку.</li><li>Выберите первую картинку, затем остальные по порядку. Номер на каждой показывает место в карусели.</li><li>Проверьте, что вверху выбран режим группировки. В Телеграме он называется «Сгруппировать» и включён по умолчанию.</li><li>Напишите подпись в поле снизу. Она одна на весь альбом.</li><li>Отправьте.</li></ol>
+<p>Порядок слайдов задаётся порядком нажатий. Первое нажатие становится обложкой, и переставить картинки после отправки нельзя, поэтому обложку выбираем осознанно.</p>
+<h2 id="sec-2">Шаг 2. Сборка с компьютера</h2>
+<ol><li>Перетащите файлы в окно канала пачкой либо нажмите скрепку и выделите их.</li><li>В открывшемся окне проверьте переключатель «Сгруппировать в один альбом».</li><li>Добавьте подпись в поле под превью.</li><li>Нажмите отправить.</li></ol>
+<p>На компьютере порядок правится мышью прямо в окне отправки, и это единственное место, где его вообще можно поменять до публикации.</p>
+<h2 id="sec-3">Шаг 3. Подпись, которая работает</h2>
+<ul><li>Лимит подписи под альбомом 1024 знака. Длинный текст придётся резать или выносить отдельным сообщением.</li><li>Первая строка видна в списке чатов, поэтому она делает всю работу по клику.</li><li>Ссылку кладите в конец, отдельной строкой. Внутри абзаца её пропускают.</li><li>Один призыв на пост. Два призыва делят внимание пополам и оба остаются невыполненными.</li></ul>
+<h2 id="sec-4">Шаг 4. Отложенная публикация</h2>
+<p>Телеграм умеет ставить альбом в очередь, и это лучший режим для канала с расписанием.</p>
+<ol><li>Соберите альбом и напишите подпись.</li><li>Нажмите на кнопку отправки и удерживайте её.</li><li>Выберите «Отправить позже» и укажите дату со временем.</li></ol>
+<p>Отложенные посты лежат в отдельной папке канала, их можно править и удалять до момента выхода. Для канала, который ведут несколько человек, это единственный способ не выкладывать пачкой всё подряд в один вечер.</p>
+<h2 id="sec-5">Шаг 5. Слайды, из которых собирается хорошая карусель</h2>
+<p>Форма поста уже верная, дальше решает содержание. Схема, которая у меня работает на всех площадках сразу:</p>
+<ol><li><b>Обложка.</b> Крупный заголовок во всю ширину, одно ключевое слово выделено цветом.</li><li><b>Слайды с сутью.</b> Один слайд, одна мысль. Текст размером, который читается с телефона без увеличения.</li><li><b>Предпоследний слайд.</b> Что человек получит и как это забрать.</li><li><b>Последний слайд.</b> Кодовое слово крупно и призыв написать его в сообщения.</li></ol>
+<p>Ту же карусель после сборки я выкладываю в Instagram, и одна работа закрывает две площадки. Как собираются слайды под короткие ролики и карусели, разбираю в статье <a href="/guides/idei-dlya-rilsov/">идеи для рилсов</a>.</p>
+<h2 id="sec-6">Частые поломки и что с ними делать</h2>
+<h3>Файлы ушли по одному сообщению</h3>
+<p>Выключен режим группировки либо файлы отправлялись не одной пачкой. На компьютере проверьте галочку «Сгруппировать», на телефоне выделяйте все картинки до нажатия отправки.</p>
+<h3>Картинки встали в другом порядке</h3>
+<p>Порядок берётся из последовательности выбора. На телефоне снимите выделение целиком и выберите заново, начиная с обложки.</p>
+<h3>Подпись обрезалась</h3>
+<p>Сработал лимит 1024 знака. Короткая подпись под альбомом плюс развёрнутый текст следующим сообщением решают это без потери смысла.</p>
+<h3>Качество картинок просело</h3>
+<p>Телеграм сжимает изображения при обычной отправке. Отправка файлом сохраняет качество, при этом альбом из файлов листается так же.</p>
+<h3>Видео и фото не собрались вместе</h3>
+<p>Такой альбом собирается только при отправке одной пачкой. Добавление видео к уже отправленному альбому невозможно.</p>
+<h2 id="sec-7">Чек-лист перед публикацией</h2>
+<ol><li>Картинок в альбоме до десяти, обложка стоит первой.</li><li>Подпись укладывается в 1024 знака, первая строка цепляет.</li><li>Ссылка стоит отдельной строкой в конце.</li><li>Призыв один.</li><li>Пост поставлен на своё время. Общая куча вечером работает хуже.</li></ol>
+<h2 id="sec-8">Частые вопросы</h2>
+<h3>Сколько фото помещается в одну карусель</h3>
+<p>До десяти файлов в одном сообщении. Нужно больше, значит собираются два альбома подряд, и лучше развести их по времени.</p>
+<h3>Можно ли добавить фото в уже опубликованный альбом</h3>
+<p>Нет. Правится только подпись. Состав альбома после отправки фиксирован, поэтому проверяйте порядок до публикации.</p>
+<h3>Как сделать карусель в обычном чате</h3>
+<p>Точно так же. Альбом работает в личных переписках, группах и каналах одинаково.</p>
+<h3>Почему в карусели пропало видео</h3>
+<p>Видео долго загружалось и ушло отдельным сообщением. Дождитесь полной загрузки всех файлов до нажатия отправки.</p>
+<h3>Что лучше заходит, карусель или один длинный пост</h3>
+<p>Карусель держит внимание дольше: человек листает и тратит на пост больше времени. Длинный текст выигрывает там, где важна одна цельная мысль без картинок.</p>
+<h2 id="sec-9">С чего начать сегодня</h2>
+<p>Соберите один альбом по схеме из шага 5 и поставьте его на завтрашнее утро через отложенную публикацию. Это займёт пятнадцать минут и даст пост, который читают дольше обычного.</p>
+<p>Дальше эта же карусель работает на вход в воронку: последний слайд называет кодовое слово, человек пишет его вам, и бот отдаёт материал сам. Как устроена такая связка целиком, показываю в своём разборе: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/muzyka-dlya-rils/"><span class="rc-type">Статья</span><span class="rc-title">Музыка для рилс: где брать треки и как поставить их правильно</span><span class="rc-desc">Пять источников музыки для коротких роликов с реальными условиями лицензий, громкость в…</span></a><a class="gp-related-card" href="/guides/lid-magnit/"><span class="rc-type">Статья</span><span class="rc-title">Лид-магнит в 2026: что дать за подписку, чтобы человек остался</span><span class="rc-desc">Что дать за подписку: семь форматов лид-магнита, которые собираются за вечер и приводят…</span></a><a class="gp-related-card" href="/guides/idei-dlya-rilsov/"><span class="rc-cover"><img src="/covers/idei-dlya-rilsov.webp?v=a218661af8" alt="Идеи для рилсов в 2026: где брать темы, когда голова пустая" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Идеи для рилсов в 2026: где брать темы, когда голова пустая</span><span class="rc-desc">Семь источников тем для рилсов на каждый день: чужие виралки, комментарии, свой архив…</span></a><a class="gp-related-card" href="/guides/chat-bot-telegram-kak-sozdat/"><span class="rc-cover"><img src="/covers/chat-bot-telegram-kak-sozdat.webp?v=1e2f3f8e44" alt="Чат-бот в Telegram в 2026: как создать своего и что он делает вместо вас" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Чат-бот в Telegram в 2026: как создать своего и что он делает вместо вас</span><span class="rc-desc">Как создать бота в Telegram за пятнадцать минут без программиста: выдача материала по…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=f6cc685a44"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "karusel-v-telegram";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

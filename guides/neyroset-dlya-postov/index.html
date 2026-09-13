@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<script data-gfmr>(function(){try{if(location.search.indexOf('nomobile')>-1)return;var p=location.pathname;if(/^\/m\//.test(p))return;var sw=Math.min(screen.width,screen.height);if(!(sw<=640))return;p=p.replace(/(^|\/)index\.html$|\.html$/,'$1');var t=null,g=p.match(/^\/guides\/([^\/.]+)\/?$/);if(g){t='/m/guides/'+g[1]+'.html';}else if(p==='/'||p===''){t='/m/';}else{var m=p.match(/^\/([^\/.]+)\/?$/);if(m&&['instagram','neyroseti','kontent','about','library'].indexOf(m[1])>-1){t='/m/'+m[1]+'.html';}}if(t){location.replace(t+location.search+location.hash);}}catch(e){}})();</script>
+<link data-gfmr-alt rel="alternate" media="only screen and (max-width: 640px)" href="https://blog.vladimir-izhmukov.ru/m/guides/neyroset-dlya-postov.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK — Владимир Ижмуков</title>
+<meta name="description" content="Посты нейросетью без узнаваемого машинного почерка: как научить модель своему голосу на своих же текстах, форма поста под каждую площадку, запросы на серию, проверка перед публикацией.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:#FAF7F2; }
+  .standalone-c { width:100%; }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK">
+<meta property="og:description" content="Посты нейросетью без узнаваемого машинного почерка: как научить модель своему голосу на своих же текстах, форма поста под каждую площадку, запросы на серию, проверка перед публикацией.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-13T05:40:00Z">
+<meta property="article:modified_time" content="2026-09-13T05:40:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK">
+<meta name="twitter:description" content="Посты нейросетью без узнаваемого машинного почерка: как научить модель своему голосу на своих же текстах, форма поста под каждую площадку, запросы на серию, проверка перед публикацией.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/images/og-vladimir.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-postov.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/#article",
+      "headline": "Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK",
+      "description": "Посты нейросетью без узнаваемого машинного почерка: как научить модель своему голосу на своих же текстах, форма поста под каждую площадку, запросы на серию, проверка перед публикацией.",
+      "datePublished": "2026-09-13T05:40:00Z",
+      "dateModified": "2026-09-13T05:40:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, kontent",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK Владимир Ижмуков · автор системы роста Instagram через короткие ролики Пост, написанный нейросетью по запросу «напиши пост про X», читатель узнаёт со второй строки. Гладкие фразы, длинные тире, симметричные списки и финал с моралью выдают машину быстрее любой проверки. Подписчик такой текст пролистывает, потому что в нём нет человека. При этом я каждый день публикую тексты, где черновик готовит модель, и звучат они моей манерой. Разница в порядке работы: модель получает мой голос, одну мысль и форму площадки, а на выходе текст проходит чистку по короткому списку. Ниже этот порядок целиком, с запросами, которые можно копировать. Проверено 13 сентября 2026 года на постах собственного Telegram-канала. Шаг 1. Паспорт голоса из своих текстов Модель пишет усреднённым языком интернета, пока не видит, как пишете вы. Описание словами «пиши живо и дружелюбно» не помогает, каждый понимает эти слова по-своему. Помогают образцы. Как собрать паспорт: 1. Возьмите десять своих постов, которые лучше всего зашли по реакциям и комментариям. 2. Добавьте три-пять своих голосовых сообщений, переведённых в текст. Устная речь показывает манеру честнее, чем отредактированные посты. 3. Отдайте всё модели с запросом ниже и сохраните ответ отдельным файлом. Запрос: «Вот мои тексты. Составь паспорт моего голоса: средняя длина предложения, как я начинаю и заканчиваю посты, какие слова и обороты повторяются, как я обращаюсь к читателю, где использую списки, каких слов я не использую никогда. Приведи по две дословные цитаты на каждый пункт. Ничего не приукрашивай и не добавляй того, чего в текстах нет». Этот файл прикладывается к каждому следующему запросу. Раз в месяц его стоит обновлять свежими постами, голос автора тоже меняется. Шаг 2. Одна мысль на пост Второй источник пустых постов это тема вместо мысли. «Пост про продвижение» даёт общие слова. «Почему я перестал снимать ролики сам и что от этого поменялось в охватах» даёт текст, который дочитывают. | Тема (слабо) | Мысль (работает) | |---|---| | Нейросети для бизнеса | Какую рутину я отдал агентам за последний месяц и сколько часов освободилось | | Как вести блог | Почему пост без призыва в конце набрал больше комментариев | | Контент-план | Что я делаю, когда нет идей для поста уже третий день | | Продажи в соцсетях | Какой вопрос в личке чаще всего приводит к покупке | Мысль всегда содержит конкретику из вашей практики: цифру, случай, ошибку, решение. Модель эту конкретику не знает, поэтому её даёте вы, двумя-тремя строками в запросе. Шаг 3. Форма под площадку Одна и та же мысль на разных площадках упаковывается по-разному. Длина, первая строка и призыв зависят от того, как человек читает ленту. | Площадка | Длина | Первая строка | Что работает | |---|---|---|---| | Telegram-канал | 800-1800 знаков | Заголовок с конкретикой или новость | Личная история, разбор, список шагов | | Подпись в Instagram | Короткая под разговорный ролик, длинная под ролик без лица | Хук, который продолжает ролик | Призыв написать слово в директ | | VK | 600-1500 знаков | Вопрос или узнаваемая ситуация | Обсуждение, опрос, полезная подборка | | Threads | До 500 знаков | Сразу суть без разгона | Одна мысль, ссылка отдельным ответом | У Threads ограничение техническое: текст длиннее 500 знаков площадка сама режет на цепочку, и разрыв встаёт в случайном месте. Поэтому длину там считают до публикации. Шаг 4. Запрос на черновик Запрос собирается из трёх частей: паспорт голоса, мысль с вашей конкретикой и форма площадки. Запрос: «Паспорт моего голоса во вложении. Напиши пост для [площадка], длина [диапазон]. Мысль: [одно предложение]. Моя конкретика: [цифры, случай, что было до и после]. Пиши от первого лица, моими оборотами из паспорта. Перечисления оформляй нумерованным списком. Без длинных тире, без противопоставлений через отрицание, без морали в финале. В конце один призыв: [что должен сделать читатель]». Отдельные запреты в запросе нужны, потому что модель тянется к своим привычным оборотам даже при хорошем образце. Когда запрет назван прямо, их становится заметно меньше. Шаг 5. Серия постов на неделю Писать по одному посту в день удобно, но дорого по времени. Серия на неделю одним запросом экономит часы и даёт связный сюжет, где посты продолжают друг друга. Как построить неделю: 1. Понедельник: история из практики, с которой начинается тема недели. 2. Вторник: разбор, как это устроено, по шагам. 3. Среда: частая ошибка и как её избежать. 4. Четверг: кейс с цифрами, свой или клиента с его разрешения. 5. Пятница: ответы на вопросы из комментариев. 6. Суббота: личное, закулисье работы. 7. Воскресенье: мягкое приглашение к продукту или консультации. Запрос: «По паспорту голоса напиши серию из семи постов на тему [тема] по плану ниже. Каждый пост отдельным блоком, у каждого своя мысль, посты ссылаются друг на друга, как продолжение разговора. Мои материалы для серии: [факты, цифры, истории]». Про планирование тем на неделю…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK",
+      "description": "Посты нейросетью без узнаваемого машинного почерка: как научить модель своему голосу на своих же текстах, форма поста под каждую площадку, запросы на серию, проверка перед публикацией.",
+      "inLanguage": "ru",
+      "supply": [],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Шаг 1. Паспорт голоса из своих текстов",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Шаг 2. Одна мысль на пост",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Шаг 3. Форма под площадку",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Шаг 4. Запрос на черновик",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Шаг 5. Серия постов на неделю",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Шаг 6. Чистка перед публикацией",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-postov/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Заметят ли подписчики, что пост писала нейросеть",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Замечают машинные обороты, а сам факт использования модели в хорошем тексте не виден. После паспорта голоса и чистки по списку текст читается как ваш, потому что в нём ваши факты и ваша манера."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какая модель лучше пишет посты на русском",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Сильные модели в этой задаче близки друг к другу, и результат больше зависит от образцов и запроса. Выбирайте ту, что доступна вам без сложностей, и держите паспорт голоса одинаковым при смене модели."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько времени уходит на пост с нейросетью",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "С готовым паспортом голоса пост для канала занимает десять-пятнадцать минут вместе с чисткой. Серия на неделю занимает около часа."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли писать посты за клиента",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Можно, если паспорт голоса собран из его текстов и голосовых. Каждый пост перед публикацией согласуется с ним, особенно цифры и истории."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что делать, если идей для постов нет",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Откройте комментарии и личные сообщения за последний месяц и попросите модель выписать повторяющиеся вопросы. Каждый частый вопрос это готовая мысль для поста."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="standalone-c"><div class="gp dir-c theme-light"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><nav class="gp-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" aria-label="Сменить тему" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><a class="gp-headbtn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте <span class="ar">→</span></a></div></div></div><div class="ban-dark"><span class="gp-eyebrow lime"><span class="dot"></span>ВЛАДИМИР&nbsp;ИЖМУКОВ</span><span>Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.</span><span class="spacer"></span></div><div class="gp-layout"><div class="gp-sidebar"><div class="gp-side-group">Claude Code · 41</div><a href="/guides/generaciya-video-po-tekstu/" class="gp-side-item">Генерация видео по тексту в 2026: как это работает и чем сделать</a><a href="/guides/ii-agenty-dlya-biznesa/" class="gp-side-item">ИИ-агенты для бизнеса в 2026: что это на самом деле и с чего начать</a><a href="/guides/kak-ozhivit-foto-neyrosetyu/" class="gp-side-item">Как оживить фото нейросетью: от старого снимка до короткого ролика</a><a href="/guides/kak-sdelat-video-neyrosetyu/" class="gp-side-item">Как сделать видео нейросетью в 2026: пошагово с телефона</a><a href="/guides/kak-zarabotat-na-neyrosetyah/" class="gp-side-item">Как заработать на нейросетях в 2026: честные способы, цифры и границы</a><a href="/guides/kitayskie-neyroseti-besplatno/" class="gp-side-item">Китайские нейросети бесплатно: какие работают из России и что они реально умеют</a><a href="/guides/neyroset-dlya-animacii/" class="gp-side-item">Нейросеть для анимации: как сделать анимированный ролик без аниматора</a><a href="/guides/neyroset-dlya-avatarki/" class="gp-side-item">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</a><a href="/guides/neyroset-dlya-chertezhey/" class="gp-side-item">Нейросеть для чертежей: где она помогает, а где обманет с размерами</a><a href="/guides/neyroset-dlya-diploma/" class="gp-side-item">Нейросеть для диплома: план, главы и защита без провала</a><a href="/guides/neyroset-dlya-dizayna/" class="gp-side-item">Нейросеть для дизайна: что она делает за вас, а что придётся доделать руками</a><a href="/guides/neyroset-dlya-dogovora/" class="gp-side-item">Нейросеть для договора: как составить и проверить документ</a><a href="/guides/neyroset-dlya-foto/" class="gp-side-item">Нейросеть для фото: обработать своё, улучшить старое, сгенерировать новое</a><a href="/guides/neyroset-dlya-infografiki/" class="gp-side-item">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</a><a href="/guides/neyroset-dlya-interera/" class="gp-side-item">Нейросеть для интерьера: как увидеть свою комнату в новом виде до ремонта</a><a href="/guides/neyroset-dlya-kartochek-tovarov/" class="gp-side-item">Нейросеть для карточек товаров: фото, инфографика и описание для маркетплейса</a><a href="/guides/neyroset-dlya-knigi/" class="gp-side-item">Нейросеть для книги: как эксперту собрать книгу из своего опыта за несколько недель</a><a href="/guides/neyroset-dlya-koda/" class="gp-side-item">Нейросеть для кода: как человек без образования программиста собирает рабочие инструменты</a><a href="/guides/neyroset-dlya-komiksa/" class="gp-side-item">Нейросеть для комикса: от идеи до готовых страниц</a><a href="/guides/neyroset-dlya-kursovoy/" class="gp-side-item">Нейросеть для курсовой: как ускорить работу и не завалиться на проверке</a><a href="/guides/neyroset-dlya-logotipa/" class="gp-side-item">Нейросеть для логотипа: как получить знак, который не стыдно поставить на профиль</a><a href="/guides/neyroset-dlya-montazha-video/" class="gp-side-item">Нейросеть для монтажа видео в 2026: что она делает сама и где нужны руки</a><a href="/guides/neyroset-dlya-muzyki/" class="gp-side-item">Нейросеть для музыки: как сделать трек для ролика, который не заглушат за авторские права</a><a href="/guides/neyroset-dlya-oblozhek/" class="gp-side-item">Нейросеть для обложек: как собрать картинку, на которую нажимают</a><a href="/guides/neyroset-dlya-otkrytki/" class="gp-side-item">Нейросеть для открытки: как сделать поздравление, которое сохранят</a><a href="/guides/neyroset-dlya-otzyvov/" class="gp-side-item">Нейросеть для отзывов: как собрать их у клиентов, разобрать и превратить в контент</a><a href="/guides/neyroset-dlya-perevoda/" class="gp-side-item">Нейросеть для перевода: как перевести текст и видео так, чтобы звучало по-человечески</a><a href="/guides/neyroset-dlya-pesni/" class="gp-side-item">Нейросеть для песни: как получить трек с вокалом, который не стыдно подарить</a><a href="/guides/neyroset-dlya-postov/" class="gp-side-item active">Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK</a><a href="/guides/neyroset-dlya-prezentaciy/" class="gp-side-item">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</a><a href="/guides/neyroset-dlya-reklamy/" class="gp-side-item">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</a><a href="/guides/neyroset-dlya-rezyume/" class="gp-side-item">Нейросеть для резюме: как собрать сильный отклик за вечер</a><a href="/guides/neyroset-dlya-rils/" class="gp-side-item">Нейросеть для Рилс в 2026: какие берут под каждую часть ролика</a><a href="/guides/neyroset-dlya-risovaniya/" class="gp-side-item">Нейросеть для рисования: как получить иллюстрацию нужного стиля, а потом повторить его во всех картинках</a><a href="/guides/neyroset-dlya-sayta/" class="gp-side-item">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</a><a href="/guides/neyroset-dlya-scenariya/" class="gp-side-item">Нейросеть для сценария: YouTube-ролик, реклама, эфир и мероприятие</a><a href="/guides/neyroset-dlya-stihov/" class="gp-side-item">Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух</a><a href="/guides/neyroset-dlya-tablic/" class="gp-side-item">Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ</a><a href="/guides/neyroseti-dlya-marketinga/" class="gp-side-item">Нейросети для маркетинга в 2026: по каждой задаче отдельно</a><a href="/guides/oblozhka-dlya-video/" class="gp-side-item">Как сделать обложку для видео: разбор кликабельной обложки и запросы под неё</a><a href="/guides/promty-dlya-video/" class="gp-side-item">Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling</a></div><div class="gp-content read-article"><div class="gp-bc">Статьи</div><div class="gp-h1row"><h1 class="gp-h1">Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK</h1><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="gp-desc">Посты нейросетью без узнаваемого машинного почерка: как научить модель своему голосу на своих же текстах, форма поста под каждую площадку, запросы на серию, проверка перед публикацией.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Пост, написанный нейросетью по запросу «напиши пост про X», читатель узнаёт со второй строки. Гладкие фразы, длинные тире, симметричные списки и финал с моралью выдают машину быстрее любой проверки. Подписчик такой текст пролистывает, потому что в нём нет человека.</p>
+<p>При этом я каждый день публикую тексты, где черновик готовит модель, и звучат они моей манерой. Разница в порядке работы: модель получает мой голос, одну мысль и форму площадки, а на выходе текст проходит чистку по короткому списку.</p>
+<p>Ниже этот порядок целиком, с запросами, которые можно копировать.</p>
+<p>Проверено 13 сентября 2026 года на постах собственного Telegram-канала.</p>
+<h2 id="sec-0">Шаг 1. Паспорт голоса из своих текстов</h2>
+<p>Модель пишет усреднённым языком интернета, пока не видит, как пишете вы. Описание словами «пиши живо и дружелюбно» не помогает, каждый понимает эти слова по-своему. Помогают образцы.</p>
+<p>Как собрать паспорт:</p>
+<ol><li>Возьмите десять своих постов, которые лучше всего зашли по реакциям и комментариям.</li><li>Добавьте три-пять своих голосовых сообщений, переведённых в текст. Устная речь показывает манеру честнее, чем отредактированные посты.</li><li>Отдайте всё модели с запросом ниже и сохраните ответ отдельным файлом.</li></ol>
+<p>Запрос: «Вот мои тексты. Составь паспорт моего голоса: средняя длина предложения, как я начинаю и заканчиваю посты, какие слова и обороты повторяются, как я обращаюсь к читателю, где использую списки, каких слов я не использую никогда. Приведи по две дословные цитаты на каждый пункт. Ничего не приукрашивай и не добавляй того, чего в текстах нет».</p>
+<p>Этот файл прикладывается к каждому следующему запросу. Раз в месяц его стоит обновлять свежими постами, голос автора тоже меняется.</p>
+<h2 id="sec-1">Шаг 2. Одна мысль на пост</h2>
+<p>Второй источник пустых постов это тема вместо мысли. «Пост про продвижение» даёт общие слова. «Почему я перестал снимать ролики сам и что от этого поменялось в охватах» даёт текст, который дочитывают.</p>
+<table class="gp-table"><thead><tr><th>Тема (слабо)</th><th>Мысль (работает)</th></tr></thead><tbody><tr><td>Нейросети для бизнеса</td><td>Какую рутину я отдал агентам за последний месяц и сколько часов освободилось</td></tr><tr><td>Как вести блог</td><td>Почему пост без призыва в конце набрал больше комментариев</td></tr><tr><td>Контент-план</td><td>Что я делаю, когда нет идей для поста уже третий день</td></tr><tr><td>Продажи в соцсетях</td><td>Какой вопрос в личке чаще всего приводит к покупке</td></tr></tbody></table>
+<p>Мысль всегда содержит конкретику из вашей практики: цифру, случай, ошибку, решение. Модель эту конкретику не знает, поэтому её даёте вы, двумя-тремя строками в запросе.</p>
+<h2 id="sec-2">Шаг 3. Форма под площадку</h2>
+<p>Одна и та же мысль на разных площадках упаковывается по-разному. Длина, первая строка и призыв зависят от того, как человек читает ленту.</p>
+<table class="gp-table"><thead><tr><th>Площадка</th><th>Длина</th><th>Первая строка</th><th>Что работает</th></tr></thead><tbody><tr><td>Telegram-канал</td><td>800-1800 знаков</td><td>Заголовок с конкретикой или новость</td><td>Личная история, разбор, список шагов</td></tr><tr><td>Подпись в Instagram</td><td>Короткая под разговорный ролик, длинная под ролик без лица</td><td>Хук, который продолжает ролик</td><td>Призыв написать слово в директ</td></tr><tr><td>VK</td><td>600-1500 знаков</td><td>Вопрос или узнаваемая ситуация</td><td>Обсуждение, опрос, полезная подборка</td></tr><tr><td>Threads</td><td>До 500 знаков</td><td>Сразу суть без разгона</td><td>Одна мысль, ссылка отдельным ответом</td></tr></tbody></table>
+<p>У Threads ограничение техническое: текст длиннее 500 знаков площадка сама режет на цепочку, и разрыв встаёт в случайном месте. Поэтому длину там считают до публикации.</p>
+<h2 id="sec-3">Шаг 4. Запрос на черновик</h2>
+<p>Запрос собирается из трёх частей: паспорт голоса, мысль с вашей конкретикой и форма площадки.</p>
+<p>Запрос: «Паспорт моего голоса во вложении. Напиши пост для [площадка], длина [диапазон]. Мысль: [одно предложение]. Моя конкретика: [цифры, случай, что было до и после]. Пиши от первого лица, моими оборотами из паспорта. Перечисления оформляй нумерованным списком. Без длинных тире, без противопоставлений через отрицание, без морали в финале. В конце один призыв: [что должен сделать читатель]».</p>
+<p>Отдельные запреты в запросе нужны, потому что модель тянется к своим привычным оборотам даже при хорошем образце. Когда запрет назван прямо, их становится заметно меньше.</p>
+<h2 id="sec-4">Шаг 5. Серия постов на неделю</h2>
+<p>Писать по одному посту в день удобно, но дорого по времени. Серия на неделю одним запросом экономит часы и даёт связный сюжет, где посты продолжают друг друга.</p>
+<p>Как построить неделю:</p>
+<ol><li>Понедельник: история из практики, с которой начинается тема недели.</li><li>Вторник: разбор, как это устроено, по шагам.</li><li>Среда: частая ошибка и как её избежать.</li><li>Четверг: кейс с цифрами, свой или клиента с его разрешения.</li><li>Пятница: ответы на вопросы из комментариев.</li><li>Суббота: личное, закулисье работы.</li><li>Воскресенье: мягкое приглашение к продукту или консультации.</li></ol>
+<p>Запрос: «По паспорту голоса напиши серию из семи постов на тему [тема] по плану ниже. Каждый пост отдельным блоком, у каждого своя мысль, посты ссылаются друг на друга, как продолжение разговора. Мои материалы для серии: [факты, цифры, истории]».</p>
+<p>Про планирование тем на неделю вперёд подробно в статье <a href="/guides/kontent-plan-na-nedelyu/">контент-план на неделю</a>.</p>
+<h2 id="sec-5">Шаг 6. Чистка перед публикацией</h2>
+<p>Черновик от модели никогда не публикуется сразу. Проверка занимает пять минут и убирает всё, по чему читатель узнаёт машину.</p>
+<p>Что искать и чем заменять:</p>
+<ul><li>Длинные тире в середине фраз. Заменяются точкой или запятой.</li><li>Противопоставления вида «это про систему, а вовсе про удачу нет». Переписываются простым утверждением того, что есть.</li><li>Утешительные штампы вроде «и это нормально» и «давай разберёмся». Удаляются целиком.</li><li>Три-четыре коротких рубленых предложения подряд. Склеиваются в одно нормальное.</li><li>Мораль в последнем абзаце. Заменяется конкретным действием для читателя.</li><li>Цифры, которых вы не давали. Удаляются или проверяются.</li></ul>
+<p>Удобно отдать эту проверку второй модели отдельным запросом: «Найди в тексте все места из списка ниже и перепиши только их, остальное оставь без изменений». Вторая модель не привязана к своему черновику и замечает обороты, которые первая считает нормой.</p>
+<p>Про выбор модели под длинные тексты и снятие машинного почерка в статье <a href="/guides/neyroset-dlya-napisaniya-teksta/">нейросеть для написания текста</a>.</p>
+<h2 id="sec-6">Частые ошибки</h2>
+<h3>Запрос без образцов</h3>
+<p>Без паспорта голоса все посты звучат одинаково, и одинаково с тысячами других каналов. Десять своих текстов в запросе меняют результат сильнее любой модели.</p>
+<h3>Публикация без прочтения</h3>
+<p>Модель уверенно пишет факты, которых не было, и цитирует людей, которые этого не говорили. Каждая цифра и каждое имя в посте проверяются автором.</p>
+<h3>Один текст на все площадки</h3>
+<p>Длинный пост из Telegram, вставленный в Threads, рвётся на куски. Короткая подпись из Instagram в Telegram выглядит пустой. Мысль общая, упаковка своя.</p>
+<h3>Продажа в каждом посте</h3>
+<p>Если каждый текст заканчивается ссылкой на оплату, подписчики перестают дочитывать. Рабочая пропорция у меня такая: большая часть постов даёт пользу и историю, продающий пост выходит время от времени.</p>
+<h2 id="sec-7">Частые вопросы</h2>
+<h3>Заметят ли подписчики, что пост писала нейросеть</h3>
+<p>Замечают машинные обороты, а сам факт использования модели в хорошем тексте не виден. После паспорта голоса и чистки по списку текст читается как ваш, потому что в нём ваши факты и ваша манера.</p>
+<h3>Какая модель лучше пишет посты на русском</h3>
+<p>Сильные модели в этой задаче близки друг к другу, и результат больше зависит от образцов и запроса. Выбирайте ту, что доступна вам без сложностей, и держите паспорт голоса одинаковым при смене модели.</p>
+<h3>Сколько времени уходит на пост с нейросетью</h3>
+<p>С готовым паспортом голоса пост для канала занимает десять-пятнадцать минут вместе с чисткой. Серия на неделю занимает около часа.</p>
+<h3>Можно ли писать посты за клиента</h3>
+<p>Можно, если паспорт голоса собран из его текстов и голосовых. Каждый пост перед публикацией согласуется с ним, особенно цифры и истории.</p>
+<h3>Что делать, если идей для постов нет</h3>
+<p>Откройте комментарии и личные сообщения за последний месяц и попросите модель выписать повторяющиеся вопросы. Каждый частый вопрос это готовая мысль для поста.</p>
+<h2 id="sec-8">Что делать дальше</h2>
+<p>Посты удерживают тех, кто уже пришёл в канал. Новых людей быстрее всего приводят короткие ролики, и лучше всего работает связка, где ролик собирает охват, а посты прогревают до покупки.</p>
+<p>Как я делаю ролики нейросетями и веду людей из них в канал, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">система коротких роликов на нейросетях</a>.</p></div><div class="cta-dark grid"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><div class="cta-bullets"><div class="b"><span class="m"></span>Готовые промпты под Reels, хуки и длинные описания</div><div class="b"><span class="m"></span>Разборы, почему одни ролики залетают, а другие нет</div><div class="b"><span class="m"></span>Гайды по нейросетям для контента, коротко и по делу</div></div><div class="cta-foot"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-stihov/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух</span><span class="rc-desc">Стихи нейросетью под задачу: запрос с размером и рифмой, поздравление на праздник…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-koda/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для кода: как человек без образования программиста собирает рабочие инструменты</span><span class="rc-desc">Пишем код нейросетью с нуля: выбор инструмента, техзадание, которое модель понимает…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-perevoda/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для перевода: как перевести текст и видео так, чтобы звучало по-человечески</span><span class="rc-desc">Перевод нейросетью для текста, роликов и субтитров: порядок работы, готовые запросы с…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-scenariya/"><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для сценария: YouTube-ролик, реклама, эфир и мероприятие</span><span class="rc-desc">Как написать сценарий с нейросетью для длинного видео, рекламного ролика, вебинара и…</span></a></div></section><div class="gp-docsnav"><a class="gp-navcard" href="/guides/neyroset-dlya-pesni/"><div class="l">← Предыдущий</div><div class="t">Нейросеть для песни: как получить трек с вокалом, который не стыдно подарить</div></a><a class="gp-navcard next" href="/guides/neyroset-dlya-prezentaciy/"><div class="l">Следующий →</div><div class="t">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</div></a></div></div><div class="gp-toc"><div class="h">На странице</div><a href="#sec-0" class="active">Шаг 1. Паспорт голоса из своих текстов</a><a href="#sec-1" class="">Шаг 2. Одна мысль на пост</a><a href="#sec-2" class="">Шаг 3. Форма под площадку</a><a href="#sec-3" class="">Шаг 4. Запрос на черновик</a><a href="#sec-4" class="">Шаг 5. Серия постов на неделю</a><a href="#sec-5" class="">Шаг 6. Чистка перед публикацией</a><a href="#sec-6" class="">Частые ошибки</a><a href="#sec-7" class="">Частые вопросы</a><a href="#sec-8" class="">Что делать дальше</a></div></div><footer class="gp-footer"><div class="gp-foot-inner"><div class="gp-foot-main"><div class="gp-foot-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><p>Гайды, статьи и разборы по темам: Instagram и рост, Нейросети для контента, Контент и воронки. От Владимир Ижмуков и канала «AI Realshift».</p></div><div class="gp-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a><a href="/library/">Все гайды</a></div><div class="col"><div class="h">Владимир Ижмуков</div><a href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><div class="col"><div class="h">Контакты</div><a href="https://t.me/Ai_realshift" target="_blank" rel="noopener">Канал «AI Realshift»</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика конфиденциальности</a></div></div></div><div class="gp-foot-bottom"><span>© 2026 ВЛАДИМИР ИЖМУКОВ</span><span class="spacer"></span><span>Владимир Ижмуков</span></div></div></footer></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=c97187fc66"></script>
+  <script>window.__GF_BASE = "";</script>
+  <script>window.__GF_VIEW = "guide";</script>
+  <script>window.__GF_SLUG = "neyroset-dlya-postov";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

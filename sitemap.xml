@@ -187,6 +187,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-doklada/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-foto/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -307,8 +313,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-proekta/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-referata/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-reklamy/</loc>
     <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-resheniya-zadach/</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -343,6 +367,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-sochineniya/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-stihov/</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -351,6 +381,18 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-tablic/</loc>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-testov/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-uchitelya/</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

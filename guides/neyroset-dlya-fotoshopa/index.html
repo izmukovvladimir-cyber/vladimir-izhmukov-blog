@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<script data-gfmr>(function(){try{if(location.search.indexOf('nomobile')>-1)return;var p=location.pathname;if(/^\/m\//.test(p))return;var sw=Math.min(screen.width,screen.height);if(!(sw<=640))return;p=p.replace(/(^|\/)index\.html$|\.html$/,'$1');var t=null,g=p.match(/^\/guides\/([^\/.]+)\/?$/);if(g){t='/m/guides/'+g[1]+'.html';}else if(p==='/'||p===''){t='/m/';}else{var m=p.match(/^\/([^\/.]+)\/?$/);if(m&&['instagram','neyroseti','kontent','about','library'].indexOf(m[1])>-1){t='/m/'+m[1]+'.html';}}if(t){location.replace(t+location.search+location.hash);}}catch(e){}})();</script>
+<link data-gfmr-alt rel="alternate" media="only screen and (max-width: 640px)" href="https://blog.vladimir-izhmukov.ru/m/guides/neyroset-dlya-fotoshopa.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего — Владимир Ижмуков</title>
+<meta name="description" content="Нейросеть в Photoshop: генеративная заливка, расширение холста, инструмент удаления, выбор модели и генеративные кредиты. Промпты под частые задачи, приёмы выделения и чем заменить Фотошоп, если подписки нет.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:#FAF7F2; }
+  .standalone-c { width:100%; }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-fotoshopa/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего">
+<meta property="og:description" content="Нейросеть в Photoshop: генеративная заливка, расширение холста, инструмент удаления, выбор модели и генеративные кредиты. Промпты под частые задачи, приёмы выделения и чем заменить Фотошоп, если подписки нет.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-fotoshopa/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-fotoshopa.webp?v=d1ebef40aa">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-14T10:20:00Z">
+<meta property="article:modified_time" content="2026-09-14T10:20:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего">
+<meta name="twitter:description" content="Нейросеть в Photoshop: генеративная заливка, расширение холста, инструмент удаления, выбор модели и генеративные кредиты. Промпты под частые задачи, приёмы выделения и чем заменить Фотошоп, если подписки нет.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-fotoshopa.webp?v=d1ebef40aa">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-fotoshopa.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-fotoshopa/#article",
+      "headline": "Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего",
+      "description": "Нейросеть в Photoshop: генеративная заливка, расширение холста, инструмент удаления, выбор модели и генеративные кредиты. Промпты под частые задачи, приёмы выделения и чем заменить Фотошоп, если подписки нет.",
+      "datePublished": "2026-09-14T10:20:00Z",
+      "dateModified": "2026-09-14T10:20:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-fotoshopa/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-fotoshopa/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-fotoshopa.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть в Фотошопе встроена прямо в привычные инструменты: выделяете область, пишете короткий запрос, и программа дорисовывает, убирает или расширяет кадр. Работа, на которую раньше уходил час штампа и масок, занимает минуту. Ниже три инструмента, приёмы выделения, промпты под частые задачи и что делать, если подписки Adobe у вас нет. Проверено 14 сентября 2026 года. Три инструмента и когда брать каждый | Инструмент | Что делает | Когда брать | Кредиты | |---|---|---|---| | Удаление (Remove) | Убирает мелкий объект, достраивая фон | Провод, прыщ, случайный прохожий вдалеке | Не тратит | | Генеративная заливка | Заменяет или добавляет объект в выделенной области по запросу | Поменять небо, добавить предмет, убрать крупный объект | Тратит | | Генеративное расширение | Достраивает кадр за пределами исходного холста | Сделать из горизонтального фото вертикальное | Тратит | Правило простое: маленькое убираете инструментом удаления, всё остальное делаете заливкой. Модели и генеративные кредиты В свежих версиях Photoshop для заливки и расширения можно выбрать модель. Собственные модели Adobe Firefly читают всё изображение целиком и тратят один кредит на генерацию. Партнёрские модели смотрят только на пиксели внутри выделения и расходуют больше кредитов. Практический вывод: - Для правки, которая должна совпасть по свету и перспективе с остальным кадром, берите модель Firefly. - Партнёрскую модель пробуйте, когда нужен объект, который Firefly рисует слабо, и держите выделение с запасом вокруг. - Число кредитов зависит от тарифа, остаток виден в аккаунте Adobe. Как выделять область под заливку Качество заливки на половину зависит от выделения. 1. Захватывайте с запасом. Отступ в 10-20 пикселей вокруг объекта даёт программе место для перехода, и граница не видна. 2. Включайте тень и отражение. Убираете человека, выделяйте и его тень на земле, иначе тень останется висеть. 3. Не выделяйте весь кадр. Чем меньше область, тем точнее результат. 4. Для расширения инструментом «Рамка» потяните холст за край и оставьте поле запроса пустым, если нужно просто продолжить фон. Промпты под частые задачи Запросы к заливке короткие, 3-8 слов, и описывают только то, что должно появиться в области. Убрать крупный объект Выделите объект вместе с тенью и оставьте поле пустым либо напишите «продолжить фон». Слово «убрать» в запросе мешает: программа может нарисовать что-то на этом месте. Заменить небо «Закатное небо с лёгкими облаками». Выделение неба плюс немного линии горизонта. Добавить предмет «Чашка кофе на столе». Выделите место под предмет примерно его размера и формы. Сменить одежду «Белая льняная рубашка». Выделите только одежду, без лица и рук. Расширить кадр под Reels и сторис Потяните холст сверху и снизу до формата 9 на 16, запрос оставьте пустым. Для фона с людьми проверьте, что программа не дорисовала лишние ноги и головы. Убрать людей с туристического фото Выделяйте людей по одному или небольшими группами. Одна огромная область на полкадра даёт размытый фон. Частые браки и как их лечить Результат не совпадает по свету Возьмите модель Firefly и расширьте выделение, чтобы в него попал кусок соседнего света. Дорисовались лишние пальцы и лица Перегенерируйте и выберите лучший из трёх вариантов. Если брак остаётся, уменьшите выделение. Размытая заплата на резком фото Генерация выходит в ограниченном разрешении. Работайте по частям небольшими областями, так детализация выше. Заливка отказывается генерировать Фильтры безопасности Adobe блокируют часть запросов. Переформулируйте нейтрально, без слов про оружие, насилие и известных людей. Если подписки Adobe нет Adobe не продаёт подписки в России с 2022 года, поэтому у многих Фотошопа нет вовсе. Те же задачи закрывают другие инструменты: | Задача | Чем заменить | |---|---| | Удалить объект | Онлайн-сервисы удаления объектов и встроенные функции в редакторах на телефоне | | Заменить фон или небо | Генераторы изображений, которые принимают фото и правят его по запросу | | Расширить кадр | Функции дорисовки кадра в генераторах изображений | | Обработка пачкой | Нейросетевые редакторы с пакетной обработкой | Подробный разбор задач с фото есть в статье про нейросеть для фото, а про создание картинок с нуля в материале про генерацию изображений. Что нейросеть в Фотошопе не заменяет - Цветокоррекцию и общий стиль кадра, их по-прежнему задаёте вы. - Точную ретушь кожи на портрете крупным планом: заливка легко делает лицо чужим. - Работу с текстом и макетом. Частые вопросы В какой версии Photoshop есть нейросеть Генеративная заливка и расширение есть в актуальных версиях Photoshop для компьютера и в веб-версии при действующей подписке с генеративными кредитами. Состав функций Adobe обновляет регулярно, актуальный список смотрите в справке Adobe. Работает ли генеративная заливка на русском языке Лучше и стабильнее запросы на английском.…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-fotoshopa/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-fotoshopa/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "В какой версии Photoshop есть нейросеть",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Генеративная заливка и расширение есть в актуальных версиях Photoshop для компьютера и в веб-версии при действующей подписке с генеративными кредитами. Состав функций Adobe обновляет регулярно, актуальный список смотрите в справке Adobe."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работает ли генеративная заливка на русском языке",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Лучше и стабильнее запросы на английском. Короткий запрос на русском часто срабатывает, но если результат мимо, переведите те же слова."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли использовать результат в коммерции",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adobe заявляет модели Firefly как обученные на лицензированном контенте и подходящие для коммерческого использования. У партнёрских моделей условия свои, их стоит проверить отдельно."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему закончились кредиты так быстро",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Партнёрские модели списывают больше кредитов за одну генерацию. Для рутинных правок держите по умолчанию модель Firefly, а мелочь убирайте инструментом удаления без кредитов."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="standalone-c"><div class="gp dir-c theme-light"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><nav class="gp-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" aria-label="Сменить тему" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><a class="gp-headbtn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте <span class="ar">→</span></a></div></div></div><div class="ban-dark"><span class="gp-eyebrow lime"><span class="dot"></span>ВЛАДИМИР&nbsp;ИЖМУКОВ</span><span>Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.</span><span class="spacer"></span></div><div class="gp-layout"><div class="gp-sidebar"><div class="gp-side-group">Claude Code · 58</div><a href="/guides/generaciya-video-po-tekstu/" class="gp-side-item">Генерация видео по тексту в 2026: как это работает и чем сделать</a><a href="/guides/ii-agenty-dlya-biznesa/" class="gp-side-item">ИИ-агенты для бизнеса в 2026: что это на самом деле и с чего начать</a><a href="/guides/kak-ozhivit-foto-neyrosetyu/" class="gp-side-item">Как оживить фото нейросетью: от старого снимка до короткого ролика</a><a href="/guides/kak-sdelat-video-neyrosetyu/" class="gp-side-item">Как сделать видео нейросетью в 2026: пошагово с телефона</a><a href="/guides/kak-zarabotat-na-neyrosetyah/" class="gp-side-item">Как заработать на нейросетях в 2026: честные способы, цифры и границы</a><a href="/guides/kitayskie-neyroseti-besplatno/" class="gp-side-item">Китайские нейросети бесплатно: какие работают из России и что они реально умеют</a><a href="/guides/neyroset-dlya-angliyskogo/" class="gp-side-item">Нейросеть для английского: как заниматься каждый день без репетитора</a><a href="/guides/neyroset-dlya-animacii/" class="gp-side-item">Нейросеть для анимации: как сделать анимированный ролик без аниматора</a><a href="/guides/neyroset-dlya-avatarki/" class="gp-side-item">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</a><a href="/guides/neyroset-dlya-biznes-plana/" class="gp-side-item">Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами</a><a href="/guides/neyroset-dlya-chertezhey/" class="gp-side-item">Нейросеть для чертежей: где она помогает, а где обманет с размерами</a><a href="/guides/neyroset-dlya-diploma/" class="gp-side-item">Нейросеть для диплома: план, главы и защита без провала</a><a href="/guides/neyroset-dlya-dizayna/" class="gp-side-item">Нейросеть для дизайна: что она делает за вас, а что придётся доделать руками</a><a href="/guides/neyroset-dlya-dogovora/" class="gp-side-item">Нейросеть для договора: как составить и проверить документ</a><a href="/guides/neyroset-dlya-doklada/" class="gp-side-item">Нейросеть для доклада: текст, план выступления и ответы на вопросы за один вечер</a><a href="/guides/neyroset-dlya-foto/" class="gp-side-item">Нейросеть для фото: обработать своё, улучшить старое, сгенерировать новое</a><a href="/guides/neyroset-dlya-fotoshopa/" class="gp-side-item active">Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего</a><a href="/guides/neyroset-dlya-infografiki/" class="gp-side-item">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</a><a href="/guides/neyroset-dlya-interera/" class="gp-side-item">Нейросеть для интерьера: как увидеть свою комнату в новом виде до ремонта</a><a href="/guides/neyroset-dlya-kartochek-tovarov/" class="gp-side-item">Нейросеть для карточек товаров: фото, инфографика и описание для маркетплейса</a><a href="/guides/neyroset-dlya-knigi/" class="gp-side-item">Нейросеть для книги и глав книги в 2026: как пользоваться и собрать книгу из своего опыта</a><a href="/guides/neyroset-dlya-koda/" class="gp-side-item">Нейросеть для кода: как человек без образования программиста собирает рабочие инструменты</a><a href="/guides/neyroset-dlya-komiksa/" class="gp-side-item">Нейросеть для комикса: от идеи до готовых страниц</a><a href="/guides/neyroset-dlya-kursovoy/" class="gp-side-item">Нейросеть для курсовой: как ускорить работу и не завалиться на проверке</a><a href="/guides/neyroset-dlya-logotipa/" class="gp-side-item">Нейросеть для логотипа: как получить знак, который не стыдно поставить на профиль</a><a href="/guides/neyroset-dlya-memov/" class="gp-side-item">Нейросеть для мемов: как делать смешные мемы для блога и чатов</a><a href="/guides/neyroset-dlya-montazha-video/" class="gp-side-item">Нейросеть для монтажа видео в 2026: что она делает сама и где нужны руки</a><a href="/guides/neyroset-dlya-muzyki/" class="gp-side-item">Нейросеть для музыки: как сделать трек для ролика, который не заглушат за авторские права</a><a href="/guides/neyroset-dlya-oblozhek/" class="gp-side-item">Нейросеть для обложек: как собрать картинку, на которую нажимают</a><a href="/guides/neyroset-dlya-otkrytki/" class="gp-side-item">Нейросеть для открытки: как сделать поздравление, которое сохранят</a><a href="/guides/neyroset-dlya-otzyvov/" class="gp-side-item">Нейросеть для отзывов в 2026: как пользоваться, отвечать на негатив и собирать отзывы клиентов</a><a href="/guides/neyroset-dlya-perevoda/" class="gp-side-item">Нейросеть для перевода: как перевести текст и видео так, чтобы звучало по-человечески</a><a href="/guides/neyroset-dlya-pesni/" class="gp-side-item">Нейросеть для песни: как получить трек с вокалом, который не стыдно подарить</a><a href="/guides/neyroset-dlya-pisem/" class="gp-side-item">Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры</a><a href="/guides/neyroset-dlya-postov/" class="gp-side-item">Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK</a><a href="/guides/neyroset-dlya-prezentaciy/" class="gp-side-item">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</a><a href="/guides/neyroset-dlya-proekta/" class="gp-side-item">Нейросеть для проекта: индивидуальный проект в школе и колледже от темы до защиты</a><a href="/guides/neyroset-dlya-raskraski/" class="gp-side-item">Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого</a><a href="/guides/neyroset-dlya-referata/" class="gp-side-item">Нейросеть для реферата: как написать реферат по шагам и пройти проверку</a><a href="/guides/neyroset-dlya-reklamy/" class="gp-side-item">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</a><a href="/guides/neyroset-dlya-resheniya-zadach/" class="gp-side-item">Нейросеть для решения задач: математика, физика, химия по фото и с разбором</a><a href="/guides/neyroset-dlya-rezyume/" class="gp-side-item">Нейросеть для резюме: как собрать сильный отклик за вечер</a><a href="/guides/neyroset-dlya-rils/" class="gp-side-item">Нейросеть для Рилс в 2026: какие берут под каждую часть ролика</a><a href="/guides/neyroset-dlya-risovaniya/" class="gp-side-item">Нейросеть для рисования: как получить иллюстрацию нужного стиля, а потом повторить его во всех картинках</a><a href="/guides/neyroset-dlya-sayta/" class="gp-side-item">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</a><a href="/guides/neyroset-dlya-scenariya/" class="gp-side-item">Нейросеть для сценария: YouTube-ролик, реклама, эфир и мероприятие</a><a href="/guides/neyroset-dlya-skazok/" class="gp-side-item">Нейросеть для сказок: как сочинить сказку для ребёнка за 10 минут</a><a href="/guides/neyroset-dlya-sochineniya/" class="gp-side-item">Нейросеть для сочинения: как написать сочинение с помощью нейросети и не потерять свой голос</a><a href="/guides/neyroset-dlya-stihov/" class="gp-side-item">Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух</a><a href="/guides/neyroset-dlya-tablic/" class="gp-side-item">Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ</a><a href="/guides/neyroset-dlya-tatu/" class="gp-side-item">Нейросеть для тату: как сделать эскиз, который мастер согласится бить</a><a href="/guides/neyroset-dlya-testov/" class="gp-side-item">Нейросеть для тестов: как составить тест с ответами и как готовиться к тестированию</a><a href="/guides/neyroset-dlya-ucheby/" class="gp-side-item">Нейросеть для учебы: как понимать темы быстрее и готовиться к экзаменам</a><a href="/guides/neyroset-dlya-uchitelya/" class="gp-side-item">Нейросеть для учителя: планы уроков, задания, проверка и отчёты за вечер</a><a href="/guides/neyroset-dlya-vizitki/" class="gp-side-item">Нейросеть для визитки: как сделать дизайн и текст, готовые к печати</a><a href="/guides/neyroseti-dlya-marketinga/" class="gp-side-item">Нейросети для маркетинга в 2026: по каждой задаче отдельно</a><a href="/guides/oblozhka-dlya-video/" class="gp-side-item">Как сделать обложку для видео: разбор кликабельной обложки и запросы под неё</a><a href="/guides/promty-dlya-video/" class="gp-side-item">Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling</a></div><div class="gp-content read-article"><div class="gp-cover"><img src="/covers/neyroset-dlya-fotoshopa.webp?v=d1ebef40aa" alt="Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего" loading="eager"></div><div class="gp-bc">Статьи</div><div class="gp-h1row"><h1 class="gp-h1">Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего</h1><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="gp-desc">Нейросеть в Photoshop: генеративная заливка, расширение холста, инструмент удаления, выбор модели и генеративные кредиты. Промпты под частые задачи, приёмы выделения и чем заменить Фотошоп, если подписки нет.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть в Фотошопе встроена прямо в привычные инструменты: выделяете область, пишете короткий запрос, и программа дорисовывает, убирает или расширяет кадр. Работа, на которую раньше уходил час штампа и масок, занимает минуту.</p>
+<p>Ниже три инструмента, приёмы выделения, промпты под частые задачи и что делать, если подписки Adobe у вас нет.</p>
+<p>Проверено 14 сентября 2026 года.</p>
+<h2 id="sec-0">Три инструмента и когда брать каждый</h2>
+<table class="gp-table"><thead><tr><th>Инструмент</th><th>Что делает</th><th>Когда брать</th><th>Кредиты</th></tr></thead><tbody><tr><td>Удаление (Remove)</td><td>Убирает мелкий объект, достраивая фон</td><td>Провод, прыщ, случайный прохожий вдалеке</td><td>Не тратит</td></tr><tr><td>Генеративная заливка</td><td>Заменяет или добавляет объект в выделенной области по запросу</td><td>Поменять небо, добавить предмет, убрать крупный объект</td><td>Тратит</td></tr><tr><td>Генеративное расширение</td><td>Достраивает кадр за пределами исходного холста</td><td>Сделать из горизонтального фото вертикальное</td><td>Тратит</td></tr></tbody></table>
+<p>Правило простое: маленькое убираете инструментом удаления, всё остальное делаете заливкой.</p>
+<h2 id="sec-1">Модели и генеративные кредиты</h2>
+<p>В свежих версиях Photoshop для заливки и расширения можно выбрать модель. Собственные модели Adobe Firefly читают всё изображение целиком и тратят один кредит на генерацию. Партнёрские модели смотрят только на пиксели внутри выделения и расходуют больше кредитов.</p>
+<p>Практический вывод:</p>
+<ul><li>Для правки, которая должна совпасть по свету и перспективе с остальным кадром, берите модель Firefly.</li><li>Партнёрскую модель пробуйте, когда нужен объект, который Firefly рисует слабо, и держите выделение с запасом вокруг.</li><li>Число кредитов зависит от тарифа, остаток виден в аккаунте Adobe.</li></ul>
+<h2 id="sec-2">Как выделять область под заливку</h2>
+<p>Качество заливки на половину зависит от выделения.</p>
+<ol><li><b>Захватывайте с запасом.</b> Отступ в 10-20 пикселей вокруг объекта даёт программе место для перехода, и граница не видна.</li><li><b>Включайте тень и отражение.</b> Убираете человека, выделяйте и его тень на земле, иначе тень останется висеть.</li><li><b>Не выделяйте весь кадр.</b> Чем меньше область, тем точнее результат.</li><li><b>Для расширения</b> инструментом «Рамка» потяните холст за край и оставьте поле запроса пустым, если нужно просто продолжить фон.</li></ol>
+<h2 id="sec-3">Промпты под частые задачи</h2>
+<p>Запросы к заливке короткие, 3-8 слов, и описывают только то, что должно появиться в области.</p>
+<h3>Убрать крупный объект</h3>
+<p>Выделите объект вместе с тенью и оставьте поле пустым либо напишите «продолжить фон». Слово «убрать» в запросе мешает: программа может нарисовать что-то на этом месте.</p>
+<h3>Заменить небо</h3>
+<p>«Закатное небо с лёгкими облаками». Выделение неба плюс немного линии горизонта.</p>
+<h3>Добавить предмет</h3>
+<p>«Чашка кофе на столе». Выделите место под предмет примерно его размера и формы.</p>
+<h3>Сменить одежду</h3>
+<p>«Белая льняная рубашка». Выделите только одежду, без лица и рук.</p>
+<h3>Расширить кадр под Reels и сторис</h3>
+<p>Потяните холст сверху и снизу до формата 9 на 16, запрос оставьте пустым. Для фона с людьми проверьте, что программа не дорисовала лишние ноги и головы.</p>
+<h3>Убрать людей с туристического фото</h3>
+<p>Выделяйте людей по одному или небольшими группами. Одна огромная область на полкадра даёт размытый фон.</p>
+<h2 id="sec-4">Частые браки и как их лечить</h2>
+<h3>Результат не совпадает по свету</h3>
+<p>Возьмите модель Firefly и расширьте выделение, чтобы в него попал кусок соседнего света.</p>
+<h3>Дорисовались лишние пальцы и лица</h3>
+<p>Перегенерируйте и выберите лучший из трёх вариантов. Если брак остаётся, уменьшите выделение.</p>
+<h3>Размытая заплата на резком фото</h3>
+<p>Генерация выходит в ограниченном разрешении. Работайте по частям небольшими областями, так детализация выше.</p>
+<h3>Заливка отказывается генерировать</h3>
+<p>Фильтры безопасности Adobe блокируют часть запросов. Переформулируйте нейтрально, без слов про оружие, насилие и известных людей.</p>
+<h2 id="sec-5">Если подписки Adobe нет</h2>
+<p>Adobe не продаёт подписки в России с 2022 года, поэтому у многих Фотошопа нет вовсе. Те же задачи закрывают другие инструменты:</p>
+<table class="gp-table"><thead><tr><th>Задача</th><th>Чем заменить</th></tr></thead><tbody><tr><td>Удалить объект</td><td>Онлайн-сервисы удаления объектов и встроенные функции в редакторах на телефоне</td></tr><tr><td>Заменить фон или небо</td><td>Генераторы изображений, которые принимают фото и правят его по запросу</td></tr><tr><td>Расширить кадр</td><td>Функции дорисовки кадра в генераторах изображений</td></tr><tr><td>Обработка пачкой</td><td>Нейросетевые редакторы с пакетной обработкой</td></tr></tbody></table>
+<p>Подробный разбор задач с фото есть в статье про <a href="/guides/neyroset-dlya-foto/">нейросеть для фото</a>, а про создание картинок с нуля в материале про <a href="/guides/neyroset-dlya-generacii-izobrazheniy/">генерацию изображений</a>.</p>
+<h2 id="sec-6">Что нейросеть в Фотошопе не заменяет</h2>
+<ul><li>Цветокоррекцию и общий стиль кадра, их по-прежнему задаёте вы.</li><li>Точную ретушь кожи на портрете крупным планом: заливка легко делает лицо чужим.</li><li>Работу с текстом и макетом.</li></ul>
+<h2 id="sec-7">Частые вопросы</h2>
+<h3>В какой версии Photoshop есть нейросеть</h3>
+<p>Генеративная заливка и расширение есть в актуальных версиях Photoshop для компьютера и в веб-версии при действующей подписке с генеративными кредитами. Состав функций Adobe обновляет регулярно, актуальный список смотрите в справке Adobe.</p>
+<h3>Работает ли генеративная заливка на русском языке</h3>
+<p>Лучше и стабильнее запросы на английском. Короткий запрос на русском часто срабатывает, но если результат мимо, переведите те же слова.</p>
+<h3>Можно ли использовать результат в коммерции</h3>
+<p>Adobe заявляет модели Firefly как обученные на лицензированном контенте и подходящие для коммерческого использования. У партнёрских моделей условия свои, их стоит проверить отдельно.</p>
+<h3>Почему закончились кредиты так быстро</h3>
+<p>Партнёрские модели списывают больше кредитов за одну генерацию. Для рутинных правок держите по умолчанию модель Firefly, а мелочь убирайте инструментом удаления без кредитов.</p>
+<h2 id="sec-8">Что делать дальше</h2>
+<p>Откройте фото, которое давно хотели поправить, уберите мелочь инструментом удаления, крупный объект заливкой с пустым запросом и расширьте кадр до 9 на 16. Сравните время с тем, сколько это заняло бы вручную.</p>
+<p>Расширенные вертикальные кадры я использую как обложки и фон для коротких роликов. Как из таких визуалов собирается поток подписчиков, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="cta-dark grid"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><div class="cta-bullets"><div class="b"><span class="m"></span>Готовые промпты под Reels, хуки и длинные описания</div><div class="b"><span class="m"></span>Разборы, почему одни ролики залетают, а другие нет</div><div class="b"><span class="m"></span>Гайды по нейросетям для контента, коротко и по делу</div></div><div class="cta-foot"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-pisem/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pisem.webp?v=a1ff968993" alt="Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры</span><span class="rc-desc">Письма через нейросеть: промпт из пяти полей, шаблоны для коммерческого предложения…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-memov/"><span class="rc-cover"><img src="/covers/neyroset-dlya-memov.webp?v=8835156269" alt="Нейросеть для мемов: как делать смешные мемы для блога и чатов" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для мемов: как делать смешные мемы для блога и чатов</span><span class="rc-desc">Мемы через нейросеть: как придумать шутку под свою аудиторию, промпты на картинку без…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-biznes-plana/"><span class="rc-cover"><img src="/covers/neyroset-dlya-biznes-plana.webp?v=1ee2422e70" alt="Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами</span><span class="rc-desc">Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-raskraski/"><span class="rc-cover"><img src="/covers/neyroset-dlya-raskraski.webp?v=6f1bb69c22" alt="Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого</span><span class="rc-desc">Раскраска через нейросеть: промпты для детских и антистресс-раскрасок, раскраска из…</span></a></div></section><div class="gp-docsnav"><a class="gp-navcard" href="/guides/neyroset-dlya-foto/"><div class="l">← Предыдущий</div><div class="t">Нейросеть для фото: обработать своё, улучшить старое, сгенерировать новое</div></a><a class="gp-navcard next" href="/guides/neyroset-dlya-infografiki/"><div class="l">Следующий →</div><div class="t">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</div></a></div></div><div class="gp-toc"><div class="h">На странице</div><a href="#sec-0" class="active">Три инструмента и когда брать каждый</a><a href="#sec-1" class="">Модели и генеративные кредиты</a><a href="#sec-2" class="">Как выделять область под заливку</a><a href="#sec-3" class="">Промпты под частые задачи</a><a href="#sec-4" class="">Частые браки и как их лечить</a><a href="#sec-5" class="">Если подписки Adobe нет</a><a href="#sec-6" class="">Что нейросеть в Фотошопе не заменяет</a><a href="#sec-7" class="">Частые вопросы</a><a href="#sec-8" class="">Что делать дальше</a></div></div><footer class="gp-footer"><div class="gp-foot-inner"><div class="gp-foot-main"><div class="gp-foot-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><p>Гайды, статьи и разборы по темам: Instagram и рост, Нейросети для контента, Контент и воронки. От Владимир Ижмуков и канала «AI Realshift».</p></div><div class="gp-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a><a href="/library/">Все гайды</a></div><div class="col"><div class="h">Владимир Ижмуков</div><a href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><div class="col"><div class="h">Контакты</div><a href="https://t.me/Ai_realshift" target="_blank" rel="noopener">Канал «AI Realshift»</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика конфиденциальности</a></div></div></div><div class="gp-foot-bottom"><span>© 2026 ВЛАДИМИР ИЖМУКОВ</span><span class="spacer"></span><span>Владимир Ижмуков</span></div></div></footer></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=9afa978d3c"></script>
+  <script>window.__GF_BASE = "";</script>
+  <script>window.__GF_VIEW = "guide";</script>
+  <script>window.__GF_SLUG = "neyroset-dlya-fotoshopa";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Раскраска через нейросеть: промпты для детских и антистресс-раскрасок, раскраска из фото, чистый контур без серых теней, размер под печать А4 и сборка книжки из 10 страниц.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raskraski/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого">
+<meta property="og:description" content="Раскраска через нейросеть: промпты для детских и антистресс-раскрасок, раскраска из фото, чистый контур без серых теней, размер под печать А4 и сборка книжки из 10 страниц.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raskraski/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-raskraski.webp?v=6f1bb69c22">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-14T09:50:00Z">
+<meta property="article:modified_time" content="2026-09-14T09:50:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого">
+<meta name="twitter:description" content="Раскраска через нейросеть: промпты для детских и антистресс-раскрасок, раскраска из фото, чистый контур без серых теней, размер под печать А4 и сборка книжки из 10 страниц.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-raskraski.webp?v=6f1bb69c22">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-raskraski.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raskraski/#article",
+      "headline": "Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого",
+      "description": "Раскраска через нейросеть: промпты для детских и антистресс-раскрасок, раскраска из фото, чистый контур без серых теней, размер под печать А4 и сборка книжки из 10 страниц.",
+      "datePublished": "2026-09-14T09:50:00Z",
+      "dateModified": "2026-09-14T09:50:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raskraski/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raskraski/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-raskraski.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для раскраски за минуту рисует страницу именно с тем, что сейчас любит ребёнок: пожарной машиной, единорогом на скейте или своей собакой. Для взрослых она делает сложные узоры-антистресс в любом стиле. Главная хитрость в том, чтобы получить чистый чёрный контур без серых теней. Ниже промпт, который это делает, и всё про печать. Проверено 14 сентября 2026 года. Базовый промпт на чистый контур Добавляйте эту строку к любому сюжету: «Страница раскраски, только чёрные контурные линии на чистом белом фоне, без заливки, без серых теней и полутонов, замкнутые контуры, вертикальный формат А4». Слово «замкнутые» важно: через разрывы в линии карандаш и фломастер вылезают за границу, и ребёнок расстраивается. Раскраски под возраст | Возраст | Детализация | Что просить в промпте | |---|---|---| | 2-3 года | Очень крупные области | «толстые линии, один большой объект, без фона» | | 4-5 лет | Крупные детали | «толстые линии, объект и простой фон из 2-3 элементов» | | 6-8 лет | Средние детали | «линии средней толщины, сюжетная сцена» | | 9-12 лет | Много деталей | «тонкие линии, подробная сцена, узоры на одежде» | | Взрослые | Очень много деталей | «сложный узор, мелкие элементы, стиль мандала или зентангл» | Примеры промптов Для малыша «Большой добрый слон с воздушным шариком, толстые линии, без фона» плюс базовая строка. Сюжетная для дошкольника «Кот в костюме пожарного тушит пожар в игрушечном домике, рядом пожарная машина» плюс базовая строка. Обучающая «Буква Ж и рядом жираф, жук и жёлудь» плюс базовая строка. Букву на картинке проверьте: модели иногда рисуют её неверно, тогда впишите её сами маркером. Антистресс для взрослых «Сова, заполненная сложным цветочным узором, мандала-стиль, тонкие линии, очень много мелких областей» плюс базовая строка. Тематическая к празднику «Новогодняя ёлка с игрушками, подарки под ёлкой, снежинки вокруг» плюс базовая строка. Раскраска из фотографии Можно превратить фото ребёнка, питомца или дома в раскраску. Детям особенно нравится раскрашивать свою собаку. 1. Загрузите фото в генератор, который принимает изображения. 2. Напишите: «Преврати это фото в страницу раскраски, только чёрные контуры, сохрани узнаваемые черты, без теней, без фона». 3. Если деталей слишком много, добавьте «упрости до крупных форм для ребёнка 5 лет». Частые браки и как их лечить Серые тени и заливка Самый частый брак. Повторите «без серого, без заливки, только чёрные линии». Если не помогает, в любом фоторедакторе поднимите контраст до максимума, серое уйдёт в белое. Сплошные чёрные пятна Глаза и волосы модель любит заливать чёрным. Пишите «глаза и волосы только контуром». Разрывы в линиях Добавьте «замкнутые контуры» и выберите вариант, где разрывов меньше. Мелкие разрывы можно дорисовать ручкой после печати. Слишком мелко для возраста Сравните с таблицей выше и попросите «увеличить детали в два раза, убрать мелкие элементы». Лишние пальцы и странные лапы Перегенерируйте. На раскраске такой брак особенно заметен, потому что ребёнок разглядывает каждую линию. Печать | Параметр | Что делать | |---|---| | Формат | А4 вертикально, 210 на 297 мм | | Поля | 5-10 мм, чтобы принтер ничего не обрезал | | Разрешение | Чем выше, тем чище линии; если картинка мелкая, увеличьте её перед печатью | | Бумага | Обычная для карандашей, плотная от 120 г для фломастеров и красок | | Режим принтера | Чёрно-белый, экономит цветные чернила | Как собрать книжку из 10 страниц 1. Выберите тему: динозавры, профессии, сказочные герои, семья. 2. Сделайте 10 страниц с одним и тем же героем в разных сценах. 3. Опишите героя одинаково в каждом промпте, чтобы он был узнаваем. 4. Добавьте обложку с именем ребёнка, текст впишите в редакторе. 5. Распечатайте и скрепите степлером или отдайте в копицентр на пружину. Такая книжка хорошо работает как подарок на день рождения. Частые вопросы Какая нейросеть лучше делает раскраски Подходит любой современный генератор изображений, который понимает подробное описание. Разницу чаще даёт промпт с чистым контуром, чем выбор сервиса. Можно ли продавать раскраски, сделанные нейросетью Правила коммерческого использования зависят от сервиса и тарифа. Проверьте условия перед продажей и не используйте чужих известных персонажей: права на них принадлежат владельцам. Как сделать раскраску с цифрами Сгенерируйте контур, затем в редакторе впишите цифры в области и сделайте легенду цветов внизу листа. Сам генератор цифры по областям расставляет неточно. Подходят ли такие раскраски для планшета Да, сохраните картинку и откройте в любом приложении для рисования, где есть заливка по контуру. Похожие приёмы для детей в статье про нейросеть для сказок, а про стили иллюстраций в материале про нейросеть для рисования. Что делать дальше Спросите ребёнка, что он хочет раскрасить сегодня, добавьте базовую строку и сделайте три варианта. Распечатайте лучший, а в выходные…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raskraski/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raskraski/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть лучше делает раскраски",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Подходит любой современный генератор изображений, который понимает подробное описание. Разницу чаще даёт промпт с чистым контуром, чем выбор сервиса."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли продавать раскраски, сделанные нейросетью",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Правила коммерческого использования зависят от сервиса и тарифа. Проверьте условия перед продажей и не используйте чужих известных персонажей: права на них принадлежат владельцам."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как сделать раскраску с цифрами",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Сгенерируйте контур, затем в редакторе впишите цифры в области и сделайте легенду цветов внизу листа. Сам генератор цифры по областям расставляет неточно."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Подходят ли такие раскраски для планшета",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, сохраните картинку и откройте в любом приложении для рисования, где есть заливка по контуру. Похожие приёмы для детей в статье про нейросеть для сказок, а про стили иллюстраций в материале про нейросеть для рисования."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/neyroset-dlya-raskraski.webp?v=6f1bb69c22" alt="Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Раскраска через нейросеть: промпты для детских и антистресс-раскрасок, раскраска из фото, чистый контур без серых теней, размер под печать А4 и сборка книжки из 10 страниц.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для раскраски за минуту рисует страницу именно с тем, что сейчас любит ребёнок: пожарной машиной, единорогом на скейте или своей собакой. Для взрослых она делает сложные узоры-антистресс в любом стиле.</p>
+<p>Главная хитрость в том, чтобы получить чистый чёрный контур без серых теней. Ниже промпт, который это делает, и всё про печать.</p>
+<p>Проверено 14 сентября 2026 года.</p>
+<h2 id="sec-0">Базовый промпт на чистый контур</h2>
+<p>Добавляйте эту строку к любому сюжету:</p>
+<p>«Страница раскраски, только чёрные контурные линии на чистом белом фоне, без заливки, без серых теней и полутонов, замкнутые контуры, вертикальный формат А4».</p>
+<p>Слово «замкнутые» важно: через разрывы в линии карандаш и фломастер вылезают за границу, и ребёнок расстраивается.</p>
+<h2 id="sec-1">Раскраски под возраст</h2>
+<table class="gp-table"><thead><tr><th>Возраст</th><th>Детализация</th><th>Что просить в промпте</th></tr></thead><tbody><tr><td>2-3 года</td><td>Очень крупные области</td><td>«толстые линии, один большой объект, без фона»</td></tr><tr><td>4-5 лет</td><td>Крупные детали</td><td>«толстые линии, объект и простой фон из 2-3 элементов»</td></tr><tr><td>6-8 лет</td><td>Средние детали</td><td>«линии средней толщины, сюжетная сцена»</td></tr><tr><td>9-12 лет</td><td>Много деталей</td><td>«тонкие линии, подробная сцена, узоры на одежде»</td></tr><tr><td>Взрослые</td><td>Очень много деталей</td><td>«сложный узор, мелкие элементы, стиль мандала или зентангл»</td></tr></tbody></table>
+<h2 id="sec-2">Примеры промптов</h2>
+<h3>Для малыша</h3>
+<p>«Большой добрый слон с воздушным шариком, толстые линии, без фона» плюс базовая строка.</p>
+<h3>Сюжетная для дошкольника</h3>
+<p>«Кот в костюме пожарного тушит пожар в игрушечном домике, рядом пожарная машина» плюс базовая строка.</p>
+<h3>Обучающая</h3>
+<p>«Буква Ж и рядом жираф, жук и жёлудь» плюс базовая строка. Букву на картинке проверьте: модели иногда рисуют её неверно, тогда впишите её сами маркером.</p>
+<h3>Антистресс для взрослых</h3>
+<p>«Сова, заполненная сложным цветочным узором, мандала-стиль, тонкие линии, очень много мелких областей» плюс базовая строка.</p>
+<h3>Тематическая к празднику</h3>
+<p>«Новогодняя ёлка с игрушками, подарки под ёлкой, снежинки вокруг» плюс базовая строка.</p>
+<h2 id="sec-3">Раскраска из фотографии</h2>
+<p>Можно превратить фото ребёнка, питомца или дома в раскраску. Детям особенно нравится раскрашивать свою собаку.</p>
+<ol><li>Загрузите фото в генератор, который принимает изображения.</li><li>Напишите: «Преврати это фото в страницу раскраски, только чёрные контуры, сохрани узнаваемые черты, без теней, без фона».</li><li>Если деталей слишком много, добавьте «упрости до крупных форм для ребёнка 5 лет».</li></ol>
+<h2 id="sec-4">Частые браки и как их лечить</h2>
+<h3>Серые тени и заливка</h3>
+<p>Самый частый брак. Повторите «без серого, без заливки, только чёрные линии». Если не помогает, в любом фоторедакторе поднимите контраст до максимума, серое уйдёт в белое.</p>
+<h3>Сплошные чёрные пятна</h3>
+<p>Глаза и волосы модель любит заливать чёрным. Пишите «глаза и волосы только контуром».</p>
+<h3>Разрывы в линиях</h3>
+<p>Добавьте «замкнутые контуры» и выберите вариант, где разрывов меньше. Мелкие разрывы можно дорисовать ручкой после печати.</p>
+<h3>Слишком мелко для возраста</h3>
+<p>Сравните с таблицей выше и попросите «увеличить детали в два раза, убрать мелкие элементы».</p>
+<h3>Лишние пальцы и странные лапы</h3>
+<p>Перегенерируйте. На раскраске такой брак особенно заметен, потому что ребёнок разглядывает каждую линию.</p>
+<h2 id="sec-5">Печать</h2>
+<table class="gp-table"><thead><tr><th>Параметр</th><th>Что делать</th></tr></thead><tbody><tr><td>Формат</td><td>А4 вертикально, 210 на 297 мм</td></tr><tr><td>Поля</td><td>5-10 мм, чтобы принтер ничего не обрезал</td></tr><tr><td>Разрешение</td><td>Чем выше, тем чище линии; если картинка мелкая, увеличьте её перед печатью</td></tr><tr><td>Бумага</td><td>Обычная для карандашей, плотная от 120 г для фломастеров и красок</td></tr><tr><td>Режим принтера</td><td>Чёрно-белый, экономит цветные чернила</td></tr></tbody></table>
+<h2 id="sec-6">Как собрать книжку из 10 страниц</h2>
+<ol><li>Выберите тему: динозавры, профессии, сказочные герои, семья.</li><li>Сделайте 10 страниц с одним и тем же героем в разных сценах.</li><li>Опишите героя одинаково в каждом промпте, чтобы он был узнаваем.</li><li>Добавьте обложку с именем ребёнка, текст впишите в редакторе.</li><li>Распечатайте и скрепите степлером или отдайте в копицентр на пружину.</li></ol>
+<p>Такая книжка хорошо работает как подарок на день рождения.</p>
+<h2 id="sec-7">Частые вопросы</h2>
+<h3>Какая нейросеть лучше делает раскраски</h3>
+<p>Подходит любой современный генератор изображений, который понимает подробное описание. Разницу чаще даёт промпт с чистым контуром, чем выбор сервиса.</p>
+<h3>Можно ли продавать раскраски, сделанные нейросетью</h3>
+<p>Правила коммерческого использования зависят от сервиса и тарифа. Проверьте условия перед продажей и не используйте чужих известных персонажей: права на них принадлежат владельцам.</p>
+<h3>Как сделать раскраску с цифрами</h3>
+<p>Сгенерируйте контур, затем в редакторе впишите цифры в области и сделайте легенду цветов внизу листа. Сам генератор цифры по областям расставляет неточно.</p>
+<h3>Подходят ли такие раскраски для планшета</h3>
+<p>Да, сохраните картинку и откройте в любом приложении для рисования, где есть заливка по контуру.</p>
+<p>Похожие приёмы для детей в статье про <a href="/guides/neyroset-dlya-skazok/">нейросеть для сказок</a>, а про стили иллюстраций в материале про <a href="/guides/neyroset-dlya-risovaniya/">нейросеть для рисования</a>.</p>
+<h2 id="sec-8">Что делать дальше</h2>
+<p>Спросите ребёнка, что он хочет раскрасить сегодня, добавьте базовую строку и сделайте три варианта. Распечатайте лучший, а в выходные соберите книжку из десяти страниц с одним героем.</p>
+<p>Умение точно объяснить нейросети, что нужно, пригодится и для работы: я так делаю обложки, карусели и ролики для своего блога. Как это устроено, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-pisem/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pisem.webp?v=a1ff968993" alt="Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры</span><span class="rc-desc">Письма через нейросеть: промпт из пяти полей, шаблоны для коммерческого предложения…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-fotoshopa/"><span class="rc-cover"><img src="/covers/neyroset-dlya-fotoshopa.webp?v=d1ebef40aa" alt="Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего</span><span class="rc-desc">Нейросеть в Photoshop: генеративная заливка, расширение холста, инструмент удаления…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-memov/"><span class="rc-cover"><img src="/covers/neyroset-dlya-memov.webp?v=8835156269" alt="Нейросеть для мемов: как делать смешные мемы для блога и чатов" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для мемов: как делать смешные мемы для блога и чатов</span><span class="rc-desc">Мемы через нейросеть: как придумать шутку под свою аудиторию, промпты на картинку без…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-biznes-plana/"><span class="rc-cover"><img src="/covers/neyroset-dlya-biznes-plana.webp?v=1ee2422e70" alt="Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами</span><span class="rc-desc">Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=9afa978d3c"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "neyroset-dlya-raskraski";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

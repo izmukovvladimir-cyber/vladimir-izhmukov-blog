@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для визитки: как сделать дизайн и текст, готовые к печати — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Визитка через нейросеть: текст, который запоминают, промпты под дизайн в разных стилях, QR-код на соцсети, размер 90 на 50 мм, вылеты под обрез и проверка макета перед типографией.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vizitki/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для визитки: как сделать дизайн и текст, готовые к печати">
+<meta property="og:description" content="Визитка через нейросеть: текст, который запоминают, промпты под дизайн в разных стилях, QR-код на соцсети, размер 90 на 50 мм, вылеты под обрез и проверка макета перед типографией.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vizitki/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-vizitki.webp?v=7a469dbfb0">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для визитки: как сделать дизайн и текст, готовые к печати">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-14T09:40:00Z">
+<meta property="article:modified_time" content="2026-09-14T09:40:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для визитки: как сделать дизайн и текст, готовые к печати">
+<meta name="twitter:description" content="Визитка через нейросеть: текст, который запоминают, промпты под дизайн в разных стилях, QR-код на соцсети, размер 90 на 50 мм, вылеты под обрез и проверка макета перед типографией.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-vizitki.webp?v=7a469dbfb0">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-vizitki.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vizitki/#article",
+      "headline": "Нейросеть для визитки: как сделать дизайн и текст, готовые к печати",
+      "description": "Визитка через нейросеть: текст, который запоминают, промпты под дизайн в разных стилях, QR-код на соцсети, размер 90 на 50 мм, вылеты под обрез и проверка макета перед типографией.",
+      "datePublished": "2026-09-14T09:40:00Z",
+      "dateModified": "2026-09-14T09:40:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vizitki/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vizitki/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-vizitki.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для визитки: как сделать дизайн и текст, готовые к печати Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для визитки закрывает две задачи сразу: придумывает, что написать, чтобы вас запомнили, и даёт варианты дизайна за несколько минут. Финальный макет всё равно собирается в редакторе, потому что типографии нужен точный размер и чёткий текст. Ниже промпты для текста и дизайна, требования к печати и чек-лист перед заказом тиража. Проверено 14 сентября 2026 года. Что написать на визитке Хорошая визитка отвечает на вопрос «кто это и зачем мне ему звонить» за три секунды. Нейросеть помогает сжать это в одну строку. Промпт: «Я массажист, работаю с офисными сотрудниками, у которых болят шея и спина, выезжаю на дом. Предложи 10 коротких строк для визитки до 6 слов, которые объясняют, чем я полезен. Без штампов вроде \"профессионал своего дела\"». Что обычно стоит на визитке: | Элемент | Нужен ли | Комментарий | |---|---|---| | Имя и фамилия | Да | Крупнее всего остального | | Чем занимаетесь | Да | Одна понятная строка | | Телефон | Да | В удобном для набора формате | | Мессенджер или соцсеть | Желательно | Один-два канала, где вы реально отвечаете | | QR-код | Желательно | Ведёт на сайт, соцсеть или запись | | Адрес | По ситуации | Если к вам приходят | | Логотип | По ситуации | Если он есть и узнаваем | Больше семи элементов на визитке делают её тесной. Лишнее переносите на обратную сторону или в QR-код. Промпты под дизайн Общее начало для всех стилей: «Дизайн визитки, горизонтальная, пропорции 90 на 50, вид спереди, ровно по центру кадра, пустые места под текст, без букв и цифр». Текст на картинке генератор напишет с ошибками, поэтому просите фон и композицию, а надписи ставьте в редакторе. Минимализм «Белый плотный картон, много пустого пространства, тонкая линия цвета графита вдоль левого края, спокойно и дорого». Тёмная премиальная «Чёрная матовая бумага, золотой тонкий орнамент в углу, место под имя по центру». Творческая «Яркий градиент от кораллового к фиолетовому, абстрактные мягкие формы, место под текст справа». Природная для бьюти и здоровья «Бежевая крафтовая бумага, веточка эвкалипта акварелью слева, мягкие тени». Строгая для юриста или финансиста «Тёмно-синий фон, тонкая светлая рамка, симметричная композиция, ощущение надёжности». Сгенерируйте по два-три варианта каждого стиля и покажите знакомым из вашей аудитории. Выбор со стороны обычно точнее собственного. Как добавить QR-код 1. Решите, куда он ведёт: сайт, соцсеть, запись онлайн, мессенджер. 2. Сделайте код в любом бесплатном генераторе QR. 3. Поставьте его в макет размером не меньше 15 на 15 мм, иначе старые камеры телефонов его не прочитают. 4. Проверьте на распечатке двумя разными телефонами. Если ссылка может поменяться, используйте короткую ссылку, которую можно перенастроить без перепечатки. Требования типографии | Параметр | Значение | |---|---| | Размер визитки | 90 на 50 мм, стандарт в России | | Вылеты под обрез | 2-3 мм с каждой стороны, итоговый файл 94 на 54 мм | | Безопасная зона | Текст не ближе 4-5 мм к краю | | Разрешение | 300 точек на дюйм | | Цветовая модель | CMYK, уточните у своей типографии | | Формат файла | PDF, шрифты переведены в кривые | | Минимальный шрифт | 7-8 пунктов | Картинка из генератора обычно приходит в меньшем разрешении, чем нужно для печати. Увеличьте её отдельным инструментом повышения качества или используйте как фон с мягкой текстурой, где небольшая потеря чёткости незаметна. Сборка макета 1. Откройте любой редактор с шаблоном визитки нужного размера. 2. Поставьте картинку из нейросети фоном с вылетами. 3. Наберите текст шрифтом, который читается с расстояния вытянутой руки. 4. Добавьте QR-код. 5. Экспортируйте PDF для печати с вылетами. Чек-лист перед заказом тиража - Имя и телефон проверены по буквам и цифрам, лучше двумя людьми. - QR-код открывается на двух телефонах с распечатки. - Текст не заходит в зону 4-5 мм от края. - Контраст текста и фона видно при слабом свете. - Заказан пробный экземпляр или маленький тираж. Частые ошибки Мелкий текст на пёстром фоне Красивая картинка съедает надпись. Под текстом оставляйте спокойную область. Опечатка в телефоне Самая дорогая ошибка визитки. Позвоните по номеру с макета перед печатью. Цвета на печати темнее, чем на экране Экран светит, бумага отражает. Просите пробный оттиск, если цвет важен. Слишком много контактов Пять соцсетей рассеивают внимание. Оставьте те, где вы отвечаете быстро. Частые вопросы Какая нейросеть лучше делает визитки Для текста подходит любой чат-ассистент, для фона и композиции любой генератор изображений. Сам макет с точными размерами удобнее собрать в редакторе с шаблонами. Можно ли сразу отдать картинку из нейросети в печать Обычно это не получается. Разрешение и размер расходятся с требованиями типографии, буквы на картинке выходят с ошибками, поэтому макет собирают в редакторе. Нужна ли визитка в 2026 году На встречах, выставках и в локальном бизнесе да, особенно с QR-кодом на…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для визитки: как сделать дизайн и текст, готовые к печати",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vizitki/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vizitki/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть лучше делает визитки",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для текста подходит любой чат-ассистент, для фона и композиции любой генератор изображений. Сам макет с точными размерами удобнее собрать в редакторе с шаблонами."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли сразу отдать картинку из нейросети в печать",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Обычно это не получается. Разрешение и размер расходятся с требованиями типографии, буквы на картинке выходят с ошибками, поэтому макет собирают в редакторе."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужна ли визитка в 2026 году",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "На встречах, выставках и в локальном бизнесе да, особенно с QR-кодом на соцсеть или запись. Для онлайн-работы её часто заменяет ссылка в профиле."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как сделать электронную визитку",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Соберите страницу со ссылками или карточку контакта и дайте на неё QR-код. Тот же дизайн из нейросети подойдёт как обложка. Про фирменный знак подробнее в статье про нейросеть для логотипа, а про общий стиль материалов в статье про нейросеть для дизайна."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/neyroset-dlya-vizitki.webp?v=7a469dbfb0" alt="Нейросеть для визитки: как сделать дизайн и текст, готовые к печати" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Нейросеть для визитки: как сделать дизайн и текст, готовые к печати</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Визитка через нейросеть: текст, который запоминают, промпты под дизайн в разных стилях, QR-код на соцсети, размер 90 на 50 мм, вылеты под обрез и проверка макета перед типографией.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для визитки закрывает две задачи сразу: придумывает, что написать, чтобы вас запомнили, и даёт варианты дизайна за несколько минут. Финальный макет всё равно собирается в редакторе, потому что типографии нужен точный размер и чёткий текст.</p>
+<p>Ниже промпты для текста и дизайна, требования к печати и чек-лист перед заказом тиража.</p>
+<p>Проверено 14 сентября 2026 года.</p>
+<h2 id="sec-0">Что написать на визитке</h2>
+<p>Хорошая визитка отвечает на вопрос «кто это и зачем мне ему звонить» за три секунды. Нейросеть помогает сжать это в одну строку.</p>
+<p>Промпт: «Я массажист, работаю с офисными сотрудниками, у которых болят шея и спина, выезжаю на дом. Предложи 10 коротких строк для визитки до 6 слов, которые объясняют, чем я полезен. Без штампов вроде "профессионал своего дела"».</p>
+<p>Что обычно стоит на визитке:</p>
+<table class="gp-table"><thead><tr><th>Элемент</th><th>Нужен ли</th><th>Комментарий</th></tr></thead><tbody><tr><td>Имя и фамилия</td><td>Да</td><td>Крупнее всего остального</td></tr><tr><td>Чем занимаетесь</td><td>Да</td><td>Одна понятная строка</td></tr><tr><td>Телефон</td><td>Да</td><td>В удобном для набора формате</td></tr><tr><td>Мессенджер или соцсеть</td><td>Желательно</td><td>Один-два канала, где вы реально отвечаете</td></tr><tr><td>QR-код</td><td>Желательно</td><td>Ведёт на сайт, соцсеть или запись</td></tr><tr><td>Адрес</td><td>По ситуации</td><td>Если к вам приходят</td></tr><tr><td>Логотип</td><td>По ситуации</td><td>Если он есть и узнаваем</td></tr></tbody></table>
+<p>Больше семи элементов на визитке делают её тесной. Лишнее переносите на обратную сторону или в QR-код.</p>
+<h2 id="sec-1">Промпты под дизайн</h2>
+<p>Общее начало для всех стилей: «Дизайн визитки, горизонтальная, пропорции 90 на 50, вид спереди, ровно по центру кадра, пустые места под текст, без букв и цифр».</p>
+<p>Текст на картинке генератор напишет с ошибками, поэтому просите фон и композицию, а надписи ставьте в редакторе.</p>
+<h3>Минимализм</h3>
+<p>«Белый плотный картон, много пустого пространства, тонкая линия цвета графита вдоль левого края, спокойно и дорого».</p>
+<h3>Тёмная премиальная</h3>
+<p>«Чёрная матовая бумага, золотой тонкий орнамент в углу, место под имя по центру».</p>
+<h3>Творческая</h3>
+<p>«Яркий градиент от кораллового к фиолетовому, абстрактные мягкие формы, место под текст справа».</p>
+<h3>Природная для бьюти и здоровья</h3>
+<p>«Бежевая крафтовая бумага, веточка эвкалипта акварелью слева, мягкие тени».</p>
+<h3>Строгая для юриста или финансиста</h3>
+<p>«Тёмно-синий фон, тонкая светлая рамка, симметричная композиция, ощущение надёжности».</p>
+<p>Сгенерируйте по два-три варианта каждого стиля и покажите знакомым из вашей аудитории. Выбор со стороны обычно точнее собственного.</p>
+<h2 id="sec-2">Как добавить QR-код</h2>
+<ol><li>Решите, куда он ведёт: сайт, соцсеть, запись онлайн, мессенджер.</li><li>Сделайте код в любом бесплатном генераторе QR.</li><li>Поставьте его в макет размером не меньше 15 на 15 мм, иначе старые камеры телефонов его не прочитают.</li><li>Проверьте на распечатке двумя разными телефонами.</li></ol>
+<p>Если ссылка может поменяться, используйте короткую ссылку, которую можно перенастроить без перепечатки.</p>
+<h2 id="sec-3">Требования типографии</h2>
+<table class="gp-table"><thead><tr><th>Параметр</th><th>Значение</th></tr></thead><tbody><tr><td>Размер визитки</td><td>90 на 50 мм, стандарт в России</td></tr><tr><td>Вылеты под обрез</td><td>2-3 мм с каждой стороны, итоговый файл 94 на 54 мм</td></tr><tr><td>Безопасная зона</td><td>Текст не ближе 4-5 мм к краю</td></tr><tr><td>Разрешение</td><td>300 точек на дюйм</td></tr><tr><td>Цветовая модель</td><td>CMYK, уточните у своей типографии</td></tr><tr><td>Формат файла</td><td>PDF, шрифты переведены в кривые</td></tr><tr><td>Минимальный шрифт</td><td>7-8 пунктов</td></tr></tbody></table>
+<p>Картинка из генератора обычно приходит в меньшем разрешении, чем нужно для печати. Увеличьте её отдельным инструментом повышения качества или используйте как фон с мягкой текстурой, где небольшая потеря чёткости незаметна.</p>
+<h2 id="sec-4">Сборка макета</h2>
+<ol><li>Откройте любой редактор с шаблоном визитки нужного размера.</li><li>Поставьте картинку из нейросети фоном с вылетами.</li><li>Наберите текст шрифтом, который читается с расстояния вытянутой руки.</li><li>Добавьте QR-код.</li><li>Экспортируйте PDF для печати с вылетами.</li></ol>
+<h2 id="sec-5">Чек-лист перед заказом тиража</h2>
+<ul><li>Имя и телефон проверены по буквам и цифрам, лучше двумя людьми.</li><li>QR-код открывается на двух телефонах с распечатки.</li><li>Текст не заходит в зону 4-5 мм от края.</li><li>Контраст текста и фона видно при слабом свете.</li><li>Заказан пробный экземпляр или маленький тираж.</li></ul>
+<h2 id="sec-6">Частые ошибки</h2>
+<h3>Мелкий текст на пёстром фоне</h3>
+<p>Красивая картинка съедает надпись. Под текстом оставляйте спокойную область.</p>
+<h3>Опечатка в телефоне</h3>
+<p>Самая дорогая ошибка визитки. Позвоните по номеру с макета перед печатью.</p>
+<h3>Цвета на печати темнее, чем на экране</h3>
+<p>Экран светит, бумага отражает. Просите пробный оттиск, если цвет важен.</p>
+<h3>Слишком много контактов</h3>
+<p>Пять соцсетей рассеивают внимание. Оставьте те, где вы отвечаете быстро.</p>
+<h2 id="sec-7">Частые вопросы</h2>
+<h3>Какая нейросеть лучше делает визитки</h3>
+<p>Для текста подходит любой чат-ассистент, для фона и композиции любой генератор изображений. Сам макет с точными размерами удобнее собрать в редакторе с шаблонами.</p>
+<h3>Можно ли сразу отдать картинку из нейросети в печать</h3>
+<p>Обычно это не получается. Разрешение и размер расходятся с требованиями типографии, буквы на картинке выходят с ошибками, поэтому макет собирают в редакторе.</p>
+<h3>Нужна ли визитка в 2026 году</h3>
+<p>На встречах, выставках и в локальном бизнесе да, особенно с QR-кодом на соцсеть или запись. Для онлайн-работы её часто заменяет ссылка в профиле.</p>
+<h3>Как сделать электронную визитку</h3>
+<p>Соберите страницу со ссылками или карточку контакта и дайте на неё QR-код. Тот же дизайн из нейросети подойдёт как обложка.</p>
+<p>Про фирменный знак подробнее в статье про <a href="/guides/neyroset-dlya-logotipa/">нейросеть для логотипа</a>, а про общий стиль материалов в статье про <a href="/guides/neyroset-dlya-dizayna/">нейросеть для дизайна</a>.</p>
+<h2 id="sec-8">Что делать дальше</h2>
+<p>Сформулируйте строку «чем я полезен» по первому промпту, сделайте три варианта фона и соберите макет по таблице требований. Закажите маленький тираж, проверьте и только потом печатайте основной.</p>
+<p>Визитка ведёт человека к вам в соцсеть, а дальше клиентов приводит уже контент. Как я выстраиваю путь от ролика до заявки, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-pisem/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pisem.webp?v=a1ff968993" alt="Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры</span><span class="rc-desc">Письма через нейросеть: промпт из пяти полей, шаблоны для коммерческого предложения…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-fotoshopa/"><span class="rc-cover"><img src="/covers/neyroset-dlya-fotoshopa.webp?v=d1ebef40aa" alt="Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего</span><span class="rc-desc">Нейросеть в Photoshop: генеративная заливка, расширение холста, инструмент удаления…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-memov/"><span class="rc-cover"><img src="/covers/neyroset-dlya-memov.webp?v=8835156269" alt="Нейросеть для мемов: как делать смешные мемы для блога и чатов" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для мемов: как делать смешные мемы для блога и чатов</span><span class="rc-desc">Мемы через нейросеть: как придумать шутку под свою аудиторию, промпты на картинку без…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-biznes-plana/"><span class="rc-cover"><img src="/covers/neyroset-dlya-biznes-plana.webp?v=1ee2422e70" alt="Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами</span><span class="rc-desc">Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=9afa978d3c"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "neyroset-dlya-vizitki";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

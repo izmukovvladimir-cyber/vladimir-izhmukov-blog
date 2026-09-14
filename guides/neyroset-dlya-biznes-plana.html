@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<script data-gfmr>(function(){try{if(location.search.indexOf('nomobile')>-1)return;var p=location.pathname;if(/^\/m\//.test(p))return;var sw=Math.min(screen.width,screen.height);if(!(sw<=640))return;p=p.replace(/(^|\/)index\.html$|\.html$/,'$1');var t=null,g=p.match(/^\/guides\/([^\/.]+)\/?$/);if(g){t='/m/guides/'+g[1]+'.html';}else if(p==='/'||p===''){t='/m/';}else{var m=p.match(/^\/([^\/.]+)\/?$/);if(m&&['instagram','neyroseti','kontent','about','library'].indexOf(m[1])>-1){t='/m/'+m[1]+'.html';}}if(t){location.replace(t+location.search+location.hash);}}catch(e){}})();</script>
+<link data-gfmr-alt rel="alternate" media="only screen and (max-width: 640px)" href="https://blog.vladimir-izhmukov.ru/m/guides/neyroset-dlya-biznes-plana.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами — Владимир Ижмуков</title>
+<meta name="description" content="Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт и цена, маркетинг, финансовая модель, риски. Промпты, таблица расчёта и проверка, где модель ошибается.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:#FAF7F2; }
+  .standalone-c { width:100%; }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-biznes-plana/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами">
+<meta property="og:description" content="Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт и цена, маркетинг, финансовая модель, риски. Промпты, таблица расчёта и проверка, где модель ошибается.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-biznes-plana/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-biznes-plana.webp?v=1ee2422e70">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-14T10:00:00Z">
+<meta property="article:modified_time" content="2026-09-14T10:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами">
+<meta name="twitter:description" content="Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт и цена, маркетинг, финансовая модель, риски. Промпты, таблица расчёта и проверка, где модель ошибается.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-biznes-plana.webp?v=1ee2422e70">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-biznes-plana.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-biznes-plana/#article",
+      "headline": "Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами",
+      "description": "Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт и цена, маркетинг, финансовая модель, риски. Промпты, таблица расчёта и проверка, где модель ошибается.",
+      "datePublished": "2026-09-14T10:00:00Z",
+      "dateModified": "2026-09-14T10:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-biznes-plana/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-biznes-plana/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-biznes-plana.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для бизнес-плана за вечер собирает черновик всех разделов, задаёт неудобные вопросы и помогает посчитать экономику. Цифры рынка и цены она при этом часто придумывает, поэтому каждое число в плане проверяется руками. Ниже структура из восьми разделов, промпт на каждый и шаблон финансовой модели, которую легко перенести в таблицу. Проверено 14 сентября 2026 года. Для чего вам план Сначала решите, кто его читает. От этого зависят объём и акцент. | Для кого | Что важно | Объём | |---|---|---| | Для себя | Посчитать, окупится ли идея | 3-5 страниц | | Партнёр или инвестор | Рост, доля рынка, возврат денег | 10-15 страниц плюс модель | | Банк | Залог, стабильный поток, срок возврата | По форме банка | | Грант или субсидия | Соответствие условиям программы | По форме программы | Для гранта и кредита всегда запрашивайте официальную форму: у программ свои обязательные разделы. Шаг 0: дайте модели контекст Промпт-основа, который вставляется перед каждым разделом: «Я открываю кофейню навынос площадью 12 квадратных метров у выхода из метро в городе с населением 600 тысяч человек. Бюджет на старт 2,5 млн рублей из своих средств. Я работал бариста 4 года, опыта управления нет. Задавай уточняющие вопросы, если данных не хватает. Все цифры, которые ты не можешь знать точно, помечай словом ДОПУЩЕНИЕ». Пометка ДОПУЩЕНИЕ помогает потом найти все места, которые надо проверить. Восемь разделов с промптами Раздел 1: резюме проекта Пишется последним, когда готово всё остальное. Промпт: «По разделам ниже напиши резюме на полстраницы: что за бизнес, для кого, сколько нужно денег, когда окупится». Раздел 2: описание продукта «Опиши продукт и чем он отличается для клиента. Перечисли 5 причин, почему человек купит у меня. Отдельно назови 3 причины, почему он пройдёт мимо». Вторая половина промпта ценнее первой. Раздел 3: рынок и клиенты «Опиши три сегмента клиентов: кто они, когда покупают, сколько готовы платить. Предложи, как проверить каждый сегмент за неделю без вложений». Раздел 4: конкуренты «Составь таблицу типов конкурентов: прямые, косвенные, замена. Для каждого сильные и слабые стороны». Названия конкретных заведений и их цены собираете сами, по картам и отзывам. Раздел 5: маркетинг «Предложи план привлечения первых 300 клиентов за 2 месяца с бюджетом 60 тысяч рублей. Для каждого канала: действие, стоимость, ожидаемый результат с пометкой ДОПУЩЕНИЕ». Раздел 6: операционный план «Опиши, что нужно для работы: оборудование, поставщики, персонал, график, разрешения. Составь список дел до открытия по неделям». Раздел 7: финансовая модель Подробно разобрана ниже. Раздел 8: риски «Назови 8 рисков этого проекта. Для каждого: вероятность, насколько больно, как снизить. Начни с самых опасных». Финансовая модель на 12 месяцев Попросите модель собрать таблицу, а потом перенесите её в электронную таблицу, где формулы можно проверить. Промпт: «Сделай финансовую модель на 12 месяцев в виде таблицы: выручка по месяцам, себестоимость, аренда, зарплаты, налоги, маркетинг, прибыль, накопленный итог. Отдельной таблицей вынеси все допущения: средний чек, число чеков в день, рост по месяцам». Минимальный набор строк модели: | Строка | Как считается | |---|---| | Выручка | Средний чек, умноженный на число чеков в день и на рабочие дни | | Себестоимость | Процент от выручки по вашим закупочным ценам | | Постоянные расходы | Аренда, зарплаты, связь, бухгалтерия | | Маркетинг | Бюджет по месяцам | | Налоги | По выбранному режиму налогообложения | | Прибыль | Выручка минус все расходы | | Накопленный итог | Сумма прибыли с учётом стартовых вложений | Точку окупаемости смотрите в строке накопленного итога: месяц, где он стал больше нуля. Три сценария Попросите модель пересчитать таблицу в трёх вариантах: плохой (чеков на 30% меньше), базовый и хороший (на 20% больше). Если в плохом сценарии деньги кончаются раньше, чем бизнес выходит в плюс, нужен запас или другой план. Где нейросеть ошибается - Придумывает объём рынка и средние цены, которые звучат правдоподобно. Проверяйте по открытой статистике, отчётам и живым ценам конкурентов. - Ошибается в арифметике длинных таблиц. Пересчитайте формулами в электронной таблице. - Предлагает оптимистичный рост без причины. Спросите, откуда взялся каждый процент. - Путает налоговые ставки и режимы. Их сверяйте с официальными источниками или бухгалтером на дату составления плана. Как проверить план самому Попросите модель сыграть скептика: «Ты опытный инвестор, который отказывает девяти проектам из десяти. Прочитай мой бизнес-план и назови 10 причин отказать. Для каждой скажи, что нужно исправить». Исправьте то, что справедливо, и повторите. Частые вопросы Какая нейросеть лучше для бизнес-плана Для текста и структуры подходит любой современный чат-ассистент. Для модели удобнее тот, что умеет работать с таблицами и загруженными файлами. Можно ли сдать в…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-biznes-plana/"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами",
+      "description": "Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт и цена, маркетинг, финансовая модель, риски. Промпты, таблица расчёта и проверка, где модель ошибается.",
+      "inLanguage": "ru",
+      "supply": [],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Шаг 0: дайте модели контекст",
+          "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-biznes-plana/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-biznes-plana/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть лучше для бизнес-плана",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для текста и структуры подходит любой современный чат-ассистент. Для модели удобнее тот, что умеет работать с таблицами и загруженными файлами."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли сдать в банк план, написанный нейросетью",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Можно использовать как черновик, если все цифры проверены и план оформлен по форме банка. Отвечать на вопросы по плану всё равно будете вы."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько времени занимает бизнес-план с нейросетью",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Черновик за один-два вечера. Проверка цифр и сбор реальных цен конкурентов обычно занимают ещё несколько дней."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужен ли бизнес-план для онлайн-проекта или блога",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Короткий план на три-пять страниц полезен любому проекту: он показывает, сколько клиентов нужно, чтобы выйти в плюс, и откуда они придут. Про продвижение уже запущенного бизнеса есть статьи про нейросети для маркетинга и про ИИ-агентов для бизнеса."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="standalone-c"><div class="gp dir-c theme-light"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><nav class="gp-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" aria-label="Сменить тему" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><a class="gp-headbtn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте <span class="ar">→</span></a></div></div></div><div class="ban-dark"><span class="gp-eyebrow lime"><span class="dot"></span>ВЛАДИМИР&nbsp;ИЖМУКОВ</span><span>Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.</span><span class="spacer"></span></div><div class="gp-layout"><div class="gp-sidebar"><div class="gp-side-group">Claude Code · 58</div><a href="/guides/generaciya-video-po-tekstu/" class="gp-side-item">Генерация видео по тексту в 2026: как это работает и чем сделать</a><a href="/guides/ii-agenty-dlya-biznesa/" class="gp-side-item">ИИ-агенты для бизнеса в 2026: что это на самом деле и с чего начать</a><a href="/guides/kak-ozhivit-foto-neyrosetyu/" class="gp-side-item">Как оживить фото нейросетью: от старого снимка до короткого ролика</a><a href="/guides/kak-sdelat-video-neyrosetyu/" class="gp-side-item">Как сделать видео нейросетью в 2026: пошагово с телефона</a><a href="/guides/kak-zarabotat-na-neyrosetyah/" class="gp-side-item">Как заработать на нейросетях в 2026: честные способы, цифры и границы</a><a href="/guides/kitayskie-neyroseti-besplatno/" class="gp-side-item">Китайские нейросети бесплатно: какие работают из России и что они реально умеют</a><a href="/guides/neyroset-dlya-angliyskogo/" class="gp-side-item">Нейросеть для английского: как заниматься каждый день без репетитора</a><a href="/guides/neyroset-dlya-animacii/" class="gp-side-item">Нейросеть для анимации: как сделать анимированный ролик без аниматора</a><a href="/guides/neyroset-dlya-avatarki/" class="gp-side-item">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</a><a href="/guides/neyroset-dlya-biznes-plana/" class="gp-side-item active">Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами</a><a href="/guides/neyroset-dlya-chertezhey/" class="gp-side-item">Нейросеть для чертежей: где она помогает, а где обманет с размерами</a><a href="/guides/neyroset-dlya-diploma/" class="gp-side-item">Нейросеть для диплома: план, главы и защита без провала</a><a href="/guides/neyroset-dlya-dizayna/" class="gp-side-item">Нейросеть для дизайна: что она делает за вас, а что придётся доделать руками</a><a href="/guides/neyroset-dlya-dogovora/" class="gp-side-item">Нейросеть для договора: как составить и проверить документ</a><a href="/guides/neyroset-dlya-doklada/" class="gp-side-item">Нейросеть для доклада: текст, план выступления и ответы на вопросы за один вечер</a><a href="/guides/neyroset-dlya-foto/" class="gp-side-item">Нейросеть для фото: обработать своё, улучшить старое, сгенерировать новое</a><a href="/guides/neyroset-dlya-fotoshopa/" class="gp-side-item">Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего</a><a href="/guides/neyroset-dlya-infografiki/" class="gp-side-item">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</a><a href="/guides/neyroset-dlya-interera/" class="gp-side-item">Нейросеть для интерьера: как увидеть свою комнату в новом виде до ремонта</a><a href="/guides/neyroset-dlya-kartochek-tovarov/" class="gp-side-item">Нейросеть для карточек товаров: фото, инфографика и описание для маркетплейса</a><a href="/guides/neyroset-dlya-knigi/" class="gp-side-item">Нейросеть для книги и глав книги в 2026: как пользоваться и собрать книгу из своего опыта</a><a href="/guides/neyroset-dlya-koda/" class="gp-side-item">Нейросеть для кода: как человек без образования программиста собирает рабочие инструменты</a><a href="/guides/neyroset-dlya-komiksa/" class="gp-side-item">Нейросеть для комикса: от идеи до готовых страниц</a><a href="/guides/neyroset-dlya-kursovoy/" class="gp-side-item">Нейросеть для курсовой: как ускорить работу и не завалиться на проверке</a><a href="/guides/neyroset-dlya-logotipa/" class="gp-side-item">Нейросеть для логотипа: как получить знак, который не стыдно поставить на профиль</a><a href="/guides/neyroset-dlya-memov/" class="gp-side-item">Нейросеть для мемов: как делать смешные мемы для блога и чатов</a><a href="/guides/neyroset-dlya-montazha-video/" class="gp-side-item">Нейросеть для монтажа видео в 2026: что она делает сама и где нужны руки</a><a href="/guides/neyroset-dlya-muzyki/" class="gp-side-item">Нейросеть для музыки: как сделать трек для ролика, который не заглушат за авторские права</a><a href="/guides/neyroset-dlya-oblozhek/" class="gp-side-item">Нейросеть для обложек: как собрать картинку, на которую нажимают</a><a href="/guides/neyroset-dlya-otkrytki/" class="gp-side-item">Нейросеть для открытки: как сделать поздравление, которое сохранят</a><a href="/guides/neyroset-dlya-otzyvov/" class="gp-side-item">Нейросеть для отзывов в 2026: как пользоваться, отвечать на негатив и собирать отзывы клиентов</a><a href="/guides/neyroset-dlya-perevoda/" class="gp-side-item">Нейросеть для перевода: как перевести текст и видео так, чтобы звучало по-человечески</a><a href="/guides/neyroset-dlya-pesni/" class="gp-side-item">Нейросеть для песни: как получить трек с вокалом, который не стыдно подарить</a><a href="/guides/neyroset-dlya-pisem/" class="gp-side-item">Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры</a><a href="/guides/neyroset-dlya-postov/" class="gp-side-item">Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK</a><a href="/guides/neyroset-dlya-prezentaciy/" class="gp-side-item">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</a><a href="/guides/neyroset-dlya-proekta/" class="gp-side-item">Нейросеть для проекта: индивидуальный проект в школе и колледже от темы до защиты</a><a href="/guides/neyroset-dlya-raskraski/" class="gp-side-item">Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого</a><a href="/guides/neyroset-dlya-referata/" class="gp-side-item">Нейросеть для реферата: как написать реферат по шагам и пройти проверку</a><a href="/guides/neyroset-dlya-reklamy/" class="gp-side-item">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</a><a href="/guides/neyroset-dlya-resheniya-zadach/" class="gp-side-item">Нейросеть для решения задач: математика, физика, химия по фото и с разбором</a><a href="/guides/neyroset-dlya-rezyume/" class="gp-side-item">Нейросеть для резюме: как собрать сильный отклик за вечер</a><a href="/guides/neyroset-dlya-rils/" class="gp-side-item">Нейросеть для Рилс в 2026: какие берут под каждую часть ролика</a><a href="/guides/neyroset-dlya-risovaniya/" class="gp-side-item">Нейросеть для рисования: как получить иллюстрацию нужного стиля, а потом повторить его во всех картинках</a><a href="/guides/neyroset-dlya-sayta/" class="gp-side-item">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</a><a href="/guides/neyroset-dlya-scenariya/" class="gp-side-item">Нейросеть для сценария: YouTube-ролик, реклама, эфир и мероприятие</a><a href="/guides/neyroset-dlya-skazok/" class="gp-side-item">Нейросеть для сказок: как сочинить сказку для ребёнка за 10 минут</a><a href="/guides/neyroset-dlya-sochineniya/" class="gp-side-item">Нейросеть для сочинения: как написать сочинение с помощью нейросети и не потерять свой голос</a><a href="/guides/neyroset-dlya-stihov/" class="gp-side-item">Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух</a><a href="/guides/neyroset-dlya-tablic/" class="gp-side-item">Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ</a><a href="/guides/neyroset-dlya-tatu/" class="gp-side-item">Нейросеть для тату: как сделать эскиз, который мастер согласится бить</a><a href="/guides/neyroset-dlya-testov/" class="gp-side-item">Нейросеть для тестов: как составить тест с ответами и как готовиться к тестированию</a><a href="/guides/neyroset-dlya-ucheby/" class="gp-side-item">Нейросеть для учебы: как понимать темы быстрее и готовиться к экзаменам</a><a href="/guides/neyroset-dlya-uchitelya/" class="gp-side-item">Нейросеть для учителя: планы уроков, задания, проверка и отчёты за вечер</a><a href="/guides/neyroset-dlya-vizitki/" class="gp-side-item">Нейросеть для визитки: как сделать дизайн и текст, готовые к печати</a><a href="/guides/neyroseti-dlya-marketinga/" class="gp-side-item">Нейросети для маркетинга в 2026: по каждой задаче отдельно</a><a href="/guides/oblozhka-dlya-video/" class="gp-side-item">Как сделать обложку для видео: разбор кликабельной обложки и запросы под неё</a><a href="/guides/promty-dlya-video/" class="gp-side-item">Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling</a></div><div class="gp-content read-article"><div class="gp-cover"><img src="/covers/neyroset-dlya-biznes-plana.webp?v=1ee2422e70" alt="Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами" loading="eager"></div><div class="gp-bc">Статьи</div><div class="gp-h1row"><h1 class="gp-h1">Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами</h1><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="gp-desc">Бизнес-план через нейросеть по разделам: описание проекта, рынок и конкуренты, продукт и цена, маркетинг, финансовая модель, риски. Промпты, таблица расчёта и проверка, где модель ошибается.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для бизнес-плана за вечер собирает черновик всех разделов, задаёт неудобные вопросы и помогает посчитать экономику. Цифры рынка и цены она при этом часто придумывает, поэтому каждое число в плане проверяется руками.</p>
+<p>Ниже структура из восьми разделов, промпт на каждый и шаблон финансовой модели, которую легко перенести в таблицу.</p>
+<p>Проверено 14 сентября 2026 года.</p>
+<h2 id="sec-0">Для чего вам план</h2>
+<p>Сначала решите, кто его читает. От этого зависят объём и акцент.</p>
+<table class="gp-table"><thead><tr><th>Для кого</th><th>Что важно</th><th>Объём</th></tr></thead><tbody><tr><td>Для себя</td><td>Посчитать, окупится ли идея</td><td>3-5 страниц</td></tr><tr><td>Партнёр или инвестор</td><td>Рост, доля рынка, возврат денег</td><td>10-15 страниц плюс модель</td></tr><tr><td>Банк</td><td>Залог, стабильный поток, срок возврата</td><td>По форме банка</td></tr><tr><td>Грант или субсидия</td><td>Соответствие условиям программы</td><td>По форме программы</td></tr></tbody></table>
+<p>Для гранта и кредита всегда запрашивайте официальную форму: у программ свои обязательные разделы.</p>
+<h2 id="sec-1">Шаг 0: дайте модели контекст</h2>
+<p>Промпт-основа, который вставляется перед каждым разделом:</p>
+<p>«Я открываю кофейню навынос площадью 12 квадратных метров у выхода из метро в городе с населением 600 тысяч человек. Бюджет на старт 2,5 млн рублей из своих средств. Я работал бариста 4 года, опыта управления нет. Задавай уточняющие вопросы, если данных не хватает. Все цифры, которые ты не можешь знать точно, помечай словом ДОПУЩЕНИЕ».</p>
+<p>Пометка ДОПУЩЕНИЕ помогает потом найти все места, которые надо проверить.</p>
+<h2 id="sec-2">Восемь разделов с промптами</h2>
+<h3>Раздел 1: резюме проекта</h3>
+<p>Пишется последним, когда готово всё остальное. Промпт: «По разделам ниже напиши резюме на полстраницы: что за бизнес, для кого, сколько нужно денег, когда окупится».</p>
+<h3>Раздел 2: описание продукта</h3>
+<p>«Опиши продукт и чем он отличается для клиента. Перечисли 5 причин, почему человек купит у меня. Отдельно назови 3 причины, почему он пройдёт мимо».</p>
+<p>Вторая половина промпта ценнее первой.</p>
+<h3>Раздел 3: рынок и клиенты</h3>
+<p>«Опиши три сегмента клиентов: кто они, когда покупают, сколько готовы платить. Предложи, как проверить каждый сегмент за неделю без вложений».</p>
+<h3>Раздел 4: конкуренты</h3>
+<p>«Составь таблицу типов конкурентов: прямые, косвенные, замена. Для каждого сильные и слабые стороны». Названия конкретных заведений и их цены собираете сами, по картам и отзывам.</p>
+<h3>Раздел 5: маркетинг</h3>
+<p>«Предложи план привлечения первых 300 клиентов за 2 месяца с бюджетом 60 тысяч рублей. Для каждого канала: действие, стоимость, ожидаемый результат с пометкой ДОПУЩЕНИЕ».</p>
+<h3>Раздел 6: операционный план</h3>
+<p>«Опиши, что нужно для работы: оборудование, поставщики, персонал, график, разрешения. Составь список дел до открытия по неделям».</p>
+<h3>Раздел 7: финансовая модель</h3>
+<p>Подробно разобрана ниже.</p>
+<h3>Раздел 8: риски</h3>
+<p>«Назови 8 рисков этого проекта. Для каждого: вероятность, насколько больно, как снизить. Начни с самых опасных».</p>
+<h2 id="sec-3">Финансовая модель на 12 месяцев</h2>
+<p>Попросите модель собрать таблицу, а потом перенесите её в электронную таблицу, где формулы можно проверить.</p>
+<p>Промпт: «Сделай финансовую модель на 12 месяцев в виде таблицы: выручка по месяцам, себестоимость, аренда, зарплаты, налоги, маркетинг, прибыль, накопленный итог. Отдельной таблицей вынеси все допущения: средний чек, число чеков в день, рост по месяцам».</p>
+<p>Минимальный набор строк модели:</p>
+<table class="gp-table"><thead><tr><th>Строка</th><th>Как считается</th></tr></thead><tbody><tr><td>Выручка</td><td>Средний чек, умноженный на число чеков в день и на рабочие дни</td></tr><tr><td>Себестоимость</td><td>Процент от выручки по вашим закупочным ценам</td></tr><tr><td>Постоянные расходы</td><td>Аренда, зарплаты, связь, бухгалтерия</td></tr><tr><td>Маркетинг</td><td>Бюджет по месяцам</td></tr><tr><td>Налоги</td><td>По выбранному режиму налогообложения</td></tr><tr><td>Прибыль</td><td>Выручка минус все расходы</td></tr><tr><td>Накопленный итог</td><td>Сумма прибыли с учётом стартовых вложений</td></tr></tbody></table>
+<p>Точку окупаемости смотрите в строке накопленного итога: месяц, где он стал больше нуля.</p>
+<h3>Три сценария</h3>
+<p>Попросите модель пересчитать таблицу в трёх вариантах: плохой (чеков на 30% меньше), базовый и хороший (на 20% больше). Если в плохом сценарии деньги кончаются раньше, чем бизнес выходит в плюс, нужен запас или другой план.</p>
+<h2 id="sec-4">Где нейросеть ошибается</h2>
+<ul><li>Придумывает объём рынка и средние цены, которые звучат правдоподобно. Проверяйте по открытой статистике, отчётам и живым ценам конкурентов.</li><li>Ошибается в арифметике длинных таблиц. Пересчитайте формулами в электронной таблице.</li><li>Предлагает оптимистичный рост без причины. Спросите, откуда взялся каждый процент.</li><li>Путает налоговые ставки и режимы. Их сверяйте с официальными источниками или бухгалтером на дату составления плана.</li></ul>
+<h2 id="sec-5">Как проверить план самому</h2>
+<p>Попросите модель сыграть скептика:</p>
+<p>«Ты опытный инвестор, который отказывает девяти проектам из десяти. Прочитай мой бизнес-план и назови 10 причин отказать. Для каждой скажи, что нужно исправить».</p>
+<p>Исправьте то, что справедливо, и повторите.</p>
+<h2 id="sec-6">Частые вопросы</h2>
+<h3>Какая нейросеть лучше для бизнес-плана</h3>
+<p>Для текста и структуры подходит любой современный чат-ассистент. Для модели удобнее тот, что умеет работать с таблицами и загруженными файлами.</p>
+<h3>Можно ли сдать в банк план, написанный нейросетью</h3>
+<p>Можно использовать как черновик, если все цифры проверены и план оформлен по форме банка. Отвечать на вопросы по плану всё равно будете вы.</p>
+<h3>Сколько времени занимает бизнес-план с нейросетью</h3>
+<p>Черновик за один-два вечера. Проверка цифр и сбор реальных цен конкурентов обычно занимают ещё несколько дней.</p>
+<h3>Нужен ли бизнес-план для онлайн-проекта или блога</h3>
+<p>Короткий план на три-пять страниц полезен любому проекту: он показывает, сколько клиентов нужно, чтобы выйти в плюс, и откуда они придут.</p>
+<p>Про продвижение уже запущенного бизнеса есть статьи про <a href="/guides/neyroseti-dlya-marketinga/">нейросети для маркетинга</a> и про <a href="/guides/ii-agenty-dlya-biznesa/">ИИ-агентов для бизнеса</a>.</p>
+<h2 id="sec-7">Что делать дальше</h2>
+<p>Напишите основу из шага 0 про свою идею, пройдите восемь разделов и соберите финансовую модель в трёх сценариях. Потом отдайте план модели-скептику и исправьте слабые места.</p>
+<p>Самая хрупкая строка почти любого плана это привлечение клиентов. Как я собираю поток заявок через короткие ролики без рекламного бюджета, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="cta-dark grid"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><div class="cta-bullets"><div class="b"><span class="m"></span>Готовые промпты под Reels, хуки и длинные описания</div><div class="b"><span class="m"></span>Разборы, почему одни ролики залетают, а другие нет</div><div class="b"><span class="m"></span>Гайды по нейросетям для контента, коротко и по делу</div></div><div class="cta-foot"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-pisem/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pisem.webp?v=a1ff968993" alt="Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры</span><span class="rc-desc">Письма через нейросеть: промпт из пяти полей, шаблоны для коммерческого предложения…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-fotoshopa/"><span class="rc-cover"><img src="/covers/neyroset-dlya-fotoshopa.webp?v=d1ebef40aa" alt="Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего</span><span class="rc-desc">Нейросеть в Photoshop: генеративная заливка, расширение холста, инструмент удаления…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-memov/"><span class="rc-cover"><img src="/covers/neyroset-dlya-memov.webp?v=8835156269" alt="Нейросеть для мемов: как делать смешные мемы для блога и чатов" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для мемов: как делать смешные мемы для блога и чатов</span><span class="rc-desc">Мемы через нейросеть: как придумать шутку под свою аудиторию, промпты на картинку без…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-raskraski/"><span class="rc-cover"><img src="/covers/neyroset-dlya-raskraski.webp?v=6f1bb69c22" alt="Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого</span><span class="rc-desc">Раскраска через нейросеть: промпты для детских и антистресс-раскрасок, раскраска из…</span></a></div></section><div class="gp-docsnav"><a class="gp-navcard" href="/guides/neyroset-dlya-avatarki/"><div class="l">← Предыдущий</div><div class="t">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</div></a><a class="gp-navcard next" href="/guides/neyroset-dlya-chertezhey/"><div class="l">Следующий →</div><div class="t">Нейросеть для чертежей: где она помогает, а где обманет с размерами</div></a></div></div><div class="gp-toc"><div class="h">На странице</div><a href="#sec-0" class="active">Для чего вам план</a><a href="#sec-1" class="">Шаг 0: дайте модели контекст</a><a href="#sec-2" class="">Восемь разделов с промптами</a><a href="#sec-3" class="">Финансовая модель на 12 месяцев</a><a href="#sec-4" class="">Где нейросеть ошибается</a><a href="#sec-5" class="">Как проверить план самому</a><a href="#sec-6" class="">Частые вопросы</a><a href="#sec-7" class="">Что делать дальше</a></div></div><footer class="gp-footer"><div class="gp-foot-inner"><div class="gp-foot-main"><div class="gp-foot-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><p>Гайды, статьи и разборы по темам: Instagram и рост, Нейросети для контента, Контент и воронки. От Владимир Ижмуков и канала «AI Realshift».</p></div><div class="gp-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a><a href="/library/">Все гайды</a></div><div class="col"><div class="h">Владимир Ижмуков</div><a href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><div class="col"><div class="h">Контакты</div><a href="https://t.me/Ai_realshift" target="_blank" rel="noopener">Канал «AI Realshift»</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика конфиденциальности</a></div></div></div><div class="gp-foot-bottom"><span>© 2026 ВЛАДИМИР ИЖМУКОВ</span><span class="spacer"></span><span>Владимир Ижмуков</span></div></div></footer></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=9afa978d3c"></script>
+  <script>window.__GF_BASE = "";</script>
+  <script>window.__GF_VIEW = "guide";</script>
+  <script>window.__GF_SLUG = "neyroset-dlya-biznes-plana";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

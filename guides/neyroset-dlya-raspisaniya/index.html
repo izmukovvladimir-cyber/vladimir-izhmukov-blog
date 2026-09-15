@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<script data-gfmr>(function(){try{if(location.search.indexOf('nomobile')>-1)return;var p=location.pathname;if(/^\/m\//.test(p))return;var sw=Math.min(screen.width,screen.height);if(!(sw<=640))return;p=p.replace(/(^|\/)index\.html$|\.html$/,'$1');var t=null,g=p.match(/^\/guides\/([^\/.]+)\/?$/);if(g){t='/m/guides/'+g[1]+'.html';}else if(p==='/'||p===''){t='/m/';}else{var m=p.match(/^\/([^\/.]+)\/?$/);if(m&&['instagram','neyroseti','kontent','about','library'].indexOf(m[1])>-1){t='/m/'+m[1]+'.html';}}if(t){location.replace(t+location.search+location.hash);}}catch(e){}})();</script>
+<link data-gfmr-alt rel="alternate" media="only screen and (max-width: 640px)" href="https://blog.vladimir-izhmukov.ru/m/guides/neyroset-dlya-raspisaniya.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь — Владимир Ижмуков</title>
+<meta name="description" content="Как составить расписание через нейросеть: личный распорядок дня, план подготовки к экзамену, график смен для команды, расписание занятий. Промпты, таблица входных данных и проверка на перегруз.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:#FAF7F2; }
+  .standalone-c { width:100%; }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raspisaniya/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь">
+<meta property="og:description" content="Как составить расписание через нейросеть: личный распорядок дня, план подготовки к экзамену, график смен для команды, расписание занятий. Промпты, таблица входных данных и проверка на перегруз.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raspisaniya/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-raspisaniya.webp?v=82c108e8c1">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-15T10:20:00Z">
+<meta property="article:modified_time" content="2026-09-15T10:20:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь">
+<meta name="twitter:description" content="Как составить расписание через нейросеть: личный распорядок дня, план подготовки к экзамену, график смен для команды, расписание занятий. Промпты, таблица входных данных и проверка на перегруз.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-raspisaniya.webp?v=82c108e8c1">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-raspisaniya.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raspisaniya/#article",
+      "headline": "Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь",
+      "description": "Как составить расписание через нейросеть: личный распорядок дня, план подготовки к экзамену, график смен для команды, расписание занятий. Промпты, таблица входных данных и проверка на перегруз.",
+      "datePublished": "2026-09-15T10:20:00Z",
+      "dateModified": "2026-09-15T10:20:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raspisaniya/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raspisaniya/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-raspisaniya.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для расписания за пару минут раскладывает дела, занятия или смены по дням и часам. Расписание получается живым, когда модель знает ваши жёсткие рамки, реальную длительность задач и время, когда у вас есть силы, а в плане остаётся запас на то, что пойдёт не так. Ниже четыре типа расписаний с промптами, таблица входных данных, проверка на перегруз и способ быстро перенести результат в календарь. Проверено 15 сентября 2026 года. Что дать нейросети на вход Без входных данных модель рисует идеальный день с подъёмом в пять утра, который не выдержит никто. Соберите данные по таблице. | Что указать | Пример | Зачем модели | |---|---|---| | Жёсткие рамки | Работа 9:00-18:00, садик до 19:00 | Это нельзя двигать | | Задачи и их длительность | Английский 30 минут, отчёт 2 часа | Реальный объём | | Приоритеты | Экзамен важнее спортзала в этом месяце | Что сдвигать при конфликте | | Время энергии | Думаю лучше утром, вечером только рутина | Куда ставить сложное | | Дорога и переходы | До офиса 40 минут | Модель про это забывает | | Сон | 23:30-7:00 | Не жертвовать сном ради плана | | Период | Неделя, месяц, семестр | Масштаб расписания | Четыре типа расписаний и промпты 1. Распорядок дня Промпт: «Составь распорядок будних дней по данным: [таблица]. Сложные задачи ставь в часы энергии, рутину во второй половине дня. После каждых 90 минут работы перерыв 10-15 минут. Оставь 20% дня свободным буфером. Выдай таблицей: время, дело, длительность». 2. План подготовки к экзамену Промпт: «Экзамен [дата], сегодня [дата]. Темы: [список с оценкой сложности]. Могу заниматься [часов] в будни и [часов] в выходные. Составь план по дням: новые темы в первые две трети срока, в последней трети только повторение и пробные тесты. Каждый седьмой день оставь свободным. Выдай таблицей: дата, темы, формат занятия, время». Как превратить конспекты тем в карточки для повторения, разобрано в статье про нейросеть для конспекта. 3. График смен для небольшой команды Промпт: «Составь график смен на [месяц] для [число] сотрудников. Точка работает [часы и дни]. В каждой смене минимум [число] человек. Ограничения: [кто не может в какие дни, пожелания по выходным]. Не больше [число] смен подряд, между сменами минимум 12 часов. Выдай таблицей по дням и отдельно сумму часов у каждого сотрудника». Итоговый график сверьте с трудовым договором и нормами рабочего времени, модель их за вас не проверит. 4. Расписание занятий или кружков Промпт: «Составь недельное расписание занятий для [школа, студия]. Преподаватели и их доступное время: [список]. Группы и сколько часов в неделю каждой: [список]. Залы: [список]. У одного преподавателя не больше [число] часов подряд, у группы не больше двух занятий в день. Выдай сетку: дни по столбцам, время по строкам». Правило буфера Главная ошибка расписаний в том, что каждая минута занята. Первая же задержка сдвигает весь день, и к вечеру план выглядит проваленным. 1. Оставляйте свободными 20% времени в дне. 2. Между встречами ставьте 15 минут перехода. 3. Задачу, которую делаете впервые, умножайте по длительности на полтора. 4. Один вечер в неделю не планируйте вовсе. Попросите модель показать, сколько процентов времени у вас свободно. Если меньше 15, расписание развалится. Проверка расписания перед запуском Промпт: «Проверь это расписание. Найди: пересечения по времени, дни, где сложных задач больше трёх, места без перерывов дольше двух часов, забытые переходы и дорогу, дни с нагрузкой выше средней на 30%. Для каждой проблемы предложи правку». Дальше пройдитесь сами по короткому списку: 1. Все жёсткие рамки на месте. 2. Сон не сокращён. 3. Есть время на еду. 4. Есть хотя бы один свободный вечер. 5. Вы готовы жить по этому плану хотя бы неделю. Как перенести расписание в календарь Переносить таблицу руками долго. Попросите модель выдать события в формате, который понимает календарь. Промпт: «Преобразуй это расписание в файл формата iCalendar с повторяющимися событиями на [период]. Часовой пояс Europe/Moscow. Название события, начало, конец, повтор по дням недели». Текст ответа сохраните в файл с расширением .ics и импортируйте в Google Календарь, Яндекс Календарь или календарь телефона. Проверьте на одной неделе, что время встало верно. Еженедельный пересмотр за 15 минут Расписание перестаёт работать через две-три недели, если его не обновлять. Раз в неделю отвечайте модели на три вопроса. | Вопрос | Что с ним делать | |---|---| | Что из плана не случилось и почему | Убрать или сократить задачу | | Где было больше всего усталости | Сдвинуть сложное на часы энергии | | Что изменилось в рамках | Обновить входные данные | Промпт: «Вот расписание прошлой недели и что реально произошло: [описание]. Предложи правки на следующую неделю, чтобы план совпадал с жизнью. Не добавляй новых задач». Частые вопросы Какая нейросеть лучше составляет…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raspisaniya/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-raspisaniya/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть лучше составляет расписание",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ChatGPT, Клод, Гигачат и YandexGPT справляются одинаково. Для сложных графиков смен удобнее модели, которые умеют работать с таблицами и выгружать их в файл."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Может ли нейросеть сама добавить события в календарь",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Некоторые ассистенты подключаются к календарю напрямую. Если такой связки нет, используйте файл формата .ics из промпта выше."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как составить расписание для ребёнка",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Добавьте в рамки школу, секции, дорогу и время на свободную игру. Сложные задания ставьте после отдыха, когда ребёнок пришёл из школы и поел, и обсудите план с ним."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему я не выполняю расписание, которое составила нейросеть",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Чаще всего в нём нет буфера или задачи оценены короче, чем занимают на деле. Пересмотрите длительность по факту прошлой недели."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли составить расписание тренировок",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Можно, по той же логике рамок и восстановления. Отдельно этот случай разобран в статье про нейросеть для тренировок. Про планирование учёбы подробнее в материале про нейросеть для учебы, а про таблицы в статье про нейросеть для таблиц."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="standalone-c"><div class="gp dir-c theme-light"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><nav class="gp-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" aria-label="Сменить тему" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><a class="gp-headbtn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте <span class="ar">→</span></a></div></div></div><div class="ban-dark"><span class="gp-eyebrow lime"><span class="dot"></span>ВЛАДИМИР&nbsp;ИЖМУКОВ</span><span>Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.</span><span class="spacer"></span></div><div class="gp-layout"><div class="gp-sidebar"><div class="gp-side-group">Claude Code · 68</div><a href="/guides/generaciya-video-po-tekstu/" class="gp-side-item">Генерация видео по тексту в 2026: как это работает и чем сделать</a><a href="/guides/ii-agenty-dlya-biznesa/" class="gp-side-item">ИИ-агенты для бизнеса в 2026: что это на самом деле и с чего начать</a><a href="/guides/kak-ozhivit-foto-neyrosetyu/" class="gp-side-item">Как оживить фото нейросетью: от старого снимка до короткого ролика</a><a href="/guides/kak-sdelat-video-neyrosetyu/" class="gp-side-item">Как сделать видео нейросетью в 2026: пошагово с телефона</a><a href="/guides/kak-zarabotat-na-neyrosetyah/" class="gp-side-item">Как заработать на нейросетях в 2026: честные способы, цифры и границы</a><a href="/guides/kitayskie-neyroseti-besplatno/" class="gp-side-item">Китайские нейросети бесплатно: какие работают из России и что они реально умеют</a><a href="/guides/neyroset-dlya-angliyskogo/" class="gp-side-item">Нейросеть для английского: как заниматься каждый день без репетитора</a><a href="/guides/neyroset-dlya-animacii/" class="gp-side-item">Нейросеть для анимации: как сделать анимированный ролик без аниматора</a><a href="/guides/neyroset-dlya-avatarki/" class="gp-side-item">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</a><a href="/guides/neyroset-dlya-biznes-plana/" class="gp-side-item">Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами</a><a href="/guides/neyroset-dlya-chertezhey/" class="gp-side-item">Нейросеть для чертежей: где она помогает, а где обманет с размерами</a><a href="/guides/neyroset-dlya-diploma/" class="gp-side-item">Нейросеть для диплома: план, главы и защита без провала</a><a href="/guides/neyroset-dlya-dizayna/" class="gp-side-item">Нейросеть для дизайна: что она делает за вас, а что придётся доделать руками</a><a href="/guides/neyroset-dlya-dogovora/" class="gp-side-item">Нейросеть для договора: как составить и проверить документ</a><a href="/guides/neyroset-dlya-doklada/" class="gp-side-item">Нейросеть для доклада: текст, план выступления и ответы на вопросы за один вечер</a><a href="/guides/neyroset-dlya-foto/" class="gp-side-item">Нейросеть для фото: обработать своё, улучшить старое, сгенерировать новое</a><a href="/guides/neyroset-dlya-fotoshopa/" class="gp-side-item">Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего</a><a href="/guides/neyroset-dlya-infografiki/" class="gp-side-item">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</a><a href="/guides/neyroset-dlya-interera/" class="gp-side-item">Нейросеть для интерьера: как увидеть свою комнату в новом виде до ремонта</a><a href="/guides/neyroset-dlya-kartochek-tovarov/" class="gp-side-item">Нейросеть для карточек товаров: фото, инфографика и описание для маркетплейса</a><a href="/guides/neyroset-dlya-knigi/" class="gp-side-item">Нейросеть для книги и глав книги в 2026: как пользоваться и собрать книгу из своего опыта</a><a href="/guides/neyroset-dlya-koda/" class="gp-side-item">Нейросеть для кода: как человек без образования программиста собирает рабочие инструменты</a><a href="/guides/neyroset-dlya-komiksa/" class="gp-side-item">Нейросеть для комикса: от идеи до готовых страниц</a><a href="/guides/neyroset-dlya-konspekta/" class="gp-side-item">Нейросеть для конспекта: как сделать конспект лекции, книги или видео, который правда помогает запомнить</a><a href="/guides/neyroset-dlya-kursovoy/" class="gp-side-item">Нейросеть для курсовой: как ускорить работу и не завалиться на проверке</a><a href="/guides/neyroset-dlya-logotipa/" class="gp-side-item">Нейросеть для логотипа: как получить знак, который не стыдно поставить на профиль</a><a href="/guides/neyroset-dlya-memov/" class="gp-side-item">Нейросеть для мемов: как делать смешные мемы для блога и чатов</a><a href="/guides/neyroset-dlya-montazha-video/" class="gp-side-item">Нейросеть для монтажа видео в 2026: что она делает сама и где нужны руки</a><a href="/guides/neyroset-dlya-muzyki/" class="gp-side-item">Нейросеть для музыки: как сделать трек для ролика, который не заглушат за авторские права</a><a href="/guides/neyroset-dlya-nazvaniya/" class="gp-side-item">Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно</a><a href="/guides/neyroset-dlya-oblozhek/" class="gp-side-item">Нейросеть для обложек: как собрать картинку, на которую нажимают</a><a href="/guides/neyroset-dlya-obyavleniya/" class="gp-side-item">Нейросеть для объявления: как написать текст на Авито и доске объявлений, чтобы покупатели сразу звонили</a><a href="/guides/neyroset-dlya-otkrytki/" class="gp-side-item">Нейросеть для открытки: как сделать поздравление, которое сохранят</a><a href="/guides/neyroset-dlya-otzyvov/" class="gp-side-item">Нейросеть для отзывов в 2026: как пользоваться, отвечать на негатив и собирать отзывы клиентов</a><a href="/guides/neyroset-dlya-perevoda/" class="gp-side-item">Нейросеть для перевода: как перевести текст и видео так, чтобы звучало по-человечески</a><a href="/guides/neyroset-dlya-pesni/" class="gp-side-item">Нейросеть для песни: как получить трек с вокалом, который не стыдно подарить</a><a href="/guides/neyroset-dlya-pisem/" class="gp-side-item">Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры</a><a href="/guides/neyroset-dlya-postov/" class="gp-side-item">Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK</a><a href="/guides/neyroset-dlya-pozdravleniya/" class="gp-side-item">Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий</a><a href="/guides/neyroset-dlya-prezentaciy/" class="gp-side-item">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</a><a href="/guides/neyroset-dlya-proekta/" class="gp-side-item">Нейросеть для проекта: индивидуальный проект в школе и колледже от темы до защиты</a><a href="/guides/neyroset-dlya-psihologa/" class="gp-side-item">Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница</a><a href="/guides/neyroset-dlya-raskraski/" class="gp-side-item">Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого</a><a href="/guides/neyroset-dlya-raspisaniya/" class="gp-side-item active">Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь</a><a href="/guides/neyroset-dlya-referata/" class="gp-side-item">Нейросеть для реферата: как написать реферат по шагам и пройти проверку</a><a href="/guides/neyroset-dlya-reklamy/" class="gp-side-item">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</a><a href="/guides/neyroset-dlya-resheniya-zadach/" class="gp-side-item">Нейросеть для решения задач: математика, физика, химия по фото и с разбором</a><a href="/guides/neyroset-dlya-rezyume/" class="gp-side-item">Нейросеть для резюме: как собрать сильный отклик за вечер</a><a href="/guides/neyroset-dlya-rils/" class="gp-side-item">Нейросеть для Рилс в 2026: какие берут под каждую часть ролика</a><a href="/guides/neyroset-dlya-risovaniya/" class="gp-side-item">Нейросеть для рисования: как получить иллюстрацию нужного стиля, а потом повторить его во всех картинках</a><a href="/guides/neyroset-dlya-sayta/" class="gp-side-item">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</a><a href="/guides/neyroset-dlya-scenariya/" class="gp-side-item">Нейросеть для сценария: YouTube-ролик, реклама, эфир и мероприятие</a><a href="/guides/neyroset-dlya-skazok/" class="gp-side-item">Нейросеть для сказок: как сочинить сказку для ребёнка за 10 минут</a><a href="/guides/neyroset-dlya-sochineniya/" class="gp-side-item">Нейросеть для сочинения: как написать сочинение с помощью нейросети и не потерять свой голос</a><a href="/guides/neyroset-dlya-stihov/" class="gp-side-item">Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух</a><a href="/guides/neyroset-dlya-tablic/" class="gp-side-item">Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ</a><a href="/guides/neyroset-dlya-tatu/" class="gp-side-item">Нейросеть для тату: как сделать эскиз, который мастер согласится бить</a><a href="/guides/neyroset-dlya-testov/" class="gp-side-item">Нейросеть для тестов: как составить тест с ответами и как готовиться к тестированию</a><a href="/guides/neyroset-dlya-trenirovok/" class="gp-side-item">Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели</a><a href="/guides/neyroset-dlya-ucheby/" class="gp-side-item">Нейросеть для учебы: как понимать темы быстрее и готовиться к экзаменам</a><a href="/guides/neyroset-dlya-uchitelya/" class="gp-side-item">Нейросеть для учителя: планы уроков, задания, проверка и отчёты за вечер</a><a href="/guides/neyroset-dlya-vakansii/" class="gp-side-item">Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди</a><a href="/guides/neyroset-dlya-vizitki/" class="gp-side-item">Нейросеть для визитки: как сделать дизайн и текст, готовые к печати</a><a href="/guides/neyroset-dlya-yurista/" class="gp-side-item">Нейросеть для юриста: где она экономит часы, а где подставляет под ответственность</a><a href="/guides/neyroset-dlya-yutuba/" class="gp-side-item">Нейросеть для ютуба: темы, сценарий, заголовок, обложка и описание для видео за один вечер</a><a href="/guides/neyroseti-dlya-marketinga/" class="gp-side-item">Нейросети для маркетинга в 2026: по каждой задаче отдельно</a><a href="/guides/oblozhka-dlya-video/" class="gp-side-item">Как сделать обложку для видео: разбор кликабельной обложки и запросы под неё</a><a href="/guides/promty-dlya-video/" class="gp-side-item">Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling</a></div><div class="gp-content read-article"><div class="gp-cover"><img src="/covers/neyroset-dlya-raspisaniya.webp?v=82c108e8c1" alt="Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь" loading="eager"></div><div class="gp-bc">Статьи</div><div class="gp-h1row"><h1 class="gp-h1">Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь</h1><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="gp-desc">Как составить расписание через нейросеть: личный распорядок дня, план подготовки к экзамену, график смен для команды, расписание занятий. Промпты, таблица входных данных и проверка на перегруз.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для расписания за пару минут раскладывает дела, занятия или смены по дням и часам. Расписание получается живым, когда модель знает ваши жёсткие рамки, реальную длительность задач и время, когда у вас есть силы, а в плане остаётся запас на то, что пойдёт не так.</p>
+<p>Ниже четыре типа расписаний с промптами, таблица входных данных, проверка на перегруз и способ быстро перенести результат в календарь.</p>
+<p>Проверено 15 сентября 2026 года.</p>
+<h2 id="sec-0">Что дать нейросети на вход</h2>
+<p>Без входных данных модель рисует идеальный день с подъёмом в пять утра, который не выдержит никто. Соберите данные по таблице.</p>
+<table class="gp-table"><thead><tr><th>Что указать</th><th>Пример</th><th>Зачем модели</th></tr></thead><tbody><tr><td>Жёсткие рамки</td><td>Работа 9:00-18:00, садик до 19:00</td><td>Это нельзя двигать</td></tr><tr><td>Задачи и их длительность</td><td>Английский 30 минут, отчёт 2 часа</td><td>Реальный объём</td></tr><tr><td>Приоритеты</td><td>Экзамен важнее спортзала в этом месяце</td><td>Что сдвигать при конфликте</td></tr><tr><td>Время энергии</td><td>Думаю лучше утром, вечером только рутина</td><td>Куда ставить сложное</td></tr><tr><td>Дорога и переходы</td><td>До офиса 40 минут</td><td>Модель про это забывает</td></tr><tr><td>Сон</td><td>23:30-7:00</td><td>Не жертвовать сном ради плана</td></tr><tr><td>Период</td><td>Неделя, месяц, семестр</td><td>Масштаб расписания</td></tr></tbody></table>
+<h2 id="sec-1">Четыре типа расписаний и промпты</h2>
+<h3>1. Распорядок дня</h3>
+<p>Промпт: «Составь распорядок будних дней по данным: [таблица]. Сложные задачи ставь в часы энергии, рутину во второй половине дня. После каждых 90 минут работы перерыв 10-15 минут. Оставь 20% дня свободным буфером. Выдай таблицей: время, дело, длительность».</p>
+<h3>2. План подготовки к экзамену</h3>
+<p>Промпт: «Экзамен [дата], сегодня [дата]. Темы: [список с оценкой сложности]. Могу заниматься [часов] в будни и [часов] в выходные. Составь план по дням: новые темы в первые две трети срока, в последней трети только повторение и пробные тесты. Каждый седьмой день оставь свободным. Выдай таблицей: дата, темы, формат занятия, время».</p>
+<p>Как превратить конспекты тем в карточки для повторения, разобрано в статье про <a href="/guides/neyroset-dlya-konspekta/">нейросеть для конспекта</a>.</p>
+<h3>3. График смен для небольшой команды</h3>
+<p>Промпт: «Составь график смен на [месяц] для [число] сотрудников. Точка работает [часы и дни]. В каждой смене минимум [число] человек. Ограничения: [кто не может в какие дни, пожелания по выходным]. Не больше [число] смен подряд, между сменами минимум 12 часов. Выдай таблицей по дням и отдельно сумму часов у каждого сотрудника».</p>
+<p>Итоговый график сверьте с трудовым договором и нормами рабочего времени, модель их за вас не проверит.</p>
+<h3>4. Расписание занятий или кружков</h3>
+<p>Промпт: «Составь недельное расписание занятий для [школа, студия]. Преподаватели и их доступное время: [список]. Группы и сколько часов в неделю каждой: [список]. Залы: [список]. У одного преподавателя не больше [число] часов подряд, у группы не больше двух занятий в день. Выдай сетку: дни по столбцам, время по строкам».</p>
+<h2 id="sec-2">Правило буфера</h2>
+<p>Главная ошибка расписаний в том, что каждая минута занята. Первая же задержка сдвигает весь день, и к вечеру план выглядит проваленным.</p>
+<ol><li>Оставляйте свободными 20% времени в дне.</li><li>Между встречами ставьте 15 минут перехода.</li><li>Задачу, которую делаете впервые, умножайте по длительности на полтора.</li><li>Один вечер в неделю не планируйте вовсе.</li></ol>
+<p>Попросите модель показать, сколько процентов времени у вас свободно. Если меньше 15, расписание развалится.</p>
+<h2 id="sec-3">Проверка расписания перед запуском</h2>
+<p>Промпт: «Проверь это расписание. Найди: пересечения по времени, дни, где сложных задач больше трёх, места без перерывов дольше двух часов, забытые переходы и дорогу, дни с нагрузкой выше средней на 30%. Для каждой проблемы предложи правку».</p>
+<p>Дальше пройдитесь сами по короткому списку:</p>
+<ol><li>Все жёсткие рамки на месте.</li><li>Сон не сокращён.</li><li>Есть время на еду.</li><li>Есть хотя бы один свободный вечер.</li><li>Вы готовы жить по этому плану хотя бы неделю.</li></ol>
+<h2 id="sec-4">Как перенести расписание в календарь</h2>
+<p>Переносить таблицу руками долго. Попросите модель выдать события в формате, который понимает календарь.</p>
+<p>Промпт: «Преобразуй это расписание в файл формата iCalendar с повторяющимися событиями на [период]. Часовой пояс Europe/Moscow. Название события, начало, конец, повтор по дням недели».</p>
+<p>Текст ответа сохраните в файл с расширением .ics и импортируйте в Google Календарь, Яндекс Календарь или календарь телефона. Проверьте на одной неделе, что время встало верно.</p>
+<h2 id="sec-5">Еженедельный пересмотр за 15 минут</h2>
+<p>Расписание перестаёт работать через две-три недели, если его не обновлять. Раз в неделю отвечайте модели на три вопроса.</p>
+<table class="gp-table"><thead><tr><th>Вопрос</th><th>Что с ним делать</th></tr></thead><tbody><tr><td>Что из плана не случилось и почему</td><td>Убрать или сократить задачу</td></tr><tr><td>Где было больше всего усталости</td><td>Сдвинуть сложное на часы энергии</td></tr><tr><td>Что изменилось в рамках</td><td>Обновить входные данные</td></tr></tbody></table>
+<p>Промпт: «Вот расписание прошлой недели и что реально произошло: [описание]. Предложи правки на следующую неделю, чтобы план совпадал с жизнью. Не добавляй новых задач».</p>
+<h2 id="sec-6">Частые вопросы</h2>
+<h3>Какая нейросеть лучше составляет расписание</h3>
+<p>ChatGPT, Клод, Гигачат и YandexGPT справляются одинаково. Для сложных графиков смен удобнее модели, которые умеют работать с таблицами и выгружать их в файл.</p>
+<h3>Может ли нейросеть сама добавить события в календарь</h3>
+<p>Некоторые ассистенты подключаются к календарю напрямую. Если такой связки нет, используйте файл формата .ics из промпта выше.</p>
+<h3>Как составить расписание для ребёнка</h3>
+<p>Добавьте в рамки школу, секции, дорогу и время на свободную игру. Сложные задания ставьте после отдыха, когда ребёнок пришёл из школы и поел, и обсудите план с ним.</p>
+<h3>Почему я не выполняю расписание, которое составила нейросеть</h3>
+<p>Чаще всего в нём нет буфера или задачи оценены короче, чем занимают на деле. Пересмотрите длительность по факту прошлой недели.</p>
+<h3>Можно ли составить расписание тренировок</h3>
+<p>Можно, по той же логике рамок и восстановления. Отдельно этот случай разобран в статье про <a href="/guides/neyroset-dlya-trenirovok/">нейросеть для тренировок</a>.</p>
+<p>Про планирование учёбы подробнее в материале про <a href="/guides/neyroset-dlya-ucheby/">нейросеть для учебы</a>, а про таблицы в статье про <a href="/guides/neyroset-dlya-tablic/">нейросеть для таблиц</a>.</p>
+<h2 id="sec-7">Что делать дальше</h2>
+<p>Заполните таблицу входных данных на ближайшую неделю и получите распорядок с буфером 20%. Прогоните его через промпт проверки, перенесите в календарь и проживите неделю. В воскресенье потратьте 15 минут на пересмотр.</p>
+<p>Для блогера расписание решает, выходит ли контент регулярно. Я держу выпуск коротких роликов по плану, где на съёмку уходит минимум времени. Как устроена такая система, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="cta-dark grid"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><div class="cta-bullets"><div class="b"><span class="m"></span>Готовые промпты под Reels, хуки и длинные описания</div><div class="b"><span class="m"></span>Разборы, почему одни ролики залетают, а другие нет</div><div class="b"><span class="m"></span>Гайды по нейросетям для контента, коротко и по делу</div></div><div class="cta-foot"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-trenirovok/"><span class="rc-cover"><img src="/covers/neyroset-dlya-trenirovok.webp?v=5042acd82e" alt="Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели</span><span class="rc-desc">Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-psihologa/"><span class="rc-cover"><img src="/covers/neyroset-dlya-psihologa.webp?v=a8205e24f8" alt="Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница</span><span class="rc-desc">Как психологу пользоваться нейросетью: подготовка к сессии, упражнения и домашние…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-pozdravleniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pozdravleniya.webp?v=99bb52beaa" alt="Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий</span><span class="rc-desc">Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-obyavleniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-obyavleniya.webp?v=8406aa18cb" alt="Нейросеть для объявления: как написать текст на Авито и доске объявлений, чтобы покупатели сразу звонили" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для объявления: как написать текст на Авито и доске объявлений, чтобы покупатели сразу звонили</span><span class="rc-desc">Как составить объявление через нейросеть для Авито, Юлы и местных чатов: заголовок под…</span></a></div></section><div class="gp-docsnav"><a class="gp-navcard" href="/guides/neyroset-dlya-raskraski/"><div class="l">← Предыдущий</div><div class="t">Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого</div></a><a class="gp-navcard next" href="/guides/neyroset-dlya-referata/"><div class="l">Следующий →</div><div class="t">Нейросеть для реферата: как написать реферат по шагам и пройти проверку</div></a></div></div><div class="gp-toc"><div class="h">На странице</div><a href="#sec-0" class="active">Что дать нейросети на вход</a><a href="#sec-1" class="">Четыре типа расписаний и промпты</a><a href="#sec-2" class="">Правило буфера</a><a href="#sec-3" class="">Проверка расписания перед запуском</a><a href="#sec-4" class="">Как перенести расписание в календарь</a><a href="#sec-5" class="">Еженедельный пересмотр за 15 минут</a><a href="#sec-6" class="">Частые вопросы</a><a href="#sec-7" class="">Что делать дальше</a></div></div><footer class="gp-footer"><div class="gp-foot-inner"><div class="gp-foot-main"><div class="gp-foot-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><p>Гайды, статьи и разборы по темам: Instagram и рост, Нейросети для контента, Контент и воронки. От Владимир Ижмуков и канала «AI Realshift».</p></div><div class="gp-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a><a href="/library/">Все гайды</a></div><div class="col"><div class="h">Владимир Ижмуков</div><a href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><div class="col"><div class="h">Контакты</div><a href="https://t.me/Ai_realshift" target="_blank" rel="noopener">Канал «AI Realshift»</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика конфиденциальности</a></div></div></div><div class="gp-foot-bottom"><span>© 2026 ВЛАДИМИР ИЖМУКОВ</span><span class="spacer"></span><span>Владимир Ижмуков</span></div></div></footer></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=80dd675633"></script>
+  <script>window.__GF_BASE = "";</script>
+  <script>window.__GF_VIEW = "guide";</script>
+  <script>window.__GF_SLUG = "neyroset-dlya-raspisaniya";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

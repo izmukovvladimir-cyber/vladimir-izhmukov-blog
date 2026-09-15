@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<script data-gfmr>(function(){try{if(location.search.indexOf('nomobile')>-1)return;var p=location.pathname;if(/^\/m\//.test(p))return;var sw=Math.min(screen.width,screen.height);if(!(sw<=640))return;p=p.replace(/(^|\/)index\.html$|\.html$/,'$1');var t=null,g=p.match(/^\/guides\/([^\/.]+)\/?$/);if(g){t='/m/guides/'+g[1]+'.html';}else if(p==='/'||p===''){t='/m/';}else{var m=p.match(/^\/([^\/.]+)\/?$/);if(m&&['instagram','neyroseti','kontent','about','library'].indexOf(m[1])>-1){t='/m/'+m[1]+'.html';}}if(t){location.replace(t+location.search+location.hash);}}catch(e){}})();</script>
+<link data-gfmr-alt rel="alternate" media="only screen and (max-width: 640px)" href="https://blog.vladimir-izhmukov.ru/m/guides/neyroset-dlya-pozdravleniya.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий — Владимир Ижмуков</title>
+<meta name="description" content="Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы, короткого сообщения, тоста и голосового, таблица тона под адресата, список штампов и способ сделать текст своим.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:#FAF7F2; }
+  .standalone-c { width:100%; }
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-pozdravleniya/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий">
+<meta property="og:description" content="Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы, короткого сообщения, тоста и голосового, таблица тона под адресата, список штампов и способ сделать текст своим.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-pozdravleniya/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-pozdravleniya.webp?v=99bb52beaa">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-15T10:00:00Z">
+<meta property="article:modified_time" content="2026-09-15T10:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий">
+<meta name="twitter:description" content="Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы, короткого сообщения, тоста и голосового, таблица тона под адресата, список штампов и способ сделать текст своим.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-pozdravleniya.webp?v=99bb52beaa">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-pozdravleniya.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-pozdravleniya/#article",
+      "headline": "Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий",
+      "description": "Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы, короткого сообщения, тоста и голосового, таблица тона под адресата, список штампов и способ сделать текст своим.",
+      "datePublished": "2026-09-15T10:00:00Z",
+      "dateModified": "2026-09-15T10:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-pozdravleniya/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-pozdravleniya/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-pozdravleniya.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для поздравления пишет текст за полминуты, и чаще всего это набор пожеланий «счастья, здоровья, успехов», который подходит любому человеку. Тёплое поздравление получается, когда вы рассказываете модели о конкретном человеке: общее воспоминание, его черту, событие года. Тогда текст звучит так, будто писали именно ему. Ниже анкета о человеке, промпты под пять форматов, таблица тона для разных адресатов и три правки, после которых текст становится вашим. Проверено 15 сентября 2026 года. Анкета: семь вопросов о человеке Ответы можно писать коротко, по одной строке. Чем больше конкретики, тем меньше в тексте общих слов. 1. Кто он вам и как вы к нему обращаетесь: «мам», «Сергей Иванович», «Лёха». 2. Повод: день рождения, юбилей, свадьба, повышение, рождение ребёнка. 3. Одно общее воспоминание или история. 4. Черта характера, за которую вы его цените. 5. Что важного случилось у него в этом году. 6. Чего он сам хочет: мечта, планы, то, о чём часто говорит. 7. В каком виде поздравление: сообщение, открытка, тост, голосовое, пост. Тон и длина под адресата | Кому | Тон | Длина | Чего избегать | |---|---|---|---| | Мама, папа, бабушка | Тёплый, благодарный | 5-8 предложений | Официальных оборотов | | Партнёр | Личный, с общей историей | Любая, главное детали | Фраз, которые можно сказать любому | | Близкий друг | С юмором, с общими шутками | 3-6 предложений | Шуток, понятных только половине гостей, если читаете вслух | | Коллега | Дружелюбный, уважительный | 2-4 предложения | Личных тем и намёков | | Руководитель | Уважительный, по делу | 2-3 предложения | Лести и фамильярности | | Клиенты и подписчики | Благодарный, от лица компании | 3-5 предложений | Продажи внутри поздравления | Промпты под пять форматов Сообщение в мессенджер Промпт: «Напиши поздравление с [повод] для [кто он мне] по анкете: [ответы]. 4-6 предложений, простым разговорным языком, обращение \"[как обращаюсь]\". Используй воспоминание и черту характера из анкеты. Запрещены фразы \"счастья, здоровья\", \"пусть сбудутся мечты\", \"оставайся таким же\"». Поздравление в прозе для открытки Промпт: «Напиши поздравление в прозе для открытки, 60-90 слов. Начни с конкретного воспоминания, дальше скажи, за что я ценю человека, в конце одно пожелание, связанное с его планом из анкеты». Если открытку тоже делаете с нейросетью, картинку и надпись разбираем отдельно в статье про нейросеть для открытки. Тост Промпт: «Напиши тост на [повод] на 40-60 секунд вслух. Структура: короткая история с неожиданным поворотом, вывод о человеке, пожелание, призыв поднять бокалы. Предложения короткие, чтобы легко произносить. Без шуток, которые могут обидеть старших гостей». Голосовое сообщение Промпт: «Перепиши это поздравление для голосового сообщения на 30 секунд. Разговорные слова, короткие фразы, паузы отметь многоточием. Убери всё, что трудно произнести». Поздравление коллектива или клиентов Промпт: «Напиши поздравление с [праздник] от лица [компания] для [клиенты, команда]. 3-5 предложений. Упомяни одно событие года: [событие]. Без рекламы и призывов купить». Штампы, которые выдают шаблон Модель тянется к этим фразам, потому что они встречаются в миллионах открыток. Попросите заменить каждую. | Штамп | Чем заменить | |---|---| | «Счастья, здоровья, успехов» | Одно пожелание, связанное с планами человека | | «Пусть сбудутся все мечты» | Назвать конкретную мечту из анкеты | | «Оставайся таким же» | Назвать черту, за которую ценишь | | «В этот прекрасный день» | Начать с воспоминания | | «Желаю всего самого наилучшего» | Убрать совсем | | «Ты самый лучший» | Сказать, в чём именно | Промпт для чистки: «Найди в этом поздравлении фразы, которые подходят любому человеку. Замени каждую на деталь из анкеты. Если детали нет, фразу удали». Три правки, после которых текст звучит вашим 1. Прочитайте вслух. Слово, которое вы бы не сказали в жизни, замените своим. 2. Добавьте одну деталь, которую модель знать не могла: прозвище, название места, фразу, которую человек часто повторяет. 3. Сократите на треть. Длинное поздравление дочитывают реже, чем короткое и точное. Частые ошибки Запрос без анкеты «Напиши поздравление маме» даёт текст, который подойдёт любой маме на свете. Три строки анкеты меняют результат сильнее, чем выбор модели. Стихи там, где нужна проза Рифмованное поздравление от нейросети часто звучит натянуто. Если хочется стихов, их пишут по отдельной схеме, она разобрана в статье про нейросеть для стихов. Одно поздравление всем Коллегам в общий чат и маме в личку нужны разные тексты. Одинаковое сообщение всем читается как рассылка. Отправка без проверки имён и дат Модель может перепутать возраст, годовщину или имя супруга. Сверьте перед отправкой. Частые вопросы Какая нейросеть лучше пишет поздравления ChatGPT, Клод, Гигачат и Алиса справляются хорошо. Качество зависит от анкеты: с конкретикой любая…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-pozdravleniya/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-pozdravleniya/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть лучше пишет поздравления",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ChatGPT, Клод, Гигачат и Алиса справляются хорошо. Качество зависит от анкеты: с конкретикой любая модель пишет живо, без неё любая пишет шаблон."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли сделать поздравление с именем человека",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Можно, укажите имя и форму обращения в промпте. Проверьте склонение имени, модели иногда ошибаются в редких именах."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как написать поздравление коллеге, которого плохо знаете",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Используйте повод и одно рабочее событие: проект, помощь, достижение. Пожелание сделайте нейтральным и коротким."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Не обидится ли человек, если узнает про нейросеть",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Если в тексте ваши воспоминания и слова, это ваше поздравление, модель помогла сформулировать. Обижает скорее безличный текст, чем способ его написания."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как поздравить в соцсетях подписчиков",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Коротко, от первого лица, с одним событием года и благодарностью. Продающие призывы в поздравлении снижают доверие."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="standalone-c"><div class="gp dir-c theme-light"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><nav class="gp-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" aria-label="Сменить тему" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><a class="gp-headbtn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте <span class="ar">→</span></a></div></div></div><div class="ban-dark"><span class="gp-eyebrow lime"><span class="dot"></span>ВЛАДИМИР&nbsp;ИЖМУКОВ</span><span>Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.</span><span class="spacer"></span></div><div class="gp-layout"><div class="gp-sidebar"><div class="gp-side-group">Claude Code · 68</div><a href="/guides/generaciya-video-po-tekstu/" class="gp-side-item">Генерация видео по тексту в 2026: как это работает и чем сделать</a><a href="/guides/ii-agenty-dlya-biznesa/" class="gp-side-item">ИИ-агенты для бизнеса в 2026: что это на самом деле и с чего начать</a><a href="/guides/kak-ozhivit-foto-neyrosetyu/" class="gp-side-item">Как оживить фото нейросетью: от старого снимка до короткого ролика</a><a href="/guides/kak-sdelat-video-neyrosetyu/" class="gp-side-item">Как сделать видео нейросетью в 2026: пошагово с телефона</a><a href="/guides/kak-zarabotat-na-neyrosetyah/" class="gp-side-item">Как заработать на нейросетях в 2026: честные способы, цифры и границы</a><a href="/guides/kitayskie-neyroseti-besplatno/" class="gp-side-item">Китайские нейросети бесплатно: какие работают из России и что они реально умеют</a><a href="/guides/neyroset-dlya-angliyskogo/" class="gp-side-item">Нейросеть для английского: как заниматься каждый день без репетитора</a><a href="/guides/neyroset-dlya-animacii/" class="gp-side-item">Нейросеть для анимации: как сделать анимированный ролик без аниматора</a><a href="/guides/neyroset-dlya-avatarki/" class="gp-side-item">Нейросеть для аватарки: как сделать фото профиля, по которому на вас подписываются</a><a href="/guides/neyroset-dlya-biznes-plana/" class="gp-side-item">Нейросеть для бизнес-плана: как собрать план, который выдержит проверку цифрами</a><a href="/guides/neyroset-dlya-chertezhey/" class="gp-side-item">Нейросеть для чертежей: где она помогает, а где обманет с размерами</a><a href="/guides/neyroset-dlya-diploma/" class="gp-side-item">Нейросеть для диплома: план, главы и защита без провала</a><a href="/guides/neyroset-dlya-dizayna/" class="gp-side-item">Нейросеть для дизайна: что она делает за вас, а что придётся доделать руками</a><a href="/guides/neyroset-dlya-dogovora/" class="gp-side-item">Нейросеть для договора: как составить и проверить документ</a><a href="/guides/neyroset-dlya-doklada/" class="gp-side-item">Нейросеть для доклада: текст, план выступления и ответы на вопросы за один вечер</a><a href="/guides/neyroset-dlya-foto/" class="gp-side-item">Нейросеть для фото: обработать своё, улучшить старое, сгенерировать новое</a><a href="/guides/neyroset-dlya-fotoshopa/" class="gp-side-item">Нейросеть в Фотошопе: генеративная заливка, расширение кадра и удаление лишнего</a><a href="/guides/neyroset-dlya-infografiki/" class="gp-side-item">Нейросеть для инфографики: как объяснить сложное картинкой, которую досмотрят</a><a href="/guides/neyroset-dlya-interera/" class="gp-side-item">Нейросеть для интерьера: как увидеть свою комнату в новом виде до ремонта</a><a href="/guides/neyroset-dlya-kartochek-tovarov/" class="gp-side-item">Нейросеть для карточек товаров: фото, инфографика и описание для маркетплейса</a><a href="/guides/neyroset-dlya-knigi/" class="gp-side-item">Нейросеть для книги и глав книги в 2026: как пользоваться и собрать книгу из своего опыта</a><a href="/guides/neyroset-dlya-koda/" class="gp-side-item">Нейросеть для кода: как человек без образования программиста собирает рабочие инструменты</a><a href="/guides/neyroset-dlya-komiksa/" class="gp-side-item">Нейросеть для комикса: от идеи до готовых страниц</a><a href="/guides/neyroset-dlya-konspekta/" class="gp-side-item">Нейросеть для конспекта: как сделать конспект лекции, книги или видео, который правда помогает запомнить</a><a href="/guides/neyroset-dlya-kursovoy/" class="gp-side-item">Нейросеть для курсовой: как ускорить работу и не завалиться на проверке</a><a href="/guides/neyroset-dlya-logotipa/" class="gp-side-item">Нейросеть для логотипа: как получить знак, который не стыдно поставить на профиль</a><a href="/guides/neyroset-dlya-memov/" class="gp-side-item">Нейросеть для мемов: как делать смешные мемы для блога и чатов</a><a href="/guides/neyroset-dlya-montazha-video/" class="gp-side-item">Нейросеть для монтажа видео в 2026: что она делает сама и где нужны руки</a><a href="/guides/neyroset-dlya-muzyki/" class="gp-side-item">Нейросеть для музыки: как сделать трек для ролика, который не заглушат за авторские права</a><a href="/guides/neyroset-dlya-nazvaniya/" class="gp-side-item">Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно</a><a href="/guides/neyroset-dlya-oblozhek/" class="gp-side-item">Нейросеть для обложек: как собрать картинку, на которую нажимают</a><a href="/guides/neyroset-dlya-obyavleniya/" class="gp-side-item">Нейросеть для объявления: как написать текст на Авито и доске объявлений, чтобы покупатели сразу звонили</a><a href="/guides/neyroset-dlya-otkrytki/" class="gp-side-item">Нейросеть для открытки: как сделать поздравление, которое сохранят</a><a href="/guides/neyroset-dlya-otzyvov/" class="gp-side-item">Нейросеть для отзывов в 2026: как пользоваться, отвечать на негатив и собирать отзывы клиентов</a><a href="/guides/neyroset-dlya-perevoda/" class="gp-side-item">Нейросеть для перевода: как перевести текст и видео так, чтобы звучало по-человечески</a><a href="/guides/neyroset-dlya-pesni/" class="gp-side-item">Нейросеть для песни: как получить трек с вокалом, который не стыдно подарить</a><a href="/guides/neyroset-dlya-pisem/" class="gp-side-item">Нейросеть для писем: деловые письма, ответы клиентам и сложные разговоры</a><a href="/guides/neyroset-dlya-postov/" class="gp-side-item">Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK</a><a href="/guides/neyroset-dlya-pozdravleniya/" class="gp-side-item active">Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий</a><a href="/guides/neyroset-dlya-prezentaciy/" class="gp-side-item">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</a><a href="/guides/neyroset-dlya-proekta/" class="gp-side-item">Нейросеть для проекта: индивидуальный проект в школе и колледже от темы до защиты</a><a href="/guides/neyroset-dlya-psihologa/" class="gp-side-item">Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница</a><a href="/guides/neyroset-dlya-raskraski/" class="gp-side-item">Нейросеть для раскраски: как сделать раскраску для ребёнка и взрослого</a><a href="/guides/neyroset-dlya-raspisaniya/" class="gp-side-item">Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь</a><a href="/guides/neyroset-dlya-referata/" class="gp-side-item">Нейросеть для реферата: как написать реферат по шагам и пройти проверку</a><a href="/guides/neyroset-dlya-reklamy/" class="gp-side-item">Нейросеть для рекламы: как собрать креативы и тексты, которые окупают показы</a><a href="/guides/neyroset-dlya-resheniya-zadach/" class="gp-side-item">Нейросеть для решения задач: математика, физика, химия по фото и с разбором</a><a href="/guides/neyroset-dlya-rezyume/" class="gp-side-item">Нейросеть для резюме: как собрать сильный отклик за вечер</a><a href="/guides/neyroset-dlya-rils/" class="gp-side-item">Нейросеть для Рилс в 2026: какие берут под каждую часть ролика</a><a href="/guides/neyroset-dlya-risovaniya/" class="gp-side-item">Нейросеть для рисования: как получить иллюстрацию нужного стиля, а потом повторить его во всех картинках</a><a href="/guides/neyroset-dlya-sayta/" class="gp-side-item">Нейросеть для сайта: как собрать рабочую страницу за вечер и не остаться с красивой пустышкой</a><a href="/guides/neyroset-dlya-scenariya/" class="gp-side-item">Нейросеть для сценария: YouTube-ролик, реклама, эфир и мероприятие</a><a href="/guides/neyroset-dlya-skazok/" class="gp-side-item">Нейросеть для сказок: как сочинить сказку для ребёнка за 10 минут</a><a href="/guides/neyroset-dlya-sochineniya/" class="gp-side-item">Нейросеть для сочинения: как написать сочинение с помощью нейросети и не потерять свой голос</a><a href="/guides/neyroset-dlya-stihov/" class="gp-side-item">Нейросеть для стихов: как получить стихотворение, которое не стыдно прочитать вслух</a><a href="/guides/neyroset-dlya-tablic/" class="gp-side-item">Нейросеть для таблиц: как разобрать выгрузку и получить готовый ответ</a><a href="/guides/neyroset-dlya-tatu/" class="gp-side-item">Нейросеть для тату: как сделать эскиз, который мастер согласится бить</a><a href="/guides/neyroset-dlya-testov/" class="gp-side-item">Нейросеть для тестов: как составить тест с ответами и как готовиться к тестированию</a><a href="/guides/neyroset-dlya-trenirovok/" class="gp-side-item">Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели</a><a href="/guides/neyroset-dlya-ucheby/" class="gp-side-item">Нейросеть для учебы: как понимать темы быстрее и готовиться к экзаменам</a><a href="/guides/neyroset-dlya-uchitelya/" class="gp-side-item">Нейросеть для учителя: планы уроков, задания, проверка и отчёты за вечер</a><a href="/guides/neyroset-dlya-vakansii/" class="gp-side-item">Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди</a><a href="/guides/neyroset-dlya-vizitki/" class="gp-side-item">Нейросеть для визитки: как сделать дизайн и текст, готовые к печати</a><a href="/guides/neyroset-dlya-yurista/" class="gp-side-item">Нейросеть для юриста: где она экономит часы, а где подставляет под ответственность</a><a href="/guides/neyroset-dlya-yutuba/" class="gp-side-item">Нейросеть для ютуба: темы, сценарий, заголовок, обложка и описание для видео за один вечер</a><a href="/guides/neyroseti-dlya-marketinga/" class="gp-side-item">Нейросети для маркетинга в 2026: по каждой задаче отдельно</a><a href="/guides/oblozhka-dlya-video/" class="gp-side-item">Как сделать обложку для видео: разбор кликабельной обложки и запросы под неё</a><a href="/guides/promty-dlya-video/" class="gp-side-item">Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling</a></div><div class="gp-content read-article"><div class="gp-cover"><img src="/covers/neyroset-dlya-pozdravleniya.webp?v=99bb52beaa" alt="Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий" loading="eager"></div><div class="gp-bc">Статьи</div><div class="gp-h1row"><h1 class="gp-h1">Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий</h1><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="gp-desc">Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы, короткого сообщения, тоста и голосового, таблица тона под адресата, список штампов и способ сделать текст своим.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для поздравления пишет текст за полминуты, и чаще всего это набор пожеланий «счастья, здоровья, успехов», который подходит любому человеку. Тёплое поздравление получается, когда вы рассказываете модели о конкретном человеке: общее воспоминание, его черту, событие года. Тогда текст звучит так, будто писали именно ему.</p>
+<p>Ниже анкета о человеке, промпты под пять форматов, таблица тона для разных адресатов и три правки, после которых текст становится вашим.</p>
+<p>Проверено 15 сентября 2026 года.</p>
+<h2 id="sec-0">Анкета: семь вопросов о человеке</h2>
+<p>Ответы можно писать коротко, по одной строке. Чем больше конкретики, тем меньше в тексте общих слов.</p>
+<ol><li>Кто он вам и как вы к нему обращаетесь: «мам», «Сергей Иванович», «Лёха».</li><li>Повод: день рождения, юбилей, свадьба, повышение, рождение ребёнка.</li><li>Одно общее воспоминание или история.</li><li>Черта характера, за которую вы его цените.</li><li>Что важного случилось у него в этом году.</li><li>Чего он сам хочет: мечта, планы, то, о чём часто говорит.</li><li>В каком виде поздравление: сообщение, открытка, тост, голосовое, пост.</li></ol>
+<h2 id="sec-1">Тон и длина под адресата</h2>
+<table class="gp-table"><thead><tr><th>Кому</th><th>Тон</th><th>Длина</th><th>Чего избегать</th></tr></thead><tbody><tr><td>Мама, папа, бабушка</td><td>Тёплый, благодарный</td><td>5-8 предложений</td><td>Официальных оборотов</td></tr><tr><td>Партнёр</td><td>Личный, с общей историей</td><td>Любая, главное детали</td><td>Фраз, которые можно сказать любому</td></tr><tr><td>Близкий друг</td><td>С юмором, с общими шутками</td><td>3-6 предложений</td><td>Шуток, понятных только половине гостей, если читаете вслух</td></tr><tr><td>Коллега</td><td>Дружелюбный, уважительный</td><td>2-4 предложения</td><td>Личных тем и намёков</td></tr><tr><td>Руководитель</td><td>Уважительный, по делу</td><td>2-3 предложения</td><td>Лести и фамильярности</td></tr><tr><td>Клиенты и подписчики</td><td>Благодарный, от лица компании</td><td>3-5 предложений</td><td>Продажи внутри поздравления</td></tr></tbody></table>
+<h2 id="sec-2">Промпты под пять форматов</h2>
+<h3>Сообщение в мессенджер</h3>
+<p>Промпт: «Напиши поздравление с [повод] для [кто он мне] по анкете: [ответы]. 4-6 предложений, простым разговорным языком, обращение "[как обращаюсь]". Используй воспоминание и черту характера из анкеты. Запрещены фразы "счастья, здоровья", "пусть сбудутся мечты", "оставайся таким же"».</p>
+<h3>Поздравление в прозе для открытки</h3>
+<p>Промпт: «Напиши поздравление в прозе для открытки, 60-90 слов. Начни с конкретного воспоминания, дальше скажи, за что я ценю человека, в конце одно пожелание, связанное с его планом из анкеты».</p>
+<p>Если открытку тоже делаете с нейросетью, картинку и надпись разбираем отдельно в статье про <a href="/guides/neyroset-dlya-otkrytki/">нейросеть для открытки</a>.</p>
+<h3>Тост</h3>
+<p>Промпт: «Напиши тост на [повод] на 40-60 секунд вслух. Структура: короткая история с неожиданным поворотом, вывод о человеке, пожелание, призыв поднять бокалы. Предложения короткие, чтобы легко произносить. Без шуток, которые могут обидеть старших гостей».</p>
+<h3>Голосовое сообщение</h3>
+<p>Промпт: «Перепиши это поздравление для голосового сообщения на 30 секунд. Разговорные слова, короткие фразы, паузы отметь многоточием. Убери всё, что трудно произнести».</p>
+<h3>Поздравление коллектива или клиентов</h3>
+<p>Промпт: «Напиши поздравление с [праздник] от лица [компания] для [клиенты, команда]. 3-5 предложений. Упомяни одно событие года: [событие]. Без рекламы и призывов купить».</p>
+<h2 id="sec-3">Штампы, которые выдают шаблон</h2>
+<p>Модель тянется к этим фразам, потому что они встречаются в миллионах открыток. Попросите заменить каждую.</p>
+<table class="gp-table"><thead><tr><th>Штамп</th><th>Чем заменить</th></tr></thead><tbody><tr><td>«Счастья, здоровья, успехов»</td><td>Одно пожелание, связанное с планами человека</td></tr><tr><td>«Пусть сбудутся все мечты»</td><td>Назвать конкретную мечту из анкеты</td></tr><tr><td>«Оставайся таким же»</td><td>Назвать черту, за которую ценишь</td></tr><tr><td>«В этот прекрасный день»</td><td>Начать с воспоминания</td></tr><tr><td>«Желаю всего самого наилучшего»</td><td>Убрать совсем</td></tr><tr><td>«Ты самый лучший»</td><td>Сказать, в чём именно</td></tr></tbody></table>
+<p>Промпт для чистки: «Найди в этом поздравлении фразы, которые подходят любому человеку. Замени каждую на деталь из анкеты. Если детали нет, фразу удали».</p>
+<h2 id="sec-4">Три правки, после которых текст звучит вашим</h2>
+<ol><li>Прочитайте вслух. Слово, которое вы бы не сказали в жизни, замените своим.</li><li>Добавьте одну деталь, которую модель знать не могла: прозвище, название места, фразу, которую человек часто повторяет.</li><li>Сократите на треть. Длинное поздравление дочитывают реже, чем короткое и точное.</li></ol>
+<h2 id="sec-5">Частые ошибки</h2>
+<h3>Запрос без анкеты</h3>
+<p>«Напиши поздравление маме» даёт текст, который подойдёт любой маме на свете. Три строки анкеты меняют результат сильнее, чем выбор модели.</p>
+<h3>Стихи там, где нужна проза</h3>
+<p>Рифмованное поздравление от нейросети часто звучит натянуто. Если хочется стихов, их пишут по отдельной схеме, она разобрана в статье про <a href="/guides/neyroset-dlya-stihov/">нейросеть для стихов</a>.</p>
+<h3>Одно поздравление всем</h3>
+<p>Коллегам в общий чат и маме в личку нужны разные тексты. Одинаковое сообщение всем читается как рассылка.</p>
+<h3>Отправка без проверки имён и дат</h3>
+<p>Модель может перепутать возраст, годовщину или имя супруга. Сверьте перед отправкой.</p>
+<h2 id="sec-6">Частые вопросы</h2>
+<h3>Какая нейросеть лучше пишет поздравления</h3>
+<p>ChatGPT, Клод, Гигачат и Алиса справляются хорошо. Качество зависит от анкеты: с конкретикой любая модель пишет живо, без неё любая пишет шаблон.</p>
+<h3>Можно ли сделать поздравление с именем человека</h3>
+<p>Можно, укажите имя и форму обращения в промпте. Проверьте склонение имени, модели иногда ошибаются в редких именах.</p>
+<h3>Как написать поздравление коллеге, которого плохо знаете</h3>
+<p>Используйте повод и одно рабочее событие: проект, помощь, достижение. Пожелание сделайте нейтральным и коротким.</p>
+<h3>Не обидится ли человек, если узнает про нейросеть</h3>
+<p>Если в тексте ваши воспоминания и слова, это ваше поздравление, модель помогла сформулировать. Обижает скорее безличный текст, чем способ его написания.</p>
+<h3>Как поздравить в соцсетях подписчиков</h3>
+<p>Коротко, от первого лица, с одним событием года и благодарностью. Продающие призывы в поздравлении снижают доверие.</p>
+<h2 id="sec-7">Что делать дальше</h2>
+<p>Выберите ближайший повод в календаре, ответьте на семь вопросов анкеты и получите два варианта: сообщение и голосовое. Сделайте три правки и отправьте то, что звучит больше похоже на вас. Анкету сохраните в заметках, она пригодится для следующего праздника.</p>
+<p>Тот же принцип «конкретика вместо общих слов» работает в любом тексте для людей, особенно в соцсетях. Как я пишу сценарии коротких роликов, которые люди досматривают, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="cta-dark grid"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><div class="cta-bullets"><div class="b"><span class="m"></span>Готовые промпты под Reels, хуки и длинные описания</div><div class="b"><span class="m"></span>Разборы, почему одни ролики залетают, а другие нет</div><div class="b"><span class="m"></span>Гайды по нейросетям для контента, коротко и по делу</div></div><div class="cta-foot"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-trenirovok/"><span class="rc-cover"><img src="/covers/neyroset-dlya-trenirovok.webp?v=5042acd82e" alt="Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели</span><span class="rc-desc">Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-raspisaniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-raspisaniya.webp?v=82c108e8c1" alt="Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь</span><span class="rc-desc">Как составить расписание через нейросеть: личный распорядок дня, план подготовки к…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-psihologa/"><span class="rc-cover"><img src="/covers/neyroset-dlya-psihologa.webp?v=a8205e24f8" alt="Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница</span><span class="rc-desc">Как психологу пользоваться нейросетью: подготовка к сессии, упражнения и домашние…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-obyavleniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-obyavleniya.webp?v=8406aa18cb" alt="Нейросеть для объявления: как написать текст на Авито и доске объявлений, чтобы покупатели сразу звонили" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для объявления: как написать текст на Авито и доске объявлений, чтобы покупатели сразу звонили</span><span class="rc-desc">Как составить объявление через нейросеть для Авито, Юлы и местных чатов: заголовок под…</span></a></div></section><div class="gp-docsnav"><a class="gp-navcard" href="/guides/neyroset-dlya-postov/"><div class="l">← Предыдущий</div><div class="t">Нейросеть для постов: как писать посты своим голосом для Telegram, Instagram и VK</div></a><a class="gp-navcard next" href="/guides/neyroset-dlya-prezentaciy/"><div class="l">Следующий →</div><div class="t">Нейросеть для презентаций: от структуры до готовых слайдов за вечер</div></a></div></div><div class="gp-toc"><div class="h">На странице</div><a href="#sec-0" class="active">Анкета: семь вопросов о человеке</a><a href="#sec-1" class="">Тон и длина под адресата</a><a href="#sec-2" class="">Промпты под пять форматов</a><a href="#sec-3" class="">Штампы, которые выдают шаблон</a><a href="#sec-4" class="">Три правки, после которых текст звучит вашим</a><a href="#sec-5" class="">Частые ошибки</a><a href="#sec-6" class="">Частые вопросы</a><a href="#sec-7" class="">Что делать дальше</a></div></div><footer class="gp-footer"><div class="gp-foot-inner"><div class="gp-foot-main"><div class="gp-foot-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><p>Гайды, статьи и разборы по темам: Instagram и рост, Нейросети для контента, Контент и воронки. От Владимир Ижмуков и канала «AI Realshift».</p></div><div class="gp-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a><a href="/library/">Все гайды</a></div><div class="col"><div class="h">Владимир Ижмуков</div><a href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><div class="col"><div class="h">Контакты</div><a href="https://t.me/Ai_realshift" target="_blank" rel="noopener">Канал «AI Realshift»</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика конфиденциальности</a></div></div></div><div class="gp-foot-bottom"><span>© 2026 ВЛАДИМИР ИЖМУКОВ</span><span class="spacer"></span><span>Владимир Ижмуков</span></div></div></footer></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=80dd675633"></script>
+  <script>window.__GF_BASE = "";</script>
+  <script>window.__GF_VIEW = "guide";</script>
+  <script>window.__GF_SLUG = "neyroset-dlya-pozdravleniya";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

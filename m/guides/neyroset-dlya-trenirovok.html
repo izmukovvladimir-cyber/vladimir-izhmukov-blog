@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для зала, дома и бега, прогрессия нагрузки, дневник и еженедельная корректировка. Когда нужен врач и тренер.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-trenirovok/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели">
+<meta property="og:description" content="Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для зала, дома и бега, прогрессия нагрузки, дневник и еженедельная корректировка. Когда нужен врач и тренер.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-trenirovok/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-trenirovok.webp?v=5042acd82e">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-15T10:30:00Z">
+<meta property="article:modified_time" content="2026-09-15T10:30:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели">
+<meta name="twitter:description" content="Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для зала, дома и бега, прогрессия нагрузки, дневник и еженедельная корректировка. Когда нужен врач и тренер.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-trenirovok.webp?v=5042acd82e">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-trenirovok.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-trenirovok/#article",
+      "headline": "Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели",
+      "description": "Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для зала, дома и бега, прогрессия нагрузки, дневник и еженедельная корректировка. Когда нужен врач и тренер.",
+      "datePublished": "2026-09-15T10:30:00Z",
+      "dateModified": "2026-09-15T10:30:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-trenirovok/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-trenirovok/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-trenirovok.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для тренировок составляет программу за пару минут, если знает ваш уровень, цель, время и ограничения по здоровью. Дальше программа работает, когда вы ведёте дневник и раз в неделю отдаёте модели цифры для корректировки нагрузки. Технику упражнений и допуск к нагрузкам нейросеть не проверяет, это задача тренера и врача. Ниже анкета, промпты для зала, дома и бега, прогрессия на восемь недель, дневник и признаки, при которых тренировку нужно остановить. Проверено 15 сентября 2026 года. Сначала о здоровье Если у вас хронические заболевания, болит спина или суставы, есть проблемы с сердцем и давлением, была травма или операция, или вы беременны, сначала покажите программу врачу. Боль в груди, головокружение, резкая боль в суставе во время тренировки означают остановку сразу. Нейросеть не видит, как вы выполняете упражнение, и не знает вашей медицинской истории. Анкета перед запросом Модель без анкеты выдаёт универсальную программу «3 подхода по 12», которая одному мала, другому опасна. 1. Цель: сила, похудение, выносливость, здоровая спина, подготовка к забегу. 2. Уровень: не тренировался год и больше, занимаюсь нерегулярно, занимаюсь больше полугода. 3. Сколько тренировок в неделю реально, и сколько минут каждая. 4. Где: зал, дом без инвентаря, дом с гантелями, улица. 5. Ограничения: травмы, боли, что запретил врач. 6. Что нравится и что точно не будете делать. 7. Текущие цифры: сколько отжиманий подряд, сколько проходите или пробегаете без остановки. 8. Сон и работа: сидячая работа, смены, сколько спите. Промпты под три формата Зал Промпт: «Ты тренер. Составь программу на 8 недель по анкете: [ответы]. [Число] тренировок в неделю по [минут]. Для каждой тренировки: разминка, упражнения с подходами, повторениями и отдыхом, заминка. Базовые упражнения с простой техникой. Отметь, какие упражнения заменить при боли в [зона]. Нагрузку увеличивай не больше чем на 5-10% в неделю». Дома Промпт: «Составь домашнюю программу без инвентаря на 8 недель по анкете: [ответы]. Тренировка до [минут], места нужно не больше коврика. Для каждого упражнения: как выполнять в 3-4 шагах, облегчённый и усложнённый вариант. Каждую четвёртую неделю сделай облегчённой». Бег с нуля Промпт: «Составь план бега для новичка на 8 недель по анкете: [ответы]. Начни с чередования ходьбы и бега. Три тренировки в неделю, между ними день отдыха. Для каждой: сколько минут ходьбы и бега, сколько повторов, общая длительность. Добавь разминку и растяжку после». Прогрессия на восемь недель Главная причина травм и срывов в том, что нагрузку поднимают слишком быстро. Ориентир для новичка: | Недели | Что происходит | Как меняется нагрузка | |---|---|---| | 1-2 | Освоение техники | Лёгкий вес или облегчённые варианты, запас 3-4 повтора до отказа | | 3 | Первая прибавка | Плюс 1-2 повтора или небольшой вес | | 4 | Облегчённая неделя | Объём меньше на треть | | 5-6 | Рабочий объём | Плюс подход в основных упражнениях | | 7 | Пик | Самая высокая нагрузка цикла | | 8 | Разгрузка и замер | Меньше объём, повтор замеров из анкеты | Цифры в таблице условные. Если после тренировки усталость держится больше двух дней, прибавку откладывайте. Дневник тренировок Модель корректирует программу только по данным. Записывайте после каждой тренировки пять полей. | Поле | Пример | |---|---| | Дата и тренировка | 15.09, тренировка А | | Что сделали | Приседания 3×10 с 20 кг, отжимания 3×8 | | Как далось по шкале от 1 до 10 | 7 | | Самочувствие и сон | Спал 6 часов, ноги тяжёлые | | Боль или дискомфорт | Нет | Корректировка раз в неделю Промпт: «Вот мой дневник тренировок за неделю: [записи]. Программа: [программа]. Скажи, где нагрузку можно поднять, где оставить, где снизить. Если есть признаки перегруза или боль, предложи облегчённую неделю и напиши, когда стоит обратиться к врачу. Новых упражнений не добавляй без причины». Когда тренировку останавливают 1. Боль в груди, одышка, которая не проходит в покое, головокружение. 2. Острая боль в суставе или спине во время движения. 3. Онемение или покалывание в руке или ноге. 4. Пульс не успокаивается после отдыха. В этих случаях прекратите тренировку и обратитесь к врачу. При угрожающем состоянии звоните 112. Частые ошибки Программа без анкеты Общий запрос даёт общую программу. Восемь строк анкеты превращают её в вашу. Прибавка каждую тренировку Тело не успевает восстановиться, и через три недели приходит усталость или травма. Смена программы каждую неделю Результат виден через 6-8 недель одной программы. Корректируйте нагрузку, а упражнения меняйте после цикла. Техника по описанию Текстовое описание упражнения не заменяет взгляд со стороны. Хотя бы первые занятия со штангой проведите с тренером или снимите себя на видео и сравните с эталоном. Частые вопросы Какая нейросеть лучше составляет программы тренировок ChatGPT, Клод, Гигачат и YandexGPT справляются…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-trenirovok/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-trenirovok/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть лучше составляет программы тренировок",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ChatGPT, Клод, Гигачат и YandexGPT справляются похоже. Разницу дают анкета и дневник, выбор сервиса влияет меньше."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Может ли нейросеть заменить тренера",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для составления плана и корректировки по цифрам она хороший помощник. Технику, травмы и индивидуальные особенности видит только живой специалист."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли составить программу для похудения",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Можно, но вес в первую очередь зависит от питания и сна. Попросите модель сочетать тренировки с шагами в день и обсудите питание со специалистом, если есть заболевания."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько раз в неделю тренироваться новичку",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Обычно начинают с 2-3 тренировок всего тела с днём отдыха между ними. Точнее скажет модель по вашей анкете и врач, если есть ограничения."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как вписать тренировки в плотный график",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Сначала составьте недельное расписание с рамками работы и сна, потом ставьте тренировки в свободные окна. Как это сделать, разобрано в статье про нейросеть для расписания. Про сценарии и посты для фитнес-блога подробнее в подборке нейросети для контента."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/neyroset-dlya-trenirovok.webp?v=5042acd82e" alt="Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для зала, дома и бега, прогрессия нагрузки, дневник и еженедельная корректировка. Когда нужен врач и тренер.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для тренировок составляет программу за пару минут, если знает ваш уровень, цель, время и ограничения по здоровью. Дальше программа работает, когда вы ведёте дневник и раз в неделю отдаёте модели цифры для корректировки нагрузки. Технику упражнений и допуск к нагрузкам нейросеть не проверяет, это задача тренера и врача.</p>
+<p>Ниже анкета, промпты для зала, дома и бега, прогрессия на восемь недель, дневник и признаки, при которых тренировку нужно остановить.</p>
+<p>Проверено 15 сентября 2026 года.</p>
+<h2 id="sec-0">Сначала о здоровье</h2>
+<p>Если у вас хронические заболевания, болит спина или суставы, есть проблемы с сердцем и давлением, была травма или операция, или вы беременны, сначала покажите программу врачу. Боль в груди, головокружение, резкая боль в суставе во время тренировки означают остановку сразу. Нейросеть не видит, как вы выполняете упражнение, и не знает вашей медицинской истории.</p>
+<h2 id="sec-1">Анкета перед запросом</h2>
+<p>Модель без анкеты выдаёт универсальную программу «3 подхода по 12», которая одному мала, другому опасна.</p>
+<ol><li>Цель: сила, похудение, выносливость, здоровая спина, подготовка к забегу.</li><li>Уровень: не тренировался год и больше, занимаюсь нерегулярно, занимаюсь больше полугода.</li><li>Сколько тренировок в неделю реально, и сколько минут каждая.</li><li>Где: зал, дом без инвентаря, дом с гантелями, улица.</li><li>Ограничения: травмы, боли, что запретил врач.</li><li>Что нравится и что точно не будете делать.</li><li>Текущие цифры: сколько отжиманий подряд, сколько проходите или пробегаете без остановки.</li><li>Сон и работа: сидячая работа, смены, сколько спите.</li></ol>
+<h2 id="sec-2">Промпты под три формата</h2>
+<h3>Зал</h3>
+<p>Промпт: «Ты тренер. Составь программу на 8 недель по анкете: [ответы]. [Число] тренировок в неделю по [минут]. Для каждой тренировки: разминка, упражнения с подходами, повторениями и отдыхом, заминка. Базовые упражнения с простой техникой. Отметь, какие упражнения заменить при боли в [зона]. Нагрузку увеличивай не больше чем на 5-10% в неделю».</p>
+<h3>Дома</h3>
+<p>Промпт: «Составь домашнюю программу без инвентаря на 8 недель по анкете: [ответы]. Тренировка до [минут], места нужно не больше коврика. Для каждого упражнения: как выполнять в 3-4 шагах, облегчённый и усложнённый вариант. Каждую четвёртую неделю сделай облегчённой».</p>
+<h3>Бег с нуля</h3>
+<p>Промпт: «Составь план бега для новичка на 8 недель по анкете: [ответы]. Начни с чередования ходьбы и бега. Три тренировки в неделю, между ними день отдыха. Для каждой: сколько минут ходьбы и бега, сколько повторов, общая длительность. Добавь разминку и растяжку после».</p>
+<h2 id="sec-3">Прогрессия на восемь недель</h2>
+<p>Главная причина травм и срывов в том, что нагрузку поднимают слишком быстро. Ориентир для новичка:</p>
+<table class="gp-table"><thead><tr><th>Недели</th><th>Что происходит</th><th>Как меняется нагрузка</th></tr></thead><tbody><tr><td>1-2</td><td>Освоение техники</td><td>Лёгкий вес или облегчённые варианты, запас 3-4 повтора до отказа</td></tr><tr><td>3</td><td>Первая прибавка</td><td>Плюс 1-2 повтора или небольшой вес</td></tr><tr><td>4</td><td>Облегчённая неделя</td><td>Объём меньше на треть</td></tr><tr><td>5-6</td><td>Рабочий объём</td><td>Плюс подход в основных упражнениях</td></tr><tr><td>7</td><td>Пик</td><td>Самая высокая нагрузка цикла</td></tr><tr><td>8</td><td>Разгрузка и замер</td><td>Меньше объём, повтор замеров из анкеты</td></tr></tbody></table>
+<p>Цифры в таблице условные. Если после тренировки усталость держится больше двух дней, прибавку откладывайте.</p>
+<h2 id="sec-4">Дневник тренировок</h2>
+<p>Модель корректирует программу только по данным. Записывайте после каждой тренировки пять полей.</p>
+<table class="gp-table"><thead><tr><th>Поле</th><th>Пример</th></tr></thead><tbody><tr><td>Дата и тренировка</td><td>15.09, тренировка А</td></tr><tr><td>Что сделали</td><td>Приседания 3×10 с 20 кг, отжимания 3×8</td></tr><tr><td>Как далось по шкале от 1 до 10</td><td>7</td></tr><tr><td>Самочувствие и сон</td><td>Спал 6 часов, ноги тяжёлые</td></tr><tr><td>Боль или дискомфорт</td><td>Нет</td></tr></tbody></table>
+<h2 id="sec-5">Корректировка раз в неделю</h2>
+<p>Промпт: «Вот мой дневник тренировок за неделю: [записи]. Программа: [программа]. Скажи, где нагрузку можно поднять, где оставить, где снизить. Если есть признаки перегруза или боль, предложи облегчённую неделю и напиши, когда стоит обратиться к врачу. Новых упражнений не добавляй без причины».</p>
+<h2 id="sec-6">Когда тренировку останавливают</h2>
+<ol><li>Боль в груди, одышка, которая не проходит в покое, головокружение.</li><li>Острая боль в суставе или спине во время движения.</li><li>Онемение или покалывание в руке или ноге.</li><li>Пульс не успокаивается после отдыха.</li></ol>
+<p>В этих случаях прекратите тренировку и обратитесь к врачу. При угрожающем состоянии звоните 112.</p>
+<h2 id="sec-7">Частые ошибки</h2>
+<h3>Программа без анкеты</h3>
+<p>Общий запрос даёт общую программу. Восемь строк анкеты превращают её в вашу.</p>
+<h3>Прибавка каждую тренировку</h3>
+<p>Тело не успевает восстановиться, и через три недели приходит усталость или травма.</p>
+<h3>Смена программы каждую неделю</h3>
+<p>Результат виден через 6-8 недель одной программы. Корректируйте нагрузку, а упражнения меняйте после цикла.</p>
+<h3>Техника по описанию</h3>
+<p>Текстовое описание упражнения не заменяет взгляд со стороны. Хотя бы первые занятия со штангой проведите с тренером или снимите себя на видео и сравните с эталоном.</p>
+<h2 id="sec-8">Частые вопросы</h2>
+<h3>Какая нейросеть лучше составляет программы тренировок</h3>
+<p>ChatGPT, Клод, Гигачат и YandexGPT справляются похоже. Разницу дают анкета и дневник, выбор сервиса влияет меньше.</p>
+<h3>Может ли нейросеть заменить тренера</h3>
+<p>Для составления плана и корректировки по цифрам она хороший помощник. Технику, травмы и индивидуальные особенности видит только живой специалист.</p>
+<h3>Можно ли составить программу для похудения</h3>
+<p>Можно, но вес в первую очередь зависит от питания и сна. Попросите модель сочетать тренировки с шагами в день и обсудите питание со специалистом, если есть заболевания.</p>
+<h3>Сколько раз в неделю тренироваться новичку</h3>
+<p>Обычно начинают с 2-3 тренировок всего тела с днём отдыха между ними. Точнее скажет модель по вашей анкете и врач, если есть ограничения.</p>
+<h3>Как вписать тренировки в плотный график</h3>
+<p>Сначала составьте недельное расписание с рамками работы и сна, потом ставьте тренировки в свободные окна. Как это сделать, разобрано в статье про <a href="/guides/neyroset-dlya-raspisaniya/">нейросеть для расписания</a>.</p>
+<p>Про сценарии и посты для фитнес-блога подробнее в подборке <a href="/guides/neyroseti-dlya-kontenta-spisok/">нейросети для контента</a>.</p>
+<h2 id="sec-9">Что делать дальше</h2>
+<p>Заполните анкету, получите программу на 8 недель под свой формат и покажите её врачу, если есть ограничения. Заведите дневник на пять полей и в конце первой недели прогоните его через промпт корректировки. Через 8 недель повторите замеры из анкеты и сравните.</p>
+<p>Если вы тренер или ведёте фитнес-блог, та же нейросеть закрывает контент: сценарии коротких роликов, ответы на частые вопросы, посты. Как я строю поток заявок из роликов, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-raspisaniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-raspisaniya.webp?v=82c108e8c1" alt="Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь</span><span class="rc-desc">Как составить расписание через нейросеть: личный распорядок дня, план подготовки к…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-psihologa/"><span class="rc-cover"><img src="/covers/neyroset-dlya-psihologa.webp?v=a8205e24f8" alt="Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница</span><span class="rc-desc">Как психологу пользоваться нейросетью: подготовка к сессии, упражнения и домашние…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-pozdravleniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pozdravleniya.webp?v=99bb52beaa" alt="Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий</span><span class="rc-desc">Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-obyavleniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-obyavleniya.webp?v=8406aa18cb" alt="Нейросеть для объявления: как написать текст на Авито и доске объявлений, чтобы покупатели сразу звонили" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для объявления: как написать текст на Авито и доске объявлений, чтобы покупатели сразу звонили</span><span class="rc-desc">Как составить объявление через нейросеть для Авито, Юлы и местных чатов: заголовок под…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=80dd675633"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "neyroset-dlya-trenirovok";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

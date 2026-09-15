@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Как придумать название через нейросеть: бриф, промпты под шесть способов нейминга, фильтр из восьми критериев, проверка домена, товарного знака и соцсетей перед тем, как влюбиться в вариант.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-nazvaniya/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно">
+<meta property="og:description" content="Как придумать название через нейросеть: бриф, промпты под шесть способов нейминга, фильтр из восьми критериев, проверка домена, товарного знака и соцсетей перед тем, как влюбиться в вариант.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-nazvaniya/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-nazvaniya.webp?v=061ade72f1">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-15T09:20:00Z">
+<meta property="article:modified_time" content="2026-09-15T09:20:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно">
+<meta name="twitter:description" content="Как придумать название через нейросеть: бриф, промпты под шесть способов нейминга, фильтр из восьми критериев, проверка домена, товарного знака и соцсетей перед тем, как влюбиться в вариант.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-nazvaniya.webp?v=061ade72f1">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-nazvaniya.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-nazvaniya/#article",
+      "headline": "Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно",
+      "description": "Как придумать название через нейросеть: бриф, промпты под шесть способов нейминга, фильтр из восьми критериев, проверка домена, товарного знака и соцсетей перед тем, как влюбиться в вариант.",
+      "datePublished": "2026-09-15T09:20:00Z",
+      "dateModified": "2026-09-15T09:20:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-nazvaniya/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-nazvaniya/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-nazvaniya.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для названия выдаёт сотню вариантов за минуту, и в этом одновременно её сила и ловушка. Хорошее название получается, когда модель работает по брифу и по конкретному способу нейминга, а вы отбираете варианты по критериям и сразу проверяете, свободен ли домен, товарный знак и никнейм в соцсетях. Ниже бриф, шесть способов придумать название с промптами, фильтр отбора и порядок проверки, который занимает около получаса и спасает от ребрендинга через год. Проверено 15 сентября 2026 года. Бриф: что сказать нейросети до первого варианта Без брифа модель предлагает общие слова вроде «Профи», «Лидер», «Смарт». Заполните шесть полей, и варианты станут точнее с первой попытки. | Поле брифа | Пример заполнения | |---|---| | Что продаёте | Онлайн-школа рисования для взрослых | | Кому | Женщины 30-45 лет, никогда не рисовали | | Какое ощущение должно вызывать | Спокойствие, «у меня получится» | | Где будет жить название | Сайт, Instagram, Telegram-канал | | Чего избегать | Слов «арт», «студия», английских названий | | Длина и звучание | 1-2 слова, легко произнести и написать на слух | Промпт-основа: «Ты специалист по неймингу. Вот бриф: [вставьте таблицу]. Предложи 20 названий. К каждому одна строка, почему оно подходит под бриф». Шесть способов придумать название Если попросить модель «придумай название», она смешает все способы сразу. Лучше просить по одному способу за раз и сравнивать. 1. Описательное название Сразу понятно, чем занимается компания. Удобно для локального бизнеса и поиска. Промпт: «Придумай 15 описательных названий, из которых сразу понятно, что это [ниша]. Не длиннее двух слов». 2. Название-образ Метафора, которая передаёт ощущение от продукта. Промпт: «Придумай 15 названий-метафор для [ниша]. Образ должен вызывать ощущение [спокойствие, скорость, надёжность]. Объясни образ в одной фразе». 3. Составное слово Два корня склеены в одно слово. Промпт: «Склей 15 новых слов из двух коротких корней, связанных с [ниша] и [ценность]. Слово должно легко читаться на русском». 4. Название от имени Подходит экспертам и мастерам, которые продают себя. Промпт: «Предложи 10 вариантов названия на основе имени [имя] для [ниша]: с добавлением профессии, места, ценности». 5. Игра слов Запоминается, но легко перейти в пошлость или непонятность. Промпт: «Придумай 10 названий с игрой слов для [ниша]. Для каждого проверь, не звучит ли оно двусмысленно или обидно». 6. Выдуманное слово Уникально и легко регистрируется, но требует вложений, чтобы его запомнили. Промпт: «Придумай 15 коротких несуществующих слов из 4-7 букв, которые звучат [мягко, энергично]. Проверь, что они не значат ничего плохого на русском, английском и казахском». Фильтр отбора: восемь критериев Из сотни вариантов в финал попадают 3-5. Оцените каждый по восьми вопросам, за каждое «да» один балл. 1. Произносится без запинки с первого раза. 2. Пишется однозначно на слух, человек наберёт его в поиске без ошибки. 3. Не короче 3 и не длиннее 15 букв. 4. Не похоже на название известного конкурента. 5. Не имеет плохого значения на других языках и в сленге. 6. Подходит, если бизнес расширится за пределы первого продукта. 7. Нравится трём людям из целевой аудитории, помимо вас самих. 8. Свободно в проверке, описанной ниже. Варианты с 6 баллами и выше идут дальше. Попросите модель прогнать ваш список по этим критериям, но пункты 7 и 8 проверяйте только сами. Как проверить, что название свободно Это шаг, который чаще всего пропускают. Итог пропуска: претензия от владельца знака или смена названия после того, как в него вложены деньги. | Что проверить | Где | Что считать проблемой | |---|---|---| | Товарный знак | Открытые реестры Роспатента | Похожий знак в том же классе товаров и услуг | | Домен | Любой регистратор доменов | Занята зона .ru, а конкурент работает на .com | | Юрлица с таким названием | Сервис проверки контрагентов ФНС | Компания в вашей нише и вашем городе | | Никнейм в соцсетях | Поиск в Instagram, Telegram, VK, YouTube | Активный аккаунт с похожим контентом | | Поисковая выдача | Яндекс и Google по названию | Первая страница занята чужим брендом | Проверка товарного знака по реестру даёт первичную картину. Перед регистрацией своего знака лучше заказать поиск у патентного поверенного: сходство оценивается по звучанию и смыслу, и простой поиск по точному слову его не покажет. Частые ошибки Название на английском для русской аудитории Люди не знают, как его прочитать и как набрать в поиске. Если выбираете латиницу, проверьте произношение на пяти знакомых. Влюбиться до проверки Логотип и сайт делают после того, как домен и знак проверены. Иначе приходится отказываться от уже любимого варианта. Слишком узкое название «Торты Марии на Ленина» мешает, когда появятся пирожные и второй адрес. Голосование среди друзей Друзья выбирают то, что нравится им. Спрашивайте людей,…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-nazvaniya/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-nazvaniya/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть лучше придумывает названия",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ChatGPT, Клод, Гигачат и YandexGPT справляются одинаково хорошо, если дать бриф. Полезно прогнать один бриф через две модели и объединить списки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли зарегистрировать название, которое придумала нейросеть",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Можно, если оно свободно и не похоже на чужой зарегистрированный знак. Кто придумал вариант, для регистрации значения не имеет."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько вариантов просить за раз",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "15-20 на один способ нейминга. Больше модель начинает повторяться."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как придумать название для Telegram-канала или блога",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Бриф тот же, но добавьте поле «ник должен быть свободен в Telegram и Instagram». Короткий ник без цифр и подчёркиваний проще найти и запомнить."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужно ли проверять название на других языках",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, особенно если планируете выход за пределы России. Попросите модель проверить значение на 5-10 языках, а спорные случаи уточните у носителей. Про логотип под готовое название в статье про нейросеть для логотипа, а про визитки в материале про нейросеть для визитки."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/neyroset-dlya-nazvaniya.webp?v=061ade72f1" alt="Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Нейросеть для названия: как придумать название компании, бренда или канала и проверить, что оно свободно</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Как придумать название через нейросеть: бриф, промпты под шесть способов нейминга, фильтр из восьми критериев, проверка домена, товарного знака и соцсетей перед тем, как влюбиться в вариант.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для названия выдаёт сотню вариантов за минуту, и в этом одновременно её сила и ловушка. Хорошее название получается, когда модель работает по брифу и по конкретному способу нейминга, а вы отбираете варианты по критериям и сразу проверяете, свободен ли домен, товарный знак и никнейм в соцсетях.</p>
+<p>Ниже бриф, шесть способов придумать название с промптами, фильтр отбора и порядок проверки, который занимает около получаса и спасает от ребрендинга через год.</p>
+<p>Проверено 15 сентября 2026 года.</p>
+<h2 id="sec-0">Бриф: что сказать нейросети до первого варианта</h2>
+<p>Без брифа модель предлагает общие слова вроде «Профи», «Лидер», «Смарт». Заполните шесть полей, и варианты станут точнее с первой попытки.</p>
+<table class="gp-table"><thead><tr><th>Поле брифа</th><th>Пример заполнения</th></tr></thead><tbody><tr><td>Что продаёте</td><td>Онлайн-школа рисования для взрослых</td></tr><tr><td>Кому</td><td>Женщины 30-45 лет, никогда не рисовали</td></tr><tr><td>Какое ощущение должно вызывать</td><td>Спокойствие, «у меня получится»</td></tr><tr><td>Где будет жить название</td><td>Сайт, Instagram, Telegram-канал</td></tr><tr><td>Чего избегать</td><td>Слов «арт», «студия», английских названий</td></tr><tr><td>Длина и звучание</td><td>1-2 слова, легко произнести и написать на слух</td></tr></tbody></table>
+<p>Промпт-основа: «Ты специалист по неймингу. Вот бриф: [вставьте таблицу]. Предложи 20 названий. К каждому одна строка, почему оно подходит под бриф».</p>
+<h2 id="sec-1">Шесть способов придумать название</h2>
+<p>Если попросить модель «придумай название», она смешает все способы сразу. Лучше просить по одному способу за раз и сравнивать.</p>
+<h3>1. Описательное название</h3>
+<p>Сразу понятно, чем занимается компания. Удобно для локального бизнеса и поиска.</p>
+<p>Промпт: «Придумай 15 описательных названий, из которых сразу понятно, что это [ниша]. Не длиннее двух слов».</p>
+<h3>2. Название-образ</h3>
+<p>Метафора, которая передаёт ощущение от продукта.</p>
+<p>Промпт: «Придумай 15 названий-метафор для [ниша]. Образ должен вызывать ощущение [спокойствие, скорость, надёжность]. Объясни образ в одной фразе».</p>
+<h3>3. Составное слово</h3>
+<p>Два корня склеены в одно слово.</p>
+<p>Промпт: «Склей 15 новых слов из двух коротких корней, связанных с [ниша] и [ценность]. Слово должно легко читаться на русском».</p>
+<h3>4. Название от имени</h3>
+<p>Подходит экспертам и мастерам, которые продают себя.</p>
+<p>Промпт: «Предложи 10 вариантов названия на основе имени [имя] для [ниша]: с добавлением профессии, места, ценности».</p>
+<h3>5. Игра слов</h3>
+<p>Запоминается, но легко перейти в пошлость или непонятность.</p>
+<p>Промпт: «Придумай 10 названий с игрой слов для [ниша]. Для каждого проверь, не звучит ли оно двусмысленно или обидно».</p>
+<h3>6. Выдуманное слово</h3>
+<p>Уникально и легко регистрируется, но требует вложений, чтобы его запомнили.</p>
+<p>Промпт: «Придумай 15 коротких несуществующих слов из 4-7 букв, которые звучат [мягко, энергично]. Проверь, что они не значат ничего плохого на русском, английском и казахском».</p>
+<h2 id="sec-2">Фильтр отбора: восемь критериев</h2>
+<p>Из сотни вариантов в финал попадают 3-5. Оцените каждый по восьми вопросам, за каждое «да» один балл.</p>
+<ol><li>Произносится без запинки с первого раза.</li><li>Пишется однозначно на слух, человек наберёт его в поиске без ошибки.</li><li>Не короче 3 и не длиннее 15 букв.</li><li>Не похоже на название известного конкурента.</li><li>Не имеет плохого значения на других языках и в сленге.</li><li>Подходит, если бизнес расширится за пределы первого продукта.</li><li>Нравится трём людям из целевой аудитории, помимо вас самих.</li><li>Свободно в проверке, описанной ниже.</li></ol>
+<p>Варианты с 6 баллами и выше идут дальше. Попросите модель прогнать ваш список по этим критериям, но пункты 7 и 8 проверяйте только сами.</p>
+<h2 id="sec-3">Как проверить, что название свободно</h2>
+<p>Это шаг, который чаще всего пропускают. Итог пропуска: претензия от владельца знака или смена названия после того, как в него вложены деньги.</p>
+<table class="gp-table"><thead><tr><th>Что проверить</th><th>Где</th><th>Что считать проблемой</th></tr></thead><tbody><tr><td>Товарный знак</td><td>Открытые реестры Роспатента</td><td>Похожий знак в том же классе товаров и услуг</td></tr><tr><td>Домен</td><td>Любой регистратор доменов</td><td>Занята зона .ru, а конкурент работает на .com</td></tr><tr><td>Юрлица с таким названием</td><td>Сервис проверки контрагентов ФНС</td><td>Компания в вашей нише и вашем городе</td></tr><tr><td>Никнейм в соцсетях</td><td>Поиск в Instagram, Telegram, VK, YouTube</td><td>Активный аккаунт с похожим контентом</td></tr><tr><td>Поисковая выдача</td><td>Яндекс и Google по названию</td><td>Первая страница занята чужим брендом</td></tr></tbody></table>
+<p>Проверка товарного знака по реестру даёт первичную картину. Перед регистрацией своего знака лучше заказать поиск у патентного поверенного: сходство оценивается по звучанию и смыслу, и простой поиск по точному слову его не покажет.</p>
+<h2 id="sec-4">Частые ошибки</h2>
+<h3>Название на английском для русской аудитории</h3>
+<p>Люди не знают, как его прочитать и как набрать в поиске. Если выбираете латиницу, проверьте произношение на пяти знакомых.</p>
+<h3>Влюбиться до проверки</h3>
+<p>Логотип и сайт делают после того, как домен и знак проверены. Иначе приходится отказываться от уже любимого варианта.</p>
+<h3>Слишком узкое название</h3>
+<p>«Торты Марии на Ленина» мешает, когда появятся пирожные и второй адрес.</p>
+<h3>Голосование среди друзей</h3>
+<p>Друзья выбирают то, что нравится им. Спрашивайте людей, которые похожи на ваших клиентов.</p>
+<h2 id="sec-5">Частые вопросы</h2>
+<h3>Какая нейросеть лучше придумывает названия</h3>
+<p>ChatGPT, Клод, Гигачат и YandexGPT справляются одинаково хорошо, если дать бриф. Полезно прогнать один бриф через две модели и объединить списки.</p>
+<h3>Можно ли зарегистрировать название, которое придумала нейросеть</h3>
+<p>Можно, если оно свободно и не похоже на чужой зарегистрированный знак. Кто придумал вариант, для регистрации значения не имеет.</p>
+<h3>Сколько вариантов просить за раз</h3>
+<p>15-20 на один способ нейминга. Больше модель начинает повторяться.</p>
+<h3>Как придумать название для Telegram-канала или блога</h3>
+<p>Бриф тот же, но добавьте поле «ник должен быть свободен в Telegram и Instagram». Короткий ник без цифр и подчёркиваний проще найти и запомнить.</p>
+<h3>Нужно ли проверять название на других языках</h3>
+<p>Да, особенно если планируете выход за пределы России. Попросите модель проверить значение на 5-10 языках, а спорные случаи уточните у носителей.</p>
+<p>Про логотип под готовое название в статье про <a href="/guides/neyroset-dlya-logotipa/">нейросеть для логотипа</a>, а про визитки в материале про <a href="/guides/neyroset-dlya-vizitki/">нейросеть для визитки</a>.</p>
+<h2 id="sec-6">Что делать дальше</h2>
+<p>Заполните бриф из шести полей, попросите модель придумать варианты тремя разными способами и прогоните лучшие через фильтр. Три финалиста сразу проверьте по таблице занятости. Если хотя бы один прошёл всё, у вас есть название, в которое можно вкладываться.</p>
+<p>Когда название готово, дальше нужны люди, которые о нём узнают. Я привожу аудиторию в новые проекты через короткие ролики, и как это устроено, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-trenirovok/"><span class="rc-cover"><img src="/covers/neyroset-dlya-trenirovok.webp?v=5042acd82e" alt="Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели</span><span class="rc-desc">Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-raspisaniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-raspisaniya.webp?v=82c108e8c1" alt="Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь</span><span class="rc-desc">Как составить расписание через нейросеть: личный распорядок дня, план подготовки к…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-psihologa/"><span class="rc-cover"><img src="/covers/neyroset-dlya-psihologa.webp?v=a8205e24f8" alt="Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница</span><span class="rc-desc">Как психологу пользоваться нейросетью: подготовка к сессии, упражнения и домашние…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-pozdravleniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pozdravleniya.webp?v=99bb52beaa" alt="Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий</span><span class="rc-desc">Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=80dd675633"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "neyroset-dlya-nazvaniya";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

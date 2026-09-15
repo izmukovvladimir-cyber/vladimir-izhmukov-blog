@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Как составить текст вакансии через нейросеть: бриф от руководителя, структура объявления, промпты под разные должности, проверка на дискриминационные формулировки, заголовок и вопросы для отбора откликов.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vakansii/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди">
+<meta property="og:description" content="Как составить текст вакансии через нейросеть: бриф от руководителя, структура объявления, промпты под разные должности, проверка на дискриминационные формулировки, заголовок и вопросы для отбора откликов.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vakansii/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-vakansii.webp?v=03d3d2076d">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-15T09:40:00Z">
+<meta property="article:modified_time" content="2026-09-15T09:40:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди">
+<meta name="twitter:description" content="Как составить текст вакансии через нейросеть: бриф от руководителя, структура объявления, промпты под разные должности, проверка на дискриминационные формулировки, заголовок и вопросы для отбора откликов.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-vakansii.webp?v=03d3d2076d">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-vakansii.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vakansii/#article",
+      "headline": "Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди",
+      "description": "Как составить текст вакансии через нейросеть: бриф от руководителя, структура объявления, промпты под разные должности, проверка на дискриминационные формулировки, заголовок и вопросы для отбора откликов.",
+      "datePublished": "2026-09-15T09:40:00Z",
+      "dateModified": "2026-09-15T09:40:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vakansii/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vakansii/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-vakansii.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для вакансии пишет текст объявления за пару минут, но хорошим он получается только из конкретного брифа: задачи на первые три месяца, условия, требования, которые реально важны. Без брифа модель выдаёт шаблон «дружный коллектив, стрессоустойчивость, работа в команде», на который откликаются все подряд. Ниже бриф из восьми вопросов, структура объявления, промпты, проверка формулировок на закон и приём, который сокращает разбор откликов. Проверено 15 сентября 2026 года. Бриф: восемь вопросов до написания текста Ответьте на вопросы сами или попросите руководителя. Это десять минут, которые экономят недели поиска. 1. Какие три задачи человек будет решать каждую неделю? 2. Какой результат вы ждёте через 3 месяца работы? 3. Какие навыки нужны с первого дня, а каким можно научить? 4. Зарплата: вилка, из чего складывается, когда выплачивается. 5. График и формат: офис, удалёнка, гибрид, часовой пояс. 6. Кто руководитель и как устроена команда? 7. Что человек получит, кроме денег: обучение, рост, оборудование? 8. Почему хорошие люди уходили с этой должности раньше? Последний вопрос неудобный, но он показывает, что стоит честно написать в вакансии, чтобы не терять людей через месяц. Структура вакансии из семи блоков | Блок | Что писать | Объём | |---|---|---| | Заголовок | Должность простыми словами, формат, иногда вилка | 3-8 слов | | Первый абзац | Чем занимается компания и зачем нужен человек | 2-3 предложения | | Задачи | Что конкретно делать каждую неделю | 4-6 пунктов | | Требования | Только то, без чего работа невозможна | 3-5 пунктов | | Будет плюсом | Навыки, которым можно научить | 2-3 пункта | | Условия | Зарплата, график, формат, оформление | 4-6 пунктов | | Как откликнуться | Что прислать и какой следующий шаг | 1-2 предложения | Промпты для текста вакансии Основной текст Промпт: «Ты рекрутер. Составь вакансию по брифу: [вставьте ответы]. Структура: заголовок, первый абзац о компании и роли, задачи 4-6 пунктов, требования 3-5 пунктов, будет плюсом, условия, как откликнуться. Пиши простым языком без штампов \"дружный коллектив\", \"стрессоустойчивость\", \"динамично развивающаяся компания\". Каждое требование должно следовать из задач». Заголовки Промпт: «Предложи 8 заголовков для этой вакансии. Должность называй так, как её ищут соискатели на сайтах вакансий. Варианты с форматом работы и без». Вопросы для отклика Промпт: «Придумай 3 коротких вопроса, на которые кандидат ответит при отклике. Вопросы должны отсеять тех, кто не читал вакансию, и показать реальный опыт в задачах. Ответ на каждый вопрос займёт 2-3 предложения». Версия для соцсетей Промпт: «Сократи вакансию до поста для Telegram на 600-800 знаков. Сохрани должность, зарплату, 3 главные задачи и способ откликнуться. Начни с вопроса, который зацепит подходящего человека». Формулировки, которые отпугивают или нарушают закон Модель иногда вставляет требования по возрасту, полу или внешности, потому что встречала их в старых вакансиях. В России закон запрещает такие ограничения, если они не связаны с деловыми качествами, и за них возможен штраф. | Как писать нельзя или не стоит | Проблема | Как написать | |---|---|---| | «Девушка до 30 лет» | Дискриминация по полу и возрасту | Опишите задачи и навыки | | «Славянская внешность», «прописка» | Дискриминация | Уберите полностью | | «Стрессоустойчивость» | Читается как хаос и переработки | Опишите реальный темп и нагрузку | | «Зарплата по итогам собеседования» | Меньше откликов, сильные кандидаты пропускают | Укажите вилку | | «Дружный коллектив» | Штамп, не несёт информации | Опишите команду: сколько человек, кто руководитель | | «Ненормированный график» | Отпугивает | Напишите, сколько часов обычно и как оплачиваются переработки | Промпт для проверки: «Проверь этот текст вакансии на дискриминационные требования по полу, возрасту, внешности, национальности, семейному положению и месту жительства. Выпиши каждое найденное место и предложи замену». Итоговый текст с требованиями к кандидатам лучше показать юристу или HR-специалисту, если сомневаетесь в формулировке. Как разобрать отклики с помощью нейросети Когда откликов больше тридцати, модель помогает сделать первичную сортировку. Решение по кандидату остаётся за человеком. 1. Удалите из резюме ФИО, фото, контакты и возраст. 2. Промпт: «Вот требования вакансии и 10 резюме без личных данных. Для каждого резюме отметь, какие задачи из вакансии кандидат уже выполнял, с цитатой из резюме. Оценку не ставь». 3. Прочитайте результат и сами выберите, кого пригласить. Такой порядок защищает от ситуации, когда модель отсеивает людей по признакам, которые к работе не относятся. Частые вопросы Какая нейросеть лучше пишет вакансии ChatGPT, Клод, Гигачат и YandexGPT справляются одинаково, если есть бриф. Главное дать задачи и условия. Запрос «напиши вакансию менеджера» без брифа даёт шаблон. Нужно…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vakansii/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-vakansii/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть лучше пишет вакансии",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ChatGPT, Клод, Гигачат и YandexGPT справляются одинаково, если есть бриф. Главное дать задачи и условия. Запрос «напиши вакансию менеджера» без брифа даёт шаблон."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужно ли указывать зарплату в вакансии",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Закон не обязывает, но вакансии с вилкой обычно получают больше подходящих откликов. Кандидаты фильтруют предложения по зарплате ещё в поиске."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли доверить нейросети выбор кандидата",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Первичную сортировку по опыту можно, если убрать личные данные. Приглашение на собеседование и решение о найме принимает человек."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как написать вакансию для удалённой работы",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Добавьте часовой пояс, часы, когда нужно быть на связи, какие инструменты используются и как проходит онбординг."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Где разместить вакансию после написания",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "На сайтах поиска работы, в профильных Telegram-чатах и на своих страницах в соцсетях. Для соцсетей используйте сокращённую версию из промпта выше. Про резюме со стороны кандидата в статье про нейросеть для резюме, а про деловые письма в материале про нейросеть для писем."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/neyroset-dlya-vakansii.webp?v=03d3d2076d" alt="Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Нейросеть для вакансии: как написать объявление о работе, на которое откликаются подходящие люди</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Как составить текст вакансии через нейросеть: бриф от руководителя, структура объявления, промпты под разные должности, проверка на дискриминационные формулировки, заголовок и вопросы для отбора откликов.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для вакансии пишет текст объявления за пару минут, но хорошим он получается только из конкретного брифа: задачи на первые три месяца, условия, требования, которые реально важны. Без брифа модель выдаёт шаблон «дружный коллектив, стрессоустойчивость, работа в команде», на который откликаются все подряд.</p>
+<p>Ниже бриф из восьми вопросов, структура объявления, промпты, проверка формулировок на закон и приём, который сокращает разбор откликов.</p>
+<p>Проверено 15 сентября 2026 года.</p>
+<h2 id="sec-0">Бриф: восемь вопросов до написания текста</h2>
+<p>Ответьте на вопросы сами или попросите руководителя. Это десять минут, которые экономят недели поиска.</p>
+<ol><li>Какие три задачи человек будет решать каждую неделю?</li><li>Какой результат вы ждёте через 3 месяца работы?</li><li>Какие навыки нужны с первого дня, а каким можно научить?</li><li>Зарплата: вилка, из чего складывается, когда выплачивается.</li><li>График и формат: офис, удалёнка, гибрид, часовой пояс.</li><li>Кто руководитель и как устроена команда?</li><li>Что человек получит, кроме денег: обучение, рост, оборудование?</li><li>Почему хорошие люди уходили с этой должности раньше?</li></ol>
+<p>Последний вопрос неудобный, но он показывает, что стоит честно написать в вакансии, чтобы не терять людей через месяц.</p>
+<h2 id="sec-1">Структура вакансии из семи блоков</h2>
+<table class="gp-table"><thead><tr><th>Блок</th><th>Что писать</th><th>Объём</th></tr></thead><tbody><tr><td>Заголовок</td><td>Должность простыми словами, формат, иногда вилка</td><td>3-8 слов</td></tr><tr><td>Первый абзац</td><td>Чем занимается компания и зачем нужен человек</td><td>2-3 предложения</td></tr><tr><td>Задачи</td><td>Что конкретно делать каждую неделю</td><td>4-6 пунктов</td></tr><tr><td>Требования</td><td>Только то, без чего работа невозможна</td><td>3-5 пунктов</td></tr><tr><td>Будет плюсом</td><td>Навыки, которым можно научить</td><td>2-3 пункта</td></tr><tr><td>Условия</td><td>Зарплата, график, формат, оформление</td><td>4-6 пунктов</td></tr><tr><td>Как откликнуться</td><td>Что прислать и какой следующий шаг</td><td>1-2 предложения</td></tr></tbody></table>
+<h2 id="sec-2">Промпты для текста вакансии</h2>
+<h3>Основной текст</h3>
+<p>Промпт: «Ты рекрутер. Составь вакансию по брифу: [вставьте ответы]. Структура: заголовок, первый абзац о компании и роли, задачи 4-6 пунктов, требования 3-5 пунктов, будет плюсом, условия, как откликнуться. Пиши простым языком без штампов "дружный коллектив", "стрессоустойчивость", "динамично развивающаяся компания". Каждое требование должно следовать из задач».</p>
+<h3>Заголовки</h3>
+<p>Промпт: «Предложи 8 заголовков для этой вакансии. Должность называй так, как её ищут соискатели на сайтах вакансий. Варианты с форматом работы и без».</p>
+<h3>Вопросы для отклика</h3>
+<p>Промпт: «Придумай 3 коротких вопроса, на которые кандидат ответит при отклике. Вопросы должны отсеять тех, кто не читал вакансию, и показать реальный опыт в задачах. Ответ на каждый вопрос займёт 2-3 предложения».</p>
+<h3>Версия для соцсетей</h3>
+<p>Промпт: «Сократи вакансию до поста для Telegram на 600-800 знаков. Сохрани должность, зарплату, 3 главные задачи и способ откликнуться. Начни с вопроса, который зацепит подходящего человека».</p>
+<h2 id="sec-3">Формулировки, которые отпугивают или нарушают закон</h2>
+<p>Модель иногда вставляет требования по возрасту, полу или внешности, потому что встречала их в старых вакансиях. В России закон запрещает такие ограничения, если они не связаны с деловыми качествами, и за них возможен штраф.</p>
+<table class="gp-table"><thead><tr><th>Как писать нельзя или не стоит</th><th>Проблема</th><th>Как написать</th></tr></thead><tbody><tr><td>«Девушка до 30 лет»</td><td>Дискриминация по полу и возрасту</td><td>Опишите задачи и навыки</td></tr><tr><td>«Славянская внешность», «прописка»</td><td>Дискриминация</td><td>Уберите полностью</td></tr><tr><td>«Стрессоустойчивость»</td><td>Читается как хаос и переработки</td><td>Опишите реальный темп и нагрузку</td></tr><tr><td>«Зарплата по итогам собеседования»</td><td>Меньше откликов, сильные кандидаты пропускают</td><td>Укажите вилку</td></tr><tr><td>«Дружный коллектив»</td><td>Штамп, не несёт информации</td><td>Опишите команду: сколько человек, кто руководитель</td></tr><tr><td>«Ненормированный график»</td><td>Отпугивает</td><td>Напишите, сколько часов обычно и как оплачиваются переработки</td></tr></tbody></table>
+<p>Промпт для проверки: «Проверь этот текст вакансии на дискриминационные требования по полу, возрасту, внешности, национальности, семейному положению и месту жительства. Выпиши каждое найденное место и предложи замену».</p>
+<p>Итоговый текст с требованиями к кандидатам лучше показать юристу или HR-специалисту, если сомневаетесь в формулировке.</p>
+<h2 id="sec-4">Как разобрать отклики с помощью нейросети</h2>
+<p>Когда откликов больше тридцати, модель помогает сделать первичную сортировку. Решение по кандидату остаётся за человеком.</p>
+<ol><li>Удалите из резюме ФИО, фото, контакты и возраст.</li><li>Промпт: «Вот требования вакансии и 10 резюме без личных данных. Для каждого резюме отметь, какие задачи из вакансии кандидат уже выполнял, с цитатой из резюме. Оценку не ставь».</li><li>Прочитайте результат и сами выберите, кого пригласить.</li></ol>
+<p>Такой порядок защищает от ситуации, когда модель отсеивает людей по признакам, которые к работе не относятся.</p>
+<h2 id="sec-5">Частые вопросы</h2>
+<h3>Какая нейросеть лучше пишет вакансии</h3>
+<p>ChatGPT, Клод, Гигачат и YandexGPT справляются одинаково, если есть бриф. Главное дать задачи и условия. Запрос «напиши вакансию менеджера» без брифа даёт шаблон.</p>
+<h3>Нужно ли указывать зарплату в вакансии</h3>
+<p>Закон не обязывает, но вакансии с вилкой обычно получают больше подходящих откликов. Кандидаты фильтруют предложения по зарплате ещё в поиске.</p>
+<h3>Можно ли доверить нейросети выбор кандидата</h3>
+<p>Первичную сортировку по опыту можно, если убрать личные данные. Приглашение на собеседование и решение о найме принимает человек.</p>
+<h3>Как написать вакансию для удалённой работы</h3>
+<p>Добавьте часовой пояс, часы, когда нужно быть на связи, какие инструменты используются и как проходит онбординг.</p>
+<h3>Где разместить вакансию после написания</h3>
+<p>На сайтах поиска работы, в профильных Telegram-чатах и на своих страницах в соцсетях. Для соцсетей используйте сокращённую версию из промпта выше.</p>
+<p>Про резюме со стороны кандидата в статье про <a href="/guides/neyroset-dlya-rezyume/">нейросеть для резюме</a>, а про деловые письма в материале про <a href="/guides/neyroset-dlya-pisem/">нейросеть для писем</a>.</p>
+<h2 id="sec-6">Что делать дальше</h2>
+<p>Ответьте на восемь вопросов брифа, прогоните через основной промпт и проверку формулировок, добавьте три вопроса для отклика. Опубликуйте вакансию и через неделю посмотрите, сколько откликов подходит под задачи. Если мало, первым делом меняйте заголовок и первый абзац.</p>
+<p>Сильные кандидаты часто приходят через личный блог руководителя: люди хотят работать с тем, кого уже видели. Как я привожу аудиторию через короткие ролики, разобрано здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-trenirovok/"><span class="rc-cover"><img src="/covers/neyroset-dlya-trenirovok.webp?v=5042acd82e" alt="Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для тренировок: как составить программу в зал или дома и не сорваться через две недели</span><span class="rc-desc">Как составить программу тренировок через нейросеть: анкета перед запросом, промпты для…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-raspisaniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-raspisaniya.webp?v=82c108e8c1" alt="Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для расписания: как составить распорядок дня, график учёбы или смен, который выдерживает реальную жизнь</span><span class="rc-desc">Как составить расписание через нейросеть: личный распорядок дня, план подготовки к…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-psihologa/"><span class="rc-cover"><img src="/covers/neyroset-dlya-psihologa.webp?v=a8205e24f8" alt="Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для психолога: как практикующему специалисту экономить часы на рутине и где проходит граница</span><span class="rc-desc">Как психологу пользоваться нейросетью: подготовка к сессии, упражнения и домашние…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-pozdravleniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pozdravleniya.webp?v=99bb52beaa" alt="Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для поздравления: как получить тёплый текст для мамы, коллеги или друга без шаблонных пожеланий</span><span class="rc-desc">Как написать поздравление через нейросеть: анкета о человеке, промпты для прозы…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=80dd675633"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "neyroset-dlya-vakansii";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

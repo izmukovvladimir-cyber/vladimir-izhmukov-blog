@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Как сделать субтитры нейросетью: автоматическое распознавание речи, титры в монтажных приложениях, файлы SRT для YouTube, перевод субтитров, оформление под короткие ролики. Таблица инструментов, пошаговый план и частые ошибки.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-subtitrov/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык">
+<meta property="og:description" content="Как сделать субтитры нейросетью: автоматическое распознавание речи, титры в монтажных приложениях, файлы SRT для YouTube, перевод субтитров, оформление под короткие ролики. Таблица инструментов, пошаговый план и частые ошибки.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-subtitrov/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-subtitrov.webp?v=346938cd26">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-17T04:45:00Z">
+<meta property="article:modified_time" content="2026-09-17T04:45:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык">
+<meta name="twitter:description" content="Как сделать субтитры нейросетью: автоматическое распознавание речи, титры в монтажных приложениях, файлы SRT для YouTube, перевод субтитров, оформление под короткие ролики. Таблица инструментов, пошаговый план и частые ошибки.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-subtitrov.webp?v=346938cd26">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/neyroset-dlya-subtitrov.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-subtitrov/#article",
+      "headline": "Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык",
+      "description": "Как сделать субтитры нейросетью: автоматическое распознавание речи, титры в монтажных приложениях, файлы SRT для YouTube, перевод субтитров, оформление под короткие ролики. Таблица инструментов, пошаговый план и частые ошибки.",
+      "datePublished": "2026-09-17T04:45:00Z",
+      "dateModified": "2026-09-17T04:45:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-subtitrov/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-subtitrov/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/neyroset-dlya-subtitrov.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык Владимир Ижмуков · автор системы роста Instagram через короткие ролики Нейросеть для субтитров распознаёт речь в видео и расставляет текст по времени за пару минут. Функция уже встроена в популярные монтажные приложения, а для YouTube можно получить отдельный файл субтитров и перевести его на другие языки. Для коротких роликов это прямая польза: многие смотрят ленту без звука, и текст на экране удерживает их до конца. Ниже таблица способов, пошаговый план для Reels и YouTube, правила оформления, перевод субтитров и ошибки, из-за которых титры мешают смотреть. Проверено 17 сентября 2026 года. Способы сделать субтитры | Способ | Где работает | Когда подходит | |---|---|---| | Автотитры в монтажном приложении | CapCut и похожие редакторы | Reels, клипы, Shorts | | Встроенные субтитры площадки | YouTube, Instagram | Быстро и без монтажа | | Файл SRT из распознавания речи | Сервисы транскрибации | YouTube, курсы, длинные видео | | Перевод готового файла | Чат-боты и переводчики | Видео для другой аудитории | | Редактура текста титров | Чат-боты | Исправление ошибок распознавания | Набор функций у приложений меняется, поэтому точные названия кнопок сверяйте в справке своего редактора. Субтитры для Reels за пять минут 1. Откройте ролик в монтажном приложении. 2. Запустите автоматические субтитры и выберите язык речи. 3. Прочитайте весь текст и исправьте ошибки распознавания. 4. Разбейте длинные фразы на строки по 3-5 слов. 5. Выберите крупный контрастный шрифт. 6. Поднимите титры выше нижнего края, чтобы их не перекрывал интерфейс. 7. Выделите цветом одно ключевое слово в каждой фразе. Файл субтитров для YouTube Файл формата SRT содержит текст и тайм-коды. Его загружают в YouTube отдельно от видео, и зритель может включать или выключать титры. Порядок работы: 1. Получите расшифровку речи с тайм-кодами в сервисе транскрибации. 2. Выгрузите результат в формате SRT. 3. Исправьте ошибки в названиях, именах и терминах. 4. Загрузите файл в разделе субтитров видео. Промпт для редактуры: «Вот фрагмент файла SRT. Исправь орфографию и пунктуацию, не меняя тайм-коды и нумерацию. Термины [список] пиши именно так». Перевод субтитров Промпт: «Переведи субтитры SRT на английский язык. Сохрани нумерацию и тайм-коды без изменений. Каждая строка перевода не длиннее 42 символов. Разговорные фразы переводи естественно, без дословности». Перевод длиннее оригинала часто не успевает прочитаться. Если строка вышла длинной, попросите сократить её с сохранением смысла. Оформление титров для коротких роликов Размер и контраст Текст должен читаться на экране телефона с вытянутой руки. Белый шрифт с тёмной обводкой или плашкой читается на любом фоне. Ритм Одна короткая фраза на экране за раз. Длинное предложение из двух строк зритель не успевает дочитать. Зона безопасности Нижняя и правая части экрана в Reels закрыты подписью и кнопками. Держите текст ближе к центру кадра. Пять ошибок, из-за которых субтитры мешают 1. Публиковать автотитры без проверки, с ошибками в словах. 2. Ставить мелкий тонкий шрифт. 3. Размещать текст под интерфейсом площадки. 4. Выводить на экран длинные фразы целиком. 5. Сбивать тайм-коды при ручной правке файла. Где субтитры дают больше всего 1. Короткие ролики, которые смотрят без звука. 2. Видео с терминами, которые сложно расслышать. 3. Уроки и курсы, где зритель возвращается к фразе. 4. Видео для зарубежной аудитории. 5. Ролики с шумным фоном на записи. Частые вопросы Какая нейросеть делает субтитры на русском Автоматическое распознавание русской речи есть в популярных монтажных приложениях и в сервисах транскрибации. Качество зависит от чистоты звука. Можно ли сделать субтитры бесплатно Базовые автотитры доступны во многих приложениях бесплатно. Продвинутые стили и экспорт иногда требуют подписки. Как улучшить точность распознавания Записывайте звук ближе к микрофону и без фоновой музыки. Музыку добавляйте после создания титров. Как сделать озвучку на другом языке Переведите текст и озвучьте его голосовой моделью, разбор в статье про озвучку нейросетью. Нужны ли субтитры в Reels Для роликов с речью да, они помогают удержать зрителя. Больше о монтаже в статье про монтаж рилс. Что делать дальше Откройте свой последний ролик с речью и сделайте для него автотитры по плану выше. Исправьте ошибки, поднимите текст над интерфейсом и сравните удержание со следующими роликами. Если вы хотите, чтобы короткие ролики приводили вам клиентов, посмотрите разбор системы: открыть разбор."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-subtitrov/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-subtitrov/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какая нейросеть делает субтитры на русском",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Автоматическое распознавание русской речи есть в популярных монтажных приложениях и в сервисах транскрибации. Качество зависит от чистоты звука."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли сделать субтитры бесплатно",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Базовые автотитры доступны во многих приложениях бесплатно. Продвинутые стили и экспорт иногда требуют подписки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как улучшить точность распознавания",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Записывайте звук ближе к микрофону и без фоновой музыки. Музыку добавляйте после создания титров."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как сделать озвучку на другом языке",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Переведите текст и озвучьте его голосовой моделью, разбор в статье про озвучку нейросетью."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужны ли субтитры в Reels",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для роликов с речью да, они помогают удержать зрителя. Больше о монтаже в статье про монтаж рилс."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/neyroset-dlya-subtitrov.webp?v=346938cd26" alt="Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Нейросеть для субтитров: автоматические титры для Reels, YouTube и перевод на другой язык</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Как сделать субтитры нейросетью: автоматическое распознавание речи, титры в монтажных приложениях, файлы SRT для YouTube, перевод субтитров, оформление под короткие ролики. Таблица инструментов, пошаговый план и частые ошибки.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Нейросеть для субтитров распознаёт речь в видео и расставляет текст по времени за пару минут. Функция уже встроена в популярные монтажные приложения, а для YouTube можно получить отдельный файл субтитров и перевести его на другие языки. Для коротких роликов это прямая польза: многие смотрят ленту без звука, и текст на экране удерживает их до конца.</p>
+<p>Ниже таблица способов, пошаговый план для Reels и YouTube, правила оформления, перевод субтитров и ошибки, из-за которых титры мешают смотреть.</p>
+<p>Проверено 17 сентября 2026 года.</p>
+<h2 id="sec-0">Способы сделать субтитры</h2>
+<table class="gp-table"><thead><tr><th>Способ</th><th>Где работает</th><th>Когда подходит</th></tr></thead><tbody><tr><td>Автотитры в монтажном приложении</td><td>CapCut и похожие редакторы</td><td>Reels, клипы, Shorts</td></tr><tr><td>Встроенные субтитры площадки</td><td>YouTube, Instagram</td><td>Быстро и без монтажа</td></tr><tr><td>Файл SRT из распознавания речи</td><td>Сервисы транскрибации</td><td>YouTube, курсы, длинные видео</td></tr><tr><td>Перевод готового файла</td><td>Чат-боты и переводчики</td><td>Видео для другой аудитории</td></tr><tr><td>Редактура текста титров</td><td>Чат-боты</td><td>Исправление ошибок распознавания</td></tr></tbody></table>
+<p>Набор функций у приложений меняется, поэтому точные названия кнопок сверяйте в справке своего редактора.</p>
+<h2 id="sec-1">Субтитры для Reels за пять минут</h2>
+<ol><li>Откройте ролик в монтажном приложении.</li><li>Запустите автоматические субтитры и выберите язык речи.</li><li>Прочитайте весь текст и исправьте ошибки распознавания.</li><li>Разбейте длинные фразы на строки по 3-5 слов.</li><li>Выберите крупный контрастный шрифт.</li><li>Поднимите титры выше нижнего края, чтобы их не перекрывал интерфейс.</li><li>Выделите цветом одно ключевое слово в каждой фразе.</li></ol>
+<h2 id="sec-2">Файл субтитров для YouTube</h2>
+<p>Файл формата SRT содержит текст и тайм-коды. Его загружают в YouTube отдельно от видео, и зритель может включать или выключать титры.</p>
+<p>Порядок работы:</p>
+<ol><li>Получите расшифровку речи с тайм-кодами в сервисе транскрибации.</li><li>Выгрузите результат в формате SRT.</li><li>Исправьте ошибки в названиях, именах и терминах.</li><li>Загрузите файл в разделе субтитров видео.</li></ol>
+<p>Промпт для редактуры: «Вот фрагмент файла SRT. Исправь орфографию и пунктуацию, не меняя тайм-коды и нумерацию. Термины [список] пиши именно так».</p>
+<h2 id="sec-3">Перевод субтитров</h2>
+<p>Промпт: «Переведи субтитры SRT на английский язык. Сохрани нумерацию и тайм-коды без изменений. Каждая строка перевода не длиннее 42 символов. Разговорные фразы переводи естественно, без дословности».</p>
+<p>Перевод длиннее оригинала часто не успевает прочитаться. Если строка вышла длинной, попросите сократить её с сохранением смысла.</p>
+<h2 id="sec-4">Оформление титров для коротких роликов</h2>
+<h3>Размер и контраст</h3>
+<p>Текст должен читаться на экране телефона с вытянутой руки. Белый шрифт с тёмной обводкой или плашкой читается на любом фоне.</p>
+<h3>Ритм</h3>
+<p>Одна короткая фраза на экране за раз. Длинное предложение из двух строк зритель не успевает дочитать.</p>
+<h3>Зона безопасности</h3>
+<p>Нижняя и правая части экрана в Reels закрыты подписью и кнопками. Держите текст ближе к центру кадра.</p>
+<h2 id="sec-5">Пять ошибок, из-за которых субтитры мешают</h2>
+<ol><li>Публиковать автотитры без проверки, с ошибками в словах.</li><li>Ставить мелкий тонкий шрифт.</li><li>Размещать текст под интерфейсом площадки.</li><li>Выводить на экран длинные фразы целиком.</li><li>Сбивать тайм-коды при ручной правке файла.</li></ol>
+<h2 id="sec-6">Где субтитры дают больше всего</h2>
+<ol><li>Короткие ролики, которые смотрят без звука.</li><li>Видео с терминами, которые сложно расслышать.</li><li>Уроки и курсы, где зритель возвращается к фразе.</li><li>Видео для зарубежной аудитории.</li><li>Ролики с шумным фоном на записи.</li></ol>
+<h2 id="sec-7">Частые вопросы</h2>
+<h3>Какая нейросеть делает субтитры на русском</h3>
+<p>Автоматическое распознавание русской речи есть в популярных монтажных приложениях и в сервисах транскрибации. Качество зависит от чистоты звука.</p>
+<h3>Можно ли сделать субтитры бесплатно</h3>
+<p>Базовые автотитры доступны во многих приложениях бесплатно. Продвинутые стили и экспорт иногда требуют подписки.</p>
+<h3>Как улучшить точность распознавания</h3>
+<p>Записывайте звук ближе к микрофону и без фоновой музыки. Музыку добавляйте после создания титров.</p>
+<h3>Как сделать озвучку на другом языке</h3>
+<p>Переведите текст и озвучьте его голосовой моделью, разбор в статье про <a href="/guides/ozvuchka-neyrosetyu/">озвучку нейросетью</a>.</p>
+<h3>Нужны ли субтитры в Reels</h3>
+<p>Для роликов с речью да, они помогают удержать зрителя. Больше о монтаже в статье про <a href="/guides/montazh-rils/">монтаж рилс</a>.</p>
+<h2 id="sec-8">Что делать дальше</h2>
+<p>Откройте свой последний ролик с речью и сделайте для него автотитры по плану выше. Исправьте ошибки, поднимите текст над интерфейсом и сравните удержание со следующими роликами.</p>
+<p>Если вы хотите, чтобы короткие ролики приводили вам клиентов, посмотрите разбор системы: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/" target="_blank" rel="noopener">открыть разбор</a>.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-literatury/"><span class="rc-cover"><img src="/covers/neyroset-dlya-literatury.webp?v=0ddc98f14d" alt="Нейросеть для литературы: анализ произведения, характеристика героя и подготовка к уроку" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для литературы: анализ произведения, характеристика героя и подготовка к уроку</span><span class="rc-desc">Как использовать нейросеть на уроках литературы: план анализа произведения…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-pdf/"><span class="rc-cover"><img src="/covers/neyroset-dlya-pdf.webp?v=a5c5b6e652" alt="Нейросеть для PDF: краткий пересказ, поиск по документу, таблицы и перевод файла" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для PDF: краткий пересказ, поиск по документу, таблицы и перевод файла</span><span class="rc-desc">Как работать с PDF через нейросеть: загрузка файла, краткое содержание, ответы на…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-sobesedovaniya/"><span class="rc-cover"><img src="/covers/neyroset-dlya-sobesedovaniya.webp?v=ee97feef95" alt="Нейросеть для собеседования: разбор вакансии, пробное интервью и ответы на сложные вопросы" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для собеседования: разбор вакансии, пробное интервью и ответы на сложные вопросы</span><span class="rc-desc">Как подготовиться к собеседованию с нейросетью: разбор требований вакансии, рассказ о…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-remonta/"><span class="rc-cover"><img src="/covers/neyroset-dlya-remonta.webp?v=70e6209e1d" alt="Нейросеть для ремонта: план работ, смета, список материалов и проверка подрядчика" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для ремонта: план работ, смета, список материалов и проверка подрядчика</span><span class="rc-desc">Как спланировать ремонт квартиры с нейросетью: порядок работ по этапам, черновая смета…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=4bf4736d11"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "neyroset-dlya-subtitrov";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

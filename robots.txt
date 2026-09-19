@@ -21,6 +21,11 @@ Allow: /
 
 User-agent: YandexBot
 Allow: /
+Disallow: /*.md$
+
+User-agent: Googlebot
+Allow: /
+Disallow: /*.md$
 
 User-agent: *
 Allow: /

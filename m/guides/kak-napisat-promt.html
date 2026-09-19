@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Как написать промпт для нейросети: пять частей рабочего запроса, приёмы для текста и картинок, частые ошибки и готовые шаблоны, которые можно забрать и применить сразу.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/kak-napisat-promt/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу">
+<meta property="og:description" content="Как написать промпт для нейросети: пять частей рабочего запроса, приёмы для текста и картинок, частые ошибки и готовые шаблоны, которые можно забрать и применить сразу.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/kak-napisat-promt/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/kak-napisat-promt.webp?v=2836d1291d">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-19T05:30:00Z">
+<meta property="article:modified_time" content="2026-09-19T05:30:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу">
+<meta name="twitter:description" content="Как написать промпт для нейросети: пять частей рабочего запроса, приёмы для текста и картинок, частые ошибки и готовые шаблоны, которые можно забрать и применить сразу.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/kak-napisat-promt.webp?v=2836d1291d">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/kak-napisat-promt.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/kak-napisat-promt/#article",
+      "headline": "Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу",
+      "description": "Как написать промпт для нейросети: пять частей рабочего запроса, приёмы для текста и картинок, частые ошибки и готовые шаблоны, которые можно забрать и применить сразу.",
+      "datePublished": "2026-09-19T05:30:00Z",
+      "dateModified": "2026-09-19T05:30:00Z",
+      "inLanguage": "ru",
+      "keywords": "neyroseti, promty, instrumenty",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/kak-napisat-promt/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/kak-napisat-promt/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/kak-napisat-promt.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу Владимир Ижмуков · автор системы роста Instagram через короткие ролики Люди жалуются, что нейросеть отвечает общими словами. Открываешь такой диалог и видишь запрос из пяти слов: «напиши пост про здоровое питание». Модель получила тему и не получила ничего больше, поэтому вернула усреднённый текст, который подошёл бы кому угодно. Хороший запрос отличается от плохого длиной и порядком. Ниже структура, которая работает в любой модели, и шаблоны, которые можно забрать себе прямо сейчас. Пять частей рабочего запроса 1. Роль. Кем модель должна быть: маркетологом с опытом запусков, редактором делового издания, методистом курса. 2. Задача. Что именно сделать, одним предложением и глаголом: написать, разобрать, переписать, сравнить. 3. Контекст. Для кого, зачем, что уже известно, какие есть ограничения. 4. Формат. Объём, структура, чем закончить: список из семи пунктов, таблица с тремя колонками, текст на две тысячи знаков. 5. Запреты. Чего делать нельзя: без вводных оборотов, без восклицаний, без обещаний результата. Пятая часть даёт самый заметный скачок качества, и её почти никто не пишет. Как это выглядит на практике Слабый запрос: «Напиши пост про мой курс». Рабочий запрос: «Ты редактор, который пишет для предпринимателей простым языком. Напиши пост о курсе по съёмке коротких роликов для владельцев маленьких студий. Люди на курс приходят из ленты, продукт стоит недорого, главная боль в том, что съёмка занимает целый вечер. Объём до двух тысяч знаков, первая строка бьёт в боль, дальше три конкретных приёма, в конце одно действие. Без восклицательных знаков, без обещаний дохода, без слова уникальный». Второй запрос длиннее раз в двадцать и экономит час правок. Приёмы, которые поднимают качество | Приём | Как применить | Что даёт | |---|---|---| | Образец | Приложить свой старый текст со словами «пиши так же» | Модель перенимает вашу речь | | Разбиение | Сначала план, потом текст по плану | Структура перестаёт плыть | | Критика своего ответа | «Найди три слабых места в том, что ты написал» | Второй вариант заметно сильнее | | Ограничение выбора | «Дай три варианта заголовка, каждый по своему принципу» | Появляется разнообразие | | Отказ от воды | «Убери вводные обороты и общие фразы» | Текст сокращается на треть | Промпт для картинки устроен иначе В запросе на изображение порядок слов важнее вежливости. Работает такая последовательность. 1. Тип кадра. Фотография, иллюстрация, документальный снимок, студийный портрет. 2. Что в кадре. Главный объект и обстановка вокруг него. 3. Свет. Дневной из окна, вечерний тёплый, жёсткий студийный. 4. Детали. Материалы, цвета, мелкие предметы, которые создают жизнь. 5. Технические слова. Объектив, глубина резкости, реализм. 6. Запреты. Без текста на картинке, без лишних рук, без пластиковой кожи. Разбор готовых формулировок под разные задачи собран в статье про промпты для нейросетей. Пять ошибок, которые портят ответ - Несколько задач в одном запросе. Модель выполнит первую и смажет остальные, поэтому задачи разносятся по сообщениям. - Вежливость вместо конкретики. «Пожалуйста, сделай хорошо» не несёт информации, эти слова можно убрать целиком. - Отсутствие адресата. Текст для подростка и текст для собственника бизнеса пишутся по-разному, и модель должна знать, кто читатель. - Молчание о формате. Без указания объёма и структуры ответ придёт в форме, которую модель выберет сама. - Работа с первого ответа. Первый вариант это черновик, дальше идут две-три правки уточняющими просьбами. Три шаблона, которые можно забрать Для текста: «Ты [роль]. Напиши [что] для [кого]. Известно: [контекст]. Формат: [объём и структура]. Нельзя: [запреты]». Для разбора: «Вот мой [материал]. Найди пять слабых мест, для каждого скажи, почему это слабо и как переписать. Отвечай списком, без вступления». Для переписывания: «Перепиши текст ниже, сохранив смысл и факты. Сделай предложения длиннее и живее, убери канцелярит и вводные обороты. Верни только готовый текст». Частые вопросы Влияет ли длина запроса на качество ответа? До определённого предела да, потому что модель получает больше опоры. После примерно двух тысяч знаков начинает работать обратный эффект, и важное теряется среди подробностей. Нужно ли писать промпт на английском? Для текста на русском пишите по-русски, модель работает с языком напрямую. Для картинок английский пока даёт заметно более точный результат. Почему один и тот же запрос даёт разные ответы? В моделях заложена случайность. Чтобы ответы стали стабильнее, задавайте жёсткий формат и приводите образец. Можно ли сохранить удачный промпт? Нужно. Заведите файл со своими рабочими запросами и складывайте туда всё, что сработало, с пометкой, для какой задачи. Что делать, если модель отвечает общими словами? Добавить контекст и запреты. Вода почти всегда появляется там, где модель не знает адресата и не имеет ограничений. С чего начать дальше Возьмите свой последний запрос к нейросети, который дал слабый…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/kak-napisat-promt/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/kak-napisat-promt.webp?v=2836d1291d" alt="Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Как написать промпт для нейросети: пять частей рабочего запроса, приёмы для текста и картинок, частые ошибки и готовые шаблоны, которые можно забрать и применить сразу.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Люди жалуются, что нейросеть отвечает общими словами. Открываешь такой диалог и видишь запрос из пяти слов: «напиши пост про здоровое питание». Модель получила тему и не получила ничего больше, поэтому вернула усреднённый текст, который подошёл бы кому угодно.</p>
+<p>Хороший запрос отличается от плохого длиной и порядком. Ниже структура, которая работает в любой модели, и шаблоны, которые можно забрать себе прямо сейчас.</p>
+<h2 id="sec-0">Пять частей рабочего запроса</h2>
+<ol><li><b>Роль.</b> Кем модель должна быть: маркетологом с опытом запусков, редактором делового издания, методистом курса.</li><li><b>Задача.</b> Что именно сделать, одним предложением и глаголом: написать, разобрать, переписать, сравнить.</li><li><b>Контекст.</b> Для кого, зачем, что уже известно, какие есть ограничения.</li><li><b>Формат.</b> Объём, структура, чем закончить: список из семи пунктов, таблица с тремя колонками, текст на две тысячи знаков.</li><li><b>Запреты.</b> Чего делать нельзя: без вводных оборотов, без восклицаний, без обещаний результата.</li></ol>
+<p>Пятая часть даёт самый заметный скачок качества, и её почти никто не пишет.</p>
+<h2 id="sec-1">Как это выглядит на практике</h2>
+<p><b>Слабый запрос:</b> «Напиши пост про мой курс».</p>
+<p><b>Рабочий запрос:</b> «Ты редактор, который пишет для предпринимателей простым языком. Напиши пост о курсе по съёмке коротких роликов для владельцев маленьких студий. Люди на курс приходят из ленты, продукт стоит недорого, главная боль в том, что съёмка занимает целый вечер. Объём до двух тысяч знаков, первая строка бьёт в боль, дальше три конкретных приёма, в конце одно действие. Без восклицательных знаков, без обещаний дохода, без слова уникальный».</p>
+<p>Второй запрос длиннее раз в двадцать и экономит час правок.</p>
+<h2 id="sec-2">Приёмы, которые поднимают качество</h2>
+<table class="gp-table"><thead><tr><th>Приём</th><th>Как применить</th><th>Что даёт</th></tr></thead><tbody><tr><td>Образец</td><td>Приложить свой старый текст со словами «пиши так же»</td><td>Модель перенимает вашу речь</td></tr><tr><td>Разбиение</td><td>Сначала план, потом текст по плану</td><td>Структура перестаёт плыть</td></tr><tr><td>Критика своего ответа</td><td>«Найди три слабых места в том, что ты написал»</td><td>Второй вариант заметно сильнее</td></tr><tr><td>Ограничение выбора</td><td>«Дай три варианта заголовка, каждый по своему принципу»</td><td>Появляется разнообразие</td></tr><tr><td>Отказ от воды</td><td>«Убери вводные обороты и общие фразы»</td><td>Текст сокращается на треть</td></tr></tbody></table>
+<h2 id="sec-3">Промпт для картинки устроен иначе</h2>
+<p>В запросе на изображение порядок слов важнее вежливости. Работает такая последовательность.</p>
+<ol><li><b>Тип кадра.</b> Фотография, иллюстрация, документальный снимок, студийный портрет.</li><li><b>Что в кадре.</b> Главный объект и обстановка вокруг него.</li><li><b>Свет.</b> Дневной из окна, вечерний тёплый, жёсткий студийный.</li><li><b>Детали.</b> Материалы, цвета, мелкие предметы, которые создают жизнь.</li><li><b>Технические слова.</b> Объектив, глубина резкости, реализм.</li><li><b>Запреты.</b> Без текста на картинке, без лишних рук, без пластиковой кожи.</li></ol>
+<p>Разбор готовых формулировок под разные задачи собран в статье про <a href="/guides/promty-dlya-neyrosetey/">промпты для нейросетей</a>.</p>
+<h2 id="sec-4">Пять ошибок, которые портят ответ</h2>
+<ul><li><b>Несколько задач в одном запросе.</b> Модель выполнит первую и смажет остальные, поэтому задачи разносятся по сообщениям.</li><li><b>Вежливость вместо конкретики.</b> «Пожалуйста, сделай хорошо» не несёт информации, эти слова можно убрать целиком.</li><li><b>Отсутствие адресата.</b> Текст для подростка и текст для собственника бизнеса пишутся по-разному, и модель должна знать, кто читатель.</li><li><b>Молчание о формате.</b> Без указания объёма и структуры ответ придёт в форме, которую модель выберет сама.</li><li><b>Работа с первого ответа.</b> Первый вариант это черновик, дальше идут две-три правки уточняющими просьбами.</li></ul>
+<h2 id="sec-5">Три шаблона, которые можно забрать</h2>
+<p><b>Для текста:</b> «Ты [роль]. Напиши [что] для [кого]. Известно: [контекст]. Формат: [объём и структура]. Нельзя: [запреты]».</p>
+<p><b>Для разбора:</b> «Вот мой [материал]. Найди пять слабых мест, для каждого скажи, почему это слабо и как переписать. Отвечай списком, без вступления».</p>
+<p><b>Для переписывания:</b> «Перепиши текст ниже, сохранив смысл и факты. Сделай предложения длиннее и живее, убери канцелярит и вводные обороты. Верни только готовый текст».</p>
+<h2 id="sec-6">Частые вопросы</h2>
+<p><b>Влияет ли длина запроса на качество ответа?</b> До определённого предела да, потому что модель получает больше опоры. После примерно двух тысяч знаков начинает работать обратный эффект, и важное теряется среди подробностей.</p>
+<p><b>Нужно ли писать промпт на английском?</b> Для текста на русском пишите по-русски, модель работает с языком напрямую. Для картинок английский пока даёт заметно более точный результат.</p>
+<p><b>Почему один и тот же запрос даёт разные ответы?</b> В моделях заложена случайность. Чтобы ответы стали стабильнее, задавайте жёсткий формат и приводите образец.</p>
+<p><b>Можно ли сохранить удачный промпт?</b> Нужно. Заведите файл со своими рабочими запросами и складывайте туда всё, что сработало, с пометкой, для какой задачи.</p>
+<p><b>Что делать, если модель отвечает общими словами?</b> Добавить контекст и запреты. Вода почти всегда появляется там, где модель не знает адресата и не имеет ограничений.</p>
+<h2 id="sec-7">С чего начать дальше</h2>
+<p>Возьмите свой последний запрос к нейросети, который дал слабый ответ, и перепишите его по пяти частям из начала статьи. Разница будет видна сразу, и этот переписанный запрос станет вашим первым шаблоном.</p>
+<p>Когда захотите применять это к своему блогу и получать с роликов заявки, забирайте разбор системы, по которой контент собирается ежедневно: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=kak-napisat-promt" target="_blank" rel="noopener">как устроен ежедневный поток роликов</a>.</p>
+<p>Проверено 19.09.2026.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/promty-dlya-chatgpt/"><span class="rc-cover"><img src="/covers/promty-dlya-chatgpt.webp?v=61abb148c9" alt="Промпты для ChatGPT: готовые запросы под работу, тексты и контент" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Промпты для ChatGPT: готовые запросы под работу, тексты и контент</span><span class="rc-desc">Промпты для ChatGPT под реальные задачи: разбор документа, письма, посты, сценарии…</span></a><a class="gp-related-card" href="/guides/kak-nastroit-ii-agenta/"><span class="rc-cover"><img src="/covers/kak-nastroit-ii-agenta.webp?v=1dd83413fb" alt="Как настроить ИИ-агента: инструкция, доступы и проверка работы" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как настроить ИИ-агента: инструкция, доступы и проверка работы</span><span class="rc-desc">Как настроить ИИ-агента под свои задачи: что написать в инструкции, какие доступы дать…</span></a><a class="gp-related-card" href="/guides/promty-dlya-video/"><span class="rc-cover"><img src="/covers/promty-dlya-video.webp?v=d4cca12616" alt="Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Промпты для видео 2026: рабочие шаблоны под Veo, Sora и Kling</span><span class="rc-desc">Структура промпта для генерации видео из шести частей, двенадцать готовых шаблонов под…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-trenera/"><span class="rc-cover"><img src="/covers/neyroset-dlya-trenera.webp?v=7b8a0139ec" alt="Нейросеть для тренера: программы, разборы клиентов и контент для блога" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для тренера: программы, разборы клиентов и контент для блога</span><span class="rc-desc">Нейросеть для тренера и фитнес-специалиста: как собирать программы под клиента, вести…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=49f5a8a4cd"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "kak-napisat-promt";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

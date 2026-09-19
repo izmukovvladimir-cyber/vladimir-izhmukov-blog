@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Как настроить ИИ-агента: инструкция, доступы и проверка работы — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Как настроить ИИ-агента под свои задачи: что написать в инструкции, какие доступы дать, как проверить работу и почему агент ошибается на второй неделе.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/kak-nastroit-ii-agenta/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Как настроить ИИ-агента: инструкция, доступы и проверка работы">
+<meta property="og:description" content="Как настроить ИИ-агента под свои задачи: что написать в инструкции, какие доступы дать, как проверить работу и почему агент ошибается на второй неделе.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/kak-nastroit-ii-agenta/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/kak-nastroit-ii-agenta.webp?v=1dd83413fb">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Как настроить ИИ-агента: инструкция, доступы и проверка работы">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-09-19T06:30:00Z">
+<meta property="article:modified_time" content="2026-09-19T06:30:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Как настроить ИИ-агента: инструкция, доступы и проверка работы">
+<meta name="twitter:description" content="Как настроить ИИ-агента под свои задачи: что написать в инструкции, какие доступы дать, как проверить работу и почему агент ошибается на второй неделе.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/kak-nastroit-ii-agenta.webp?v=1dd83413fb">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/kak-nastroit-ii-agenta.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/kak-nastroit-ii-agenta/#article",
+      "headline": "Как настроить ИИ-агента: инструкция, доступы и проверка работы",
+      "description": "Как настроить ИИ-агента под свои задачи: что написать в инструкции, какие доступы дать, как проверить работу и почему агент ошибается на второй неделе.",
+      "datePublished": "2026-09-19T06:30:00Z",
+      "dateModified": "2026-09-19T06:30:00Z",
+      "inLanguage": "ru",
+      "keywords": "ii-agenty, avtomatizaciya, instrumenty",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/kak-nastroit-ii-agenta/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/kak-nastroit-ii-agenta/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/kak-nastroit-ii-agenta.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Как настроить ИИ-агента: инструкция, доступы и проверка работы Владимир Ижмуков · автор системы роста Instagram через короткие ролики Обычная нейросеть отвечает на вопрос и забывает разговор. Агент отличается тем, что у него есть задача, инструменты и право делать шаги самостоятельно: прочитать файл, сходить в сервис, записать результат, вернуться с отчётом. У меня такие агенты ведут рутину каждый день, и большая часть их ошибок растёт из настройки, сама модель тут почти ни при чём. Ниже порядок, по которому агент собирается и начинает работать предсказуемо. Шаг первый: выберите одну задачу Агент ставится под конкретную повторяющуюся работу, и первая задача должна быть скучной. 1. Повторяется регулярно , хотя бы раз в неделю. 2. Имеет понятный результат , по которому видно, выполнена она или нет. 3. Стоит недорого при ошибке , потому что ошибки будут. 4. Не требует решения о деньгах и о людях. Хорошие первые задачи: собрать сводку за день, разложить входящие письма, подготовить черновик отчёта, проверить, все ли страницы сайта отвечают. Плохие первые задачи: переписка с клиентами, оплаты, публикации без проверки. Шаг второй: напишите инструкцию Инструкция это главный файл агента, и от него зависит почти всё. В нём пять частей. 1. Кто он и чем занимается. Одна строка про роль и зону ответственности. 2. Что делает по шагам. Порядок действий, пронумерованный, без развилок «на усмотрение». 3. Чего не делает никогда. Список запретов прямым текстом. 4. Как выглядит готовый результат. Формат отчёта и признак, по которому работа считается сделанной. 5. Что делать при затруднении. Кому писать, какой вопрос задавать, когда останавливаться. Пятая часть спасает от самой дорогой ошибки: агент, которому не сказали останавливаться, придумывает решение сам и делает уверенно неправильно. Шаг третий: раздайте доступы по минимуму | Доступ | Когда давать | Риск | |---|---|---| | Чтение файлов | Сразу, это безопасно | Почти никакого | | Запись в рабочие файлы | После первой недели проверок | Затирание чужой работы | | Отправка сообщений людям | Только после проверки текстов вами | Репутация и отношения | | Доступ к деньгам и оплатам | Обычно никогда | Прямые потери | | Удаление данных | Никогда без подтверждения | Невосстановимая потеря | Правило простое: сначала агент читает и предлагает, и только потом получает право делать. Шаг четвёртый: проверьте на живой работе 1. Первый прогон смотрите целиком. Каждый шаг, каждый вывод, каждое действие. 2. Подсуньте трудный случай. Пустой файл, странные данные, отсутствующий доступ. Агент обязан сказать об этом вслух. Тихо пропущенный случай это самый дорогой вид ошибки. 3. Проверьте отчёт против предмета. Отчёт агента это его слова о работе, а работу проверяют по самой работе. 4. Повторите через неделю. Задачи меняются, и инструкция устаревает быстрее, чем кажется. Третий пункт важнее остальных. Агент почти никогда не врёт нарочно, но он легко считает задачу выполненной, когда сделал похожую работу рядом. Три вопроса перед первым запуском 1. Что произойдёт, если агент ошибётся на этой задаче, и сколько это будет стоить. 2. По какому признаку вы через неделю поймёте, что он работает правильно. 3. Кому он напишет, когда упрётся в нехватку данных или доступа. Почему агент ломается на второй неделе - Изменились данные. Поле переименовали, формат сменился, и агент молча получает пустоту, которую считает нулём. - Инструкция обросла правилами. Двадцать запретов противоречат друг другу, и агент выбирает первый попавшийся. - Пропала проверка. Первую неделю вы смотрели каждый прогон, потом перестали, и ошибка накопилась. - Задача расширилась. Агенту подкинули соседнюю работу, под которую он не настроен. - Доступы дали заранее. Право писать выдали до того, как убедились в качестве чтения. Как понять, что настройка удалась Три признака, по которым видно рабочего агента. 1. Он приносит результат в одном и том же формате каждый раз. 2. Он останавливается и спрашивает, когда данных не хватает. 3. Его отчёт совпадает с тем, что видно в самой работе при выборочной проверке. Если хотя бы один признак отсутствует, дело почти всегда в инструкции. Общее объяснение того, что такое агент и чем он отличается от обычного чата, лежит в статье про ии агента, а применение к бизнес-задачам в статье про ии агентов для бизнеса. Частые вопросы Нужно ли уметь программировать? Для сборки на готовых платформах не нужно. Своя связка с вашими сервисами требует программиста. Сколько агентов имеет смысл заводить? Начинать стоит с одного и довести его до стабильной работы. Несколько агентов на неотлаженных инструкциях создают больше работы, чем снимают. Может ли агент работать без присмотра? После нескольких недель проверок и на задачах с дешёвой ошибкой. Выборочная проверка остаётся всегда. Что делать, если агент выдумывает? Сократить инструкцию, убрать противоречия и добавить прямое указание останавливаться при нехватке данных. Сколько времени занимает настройка? Первая настройка это вечер, доведение до стабильной работы…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Как настроить ИИ-агента: инструкция, доступы и проверка работы",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/kak-nastroit-ii-agenta/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/kak-nastroit-ii-agenta.webp?v=1dd83413fb" alt="Как настроить ИИ-агента: инструкция, доступы и проверка работы" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Как настроить ИИ-агента: инструкция, доступы и проверка работы</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Как настроить ИИ-агента под свои задачи: что написать в инструкции, какие доступы дать, как проверить работу и почему агент ошибается на второй неделе.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Обычная нейросеть отвечает на вопрос и забывает разговор. Агент отличается тем, что у него есть задача, инструменты и право делать шаги самостоятельно: прочитать файл, сходить в сервис, записать результат, вернуться с отчётом. У меня такие агенты ведут рутину каждый день, и большая часть их ошибок растёт из настройки, сама модель тут почти ни при чём.</p>
+<p>Ниже порядок, по которому агент собирается и начинает работать предсказуемо.</p>
+<h2 id="sec-0">Шаг первый: выберите одну задачу</h2>
+<p>Агент ставится под конкретную повторяющуюся работу, и первая задача должна быть скучной.</p>
+<ol><li><b>Повторяется регулярно</b>, хотя бы раз в неделю.</li><li><b>Имеет понятный результат</b>, по которому видно, выполнена она или нет.</li><li><b>Стоит недорого при ошибке</b>, потому что ошибки будут.</li><li><b>Не требует решения о деньгах и о людях.</b></li></ol>
+<p>Хорошие первые задачи: собрать сводку за день, разложить входящие письма, подготовить черновик отчёта, проверить, все ли страницы сайта отвечают. Плохие первые задачи: переписка с клиентами, оплаты, публикации без проверки.</p>
+<h2 id="sec-1">Шаг второй: напишите инструкцию</h2>
+<p>Инструкция это главный файл агента, и от него зависит почти всё. В нём пять частей.</p>
+<ol><li><b>Кто он и чем занимается.</b> Одна строка про роль и зону ответственности.</li><li><b>Что делает по шагам.</b> Порядок действий, пронумерованный, без развилок «на усмотрение».</li><li><b>Чего не делает никогда.</b> Список запретов прямым текстом.</li><li><b>Как выглядит готовый результат.</b> Формат отчёта и признак, по которому работа считается сделанной.</li><li><b>Что делать при затруднении.</b> Кому писать, какой вопрос задавать, когда останавливаться.</li></ol>
+<p>Пятая часть спасает от самой дорогой ошибки: агент, которому не сказали останавливаться, придумывает решение сам и делает уверенно неправильно.</p>
+<h2 id="sec-2">Шаг третий: раздайте доступы по минимуму</h2>
+<table class="gp-table"><thead><tr><th>Доступ</th><th>Когда давать</th><th>Риск</th></tr></thead><tbody><tr><td>Чтение файлов</td><td>Сразу, это безопасно</td><td>Почти никакого</td></tr><tr><td>Запись в рабочие файлы</td><td>После первой недели проверок</td><td>Затирание чужой работы</td></tr><tr><td>Отправка сообщений людям</td><td>Только после проверки текстов вами</td><td>Репутация и отношения</td></tr><tr><td>Доступ к деньгам и оплатам</td><td>Обычно никогда</td><td>Прямые потери</td></tr><tr><td>Удаление данных</td><td>Никогда без подтверждения</td><td>Невосстановимая потеря</td></tr></tbody></table>
+<p>Правило простое: сначала агент читает и предлагает, и только потом получает право делать.</p>
+<h2 id="sec-3">Шаг четвёртый: проверьте на живой работе</h2>
+<ol><li><b>Первый прогон смотрите целиком.</b> Каждый шаг, каждый вывод, каждое действие.</li><li><b>Подсуньте трудный случай.</b> Пустой файл, странные данные, отсутствующий доступ. Агент обязан сказать об этом вслух. Тихо пропущенный случай это самый дорогой вид ошибки.</li><li><b>Проверьте отчёт против предмета.</b> Отчёт агента это его слова о работе, а работу проверяют по самой работе.</li><li><b>Повторите через неделю.</b> Задачи меняются, и инструкция устаревает быстрее, чем кажется.</li></ol>
+<p>Третий пункт важнее остальных. Агент почти никогда не врёт нарочно, но он легко считает задачу выполненной, когда сделал похожую работу рядом.</p>
+<h3>Три вопроса перед первым запуском</h3>
+<ol><li>Что произойдёт, если агент ошибётся на этой задаче, и сколько это будет стоить.</li><li>По какому признаку вы через неделю поймёте, что он работает правильно.</li><li>Кому он напишет, когда упрётся в нехватку данных или доступа.</li></ol>
+<h2 id="sec-4">Почему агент ломается на второй неделе</h2>
+<ul><li><b>Изменились данные.</b> Поле переименовали, формат сменился, и агент молча получает пустоту, которую считает нулём.</li><li><b>Инструкция обросла правилами.</b> Двадцать запретов противоречат друг другу, и агент выбирает первый попавшийся.</li><li><b>Пропала проверка.</b> Первую неделю вы смотрели каждый прогон, потом перестали, и ошибка накопилась.</li><li><b>Задача расширилась.</b> Агенту подкинули соседнюю работу, под которую он не настроен.</li><li><b>Доступы дали заранее.</b> Право писать выдали до того, как убедились в качестве чтения.</li></ul>
+<h2 id="sec-5">Как понять, что настройка удалась</h2>
+<p>Три признака, по которым видно рабочего агента.</p>
+<ol><li>Он приносит результат в одном и том же формате каждый раз.</li><li>Он останавливается и спрашивает, когда данных не хватает.</li><li>Его отчёт совпадает с тем, что видно в самой работе при выборочной проверке.</li></ol>
+<p>Если хотя бы один признак отсутствует, дело почти всегда в инструкции. Общее объяснение того, что такое агент и чем он отличается от обычного чата, лежит в статье про <a href="/guides/ii-agent-chto-eto/">ии агента</a>, а применение к бизнес-задачам в статье про <a href="/guides/ii-agenty-dlya-biznesa/">ии агентов для бизнеса</a>.</p>
+<h2 id="sec-6">Частые вопросы</h2>
+<p><b>Нужно ли уметь программировать?</b> Для сборки на готовых платформах не нужно. Своя связка с вашими сервисами требует программиста.</p>
+<p><b>Сколько агентов имеет смысл заводить?</b> Начинать стоит с одного и довести его до стабильной работы. Несколько агентов на неотлаженных инструкциях создают больше работы, чем снимают.</p>
+<p><b>Может ли агент работать без присмотра?</b> После нескольких недель проверок и на задачах с дешёвой ошибкой. Выборочная проверка остаётся всегда.</p>
+<p><b>Что делать, если агент выдумывает?</b> Сократить инструкцию, убрать противоречия и добавить прямое указание останавливаться при нехватке данных.</p>
+<p><b>Сколько времени занимает настройка?</b> Первая настройка это вечер, доведение до стабильной работы занимает две-три недели наблюдений.</p>
+<h2 id="sec-7">С чего начать дальше</h2>
+<p>Выберите одну скучную повторяющуюся задачу и напишите к ней инструкцию из пяти частей. Даже без запуска агента этот текст покажет, насколько ваша рутина вообще описана словами.</p>
+<p>Когда захотите поставить на поток контент и заявки, забирайте разбор системы, по которой ролики выходят каждый день и ведут людей в воронку: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=kak-nastroit-ii-agenta" target="_blank" rel="noopener">как устроен ежедневный поток роликов</a>.</p>
+<p>Проверено 19.09.2026.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/chat-bot-dlya-biznesa/"><span class="rc-cover"><img src="/covers/chat-bot-dlya-biznesa.webp?v=c9400b2c62" alt="Чат-бот для бизнеса: какие задачи он закрывает и когда он окупается" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Чат-бот для бизнеса: какие задачи он закрывает и когда он окупается</span><span class="rc-desc">Чат-бот для бизнеса: какие задачи реально решает, сколько стоит запуск и поддержка…</span></a><a class="gp-related-card" href="/guides/promty-dlya-chatgpt/"><span class="rc-cover"><img src="/covers/promty-dlya-chatgpt.webp?v=61abb148c9" alt="Промпты для ChatGPT: готовые запросы под работу, тексты и контент" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Промпты для ChatGPT: готовые запросы под работу, тексты и контент</span><span class="rc-desc">Промпты для ChatGPT под реальные задачи: разбор документа, письма, посты, сценарии…</span></a><a class="gp-related-card" href="/guides/kak-napisat-promt/"><span class="rc-cover"><img src="/covers/kak-napisat-promt.webp?v=2836d1291d" alt="Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу</span><span class="rc-desc">Как написать промпт для нейросети: пять частей рабочего запроса, приёмы для текста и…</span></a><a class="gp-related-card" href="/guides/kak-prodavat-v-telegram/"><span class="rc-cover"><img src="/covers/kak-prodavat-v-telegram.webp?v=ab2de0315c" alt="Как продавать в телеграм: канал, личные сообщения и бот без давления" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как продавать в телеграм: канал, личные сообщения и бот без давления</span><span class="rc-desc">Как продавать в телеграм: что писать в канале, как вести переписку, где брать людей…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=49f5a8a4cd"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "kak-nastroit-ii-agenta";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=ca754610bd"></script>
+
+
+</body></html>

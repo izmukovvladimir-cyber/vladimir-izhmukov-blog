@@ -1147,6 +1147,7 @@ function MobileArticle({ article, initialTheme }) {
           <div className="m-foot-cols">
             <div className="col"><div className="h">Разделы</div>{BRAND_CATS ? BRAND_CATS.map((c) => <a key={c.id} href={P(c.id)}>{c.name}</a>) : <React.Fragment><a href={P("claude")}>Claude Code</a><a href={P("hermes")}>Hermes</a><a href={P("codex")}>Codex</a></React.Fragment>}</div>
             <div className="col"><div className="h">Проект</div><a href={P("library")}>Все гайды</a><a href={P("about")}>О проекте</a></div>
+            {HAS_DOCS && <div className="col"><div className="h">Документы</div>{DOC_PRIVACY && <a href={DOC_PRIVACY} target="_blank" rel="noopener">Политика</a>}{DOC_OFFER && <a href={DOC_OFFER} target="_blank" rel="noopener">Оферта</a>}</div>}
           </div>
           <div className="m-foot-bottom">© 2026 {LEGAL_NAME.toUpperCase()}<br />{LEGAL_ENTITY}</div>
         </div>
@@ -1506,6 +1507,7 @@ function Catalog({ initialTheme, mobile, initialCmdk }) {
             )}
           </div>
         </div>
+        {mobile ? (HAS_DOCS && <div className="m-footer"><div className="m-foot-cols"><div className="col"><div className="h">Документы</div>{DOC_PRIVACY && <a href={DOC_PRIVACY} target="_blank" rel="noopener">Политика</a>}{DOC_OFFER && <a href={DOC_OFFER} target="_blank" rel="noopener">Оферта</a>}</div></div></div>) : <Footer />}
         {cmdk && <CommandPalette onClose={() => setCmdk(false)} />}
       </div>
     </div>

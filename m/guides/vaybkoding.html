@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Вайбкодинг: что это такое и как сделать первое приложение без знания кода — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Вайбкодинг простыми словами: откуда термин, как создавать сайты, ботов и приложения через нейросеть без программирования, какие инструменты выбрать (Claude Code, Cursor, Lovable, Bolt), пошаговый план первого проекта и ошибки новичков.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/vaybkoding/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Вайбкодинг: что это такое и как сделать первое приложение без знания кода">
+<meta property="og:description" content="Вайбкодинг простыми словами: откуда термин, как создавать сайты, ботов и приложения через нейросеть без программирования, какие инструменты выбрать (Claude Code, Cursor, Lovable, Bolt), пошаговый план первого проекта и ошибки новичков.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/vaybkoding/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/vaybkoding.webp?v=432ce00366">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Вайбкодинг: что это такое и как сделать первое приложение без знания кода">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-03T06:00:00Z">
+<meta property="article:modified_time" content="2026-10-03T06:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Вайбкодинг: что это такое и как сделать первое приложение без знания кода">
+<meta name="twitter:description" content="Вайбкодинг простыми словами: откуда термин, как создавать сайты, ботов и приложения через нейросеть без программирования, какие инструменты выбрать (Claude Code, Cursor, Lovable, Bolt), пошаговый план первого проекта и ошибки новичков.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/vaybkoding.webp?v=432ce00366">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/vaybkoding.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/vaybkoding/#article",
+      "headline": "Вайбкодинг: что это такое и как сделать первое приложение без знания кода",
+      "description": "Вайбкодинг простыми словами: откуда термин, как создавать сайты, ботов и приложения через нейросеть без программирования, какие инструменты выбрать (Claude Code, Cursor, Lovable, Bolt), пошаговый план первого проекта и ошибки новичков.",
+      "datePublished": "2026-10-03T06:00:00Z",
+      "dateModified": "2026-10-03T06:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, instrumenty, kontent",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/vaybkoding/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/vaybkoding/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/vaybkoding.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Вайбкодинг: что это такое и как сделать первое приложение без знания кода Владимир Ижмуков · автор системы роста Instagram через короткие ролики Вайбкодинг это создание программ, сайтов и ботов через разговор с нейросетью: вы обычными словами описываете, что хотите получить, нейросеть пишет код, запускает его и исправляет ошибки, а вы проверяете результат и говорите, что поменять. Знать язык программирования для этого не обязательно, важно уметь чётко объяснить задачу. Я сам пришёл в вайбкодинг из маркетинга. Сегодня у меня через нейросети собраны боты воронок, лендинги, этот блог и команда ИИ-агентов, которая ведёт контент. Ниже разберу, как начать, какие инструменты выбрать и какой проект сделать первым. Откуда взялось слово Термин vibe coding в феврале 2025 года придумал Андрей Карпаты, один из основателей OpenAI. Он описал подход, при котором человек полностью отдаётся «вайбу», то есть общему ощущению задачи, и почти не смотрит в сам код. Слово быстро разошлось, и уже в том же году словарь Collins выбрал vibe coding словом года. В русском языке прижились варианты «вайбкодинг» и «вайб-кодинг», означают они одно и то же. Чем вайбкодинг отличается от обычного программирования | | Обычное программирование | Вайбкодинг | |---|---|---| | Кто пишет код | человек | нейросеть | | Что нужно знать | язык, библиотеки, архитектуру | как сформулировать задачу и проверить результат | | Скорость первой версии | недели | часы или дни | | Где слабое место | время и порог входа | ошибки и безопасность без проверки | | Для чего лучше всего | сложные системы на годы | прототипы, личные инструменты, малый бизнес | Главный навык вайбкодера это постановка задачи. Чем точнее описание, тем меньше кругов правок. Приёмы формулировок разобраны в статье как написать промт. Какие инструменты выбрать | Инструмент | Как работает | Кому подойдёт | |---|---|---| | Lovable, Bolt | сайт или приложение в браузере по описанию | первый проект без установки программ | | Cursor | редактор кода со встроенной нейросетью | тем, кто хочет видеть код и учиться | | Claude Code | агент в терминале, сам создаёт файлы и запускает команды | ботам, автоматизациям, проектам посерьёзнее | | Replit | среда в браузере с публикацией в один клик | быстрым веб-приложениям | | Обычный чат с нейросетью | код копируется вручную | разовые скрипты и таблицы | Новичку я советую начинать с Lovable или Bolt: всё происходит в браузере, а результат сразу видно. Когда захочется проектов сложнее, переходите на Claude Code. Что умеет нейросеть Anthropic в целом, описано в статье Claude нейросеть. Первый проект за выходные: пошаговый план Шаг 1. Выберите маленькую задачу Хороший первый проект решает вашу собственную боль и умещается в одну фразу. Например: «страница с записью на консультацию», «калькулятор стоимости моих услуг», «бот, который присылает клиенту чек-лист после оплаты». Шаг 2. Опишите, что увидит пользователь Напишите, что видит пользователь и что происходит по шагам. Пример: «Сделай одностраничный сайт психолога. Сверху фото и имя, ниже три услуги с ценами, форма записи с полями имя, телефон и удобное время. После отправки формы показывай сообщение \"Спасибо, я свяжусь с вами в течение дня\". Цвета бежевый и оливковый». Шаг 3. Двигайтесь маленькими шагами Просите одно изменение за раз: «добавь отзывы», «сделай кнопку крупнее на телефоне». Большие запросы со списком из десяти правок ломают то, что уже работало. Шаг 4. Проверяйте сами После каждого шага открывайте результат и пробуйте как обычный посетитель: нажмите все кнопки, отправьте форму, откройте с телефона. Нейросеть уверенно говорит «готово» и тогда, когда что-то не работает. Шаг 5. Опубликуйте Lovable, Bolt и Replit публикуют проект по кнопке. Для своего домена потребуется пара настроек, их нейросеть тоже подскажет по шагам. Шесть готовых запросов для первого проекта Подставьте свои данные в квадратные скобки и отдайте запрос целиком. 1. «Сделай одностраничный сайт для [профессия]. Блоки: кто я, три услуги с ценами, отзывы, форма записи. Цвета [цвета], адаптируй под телефон». 2. «Сделай калькулятор стоимости [услуга]: пользователь выбирает 3 параметра, внизу итоговая цена и кнопка \"Записаться\"». 3. «Сделай тест из 7 вопросов \"[тема теста]\". В конце покажи один из 3 результатов и кнопку перейти в мой Telegram». 4. «Напиши Telegram-бота: после команды /start он присылает приветствие, ссылку на гайд и спрашивает имя. Ответы сохраняй в таблицу». 5. «Сделай страницу трекера привычек на 30 дней: клик по дню ставит отметку, данные сохраняются в браузере». 6. «Посмотри на текущую версию и предложи 5 улучшений для удобства на телефоне. Пока ничего не меняй, только список». Последний запрос полезно давать после каждого крупного шага: нейросеть сама находит то, что вы пропустили. | Тип проекта | Сколько занимает первая версия | Сложность | |---|---|---| | Одностраничный сайт | 1-2 часа | низкая | | Калькулятор или тест | 2-3 часа | низкая | | Telegram-бот с таблицей | 3-5 часов | средняя | | Приложение с оплатой |…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Вайбкодинг: что это такое и как сделать первое приложение без знания кода",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/vaybkoding/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/vaybkoding.webp?v=432ce00366" alt="Вайбкодинг: что это такое и как сделать первое приложение без знания кода" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Вайбкодинг: что это такое и как сделать первое приложение без знания кода</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Вайбкодинг простыми словами: откуда термин, как создавать сайты, ботов и приложения через нейросеть без программирования, какие инструменты выбрать (Claude Code, Cursor, Lovable, Bolt), пошаговый план первого проекта и ошибки новичков.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Вайбкодинг это создание программ, сайтов и ботов через разговор с нейросетью: вы обычными словами описываете, что хотите получить, нейросеть пишет код, запускает его и исправляет ошибки, а вы проверяете результат и говорите, что поменять. Знать язык программирования для этого не обязательно, важно уметь чётко объяснить задачу.</p>
+<p>Я сам пришёл в вайбкодинг из маркетинга. Сегодня у меня через нейросети собраны боты воронок, лендинги, этот блог и команда ИИ-агентов, которая ведёт контент. Ниже разберу, как начать, какие инструменты выбрать и какой проект сделать первым.</p>
+<h2 id="sec-0">Откуда взялось слово</h2>
+<p>Термин vibe coding в феврале 2025 года придумал Андрей Карпаты, один из основателей OpenAI. Он описал подход, при котором человек полностью отдаётся «вайбу», то есть общему ощущению задачи, и почти не смотрит в сам код. Слово быстро разошлось, и уже в том же году словарь Collins выбрал vibe coding словом года.</p>
+<p>В русском языке прижились варианты «вайбкодинг» и «вайб-кодинг», означают они одно и то же.</p>
+<h2 id="sec-1">Чем вайбкодинг отличается от обычного программирования</h2>
+<table class="gp-table"><thead><tr><th></th><th>Обычное программирование</th><th>Вайбкодинг</th></tr></thead><tbody><tr><td>Кто пишет код</td><td>человек</td><td>нейросеть</td></tr><tr><td>Что нужно знать</td><td>язык, библиотеки, архитектуру</td><td>как сформулировать задачу и проверить результат</td></tr><tr><td>Скорость первой версии</td><td>недели</td><td>часы или дни</td></tr><tr><td>Где слабое место</td><td>время и порог входа</td><td>ошибки и безопасность без проверки</td></tr><tr><td>Для чего лучше всего</td><td>сложные системы на годы</td><td>прототипы, личные инструменты, малый бизнес</td></tr></tbody></table>
+<p>Главный навык вайбкодера это постановка задачи. Чем точнее описание, тем меньше кругов правок. Приёмы формулировок разобраны в статье <a href="/guides/kak-napisat-promt/">как написать промт</a>.</p>
+<h2 id="sec-2">Какие инструменты выбрать</h2>
+<table class="gp-table"><thead><tr><th>Инструмент</th><th>Как работает</th><th>Кому подойдёт</th></tr></thead><tbody><tr><td>Lovable, Bolt</td><td>сайт или приложение в браузере по описанию</td><td>первый проект без установки программ</td></tr><tr><td>Cursor</td><td>редактор кода со встроенной нейросетью</td><td>тем, кто хочет видеть код и учиться</td></tr><tr><td>Claude Code</td><td>агент в терминале, сам создаёт файлы и запускает команды</td><td>ботам, автоматизациям, проектам посерьёзнее</td></tr><tr><td>Replit</td><td>среда в браузере с публикацией в один клик</td><td>быстрым веб-приложениям</td></tr><tr><td>Обычный чат с нейросетью</td><td>код копируется вручную</td><td>разовые скрипты и таблицы</td></tr></tbody></table>
+<p>Новичку я советую начинать с Lovable или Bolt: всё происходит в браузере, а результат сразу видно. Когда захочется проектов сложнее, переходите на Claude Code. Что умеет нейросеть Anthropic в целом, описано в статье <a href="/guides/claude-neyroset/">Claude нейросеть</a>.</p>
+<h2 id="sec-3">Первый проект за выходные: пошаговый план</h2>
+<h3>Шаг 1. Выберите маленькую задачу</h3>
+<p>Хороший первый проект решает вашу собственную боль и умещается в одну фразу. Например: «страница с записью на консультацию», «калькулятор стоимости моих услуг», «бот, который присылает клиенту чек-лист после оплаты».</p>
+<h3>Шаг 2. Опишите, что увидит пользователь</h3>
+<p>Напишите, что видит пользователь и что происходит по шагам. Пример: «Сделай одностраничный сайт психолога. Сверху фото и имя, ниже три услуги с ценами, форма записи с полями имя, телефон и удобное время. После отправки формы показывай сообщение "Спасибо, я свяжусь с вами в течение дня". Цвета бежевый и оливковый».</p>
+<h3>Шаг 3. Двигайтесь маленькими шагами</h3>
+<p>Просите одно изменение за раз: «добавь отзывы», «сделай кнопку крупнее на телефоне». Большие запросы со списком из десяти правок ломают то, что уже работало.</p>
+<h3>Шаг 4. Проверяйте сами</h3>
+<p>После каждого шага открывайте результат и пробуйте как обычный посетитель: нажмите все кнопки, отправьте форму, откройте с телефона. Нейросеть уверенно говорит «готово» и тогда, когда что-то не работает.</p>
+<h3>Шаг 5. Опубликуйте</h3>
+<p>Lovable, Bolt и Replit публикуют проект по кнопке. Для своего домена потребуется пара настроек, их нейросеть тоже подскажет по шагам.</p>
+<h2 id="sec-4">Шесть готовых запросов для первого проекта</h2>
+<p>Подставьте свои данные в квадратные скобки и отдайте запрос целиком.</p>
+<ol><li>«Сделай одностраничный сайт для [профессия]. Блоки: кто я, три услуги с ценами, отзывы, форма записи. Цвета [цвета], адаптируй под телефон».</li><li>«Сделай калькулятор стоимости [услуга]: пользователь выбирает 3 параметра, внизу итоговая цена и кнопка "Записаться"».</li><li>«Сделай тест из 7 вопросов "[тема теста]". В конце покажи один из 3 результатов и кнопку перейти в мой Telegram».</li><li>«Напиши Telegram-бота: после команды /start он присылает приветствие, ссылку на гайд и спрашивает имя. Ответы сохраняй в таблицу».</li><li>«Сделай страницу трекера привычек на 30 дней: клик по дню ставит отметку, данные сохраняются в браузере».</li><li>«Посмотри на текущую версию и предложи 5 улучшений для удобства на телефоне. Пока ничего не меняй, только список».</li></ol>
+<p>Последний запрос полезно давать после каждого крупного шага: нейросеть сама находит то, что вы пропустили.</p>
+<table class="gp-table"><thead><tr><th>Тип проекта</th><th>Сколько занимает первая версия</th><th>Сложность</th></tr></thead><tbody><tr><td>Одностраничный сайт</td><td>1-2 часа</td><td>низкая</td></tr><tr><td>Калькулятор или тест</td><td>2-3 часа</td><td>низкая</td></tr><tr><td>Telegram-бот с таблицей</td><td>3-5 часов</td><td>средняя</td></tr><tr><td>Приложение с оплатой</td><td>2-5 дней</td><td>высокая, нужна проверка специалистом</td></tr></tbody></table>
+<h2 id="sec-5">Пять ошибок новичка</h2>
+<ol><li><b>Огромная первая задача.</b> «Сделай мне маркетплейс» почти всегда заканчивается разочарованием. Начинайте с одной страницы или одной функции.</li><li><b>Нет сохранённых версий.</b> Перед крупной правкой просите нейросеть сохранить текущую версию, чтобы можно было откатиться.</li><li><b>Ключи и пароли в коде.</b> Никогда не вставляйте платёжные ключи и пароли прямо в текст запроса, просите нейросеть вынести их в настройки.</li><li><b>Слепое доверие.</b> Проверяйте каждую функцию руками, особенно оплату и формы с личными данными.</li><li><b>Бесконечный круг правок.</b> Если третья попытка исправить ошибку не помогла, попросите нейросеть объяснить причину и предложить другой подход.</li></ol>
+<h2 id="sec-6">Что можно сделать вайбкодингом для блога</h2>
+<ul><li>Лендинг под лид-магнит с формой подписки, подробнее в статье <a href="/guides/lid-magnit/">лид-магнит</a>.</li><li>Telegram-бота, который выдаёт гайд и собирает заявки.</li><li>Калькулятор или тест для аудитории, которым делятся в сторис.</li><li>Внутренний инструмент: таблицу идей, генератор хуков, трекер публикаций.</li></ul>
+<h2 id="sec-7">Частые вопросы</h2>
+<p><b>Можно ли заниматься вайбкодингом без знания программирования?</b> Да, для простых сайтов, ботов и личных инструментов знания кода не нужны. Понимать основы полезно, когда проект растёт.</p>
+<p><b>Сколько стоит вайбкодинг?</b> У большинства сервисов есть бесплатный старт с ограничением запросов. Платные тарифы обычно стоят от 20 долларов в месяц.</p>
+<p><b>Какую нейросеть выбрать для вайбкодинга?</b> Новичку проще всего Lovable или Bolt в браузере. Для серьёзных проектов чаще берут Claude Code или Cursor.</p>
+<p><b>Безопасно ли приложение, написанное нейросетью?</b> Для личного инструмента обычно да. Если приложение принимает оплату или личные данные, покажите его специалисту перед запуском.</p>
+<p><b>Можно ли заработать на вайбкодинге?</b> Люди делают сайты и ботов на заказ и запускают свои небольшие сервисы. Начинать лучше с решения собственной задачи, так вы быстрее набьёте руку.</p>
+<p>Официальные страницы и источники: <a href="https://www.ctvnews.ca/lifestyle/article/vibe-coding-named-word-of-the-year-by-collins-dictionary/" target="_blank" rel="noopener">CTV News: Collins выбрал vibe coding словом года</a>, <a href="https://lovable.dev/" target="_blank" rel="noopener">Lovable</a>, <a href="https://cursor.com/" target="_blank" rel="noopener">Cursor</a>, <a href="https://www.anthropic.com/claude-code" target="_blank" rel="noopener">Claude Code</a>.</p>
+<h2 id="sec-8">Что делать дальше</h2>
+<p>Запишите одну фразу о том, какой инструмент упростил бы вам работу прямо на этой неделе, и опишите его по шагу 2. Откройте Lovable или Bolt и отдайте описание. Через час у вас будет первая работающая версия, и дальше вы будете улучшать её маленькими шагами.</p>
+<p>Как нейросети и агенты помогают мне вести блог и выпускать ролики каждый день без съёмок, я рассказал в статье про свою систему: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=vaybkoding" target="_blank" rel="noopener">как я веду рилсы через нейросети</a>.</p>
+<p>Проверено 3 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/gigachat/"><span class="rc-cover"><img src="/covers/gigachat.webp?v=e6029b8e8b" alt="GigaChat: что умеет нейросеть Сбера и как пользоваться бесплатно в 2026 году" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">GigaChat: что умеет нейросеть Сбера и как пользоваться бесплатно в 2026 году</span><span class="rc-desc">GigaChat от Сбера: где открыть бесплатно (сайт, Telegram, MAX), версии Pro и Max…</span></a><a class="gp-related-card" href="/guides/kak-nayti-cheloveka-po-foto/"><span class="rc-cover"><img src="/covers/kak-nayti-cheloveka-po-foto.webp?v=11bd1f4491" alt="Как найти человека по фото: поиск по картинке в Яндексе, Google и через нейросети" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как найти человека по фото: поиск по картинке в Яндексе, Google и через нейросети</span><span class="rc-desc">Как найти человека по фото в 2026 году: поиск по картинке в Яндексе и Google Lens…</span></a><a class="gp-related-card" href="/guides/kopirayting/"><span class="rc-cover"><img src="/covers/kopirayting.webp?v=57b59485f9" alt="Копирайтинг: что это, как писать продающие тексты и где помогает нейросеть" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Копирайтинг: что это, как писать продающие тексты и где помогает нейросеть</span><span class="rc-desc">Копирайтинг простыми словами: чем отличается от рерайтинга, формулы AIDA и PAS…</span></a><a class="gp-related-card" href="/guides/n8n/"><span class="rc-cover"><img src="/covers/n8n.webp?v=f4c878fa9c" alt="n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью</span><span class="rc-desc">n8n простыми словами: как работает конструктор автоматизаций, тарифы облака и…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=eb4a17db52"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "vaybkoding";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=52c5b988a6"></script>
+
+
+</body></html>

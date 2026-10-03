@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="n8n простыми словами: как работает конструктор автоматизаций, тарифы облака и бесплатная версия на своём сервере, как установить из России, первый сценарий с Telegram и нейросетью и пять готовых идей для блога.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/n8n/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью">
+<meta property="og:description" content="n8n простыми словами: как работает конструктор автоматизаций, тарифы облака и бесплатная версия на своём сервере, как установить из России, первый сценарий с Telegram и нейросетью и пять готовых идей для блога.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/n8n/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/n8n.webp?v=f4c878fa9c">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-03T06:00:00Z">
+<meta property="article:modified_time" content="2026-10-03T06:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью">
+<meta name="twitter:description" content="n8n простыми словами: как работает конструктор автоматизаций, тарифы облака и бесплатная версия на своём сервере, как установить из России, первый сценарий с Telegram и нейросетью и пять готовых идей для блога.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/n8n.webp?v=f4c878fa9c">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/n8n.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/n8n/#article",
+      "headline": "n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью",
+      "description": "n8n простыми словами: как работает конструктор автоматизаций, тарифы облака и бесплатная версия на своём сервере, как установить из России, первый сценарий с Telegram и нейросетью и пять готовых идей для блога.",
+      "datePublished": "2026-10-03T06:00:00Z",
+      "dateModified": "2026-10-03T06:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, instrumenty, kontent",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/n8n/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/n8n/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/n8n.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью Владимир Ижмуков · автор системы роста Instagram через короткие ролики n8n это конструктор автоматизаций: вы соединяете сервисы блоками на схеме, и дальше они работают сами. Например, новое сообщение в Telegram отправляется в нейросеть, та пишет ответ, а результат сохраняется в таблицу. Кода писать почти не нужно, n8n можно поставить бесплатно на свой сервер или пользоваться платным облаком. Я пришёл к n8n, когда рутина вокруг контента стала съедать по два часа в день: собрать идеи, записать их в таблицу, отправить черновик на проверку. Ниже разберу, как он устроен, сколько стоит, как запустить и какой первый сценарий собрать за вечер. Как устроен n8n Вся работа в n8n строится из трёх понятий. | Понятие | Что это | Пример | |---|---|---| | Сценарий (workflow) | цепочка действий от начала до конца | «пришла заявка, записать её и уведомить меня» | | Триггер | событие, которое запускает сценарий | новое сообщение боту, расписание, письмо | | Узел (node) | один шаг цепочки | запрос к нейросети, запись в Google Таблицу | Узлы соединяются стрелками на холсте, данные из одного шага уходят в следующий. Готовых интеграций сотни: Telegram, Google Таблицы и Диск, Notion, почта, CRM, а также нейросети OpenAI, Anthropic, Google и другие. Что n8n умеет с нейросетями - Узел ИИ-агента. Нейросеть получает задачу и сама решает, какие инструменты вызвать: поиск, таблицу, календарь. - Память диалога. Бот помнит, о чём с человеком говорили раньше. - Работа с документами. Сценарий читает файл, отдаёт его нейросети и сохраняет выжимку. Если сама идея ИИ-агента пока непонятна, начните со статьи что такое ИИ-агент. Сколько стоит n8n | Вариант | Цена | Что даёт | |---|---|---| | Community, на своём сервере | 0 за сам n8n, платите только за сервер | неограниченные запуски, все базовые узлы | | Cloud Starter | от 20 евро в месяц при оплате за год | 2 500 запусков, 5 одновременных | | Cloud Pro | от 50 евро в месяц при оплате за год | 10 000 запусков, 20 одновременных, роли | | Business, на своём сервере | 667 евро в месяц при оплате за год | 40 000 запусков, SSO, контроль версий | Запуском считается один полный проход сценария, сколько бы шагов в нём ни было. Сценарий из двадцати узлов и сценарий из двух стоят одинаково. Для блогера и небольшого бизнеса разумный старт это Community на арендованном сервере. Сервер с 2 ГБ памяти стоит несколько сотен рублей в месяц, и этого хватает на десятки сценариев. Как запустить n8n из России 1. Арендуйте сервер (VPS) у любого хостинга, лучше с готовым образом n8n или Docker. Многие хостинги ставят n8n в один клик. 2. Откройте n8n в браузере по адресу сервера и создайте учётную запись владельца. 3. Подключите сервисы. Для Telegram нужен токен бота от BotFather, для нейросети ключ API. 4. Соберите первый сценарий и включите переключатель Active, чтобы он работал постоянно. Облако n8n требует оплату зарубежной картой, поэтому из России проще свой сервер. Ключи API зарубежных нейросетей тоже оплачиваются картой другой страны. Российские модели вроде GigaChat подключаются через их API без этого ограничения, подробнее в статье про GigaChat. Первый сценарий: бот, который пишет черновики постов Этот сценарий я советую собрать первым, он окупается в первую же неделю. 1. Триггер Telegram. Вы пишете боту тему поста одной фразой. 2. Узел нейросети. Инструкция: «Ты редактор блога о [ниша]. Напиши черновик поста на 1000-1200 знаков по теме пользователя. Начни с вопроса, закончи призывом написать в комментарии». 3. Узел Google Таблиц. Тема, черновик и дата записываются в строку. 4. Ответ в Telegram. Бот присылает вам черновик для правки. На сборку уходит 30-40 минут, после этого идея поста превращается в черновик за 20 секунд прямо с телефона. Пять идей автоматизаций для блога 1. Банк идей. Голосовое боту, расшифровка, тема и хук ложатся в таблицу. 2. Ответы на частые вопросы. Бот в Telegram отвечает по вашей базе знаний и зовёт вас, если вопрос сложный. 3. Сводка конкурентов. Каждое утро сценарий собирает новые посты из выбранных каналов и присылает выжимку. 4. Заявки в одну таблицу. Формы, сообщения и оплаты из разных мест собираются в один список с отметкой статуса. 5. Напоминания клиентам. За день до консультации клиент получает сообщение с временем и ссылкой. Для простых ботов без сервера посмотрите статью как создать чат-бот в Telegram, а про связку нескольких агентов рассказано в разборе ИИ-агенты для бизнеса. n8n, Make или Zapier | | n8n | Make | Zapier | |---|---|---|---| | Свой сервер | да, бесплатно | нет | нет | | Цена за объём | за запуск сценария | за каждую операцию | за каждую задачу | | Порог входа | средний | низкий | самый низкий | | Сложные сценарии с ИИ | сильная сторона | хорошо | проще, но дороже | Если сценариев много и они длинные, n8n обходится дешевле всех, потому что считает запуск целиком. Частые вопросы n8n бесплатный? Версия Community бесплатна и ставится на ваш сервер без ограничения запусков. Облако…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/n8n/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/n8n.webp?v=f4c878fa9c" alt="n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">n8n: что это, сколько стоит и как собрать первую автоматизацию с нейросетью</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">n8n простыми словами: как работает конструктор автоматизаций, тарифы облака и бесплатная версия на своём сервере, как установить из России, первый сценарий с Telegram и нейросетью и пять готовых идей для блога.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>n8n это конструктор автоматизаций: вы соединяете сервисы блоками на схеме, и дальше они работают сами. Например, новое сообщение в Telegram отправляется в нейросеть, та пишет ответ, а результат сохраняется в таблицу. Кода писать почти не нужно, n8n можно поставить бесплатно на свой сервер или пользоваться платным облаком.</p>
+<p>Я пришёл к n8n, когда рутина вокруг контента стала съедать по два часа в день: собрать идеи, записать их в таблицу, отправить черновик на проверку. Ниже разберу, как он устроен, сколько стоит, как запустить и какой первый сценарий собрать за вечер.</p>
+<h2 id="sec-0">Как устроен n8n</h2>
+<p>Вся работа в n8n строится из трёх понятий.</p>
+<table class="gp-table"><thead><tr><th>Понятие</th><th>Что это</th><th>Пример</th></tr></thead><tbody><tr><td>Сценарий (workflow)</td><td>цепочка действий от начала до конца</td><td>«пришла заявка, записать её и уведомить меня»</td></tr><tr><td>Триггер</td><td>событие, которое запускает сценарий</td><td>новое сообщение боту, расписание, письмо</td></tr><tr><td>Узел (node)</td><td>один шаг цепочки</td><td>запрос к нейросети, запись в Google Таблицу</td></tr></tbody></table>
+<p>Узлы соединяются стрелками на холсте, данные из одного шага уходят в следующий. Готовых интеграций сотни: Telegram, Google Таблицы и Диск, Notion, почта, CRM, а также нейросети OpenAI, Anthropic, Google и другие.</p>
+<h3>Что n8n умеет с нейросетями</h3>
+<ul><li><b>Узел ИИ-агента.</b> Нейросеть получает задачу и сама решает, какие инструменты вызвать: поиск, таблицу, календарь.</li><li><b>Память диалога.</b> Бот помнит, о чём с человеком говорили раньше.</li><li><b>Работа с документами.</b> Сценарий читает файл, отдаёт его нейросети и сохраняет выжимку.</li></ul>
+<p>Если сама идея ИИ-агента пока непонятна, начните со статьи <a href="/guides/ii-agent-chto-eto/">что такое ИИ-агент</a>.</p>
+<h2 id="sec-1">Сколько стоит n8n</h2>
+<table class="gp-table"><thead><tr><th>Вариант</th><th>Цена</th><th>Что даёт</th></tr></thead><tbody><tr><td>Community, на своём сервере</td><td>0 за сам n8n, платите только за сервер</td><td>неограниченные запуски, все базовые узлы</td></tr><tr><td>Cloud Starter</td><td>от 20 евро в месяц при оплате за год</td><td>2 500 запусков, 5 одновременных</td></tr><tr><td>Cloud Pro</td><td>от 50 евро в месяц при оплате за год</td><td>10 000 запусков, 20 одновременных, роли</td></tr><tr><td>Business, на своём сервере</td><td>667 евро в месяц при оплате за год</td><td>40 000 запусков, SSO, контроль версий</td></tr></tbody></table>
+<p>Запуском считается один полный проход сценария, сколько бы шагов в нём ни было. Сценарий из двадцати узлов и сценарий из двух стоят одинаково.</p>
+<p>Для блогера и небольшого бизнеса разумный старт это Community на арендованном сервере. Сервер с 2 ГБ памяти стоит несколько сотен рублей в месяц, и этого хватает на десятки сценариев.</p>
+<h2 id="sec-2">Как запустить n8n из России</h2>
+<ol><li><b>Арендуйте сервер (VPS)</b> у любого хостинга, лучше с готовым образом n8n или Docker. Многие хостинги ставят n8n в один клик.</li><li><b>Откройте n8n в браузере</b> по адресу сервера и создайте учётную запись владельца.</li><li><b>Подключите сервисы.</b> Для Telegram нужен токен бота от BotFather, для нейросети ключ API.</li><li><b>Соберите первый сценарий</b> и включите переключатель Active, чтобы он работал постоянно.</li></ol>
+<p>Облако n8n требует оплату зарубежной картой, поэтому из России проще свой сервер. Ключи API зарубежных нейросетей тоже оплачиваются картой другой страны. Российские модели вроде GigaChat подключаются через их API без этого ограничения, подробнее в статье про <a href="/guides/gigachat/">GigaChat</a>.</p>
+<h2 id="sec-3">Первый сценарий: бот, который пишет черновики постов</h2>
+<p>Этот сценарий я советую собрать первым, он окупается в первую же неделю.</p>
+<ol><li><b>Триггер Telegram.</b> Вы пишете боту тему поста одной фразой.</li><li><b>Узел нейросети.</b> Инструкция: «Ты редактор блога о [ниша]. Напиши черновик поста на 1000-1200 знаков по теме пользователя. Начни с вопроса, закончи призывом написать в комментарии».</li><li><b>Узел Google Таблиц.</b> Тема, черновик и дата записываются в строку.</li><li><b>Ответ в Telegram.</b> Бот присылает вам черновик для правки.</li></ol>
+<p>На сборку уходит 30-40 минут, после этого идея поста превращается в черновик за 20 секунд прямо с телефона.</p>
+<h2 id="sec-4">Пять идей автоматизаций для блога</h2>
+<ol><li><b>Банк идей.</b> Голосовое боту, расшифровка, тема и хук ложатся в таблицу.</li><li><b>Ответы на частые вопросы.</b> Бот в Telegram отвечает по вашей базе знаний и зовёт вас, если вопрос сложный.</li><li><b>Сводка конкурентов.</b> Каждое утро сценарий собирает новые посты из выбранных каналов и присылает выжимку.</li><li><b>Заявки в одну таблицу.</b> Формы, сообщения и оплаты из разных мест собираются в один список с отметкой статуса.</li><li><b>Напоминания клиентам.</b> За день до консультации клиент получает сообщение с временем и ссылкой.</li></ol>
+<p>Для простых ботов без сервера посмотрите статью <a href="/guides/chat-bot-telegram-kak-sozdat/">как создать чат-бот в Telegram</a>, а про связку нескольких агентов рассказано в разборе <a href="/guides/ii-agenty-dlya-biznesa/">ИИ-агенты для бизнеса</a>.</p>
+<h2 id="sec-5">n8n, Make или Zapier</h2>
+<table class="gp-table"><thead><tr><th></th><th>n8n</th><th>Make</th><th>Zapier</th></tr></thead><tbody><tr><td>Свой сервер</td><td>да, бесплатно</td><td>нет</td><td>нет</td></tr><tr><td>Цена за объём</td><td>за запуск сценария</td><td>за каждую операцию</td><td>за каждую задачу</td></tr><tr><td>Порог входа</td><td>средний</td><td>низкий</td><td>самый низкий</td></tr><tr><td>Сложные сценарии с ИИ</td><td>сильная сторона</td><td>хорошо</td><td>проще, но дороже</td></tr></tbody></table>
+<p>Если сценариев много и они длинные, n8n обходится дешевле всех, потому что считает запуск целиком.</p>
+<h2 id="sec-6">Частые вопросы</h2>
+<p><b>n8n бесплатный?</b> Версия Community бесплатна и ставится на ваш сервер без ограничения запусков. Облако платное, от 20 евро в месяц.</p>
+<p><b>Нужно ли уметь программировать?</b> Для большинства сценариев нет, блоки собираются мышкой. Немного кода пригодится для нестандартной обработки данных, и его может написать нейросеть.</p>
+<p><b>Можно ли сделать в n8n Telegram-бота?</b> Да, для этого есть готовый триггер и узел Telegram. Нужен только токен бота.</p>
+<p><b>Чем n8n отличается от ИИ-агента?</b> n8n это среда, где агент живёт и получает доступ к инструментам. Сам агент это узел внутри сценария.</p>
+<p><b>Сколько сценариев выдержит недорогой сервер?</b> Сервер с 2 ГБ памяти спокойно держит десятки простых сценариев. Тяжёлые задачи с файлами требуют больше ресурсов.</p>
+<p>Официальные страницы: <a href="https://n8n.io/" target="_blank" rel="noopener">n8n</a>, <a href="https://n8n.io/pricing/" target="_blank" rel="noopener">тарифы n8n</a>, <a href="https://docs.n8n.io/" target="_blank" rel="noopener">документация n8n</a>. Тарифы сверены по разборам на сентябрь 2026 года.</p>
+<h2 id="sec-7">Что делать дальше</h2>
+<p>Выберите одну рутину, которая отнимает у вас больше 20 минут каждый день, и опишите её шагами на бумаге: что запускает задачу, какие действия идут дальше и где лежит результат. Если шагов три-пять, это готовый первый сценарий для n8n.</p>
+<p>Как автоматизация и нейросети помогают мне выпускать ролики каждый день без съёмок, я рассказал в статье про свою систему: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=n8n" target="_blank" rel="noopener">как я веду рилсы через нейросети</a>.</p>
+<p>Проверено 3 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/gigachat/"><span class="rc-cover"><img src="/covers/gigachat.webp?v=e6029b8e8b" alt="GigaChat: что умеет нейросеть Сбера и как пользоваться бесплатно в 2026 году" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">GigaChat: что умеет нейросеть Сбера и как пользоваться бесплатно в 2026 году</span><span class="rc-desc">GigaChat от Сбера: где открыть бесплатно (сайт, Telegram, MAX), версии Pro и Max…</span></a><a class="gp-related-card" href="/guides/kak-nayti-cheloveka-po-foto/"><span class="rc-cover"><img src="/covers/kak-nayti-cheloveka-po-foto.webp?v=11bd1f4491" alt="Как найти человека по фото: поиск по картинке в Яндексе, Google и через нейросети" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как найти человека по фото: поиск по картинке в Яндексе, Google и через нейросети</span><span class="rc-desc">Как найти человека по фото в 2026 году: поиск по картинке в Яндексе и Google Lens…</span></a><a class="gp-related-card" href="/guides/kopirayting/"><span class="rc-cover"><img src="/covers/kopirayting.webp?v=57b59485f9" alt="Копирайтинг: что это, как писать продающие тексты и где помогает нейросеть" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Копирайтинг: что это, как писать продающие тексты и где помогает нейросеть</span><span class="rc-desc">Копирайтинг простыми словами: чем отличается от рерайтинга, формулы AIDA и PAS…</span></a><a class="gp-related-card" href="/guides/neyrofotosessiya/"><span class="rc-cover"><img src="/covers/neyrofotosessiya.webp?v=927a6d0bb5" alt="Нейрофотосессия: как сделать фотосессию нейросетью по своему фото бесплатно" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейрофотосессия: как сделать фотосессию нейросетью по своему фото бесплатно</span><span class="rc-desc">Нейрофотосессия по шагам: какие фото загрузить, в каких нейросетях сделать (ChatGPT…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=eb4a17db52"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "n8n";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=52c5b988a6"></script>
+
+
+</body></html>

@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/library/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/kontent/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -91,6 +91,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/elevenlabs/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/flux-neyroset/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/gemini-neyroset/</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -121,6 +133,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/heygen/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/higgsfield-ai/</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -147,6 +165,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/kak-monetizirovat-instagram/</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/kak-montirovat-video-na-telefone/</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -271,6 +295,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/kontent-marketing/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/kontent-plan-na-nedelyu/</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -279,6 +309,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/kopirayting/</loc>
     <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/leonardo-ai/</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -955,6 +991,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/rassylka-v-telegram/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/reels-bez-semok-neyrosetyami/</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -963,6 +1005,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/rils-iz-video/</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/runway-neyroset/</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -981,6 +1029,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/smm-specialist/</loc>
     <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/stable-diffusion/</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1029,6 +1083,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/voronka-prodazh/</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/yandexgpt/</loc>
+    <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

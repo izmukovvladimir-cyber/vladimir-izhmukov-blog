@@ -107,6 +107,34 @@
     ]
   },
   {
+    "slug": "elevenlabs",
+    "title": "ElevenLabs: как пользоваться нейросетью для озвучки и клонирования голоса в 2026 году",
+    "desc": "ElevenLabs по шагам: озвучка текста моделью Eleven v3, клонирование своего голоса, перевод видео с сохранением голоса, тарифы и бесплатный лимит, как работать из России и запросы для роликов.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 11,
+    "url": "/guides/elevenlabs/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "video"
+    ]
+  },
+  {
+    "slug": "flux-neyroset",
+    "title": "Flux нейросеть: что умеет FLUX.2 и как пользоваться в 2026 году",
+    "desc": "Flux от Black Forest Labs простыми словами: модели FLUX.2 Pro, Flex, Dev и Klein, текст на картинке, редактирование по нескольким референсам, где пользоваться онлайн и на компьютере, лицензии и промпты для обложек.",
+    "category": "Claude Code",
+    "level": "Средний",
+    "min": 11,
+    "url": "/guides/flux-neyroset/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "gemini-neyroset",
     "title": "Gemini нейросеть от Google: что умеет, сколько стоит и как пользоваться из России",
     "desc": "Gemini от Google: какие модели есть сейчас, что умеет бесплатная версия, сколько стоят тарифы Google AI, как пользоваться из России и для каких задач блога она подходит лучше ChatGPT.",
@@ -176,6 +204,20 @@
     ]
   },
   {
+    "slug": "heygen",
+    "title": "HeyGen: как сделать говорящий аватар и видео с собой без съёмок в 2026 году",
+    "desc": "HeyGen по шагам: цифровой двойник по своему видео, Avatar IV из одной фотографии, перевод роликов с синхронизацией губ, бесплатный тариф на 3 видео в месяц, цены, работа из России и сценарии для рилсов.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 11,
+    "url": "/guides/heygen/",
+    "tags": [
+      "neuroseti",
+      "video",
+      "instrumenty"
+    ]
+  },
+  {
     "slug": "higgsfield-ai",
     "title": "Higgsfield AI: что это за нейросеть, сколько стоит и как пользоваться",
     "desc": "Higgsfield AI простым языком: какие модели видео и фото внутри, тарифы и кредиты на 2026 год, сколько стоит один ролик, как пользоваться из России и пять сценариев для рилсов.",
@@ -240,6 +282,20 @@
       "instagram",
       "monetizaciya",
       "prodazhi"
+    ]
+  },
+  {
+    "slug": "kak-montirovat-video-na-telefone",
+    "title": "Как монтировать видео на телефоне: пошагово для рилсов и шортс в 2026 году",
+    "desc": "Как монтировать видео на телефоне: приложения для iPhone и Android, порядок монтажа от обрезки до экспорта, субтитры, музыка, переходы, настройки экспорта для Reels и Shorts и как ускорить монтаж нейросетями.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 11,
+    "url": "/guides/kak-montirovat-video-na-telefone/",
+    "tags": [
+      "video",
+      "instagram",
+      "instrumenty"
     ]
   },
   {
@@ -511,6 +567,20 @@
     ]
   },
   {
+    "slug": "kontent-marketing",
+    "title": "Контент-маркетинг: что это простыми словами и как выстроить его для эксперта в 2026 году",
+    "desc": "Контент-маркетинг простыми словами: как полезный контент приводит клиентов, воронка из охватного и экспертного контента, форматы для Instagram и Telegram, контент-план, метрики и как ускорить работу нейросетями.",
+    "category": "Контент и воронки",
+    "level": "Новичок",
+    "min": 12,
+    "url": "/guides/kontent-marketing/",
+    "tags": [
+      "kontent",
+      "instagram",
+      "telegram"
+    ]
+  },
+  {
     "slug": "kontent-plan-na-nedelyu",
     "title": "Контент-план для эксперта на неделю в 2026: собрать за один вечер",
     "desc": "Контент-план на неделю за один вечер: банк из 15-20 болей аудитории, семь тем по дням с форматами и заготовленная первая строка-хук.",
@@ -532,6 +602,20 @@
     "level": "Новичок",
     "min": 11,
     "url": "/guides/kopirayting/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "leonardo-ai",
+    "title": "Leonardo AI: как пользоваться нейросетью для картинок бесплатно в 2026 году",
+    "desc": "Leonardo AI по шагам: регистрация, 150 бесплатных токенов в день, модели Phoenix, Kino XL и Anime XL, оживление картинки в видео, тарифы, работа из России и готовые промпты для обложек и постов.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 10,
+    "url": "/guides/leonardo-ai/",
     "tags": [
       "neuroseti",
       "instrumenty",
@@ -1960,6 +2044,20 @@
     ]
   },
   {
+    "slug": "rassylka-v-telegram",
+    "title": "Рассылка в Телеграм: как сделать её через бота без бана в 2026 году",
+    "desc": "Рассылка в Telegram по шагам: через бота, канал или личный аккаунт, лимиты Telegram на отправку, платные рассылки, сервисы-конструкторы, как собрать базу законно, тексты, которые читают, и как не попасть под блокировку.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 11,
+    "url": "/guides/rassylka-v-telegram/",
+    "tags": [
+      "telegram",
+      "avtomatizaciya",
+      "prodazhi"
+    ]
+  },
+  {
     "slug": "reels-bez-semok-neyrosetyami",
     "title": "Рилс без съёмок и монтажа в 2026: как собрать ролик нейросетями",
     "desc": "Рилс без съёмок и монтажа: вертикальный ролик нейросетями Sora, Veo и Higgsfield, оживление кадров и правда о том, что реально даёт просмотры.",
@@ -1985,6 +2083,20 @@
       "reels",
       "instagram",
       "video"
+    ]
+  },
+  {
+    "slug": "runway-neyroset",
+    "title": "Runway нейросеть: как сделать видео из текста и фото в 2026 году",
+    "desc": "Runway по шагам: модель Gen-4.5, видео из текста и из картинки, вертикальный формат 9:16 для рилсов, длина роликов до 10 секунд, тарифы и кредиты, работа из России и промпты для кинематографичных кадров.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 11,
+    "url": "/guides/runway-neyroset/",
+    "tags": [
+      "neuroseti",
+      "video",
+      "instrumenty"
     ]
   },
   {
@@ -2027,6 +2139,20 @@
       "kontent",
       "instagram",
       "blog"
+    ]
+  },
+  {
+    "slug": "stable-diffusion",
+    "title": "Stable Diffusion: что это, как установить и пользоваться бесплатно в 2026 году",
+    "desc": "Stable Diffusion простыми словами: актуальная версия SD 3.5, где запустить онлайн и как установить на компьютер через ComfyUI или Forge, требования к видеокарте, модели и LoRA, промпты и честные ограничения.",
+    "category": "Claude Code",
+    "level": "Средний",
+    "min": 12,
+    "url": "/guides/stable-diffusion/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
     ]
   },
   {
@@ -2139,6 +2265,20 @@
       "voronka",
       "prodazhi",
       "instagram"
+    ]
+  },
+  {
+    "slug": "yandexgpt",
+    "title": "YandexGPT: как пользоваться нейросетью Яндекса бесплатно в 2026 году",
+    "desc": "YandexGPT простыми словами: где открыть нейросеть Яндекса (Алиса AI, Браузер, Yandex Cloud), чем отличаются YandexGPT 5 Lite и Pro, что изменилось с Алисой AI, сравнение с GigaChat и ChatGPT и запросы для работы и блога.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 10,
+    "url": "/guides/yandexgpt/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
     ]
   }
 ]

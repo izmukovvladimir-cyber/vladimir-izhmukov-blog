@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Tensor Art по шагам: генерация картинок на тысячах готовых моделей и LoRA, 50 бесплатных кредитов в день, тариф Pro около 10 долларов, обучение своей модели, рабочие процессы ComfyUI в браузере, работа на русском и из России.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/tensor-art/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026">
+<meta property="og:description" content="Tensor Art по шагам: генерация картинок на тысячах готовых моделей и LoRA, 50 бесплатных кредитов в день, тариф Pro около 10 долларов, обучение своей модели, рабочие процессы ComfyUI в браузере, работа на русском и из России.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/tensor-art/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/tensor-art.webp?v=94a1c075f6">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-08T07:00:00Z">
+<meta property="article:modified_time" content="2026-10-08T07:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026">
+<meta name="twitter:description" content="Tensor Art по шагам: генерация картинок на тысячах готовых моделей и LoRA, 50 бесплатных кредитов в день, тариф Pro около 10 долларов, обучение своей модели, рабочие процессы ComfyUI в браузере, работа на русском и из России.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/tensor-art.webp?v=94a1c075f6">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/tensor-art.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/tensor-art/#article",
+      "headline": "Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026",
+      "description": "Tensor Art по шагам: генерация картинок на тысячах готовых моделей и LoRA, 50 бесплатных кредитов в день, тариф Pro около 10 долларов, обучение своей модели, рабочие процессы ComfyUI в браузере, работа на русском и из России.",
+      "datePublished": "2026-10-08T07:00:00Z",
+      "dateModified": "2026-10-08T07:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, instrumenty, kontent",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/tensor-art/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/tensor-art/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/tensor-art.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026 Владимир Ижмуков · автор системы роста Instagram через короткие ролики Tensor Art это сайт, где можно генерировать картинки на тысячах готовых моделей, которые выкладывают сами пользователи: аниме, фэнтези, фотореализм, иллюстрации, логотипы. Под капотом модели семейств Stable Diffusion и Flux плюс LoRA, маленькие дообученные надстройки под конкретный стиль или персонажа. Бесплатно сервис даёт около 50 кредитов в день, платный Pro стоит около 10 долларов в месяц и даёт 300 кредитов в день. Главное преимущество Tensor Art перед Midjourney в выборе: под почти любой стиль уже есть готовая модель, и не нужно ставить ничего на свой компьютер. Что умеет Tensor Art | Функция | Что делает | Для чего | |---|---|---| | Текст в картинку | генерация по описанию | обложки, иллюстрации | | Готовые модели | тысячи стилей от сообщества | аниме, реализм, арт | | LoRA | надстройка под стиль или персонажа | единый образ в серии | | Картинка в картинку | переделка по образцу | новый стиль своего фото | | Обучение модели | своя LoRA по вашим фото | персонаж, товар | | Рабочие процессы | схемы ComfyUI прямо в браузере | сложные цепочки обработки | Как сделать картинку в Tensor Art по шагам 1. Зайдите на tensor.art и войдите через Google или почту. 2. Откройте раздел моделей и выберите модель под стиль, глядя на примеры работ. 3. Нажмите запуск модели, откроется окно генерации. 4. Напишите промпт на английском: кто или что, где, свет, стиль. 5. В негативный промпт добавьте то, чего не должно быть: лишние пальцы, размытость, текст. 6. Выберите размер. Для рилса берите вертикальный формат, для поста квадрат. 7. Запустите генерацию и скачайте понравившийся вариант. Настройки, которые меняют результат сильнее всего - Модель важнее промпта: один и тот же текст в аниме-модели и в реалистичной даёт разные миры. - LoRA подключайте по одной-две, иначе стили смешиваются. - Сила LoRA около 0,6-0,8 обычно даёт стиль без искажений. - Число шагов 25-30 хватает для большинства моделей. Больше тратит кредиты без заметной разницы. Сколько стоит Tensor Art | План | Цена | Кредиты | Что даёт | |---|---|---|---| | Free | 0 | около 50 в день | 1 задача одновременно, разрешение до 1536 на 1024 | | Pro | около 10 долларов в месяц | около 300 в день | параллельные задачи, разрешение до 3840 на 2160, обучение своих моделей | | Годовой Pro | около 60-70 долларов в год по акциям | как у Pro | дешевле в пересчёте на месяц | Цена картинки в кредитах зависит от модели и настроек, поэтому 50 кредитов не равны 50 картинкам. В часы пик бесплатные задачи стоят в очереди дольше. Tensor Art на русском и из России Интерфейс на английском, промпты лучше писать по-английски: большинство моделей обучены на английских описаниях. Сайт открывается в браузере, при сбоях помогает VPN. Оплата Pro идёт зарубежной картой. Tensor Art и другие нейросети Если нужна картинка без выбора моделей, проще Midjourney или Nano Banana. Тем, кто хочет ставить Stable Diffusion на свой компьютер, пригодится разбор Stable Diffusion. Готовую картинку можно оживить в видео по инструкции как оживить фото нейросетью. Что сделать в Tensor Art для блога 1. Серию обложек для рилсов в одном стиле с одной LoRA. 2. Персонажа-маскота блога и его версии в разных сценах. 3. Аниме-версию своего фото для сторис или аватарки. 4. Фоны для каруселей в едином стиле. Частые вопросы Tensor Art бесплатный? Да, бесплатно дают около 50 кредитов в день. Можно ли писать промпт на русском? Можно, но большинство моделей лучше понимают английский. Что такое LoRA в Tensor Art? Небольшая надстройка к модели, которая добавляет конкретный стиль, персонажа или предмет. Можно ли обучить свою модель в Tensor Art? Да, на тарифе Pro можно обучить LoRA по своим фото. Чем Tensor Art отличается от Civitai? Оба сервиса собирают модели сообщества. Tensor Art удобнее для генерации прямо в браузере без своей видеокарты. Официальные страницы и источники: Tensor Art, обзор Tensor Art 2026, тарифы Tensor Art. Что делать дальше Выберите в Tensor Art одну модель под стиль своего блога и сделайте пять обложек с одинаковым промптом и разными сценами. Так появится узнаваемый визуал без дизайнера. Как визуал из нейросетей превращается в подписчиков и заявки, я разобрал на своём примере: как я веду рилсы через нейросети. Проверено 8 октября 2026 года."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/tensor-art/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/tensor-art.webp?v=94a1c075f6" alt="Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Tensor Art: нейросеть для картинок на моделях Stable Diffusion и Flux, как пользоваться в 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Tensor Art по шагам: генерация картинок на тысячах готовых моделей и LoRA, 50 бесплатных кредитов в день, тариф Pro около 10 долларов, обучение своей модели, рабочие процессы ComfyUI в браузере, работа на русском и из России.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Tensor Art это сайт, где можно генерировать картинки на тысячах готовых моделей, которые выкладывают сами пользователи: аниме, фэнтези, фотореализм, иллюстрации, логотипы. Под капотом модели семейств Stable Diffusion и Flux плюс LoRA, маленькие дообученные надстройки под конкретный стиль или персонажа. Бесплатно сервис даёт около 50 кредитов в день, платный Pro стоит около 10 долларов в месяц и даёт 300 кредитов в день.</p>
+<p>Главное преимущество Tensor Art перед Midjourney в выборе: под почти любой стиль уже есть готовая модель, и не нужно ставить ничего на свой компьютер.</p>
+<h2 id="sec-0">Что умеет Tensor Art</h2>
+<table class="gp-table"><thead><tr><th>Функция</th><th>Что делает</th><th>Для чего</th></tr></thead><tbody><tr><td>Текст в картинку</td><td>генерация по описанию</td><td>обложки, иллюстрации</td></tr><tr><td>Готовые модели</td><td>тысячи стилей от сообщества</td><td>аниме, реализм, арт</td></tr><tr><td>LoRA</td><td>надстройка под стиль или персонажа</td><td>единый образ в серии</td></tr><tr><td>Картинка в картинку</td><td>переделка по образцу</td><td>новый стиль своего фото</td></tr><tr><td>Обучение модели</td><td>своя LoRA по вашим фото</td><td>персонаж, товар</td></tr><tr><td>Рабочие процессы</td><td>схемы ComfyUI прямо в браузере</td><td>сложные цепочки обработки</td></tr></tbody></table>
+<h2 id="sec-1">Как сделать картинку в Tensor Art по шагам</h2>
+<ol><li>Зайдите на tensor.art и войдите через Google или почту.</li><li>Откройте раздел моделей и выберите модель под стиль, глядя на примеры работ.</li><li>Нажмите запуск модели, откроется окно генерации.</li><li>Напишите промпт на английском: кто или что, где, свет, стиль.</li><li>В негативный промпт добавьте то, чего не должно быть: лишние пальцы, размытость, текст.</li><li>Выберите размер. Для рилса берите вертикальный формат, для поста квадрат.</li><li>Запустите генерацию и скачайте понравившийся вариант.</li></ol>
+<h3>Настройки, которые меняют результат сильнее всего</h3>
+<ul><li>Модель важнее промпта: один и тот же текст в аниме-модели и в реалистичной даёт разные миры.</li><li>LoRA подключайте по одной-две, иначе стили смешиваются.</li><li>Сила LoRA около 0,6-0,8 обычно даёт стиль без искажений.</li><li>Число шагов 25-30 хватает для большинства моделей. Больше тратит кредиты без заметной разницы.</li></ul>
+<h2 id="sec-2">Сколько стоит Tensor Art</h2>
+<table class="gp-table"><thead><tr><th>План</th><th>Цена</th><th>Кредиты</th><th>Что даёт</th></tr></thead><tbody><tr><td>Free</td><td>0</td><td>около 50 в день</td><td>1 задача одновременно, разрешение до 1536 на 1024</td></tr><tr><td>Pro</td><td>около 10 долларов в месяц</td><td>около 300 в день</td><td>параллельные задачи, разрешение до 3840 на 2160, обучение своих моделей</td></tr><tr><td>Годовой Pro</td><td>около 60-70 долларов в год по акциям</td><td>как у Pro</td><td>дешевле в пересчёте на месяц</td></tr></tbody></table>
+<p>Цена картинки в кредитах зависит от модели и настроек, поэтому 50 кредитов не равны 50 картинкам. В часы пик бесплатные задачи стоят в очереди дольше.</p>
+<h2 id="sec-3">Tensor Art на русском и из России</h2>
+<p>Интерфейс на английском, промпты лучше писать по-английски: большинство моделей обучены на английских описаниях. Сайт открывается в браузере, при сбоях помогает VPN. Оплата Pro идёт зарубежной картой.</p>
+<h2 id="sec-4">Tensor Art и другие нейросети</h2>
+<p>Если нужна картинка без выбора моделей, проще <a href="/guides/midjourney/">Midjourney</a> или <a href="/guides/nano-banana/">Nano Banana</a>. Тем, кто хочет ставить Stable Diffusion на свой компьютер, пригодится разбор <a href="/guides/stable-diffusion/">Stable Diffusion</a>. Готовую картинку можно оживить в видео по инструкции <a href="/guides/kak-ozhivit-foto-neyrosetyu/">как оживить фото нейросетью</a>.</p>
+<h2 id="sec-5">Что сделать в Tensor Art для блога</h2>
+<ol><li>Серию обложек для рилсов в одном стиле с одной LoRA.</li><li>Персонажа-маскота блога и его версии в разных сценах.</li><li>Аниме-версию своего фото для сторис или аватарки.</li><li>Фоны для каруселей в едином стиле.</li></ol>
+<h2 id="sec-6">Частые вопросы</h2>
+<p><b>Tensor Art бесплатный?</b> Да, бесплатно дают около 50 кредитов в день.</p>
+<p><b>Можно ли писать промпт на русском?</b> Можно, но большинство моделей лучше понимают английский.</p>
+<p><b>Что такое LoRA в Tensor Art?</b> Небольшая надстройка к модели, которая добавляет конкретный стиль, персонажа или предмет.</p>
+<p><b>Можно ли обучить свою модель в Tensor Art?</b> Да, на тарифе Pro можно обучить LoRA по своим фото.</p>
+<p><b>Чем Tensor Art отличается от Civitai?</b> Оба сервиса собирают модели сообщества. Tensor Art удобнее для генерации прямо в браузере без своей видеокарты.</p>
+<p>Официальные страницы и источники: <a href="https://tensor.art/" target="_blank" rel="noopener">Tensor Art</a>, <a href="https://aisotools.com/blog/tensor-art-review-2026" target="_blank" rel="noopener">обзор Tensor Art 2026</a>, <a href="https://toolradar.com/tools/tensor-art/pricing" target="_blank" rel="noopener">тарифы Tensor Art</a>.</p>
+<h2 id="sec-7">Что делать дальше</h2>
+<p>Выберите в Tensor Art одну модель под стиль своего блога и сделайте пять обложек с одинаковым промптом и разными сценами. Так появится узнаваемый визуал без дизайнера.</p>
+<p>Как визуал из нейросетей превращается в подписчиков и заявки, я разобрал на своём примере: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=tensor-art" target="_blank" rel="noopener">как я веду рилсы через нейросети</a>.</p>
+<p>Проверено 8 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/gpt-5/"><span class="rc-cover"><img src="/covers/gpt-5.webp?v=2d95fb1664" alt="GPT-5: что это за модель OpenAI и чем её заменил GPT-6 в 2026 году" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">GPT-5: что это за модель OpenAI и чем её заменил GPT-6 в 2026 году</span><span class="rc-desc">GPT-5 простыми словами: когда вышел, чем отличались версии 5.1 и 5.6 Sol, Terra, Luna…</span></a><a class="gp-related-card" href="/guides/mistral-ai/"><span class="rc-cover"><img src="/covers/mistral-ai.webp?v=d839ca5382" alt="Mistral AI: французская нейросеть и чат Le Chat, как пользоваться в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Mistral AI: французская нейросеть и чат Le Chat, как пользоваться в 2026</span><span class="rc-desc">Mistral AI по шагам: чат Le Chat бесплатно и на тарифе Pro за 14,99 доллара, модели…</span></a><a class="gp-related-card" href="/guides/napkin-ai/"><span class="rc-cover"><img src="/covers/napkin-ai.webp?v=499fc3afc5" alt="Napkin AI: нейросеть для схем и инфографики из текста, как пользоваться в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Napkin AI: нейросеть для схем и инфографики из текста, как пользоваться в 2026</span><span class="rc-desc">Napkin AI по шагам: схема, майнд-карта и инфографика из обычного текста за минуту…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-otvetov-na-voprosy/"><span class="rc-cover"><img src="/covers/neyroset-dlya-otvetov-na-voprosy.webp?v=3d09d18458" alt="Нейросеть для ответов на вопросы: 8 сервисов бесплатно и на русском в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для ответов на вопросы: 8 сервисов бесплатно и на русском в 2026</span><span class="rc-desc">Какая нейросеть лучше отвечает на вопросы в 2026: ChatGPT, Perplexity, Claude…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=0bc65b3656"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "tensor-art";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=52c5b988a6"></script>
+
+
+</body></html>

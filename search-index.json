@@ -54,6 +54,20 @@
     ]
   },
   {
+    "slug": "character-ai",
+    "title": "Character AI: что это за нейросеть, как пользоваться и создать своего персонажа в 2026",
+    "desc": "Character AI по шагам: как начать чат с персонажем, как создать своего героя, что даёт подписка c.ai+, работает ли сервис на русском и из России, ограничения для подростков в 2026 году.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/character-ai/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "chat-bot-dlya-biznesa",
     "title": "Чат-бот для бизнеса: какие задачи он закрывает и когда он окупается",
     "desc": "Чат-бот для бизнеса: какие задачи реально решает, сколько стоит запуск и поддержка, когда он окупается и в каких случаях бот только мешает продажам.",
@@ -121,6 +135,20 @@
     ]
   },
   {
+    "slug": "claude-code",
+    "title": "Claude Code: что это, как установить и пользоваться в 2026, цены и тарифы",
+    "desc": "Claude Code по шагам: установка одной командой на Mac, Windows и Linux, первый запуск, какие задачи отдавать агенту, тарифы Pro и Max, как работать из России и не тратить лимиты впустую.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 8,
+    "url": "/guides/claude-code/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "avtomatizaciya"
+    ]
+  },
+  {
     "slug": "claude-neyroset",
     "title": "Claude нейросеть: что это, чем отличается от ChatGPT и как пользоваться из России",
     "desc": "Claude от Anthropic: какие модели есть сейчас, сколько стоят тарифы Pro и Max, чем Claude сильнее ChatGPT в текстах и работе с файлами, как зайти из России и с каких задач начать.",
@@ -128,6 +156,48 @@
     "level": "Новичок",
     "min": 12,
     "url": "/guides/claude-neyroset/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "codex",
+    "title": "Codex от OpenAI: что это, как пользоваться и сколько стоит в 2026",
+    "desc": "Codex от OpenAI по шагам: что умеет агент для кода, где он работает (веб, приложение, терминал, редактор), как запустить первую задачу, какие тарифы ChatGPT его включают и как работать из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/codex/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "avtomatizaciya"
+    ]
+  },
+  {
+    "slug": "comfyui",
+    "title": "ComfyUI: что это, как установить и пользоваться на русском в 2026, требования к видеокарте",
+    "desc": "ComfyUI по шагам: установка через Desktop на Windows и Mac, требования к видеокарте и памяти, первый воркфлоу для картинки, где брать модели и готовые схемы, Comfy Cloud без своей видеокарты.",
+    "category": "Claude Code",
+    "level": "Средний",
+    "min": 9,
+    "url": "/guides/comfyui/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "copilot",
+    "title": "Copilot от Microsoft: как пользоваться бесплатно, в Word и Excel, на русском в 2026",
+    "desc": "Microsoft Copilot по шагам: бесплатный чат на сайте и в приложении, Copilot в Word, Excel и PowerPoint по подписке Microsoft 365, что стало с Copilot Pro, GitHub Copilot для кода, как работать из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/copilot/",
     "tags": [
       "neuroseti",
       "instrumenty",
@@ -232,6 +302,20 @@
     ]
   },
   {
+    "slug": "freepik",
+    "title": "Freepik в 2026: как пользоваться, скачивать бесплатно и что изменилось после ребрендинга в Magnific",
+    "desc": "Freepik по шагам: фото, векторы и шаблоны, как скачать бесплатно с указанием автора, ИИ-генератор картинок и видео, тарифы Premium, почему сайт теперь называется Magnific и как работать из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/freepik/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "gamma-ai",
     "title": "Gamma AI: как сделать презентацию нейросетью за 5 минут в 2026 году",
     "desc": "Gamma AI по шагам: презентация по одной фразе или из готового текста, темы и картинки, экспорт в PowerPoint и PDF, 400 бесплатных кредитов, тарифы Plus и Pro, работа из России и как сделать карусель для соцсетей.",
@@ -298,6 +382,20 @@
       "neuroseti",
       "instrumenty",
       "kontent"
+    ]
+  },
+  {
+    "slug": "google-ai-studio",
+    "title": "Google AI Studio: как пользоваться бесплатно Gemini, создавать приложения и ключ API в 2026",
+    "desc": "Google AI Studio по шагам: бесплатный доступ к моделям Gemini, чат с файлами, генерация картинок и видео, режим Build для приложений без кода, как получить API-ключ и какие лимиты у бесплатного уровня.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 8,
+    "url": "/guides/google-ai-studio/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "avtomatizaciya"
     ]
   },
   {
@@ -750,6 +848,20 @@
     ]
   },
   {
+    "slug": "kimi-ai",
+    "title": "Kimi: китайская нейросеть от Moonshot AI, как пользоваться на русском в 2026",
+    "desc": "Kimi по шагам: что умеет нейросеть Moonshot AI, модель Kimi K2.6, длинные документы, поиск, слайды и агентный режим, как зарегистрироваться и работать на русском и из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/kimi-ai/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "kitayskie-neyroseti-besplatno",
     "title": "Китайские нейросети бесплатно: какие работают из России и что они реально умеют",
     "desc": "Обзор китайских нейросетей, доступных без оплаты: чаты для текста, генерация видео и картинок, работа с русским языком, вход без зарубежной карты и честные ограничения каждой.",
@@ -912,6 +1024,20 @@
     "tags": [
       "video",
       "neuroseti",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "magnific-ai",
+    "title": "Magnific AI: апскейлер для улучшения качества фото, как пользоваться и цены в 2026",
+    "desc": "Magnific AI по шагам: как увеличить и улучшить качество фото и картинок нейросетью, режимы Creative и Precision, настройки Creativity и HDR, тарифы на кредитах после объединения с Freepik и работа из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/magnific-ai/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
       "kontent"
     ]
   },
@@ -2255,6 +2381,20 @@
       "instagram",
       "reels",
       "ohvat"
+    ]
+  },
+  {
+    "slug": "openrouter",
+    "title": "OpenRouter: что это, как пользоваться, оплатить из России и бесплатные модели в 2026",
+    "desc": "OpenRouter по шагам: один ключ API к сотням нейросетей (GPT, Claude, Gemini, DeepSeek), как пополнить баланс, комиссия 5,5%, бесплатные модели и их лимиты, как подключить к боту и сервисам.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/openrouter/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "avtomatizaciya"
     ]
   },
   {

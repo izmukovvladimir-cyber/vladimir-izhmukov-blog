@@ -40,6 +40,20 @@
     ]
   },
   {
+    "slug": "canva-neyroset",
+    "title": "Canva нейросеть: Canva AI 2.0 и Magic Studio, как пользоваться в 2026",
+    "desc": "Нейросеть Canva по шагам: дизайн в диалоге Canva AI 2.0, Magic Write, удаление фона, расширение картинки, перевод и дубляж видео, лимиты ИИ на Free и Pro и работа из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/canva-neyroset/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "capcut",
     "title": "CapCut: как монтировать видео и рилсы в 2026 году, бесплатно и в Pro",
     "desc": "CapCut по шагам: монтаж рилса на телефоне и компьютере, автосубтитры на русском, удаление фона, шаблоны, ИИ-функции, чем бесплатная версия отличается от Pro, цены и оплата из России.",
@@ -260,6 +274,20 @@
     ]
   },
   {
+    "slug": "descript",
+    "title": "Descript: монтаж видео через текст с нейросетью, как пользоваться в 2026",
+    "desc": "Descript по шагам: монтаж правкой транскрипта, ИИ-соредактор Underlord, Studio Sound, удаление слов-паразитов, клон голоса, бесплатный план и тарифы, есть ли русский.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/descript/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "dreamina",
     "title": "Dreamina: нейросеть от CapCut для картинок и видео, как пользоваться бесплатно",
     "desc": "Dreamina по шагам: генерация картинок и видео по тексту и фото, бесплатные ежедневные кредиты, модели Seedance и Seedream внутри, говорящий аватар, тарифы Standard, Pro и Ultra, промпты и работа из России в 2026 году.",
@@ -285,6 +313,20 @@
       "neuroseti",
       "instrumenty",
       "video"
+    ]
+  },
+  {
+    "slug": "faceapp",
+    "title": "FaceApp: приложение для изменения лица на фото, как пользоваться в 2026",
+    "desc": "FaceApp по шагам: фильтры возраста, причёски, улыбки и макияжа, ретушь Retouch, смена эмоций, есть ли версия на компьютер, цены PRO и как оплатить из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/faceapp/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
     ]
   },
   {
@@ -561,6 +603,20 @@
     "tags": [
       "neuroseti",
       "biznes"
+    ]
+  },
+  {
+    "slug": "invideo-ai",
+    "title": "InVideo AI: нейросеть для создания видео, как пользоваться и цены в 2026",
+    "desc": "InVideo AI по шагам: агент Agent Two, монтаж текстовыми командами, модели Veo 3.1, Sora 2, Kling и Seedance внутри, тарифы Starter, Plus, Max на кредитах.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/invideo-ai/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
     ]
   },
   {
@@ -958,6 +1014,20 @@
     ]
   },
   {
+    "slug": "lensa",
+    "title": "Lensa: приложение для ретуши фото и ИИ-аватаров, как пользоваться в 2026",
+    "desc": "Lensa по шагам: ретушь селфи, удаление объектов, Magic Avatars в разных стилях, замена фона, AI Effects, русский язык и цены подписки и пакетов аватаров.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 5,
+    "url": "/guides/lensa/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "leonardo-ai",
     "title": "Leonardo AI: как пользоваться нейросетью для картинок бесплатно в 2026 году",
     "desc": "Leonardo AI по шагам: регистрация, 150 бесплатных токенов в день, модели Phoenix, Kino XL и Anime XL, оживление картинки в видео, тарифы, работа из России и готовые промпты для обложек и постов.",
@@ -1063,6 +1133,20 @@
     "level": "Новичок",
     "min": 11,
     "url": "/guides/midjourney/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "minimax-ai",
+    "title": "MiniMax AI: нейросеть для видео, текста и голоса, как пользоваться в 2026",
+    "desc": "MiniMax AI по шагам: видео H3 в Hailuo, языковая модель M3 с контекстом 1M токенов, клонирование голоса Speech 2.8, музыка Music 3.0, цены и бесплатный доступ.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/minimax-ai/",
     "tags": [
       "neuroseti",
       "instrumenty",
@@ -2453,6 +2537,34 @@
     ]
   },
   {
+    "slug": "pika-ai",
+    "title": "Pika AI: нейросеть для создания видео, как пользоваться и цены в 2026",
+    "desc": "Pika AI по шагам: Video Studio для роликов до 30 секунд, Pika 2.5 и Pikaframes, Seedance 2.5 и MiniMax H3 внутри, звук и музыка, бесплатный план и тарифы.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/pika-ai/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "pixlr",
+    "title": "Pixlr: бесплатный онлайн фоторедактор с нейросетью, как пользоваться в 2026",
+    "desc": "Pixlr по шагам: Express и Editor на русском, ИИ-генератор картинок, Generative Fill, удаление фона и апскейл, тарифы Plus, Premium, Ultra и сколько кредитов дают.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/pixlr/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "pixverse",
     "title": "PixVerse: как сделать видео нейросетью бесплатно в 2026 году, эффекты и тарифы",
     "desc": "PixVerse по шагам: видео из фото и текста, вирусные эффекты и шаблоны, звук и ролики до 10 секунд, 30 бесплатных кредитов в день, тарифы от 10 долларов, расход кредитов, работа из России и идеи для рилсов.",
@@ -2715,6 +2827,20 @@
     ]
   },
   {
+    "slug": "seedream",
+    "title": "Seedream: нейросеть ByteDance для генерации картинок, как пользоваться в 2026",
+    "desc": "Seedream по шагам: версии 5.0 Pro и 5.0 Lite, где попробовать бесплатно в Dreamina, до 14 референсов, разрешение до 4K через API, текст на картинке и цены.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/seedream/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "shedevrum",
     "title": "Шедеврум: что это за нейросеть Яндекса и как ей пользоваться в 2026 году",
     "desc": "Шедеврум от Яндекса: как сгенерировать картинку и видео по тексту, как писать запросы на русском, где скачать приложение, чем он отличается от Midjourney и как использовать картинки для блога.",
@@ -2848,6 +2974,20 @@
     "level": "Новичок",
     "min": 8,
     "url": "/guides/tensor-art/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "topaz-labs",
+    "title": "Topaz Labs: улучшение качества видео и фото нейросетью, цены в 2026",
+    "desc": "Topaz Labs по шагам: Topaz Video для апскейла видео до 4K, Gigapixel и Topaz Photo для фото, подписка Studio вместо бессрочных лицензий, пробная версия и цены.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/topaz-labs/",
     "tags": [
       "neuroseti",
       "instrumenty",

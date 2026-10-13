@@ -14,6 +14,20 @@
     ]
   },
   {
+    "slug": "adobe-podcast",
+    "title": "Adobe Podcast Enhance Speech: как улучшить звук голоса онлайн бесплатно в 2026",
+    "desc": "Adobe Podcast по шагам: Enhance Speech убирает шум и эхо из голоса, лимиты бесплатного плана, что даёт Firefly Pro, работа с русской речью и оплата из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 5,
+    "url": "/guides/adobe-podcast/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "avtovoronka",
     "title": "Автоворонка: что это, как работает и как сделать автоворонку продаж в Telegram и Instagram",
     "desc": "Автоворонка простыми словами: что это такое, из каких этапов состоит, примеры автоворонок для экспертов, как сделать автоворонку в Telegram и Instagram и какие ошибки съедают продажи.",
@@ -119,6 +133,20 @@
     "url": "/guides/chat-gpt-na-russkom/",
     "tags": [
       "neuroseti"
+    ]
+  },
+  {
+    "slug": "chatgpt-atlas",
+    "title": "ChatGPT Atlas закрыт: что случилось с браузером OpenAI и чем его заменить в 2026",
+    "desc": "ChatGPT Atlas больше не работает с 9 августа 2026. Что это был за браузер, чем OpenAI его заменила, как перенести закладки и пароли в Chrome и какие есть альтернативы.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 5,
+    "url": "/guides/chatgpt-atlas/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
     ]
   },
   {
@@ -469,6 +497,20 @@
     ]
   },
   {
+    "slug": "gptzero",
+    "title": "GPTZero: как проверить текст на ИИ онлайн, работает ли с русским в 2026",
+    "desc": "GPTZero по шагам: проверка текста на нейросеть, поддержка русского языка, Advanced Scan, расширение Chrome, лимиты бесплатного плана и цены Premium и Professional.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 5,
+    "url": "/guides/gptzero/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "grok-neyroset",
     "title": "Grok нейросеть: что умеет чат-бот от xAI и как им пользоваться в 2026 году",
     "desc": "Grok по шагам: вход без аккаунта X, свежие ответы из сети и X, генерация картинок и видео Grok Imagine, лимиты бесплатного плана, тарифы SuperGrok Lite за 10, SuperGrok за 30 и Heavy за 300 долларов, работа из России.",
@@ -613,6 +655,20 @@
     "level": "Новичок",
     "min": 7,
     "url": "/guides/invideo-ai/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "kaiber-ai",
+    "title": "Kaiber AI: нейросеть для клипов под музыку, Canvas и Beat Sync, как пользоваться в 2026",
+    "desc": "Kaiber AI по шагам: что стало с Superstudio, как работают Canvas, Beat Sync и Editor, как нарезать клипы под бит для Reels, тарифы Starter, Creator, Pro и пробный период за 5 долларов.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/kaiber-ai/",
     "tags": [
       "neuroseti",
       "instrumenty",
@@ -1007,6 +1063,20 @@
     "level": "Новичок",
     "min": 8,
     "url": "/guides/krea-ai/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "lalal-ai",
+    "title": "LALAL.AI: как отделить голос от музыки онлайн нейросетью, инструкция 2026",
+    "desc": "LALAL.AI по шагам: убрать фоновую музыку из видео, отделить вокал и минус, Voice Cleaner, как считаются минуты, тарифы Starter, Lite и Pro.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 5,
+    "url": "/guides/lalal-ai/",
     "tags": [
       "neuroseti",
       "instrumenty",
@@ -2537,6 +2607,20 @@
     ]
   },
   {
+    "slug": "picsart",
+    "title": "Picsart: фоторедактор с нейросетью на русском, как пользоваться и сколько стоит в 2026",
+    "desc": "Picsart по шагам: удаление фона, генерация видео и картинок, Batch Editor, тарифы Pro и Ultra, кредиты и как сделать обложку для рилса.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/picsart/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "pika-ai",
     "title": "Pika AI: нейросеть для создания видео, как пользоваться и цены в 2026",
     "desc": "Pika AI по шагам: Video Studio для роликов до 30 секунд, Pika 2.5 и Pikaframes, Seedance 2.5 и MiniMax H3 внутри, звук и музыка, бесплатный план и тарифы.",
@@ -2813,6 +2897,20 @@
     ]
   },
   {
+    "slug": "seaart-ai",
+    "title": "SeaArt AI: нейросеть для генерации картинок и видео на русском, как пользоваться в 2026",
+    "desc": "SeaArt AI по шагам: как сделать видео 9:16 для Reels, какие модели внутри (Seedance, Kling, Veo, Flux), что такое Stamina, тарифы Beginner, Standard, Professional и Master.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/seaart-ai/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "seedance",
     "title": "Seedance: нейросеть ByteDance для видео, как пользоваться в 2026 году",
     "desc": "Seedance 2.0 по шагам: видео по тексту и по фото со звуком, где попробовать бесплатно (Dreamina, CapCut), сколько стоит, как писать промпт для ролика 5-10 секунд, чем Seedance отличается от Kling и Veo, работа из России.",
@@ -3023,6 +3121,20 @@
     ]
   },
   {
+    "slug": "turboscribe",
+    "title": "TurboScribe: расшифровка аудио и видео в текст бесплатно, как пользоваться в 2026",
+    "desc": "TurboScribe по шагам: как перевести аудио и видео в текст на русском, режимы Cheetah, Dolphin и Whale, субтитры SRT, лимиты бесплатного плана и цена Unlimited.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 5,
+    "url": "/guides/turboscribe/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "udio",
     "title": "Udio: нейросеть для создания музыки и песен, как пользоваться в 2026 году",
     "desc": "Udio по шагам: песня по описанию за минуту, свой текст и вокал, продление трека, 10 кредитов в день на бесплатном плане, тарифы 10 и 30 долларов, коммерческие права только на Pro, работа из России и музыка для рилсов.",
@@ -3037,6 +3149,20 @@
     ]
   },
   {
+    "slug": "upscayl",
+    "title": "Upscayl: бесплатная программа для увеличения качества фото нейросетью, как пользоваться",
+    "desc": "Upscayl по шагам: как скачать, выбрать модель и увеличить разрешение картинки на своём компьютере, требования к видеокарте, Upscayl Cloud и его цены.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 5,
+    "url": "/guides/upscayl/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
     "slug": "vaybkoding",
     "title": "Вайбкодинг: что это такое и как сделать первое приложение без знания кода",
     "desc": "Вайбкодинг простыми словами: откуда термин, как создавать сайты, ботов и приложения через нейросеть без программирования, какие инструменты выбрать (Claude Code, Cursor, Lovable, Bolt), пошаговый план первого проекта и ошибки новичков.",
@@ -3044,6 +3170,20 @@
     "level": "Новичок",
     "min": 11,
     "url": "/guides/vaybkoding/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "kontent"
+    ]
+  },
+  {
+    "slug": "veed",
+    "title": "VEED: онлайн видеоредактор с автосубтитрами на русском, как пользоваться в 2026",
+    "desc": "VEED по шагам: автосубтитры для Reels на русском, перевод и дубляж, Magic Cut, удаление пауз, тарифы Creator, Pro и Studio и что даёт бесплатный план.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/veed/",
     "tags": [
       "neuroseti",
       "instrumenty",

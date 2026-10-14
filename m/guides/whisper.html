@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Whisper от OpenAI по шагам: расшифровка аудио и видео в текст, русский язык, какую модель выбрать, сколько нужно видеопамяти, установка на компьютер и транскрибация через API.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/whisper/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026">
+<meta property="og:description" content="Whisper от OpenAI по шагам: расшифровка аудио и видео в текст, русский язык, какую модель выбрать, сколько нужно видеопамяти, установка на компьютер и транскрибация через API.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/whisper/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/whisper.webp?v=53512fb042">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-14T08:00:00Z">
+<meta property="article:modified_time" content="2026-10-14T08:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026">
+<meta name="twitter:description" content="Whisper от OpenAI по шагам: расшифровка аудио и видео в текст, русский язык, какую модель выбрать, сколько нужно видеопамяти, установка на компьютер и транскрибация через API.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/whisper.webp?v=53512fb042">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/whisper.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/whisper/#article",
+      "headline": "Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026",
+      "description": "Whisper от OpenAI по шагам: расшифровка аудио и видео в текст, русский язык, какую модель выбрать, сколько нужно видеопамяти, установка на компьютер и транскрибация через API.",
+      "datePublished": "2026-10-14T08:00:00Z",
+      "dateModified": "2026-10-14T08:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, instrumenty, kontent",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/whisper/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/whisper/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/whisper.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026 Владимир Ижмуков · автор системы роста Instagram через короткие ролики Whisper это открытая нейросеть OpenAI для распознавания речи: она переводит аудио и видео в текст и умеет переводить речь с других языков на английский. Код и веса модели выложены под лицензией MIT, поэтому Whisper можно бесплатно поставить на свой компьютер. Русский язык поддерживается мультиязычными моделями. Если ставить ничего не хочется, та же задача решается через API OpenAI, там Whisper доступен как модель whisper-1. Какую модель Whisper выбрать | Модель | Параметров | Видеопамяти | Скорость к large | |---|---|---|---| | tiny | 39 млн | около 1 ГБ | примерно в 10 раз быстрее | | base | 74 млн | около 1 ГБ | быстрее | | small | 244 млн | около 2 ГБ | быстрее | | medium | 769 млн | около 5 ГБ | быстрее | | turbo | 809 млн | около 6 ГБ | примерно в 8 раз быстрее | | large | 1 550 млн | около 10 ГБ | эталон | Turbo это ускоренная версия large-v3, в командной строке Whisper она стоит по умолчанию. Для русской речи берите мультиязычные модели: версии с окончанием .en знают только английский. Переводить речь на английский turbo не обучена, для перевода нужна medium или large. Как выбрать под свой компьютер - Видеокарта на 6 ГБ и больше: turbo, это лучший баланс скорости и точности. - Слабый компьютер: small или base, точности хватит для черновой расшифровки. - Важна каждая фраза, например интервью: large и время на ожидание. Как установить Whisper на компьютер 1. Установите Python версии от 3.8 до 3.11. 2. Установите ffmpeg, он нужен для чтения аудио и видео. 3. В терминале выполните pip install -U openai-whisper. 4. Запустите расшифровку командой whisper audio.mp3 --model turbo --language Russian. 5. Рядом с файлом появятся текст и субтитры. Флаг --language Russian подсказывает модели язык, так она реже ошибается на первых секундах. Как расшифровать аудио через API без установки 1. Получите ключ API в кабинете разработчика OpenAI. 2. Отправьте файл на адрес /v1/audio/transcriptions. 3. Выберите модель: для обычной расшифровки документация сейчас рекомендует gpt-transcribe, для разметки по спикерам gpt-4o-transcribe-diarize, для таймкодов и субтитров whisper-1. 4. Получите текст в ответе. | Ограничение API | Значение | |---|---| | Размер файла | до 25 МБ | | Форматы | mp3, mp4, mpeg, mpga, m4a, wav, webm | | Языков у whisper-1 | 98 | Длинную запись режьте на куски меньше 25 МБ. Цену за минуту страница тарифов OpenAI на дату проверки не открыла, её показывает кабинет разработчика. Где Whisper пригодится блогеру - Расшифровать свой голосовой поток мыслей и превратить его в пост. - Сделать субтитры к ролику: Whisper сразу выдаёт файл субтитров. - Вытащить текст из чужого интервью, чтобы разобрать структуру. Если хочется без терминала и сразу в браузере, посмотрите TurboScribe, он построен на распознавании речи. Субтитры к роликам разобраны в статье нейросеть для субтитров, озвучка текста в материале озвучка нейросетью. Частые вопросы Whisper бесплатный? Да, модель открытая, лицензия MIT. Платно только использование через API OpenAI. Понимает ли Whisper русский язык? Да, мультиязычные модели понимают русский, флаг --language Russian повышает точность. Какая модель Whisper лучшая? По точности large, по балансу скорости и точности turbo. Нужна ли видеокарта? Требования растут с размером модели: tiny и base занимают около 1 ГБ видеопамяти, turbo около 6 ГБ, large около 10 ГБ. Какой максимальный файл в API? 25 МБ. Официальные страницы и источники: Whisper на GitHub, документация OpenAI для разработчиков, раздел Speech to text. Что делать дальше Расшифруйте свою следующую голосовую заметку и сделайте из неё текст под ролик. Свой голос в тексте читается лучше любого сгенерированного. Как я превращаю такие тексты в рилсы, которые досматривают, рассказал на своём примере: как я веду рилсы через нейросети. Проверено 14 октября 2026 года."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/whisper/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/whisper.webp?v=53512fb042" alt="Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Whisper нейросеть: как перевести аудио в текст бесплатно, модели и установка в 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Whisper от OpenAI по шагам: расшифровка аудио и видео в текст, русский язык, какую модель выбрать, сколько нужно видеопамяти, установка на компьютер и транскрибация через API.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Whisper это открытая нейросеть OpenAI для распознавания речи: она переводит аудио и видео в текст и умеет переводить речь с других языков на английский. Код и веса модели выложены под лицензией MIT, поэтому Whisper можно бесплатно поставить на свой компьютер. Русский язык поддерживается мультиязычными моделями. Если ставить ничего не хочется, та же задача решается через API OpenAI, там Whisper доступен как модель whisper-1.</p>
+<h2 id="sec-0">Какую модель Whisper выбрать</h2>
+<table class="gp-table"><thead><tr><th>Модель</th><th>Параметров</th><th>Видеопамяти</th><th>Скорость к large</th></tr></thead><tbody><tr><td>tiny</td><td>39 млн</td><td>около 1 ГБ</td><td>примерно в 10 раз быстрее</td></tr><tr><td>base</td><td>74 млн</td><td>около 1 ГБ</td><td>быстрее</td></tr><tr><td>small</td><td>244 млн</td><td>около 2 ГБ</td><td>быстрее</td></tr><tr><td>medium</td><td>769 млн</td><td>около 5 ГБ</td><td>быстрее</td></tr><tr><td>turbo</td><td>809 млн</td><td>около 6 ГБ</td><td>примерно в 8 раз быстрее</td></tr><tr><td>large</td><td>1 550 млн</td><td>около 10 ГБ</td><td>эталон</td></tr></tbody></table>
+<p>Turbo это ускоренная версия large-v3, в командной строке Whisper она стоит по умолчанию. Для русской речи берите мультиязычные модели: версии с окончанием .en знают только английский. Переводить речь на английский turbo не обучена, для перевода нужна medium или large.</p>
+<h3>Как выбрать под свой компьютер</h3>
+<ul><li>Видеокарта на 6 ГБ и больше: turbo, это лучший баланс скорости и точности.</li><li>Слабый компьютер: small или base, точности хватит для черновой расшифровки.</li><li>Важна каждая фраза, например интервью: large и время на ожидание.</li></ul>
+<h2 id="sec-1">Как установить Whisper на компьютер</h2>
+<ol><li>Установите Python версии от 3.8 до 3.11.</li><li>Установите ffmpeg, он нужен для чтения аудио и видео.</li><li>В терминале выполните pip install -U openai-whisper.</li><li>Запустите расшифровку командой whisper audio.mp3 --model turbo --language Russian.</li><li>Рядом с файлом появятся текст и субтитры.</li></ol>
+<p>Флаг --language Russian подсказывает модели язык, так она реже ошибается на первых секундах.</p>
+<h2 id="sec-2">Как расшифровать аудио через API без установки</h2>
+<ol><li>Получите ключ API в кабинете разработчика OpenAI.</li><li>Отправьте файл на адрес /v1/audio/transcriptions.</li><li>Выберите модель: для обычной расшифровки документация сейчас рекомендует gpt-transcribe, для разметки по спикерам gpt-4o-transcribe-diarize, для таймкодов и субтитров whisper-1.</li><li>Получите текст в ответе.</li></ol>
+<table class="gp-table"><thead><tr><th>Ограничение API</th><th>Значение</th></tr></thead><tbody><tr><td>Размер файла</td><td>до 25 МБ</td></tr><tr><td>Форматы</td><td>mp3, mp4, mpeg, mpga, m4a, wav, webm</td></tr><tr><td>Языков у whisper-1</td><td>98</td></tr></tbody></table>
+<p>Длинную запись режьте на куски меньше 25 МБ. Цену за минуту страница тарифов OpenAI на дату проверки не открыла, её показывает кабинет разработчика.</p>
+<h2 id="sec-3">Где Whisper пригодится блогеру</h2>
+<ul><li>Расшифровать свой голосовой поток мыслей и превратить его в пост.</li><li>Сделать субтитры к ролику: Whisper сразу выдаёт файл субтитров.</li><li>Вытащить текст из чужого интервью, чтобы разобрать структуру.</li></ul>
+<p>Если хочется без терминала и сразу в браузере, посмотрите <a href="/guides/turboscribe/">TurboScribe</a>, он построен на распознавании речи. Субтитры к роликам разобраны в статье <a href="/guides/neyroset-dlya-subtitrov/">нейросеть для субтитров</a>, озвучка текста в материале <a href="/guides/ozvuchka-neyrosetyu/">озвучка нейросетью</a>.</p>
+<h2 id="sec-4">Частые вопросы</h2>
+<p><b>Whisper бесплатный?</b> Да, модель открытая, лицензия MIT. Платно только использование через API OpenAI.</p>
+<p><b>Понимает ли Whisper русский язык?</b> Да, мультиязычные модели понимают русский, флаг --language Russian повышает точность.</p>
+<p><b>Какая модель Whisper лучшая?</b> По точности large, по балансу скорости и точности turbo.</p>
+<p><b>Нужна ли видеокарта?</b> Требования растут с размером модели: tiny и base занимают около 1 ГБ видеопамяти, turbo около 6 ГБ, large около 10 ГБ.</p>
+<p><b>Какой максимальный файл в API?</b> 25 МБ.</p>
+<p>Официальные страницы и источники: <a href="https://github.com/openai/whisper" target="_blank" rel="noopener">Whisper на GitHub</a>, <a href="https://developers.openai.com/" target="_blank" rel="noopener">документация OpenAI для разработчиков</a>, раздел Speech to text.</p>
+<h2 id="sec-5">Что делать дальше</h2>
+<p>Расшифруйте свою следующую голосовую заметку и сделайте из неё текст под ролик. Свой голос в тексте читается лучше любого сгенерированного.</p>
+<p>Как я превращаю такие тексты в рилсы, которые досматривают, рассказал на своём примере: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=whisper" target="_blank" rel="noopener">как я веду рилсы через нейросети</a>.</p>
+<p>Проверено 14 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/beautiful-ai/"><span class="rc-cover"><img src="/covers/beautiful-ai.webp?v=3ad57981c8" alt="Beautiful.ai: как сделать презентацию нейросетью, цены и есть ли бесплатная версия в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Beautiful.ai: как сделать презентацию нейросетью, цены и есть ли бесплатная версия в 2026</span><span class="rc-desc">Beautiful.ai по шагам: презентация из промпта или документа, умные слайды, бренд и…</span></a><a class="gp-related-card" href="/guides/clipdrop/"><span class="rc-cover"><img src="/covers/clipdrop.webp?v=42c50020c7" alt="Clipdrop: как убрать лишнее с фото, заменить фон и увеличить картинку онлайн в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Clipdrop: как убрать лишнее с фото, заменить фон и увеличить картинку онлайн в 2026</span><span class="rc-desc">Clipdrop по шагам: Cleanup, удаление и замена фона, Relight, Uncrop, увеличение до 16…</span></a><a class="gp-related-card" href="/guides/figma-ai/"><span class="rc-cover"><img src="/covers/figma-ai.webp?v=7a4fa25311" alt="Figma AI: что умеют нейросети в Figma, Figma Make и сколько стоят ИИ-кредиты в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Figma AI: что умеют нейросети в Figma, Figma Make и сколько стоят ИИ-кредиты в 2026</span><span class="rc-desc">Figma AI по шагам: Figma Make для прототипов по описанию, ИИ-функции в Figma Design…</span></a><a class="gp-related-card" href="/guides/fotor/"><span class="rc-cover"><img src="/covers/fotor.webp?v=25f9a5d640" alt="Fotor: онлайн фоторедактор с ИИ, как пользоваться и что даёт бесплатный план в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Fotor: онлайн фоторедактор с ИИ, как пользоваться и что даёт бесплатный план в 2026</span><span class="rc-desc">Fotor по шагам: обработка фото онлайн, удаление фона и лишних объектов, улучшение…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=dec6cbec42"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "whisper";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=52c5b988a6"></script>
+
+
+</body></html>

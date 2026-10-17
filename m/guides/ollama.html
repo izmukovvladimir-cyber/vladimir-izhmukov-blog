@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Ollama по шагам: установка на Windows, Mac и Linux, какую модель выбрать (Llama, Qwen, Gemma, DeepSeek), сколько нужно памяти, основные команды, приложение с чатом и тарифы облака Ollama.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/ollama/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026">
+<meta property="og:description" content="Ollama по шагам: установка на Windows, Mac и Linux, какую модель выбрать (Llama, Qwen, Gemma, DeepSeek), сколько нужно памяти, основные команды, приложение с чатом и тарифы облака Ollama.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/ollama/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/ollama.webp?v=c8b70743d6">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-17T08:20:00Z">
+<meta property="article:modified_time" content="2026-10-17T08:20:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026">
+<meta name="twitter:description" content="Ollama по шагам: установка на Windows, Mac и Linux, какую модель выбрать (Llama, Qwen, Gemma, DeepSeek), сколько нужно памяти, основные команды, приложение с чатом и тарифы облака Ollama.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/ollama.webp?v=c8b70743d6">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/ollama.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/ollama/#article",
+      "headline": "Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026",
+      "description": "Ollama по шагам: установка на Windows, Mac и Linux, какую модель выбрать (Llama, Qwen, Gemma, DeepSeek), сколько нужно памяти, основные команды, приложение с чатом и тарифы облака Ollama.",
+      "datePublished": "2026-10-17T08:20:00Z",
+      "dateModified": "2026-10-17T08:20:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, instrumenty, agenty",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/ollama/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/ollama/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/ollama.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026 Владимир Ижмуков · автор системы роста Instagram через короткие ролики Ollama это бесплатная программа, которая запускает открытые нейросети прямо на вашем компьютере: Llama, Qwen, Gemma, DeepSeek, gpt-oss и десятки других. Интернет нужен только чтобы скачать модель, дальше она работает локально, и ваши тексты никуда не уходят. Ollama ставится на Windows, macOS и Linux, у неё есть приложение с чатом для Windows и Mac, а лицензия MIT разрешает пользоваться ей бесплатно. Для облачных моделей есть тариф Pro за 20 долларов в месяц. Ниже показываю установку по шагам, как выбрать модель под ваш компьютер и какие команды понадобятся в первый день. Что нужно от компьютера | Система | Требования | |---|---| | Windows | Windows 10 22H2 или новее, от 4 ГБ места под программу, для видеокарты NVIDIA драйвер от 551.61 | | macOS | Sonoma 14 или новее, на Apple M работают процессор и видеочип, на Intel только процессор | | Linux | для NVIDIA нужна CUDA, для AMD нужен ROCm v7 | Главное ограничение это память. Модель должна поместиться в видеопамять или в единую память Mac, иначе Ollama возьмёт обычную оперативку и будет отвечать заметно медленнее. Например, для небольшой gemma4:e2b нужно около 7,2 ГБ на диске и рекомендуется 8 ГБ видеопамяти. Официальной таблицы «память под размер модели» у Ollama нет, поэтому ориентируйтесь на размер файла модели в библиотеке: памяти нужно чуть больше, чем весит модель. Как установить Ollama Windows 1. Скачайте OllamaSetup.exe на ollama.com/download. 2. Запустите установщик, права администратора не нужны. 3. После установки откроется приложение с окном чата. Если хотите хранить модели на другом диске, задайте путь переменной OLLAMA MODELS. macOS 1. Скачайте Ollama.dmg на ollama.com/download. 2. Перетащите Ollama в папку «Программы» и откройте. 3. В строке меню появится значок, а приложение с чатом откроется отдельным окном. Linux 1. Установите одной командой из официальной инструкции на ollama.com/download. 2. Ollama запустится как системный сервис. 3. Работа идёт в терминале, приложения с окном на Linux нет. Какую модель выбрать Самые скачиваемые модели в библиотеке Ollama на октябрь 2026 года: | Модель | Скачиваний | Для чего | |---|---|---| | llama3.1 | 120,4 млн | универсальная модель для текстов и чата | | deepseek-r1 | 93,8 млн | рассуждения, задачи с логикой | | llama3.2 | 85,6 млн | лёгкие версии для слабых компьютеров | | qwen2.5 | 42,7 млн | хорошо понимает русский, код | | gemma3 | 41,2 млн | тексты, картинки на входе | | qwen3 | 40,4 млн | новое поколение Qwen | | mistral | 33,9 млн | быстрая модель общего назначения | Из свежих популярны gemma4 (от E2B до 31B), qwen3.5 (от 0,8B до 122B), gpt-oss в версиях 20B и 120B и qwen3-coder для программирования. Как выбирать на практике 1. Ноутбук с 8 ГБ памяти: модели до 3-4 миллиардов параметров, например llama3.2 или gemma4:e2b. 2. Компьютер с видеокартой на 12-16 ГБ: модели 7-14 миллиардов параметров, qwen3 или gemma3. 3. Mac с 32 ГБ и больше или мощная видеокарта: модели 30 миллиардов параметров и выше. 4. Для русских текстов начните с Qwen или Gemma, они заметно лучше пишут по-русски, чем ранние Llama. Основные команды - ollama run qwen3 скачивает модель, если её нет, и открывает чат. - ollama pull gemma3 только скачивает модель. - ollama ls показывает скачанные модели. - ollama ps показывает, какие модели сейчас загружены в память. - ollama stop qwen3 выгружает модель из памяти. - ollama rm mistral удаляет модель с диска. - ollama create создаёт свою модель из файла настроек Modelfile, например с вашим системным промптом. - ollama serve запускает сервер вручную. У Ollama есть локальный API по адресу localhost:11434. Через него к модели подключаются другие программы: редакторы кода, чат-интерфейсы, автоматизации вроде n8n. Облако Ollama и тарифы Модели, которые не помещаются в ваш компьютер, можно запускать в облаке Ollama. Для этого к названию модели добавляется метка cloud, например gemma4:cloud. Промпты на обучение не используются. | Тариф | Цена | Что входит | |---|---|---| | Free | 0 | локально без ограничений, облако с оплатой по факту, 1 запрос одновременно | | Pro | 20 $ в месяц или 200 $ в год | 60 $ облачных кредитов в месяц, 3 запроса одновременно | | Max | 100 $ в месяц | 300 $ кредитов, 10 запросов одновременно | | Team | 500 $ в месяц | 1 000 $ кредитов | Неиспользованные кредиты на следующий месяц не переносятся. Ollama и агенты С 2026 года Ollama умеет запускать кодинг-агентов на своих моделях командами ollama launch claude, ollama launch codex и ollama launch opencode. Это удобный способ попробовать агента без подписки, но локальные модели слабее облачных лидеров. Чем агент отличается от чат-бота, разобрал в статье что такое ИИ-агент. Кому Ollama подходит - Тем, кто работает с приватными данными: договоры, переписка, внутренние документы. - Тем, кто хочет нейросеть без подписки и без лимитов. - Разработчикам, которым нужна…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/ollama/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/ollama.webp?v=c8b70743d6" alt="Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Ollama по шагам: установка на Windows, Mac и Linux, какую модель выбрать (Llama, Qwen, Gemma, DeepSeek), сколько нужно памяти, основные команды, приложение с чатом и тарифы облака Ollama.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Ollama это бесплатная программа, которая запускает открытые нейросети прямо на вашем компьютере: Llama, Qwen, Gemma, DeepSeek, gpt-oss и десятки других. Интернет нужен только чтобы скачать модель, дальше она работает локально, и ваши тексты никуда не уходят. Ollama ставится на Windows, macOS и Linux, у неё есть приложение с чатом для Windows и Mac, а лицензия MIT разрешает пользоваться ей бесплатно. Для облачных моделей есть тариф Pro за 20 долларов в месяц.</p>
+<p>Ниже показываю установку по шагам, как выбрать модель под ваш компьютер и какие команды понадобятся в первый день.</p>
+<h2 id="sec-0">Что нужно от компьютера</h2>
+<table class="gp-table"><thead><tr><th>Система</th><th>Требования</th></tr></thead><tbody><tr><td>Windows</td><td>Windows 10 22H2 или новее, от 4 ГБ места под программу, для видеокарты NVIDIA драйвер от 551.61</td></tr><tr><td>macOS</td><td>Sonoma 14 или новее, на Apple M работают процессор и видеочип, на Intel только процессор</td></tr><tr><td>Linux</td><td>для NVIDIA нужна CUDA, для AMD нужен ROCm v7</td></tr></tbody></table>
+<p>Главное ограничение это память. Модель должна поместиться в видеопамять или в единую память Mac, иначе Ollama возьмёт обычную оперативку и будет отвечать заметно медленнее. Например, для небольшой gemma4:e2b нужно около 7,2 ГБ на диске и рекомендуется 8 ГБ видеопамяти. Официальной таблицы «память под размер модели» у Ollama нет, поэтому ориентируйтесь на размер файла модели в библиотеке: памяти нужно чуть больше, чем весит модель.</p>
+<h2 id="sec-1">Как установить Ollama</h2>
+<h3>Windows</h3>
+<ol><li>Скачайте OllamaSetup.exe на ollama.com/download.</li><li>Запустите установщик, права администратора не нужны.</li><li>После установки откроется приложение с окном чата. Если хотите хранить модели на другом диске, задайте путь переменной OLLAMA_MODELS.</li></ol>
+<h3>macOS</h3>
+<ol><li>Скачайте Ollama.dmg на ollama.com/download.</li><li>Перетащите Ollama в папку «Программы» и откройте.</li><li>В строке меню появится значок, а приложение с чатом откроется отдельным окном.</li></ol>
+<h3>Linux</h3>
+<ol><li>Установите одной командой из официальной инструкции на ollama.com/download.</li><li>Ollama запустится как системный сервис.</li><li>Работа идёт в терминале, приложения с окном на Linux нет.</li></ol>
+<h2 id="sec-2">Какую модель выбрать</h2>
+<p>Самые скачиваемые модели в библиотеке Ollama на октябрь 2026 года:</p>
+<table class="gp-table"><thead><tr><th>Модель</th><th>Скачиваний</th><th>Для чего</th></tr></thead><tbody><tr><td>llama3.1</td><td>120,4 млн</td><td>универсальная модель для текстов и чата</td></tr><tr><td>deepseek-r1</td><td>93,8 млн</td><td>рассуждения, задачи с логикой</td></tr><tr><td>llama3.2</td><td>85,6 млн</td><td>лёгкие версии для слабых компьютеров</td></tr><tr><td>qwen2.5</td><td>42,7 млн</td><td>хорошо понимает русский, код</td></tr><tr><td>gemma3</td><td>41,2 млн</td><td>тексты, картинки на входе</td></tr><tr><td>qwen3</td><td>40,4 млн</td><td>новое поколение Qwen</td></tr><tr><td>mistral</td><td>33,9 млн</td><td>быстрая модель общего назначения</td></tr></tbody></table>
+<p>Из свежих популярны gemma4 (от E2B до 31B), qwen3.5 (от 0,8B до 122B), gpt-oss в версиях 20B и 120B и qwen3-coder для программирования.</p>
+<h3>Как выбирать на практике</h3>
+<ol><li>Ноутбук с 8 ГБ памяти: модели до 3-4 миллиардов параметров, например llama3.2 или gemma4:e2b.</li><li>Компьютер с видеокартой на 12-16 ГБ: модели 7-14 миллиардов параметров, qwen3 или gemma3.</li><li>Mac с 32 ГБ и больше или мощная видеокарта: модели 30 миллиардов параметров и выше.</li><li>Для русских текстов начните с Qwen или Gemma, они заметно лучше пишут по-русски, чем ранние Llama.</li></ol>
+<h2 id="sec-3">Основные команды</h2>
+<ul><li>ollama run qwen3 скачивает модель, если её нет, и открывает чат.</li><li>ollama pull gemma3 только скачивает модель.</li><li>ollama ls показывает скачанные модели.</li><li>ollama ps показывает, какие модели сейчас загружены в память.</li><li>ollama stop qwen3 выгружает модель из памяти.</li><li>ollama rm mistral удаляет модель с диска.</li><li>ollama create создаёт свою модель из файла настроек Modelfile, например с вашим системным промптом.</li><li>ollama serve запускает сервер вручную.</li></ul>
+<p>У Ollama есть локальный API по адресу localhost:11434. Через него к модели подключаются другие программы: редакторы кода, чат-интерфейсы, автоматизации вроде <a href="/guides/n8n/">n8n</a>.</p>
+<h2 id="sec-4">Облако Ollama и тарифы</h2>
+<p>Модели, которые не помещаются в ваш компьютер, можно запускать в облаке Ollama. Для этого к названию модели добавляется метка cloud, например gemma4:cloud. Промпты на обучение не используются.</p>
+<table class="gp-table"><thead><tr><th>Тариф</th><th>Цена</th><th>Что входит</th></tr></thead><tbody><tr><td>Free</td><td>0</td><td>локально без ограничений, облако с оплатой по факту, 1 запрос одновременно</td></tr><tr><td>Pro</td><td>20 $ в месяц или 200 $ в год</td><td>60 $ облачных кредитов в месяц, 3 запроса одновременно</td></tr><tr><td>Max</td><td>100 $ в месяц</td><td>300 $ кредитов, 10 запросов одновременно</td></tr><tr><td>Team</td><td>500 $ в месяц</td><td>1 000 $ кредитов</td></tr></tbody></table>
+<p>Неиспользованные кредиты на следующий месяц не переносятся.</p>
+<h2 id="sec-5">Ollama и агенты</h2>
+<p>С 2026 года Ollama умеет запускать кодинг-агентов на своих моделях командами ollama launch claude, ollama launch codex и ollama launch opencode. Это удобный способ попробовать агента без подписки, но локальные модели слабее облачных лидеров. Чем агент отличается от чат-бота, разобрал в статье <a href="/guides/ii-agent-chto-eto/">что такое ИИ-агент</a>.</p>
+<h2 id="sec-6">Кому Ollama подходит</h2>
+<ul><li>Тем, кто работает с приватными данными: договоры, переписка, внутренние документы.</li><li>Тем, кто хочет нейросеть без подписки и без лимитов.</li><li>Разработчикам, которым нужна модель по API у себя на машине.</li></ul>
+<p>Если компьютер слабый и нужен быстрый сильный ответ, проще взять облачного ассистента, например <a href="/guides/claude-neyroset/">Claude</a> или <a href="/guides/chat-gpt-na-russkom/">ChatGPT</a>.</p>
+<h2 id="sec-7">Частые вопросы</h2>
+<p><b>Ollama бесплатная?</b> Да, программа бесплатная, лицензия MIT. Платно только облако: тариф Pro от 20 долларов в месяц.</p>
+<p><b>Есть ли у Ollama интерфейс?</b> Да, на Windows и macOS есть приложение с чатом, туда можно перетащить PDF и картинки. На Linux работа идёт в терминале.</p>
+<p><b>Сколько нужно оперативной памяти?</b> Чуть больше, чем весит файл модели. Для маленьких моделей хватает 8 ГБ, для моделей 7-14 миллиардов параметров лучше 16 ГБ видеопамяти.</p>
+<p><b>Какую модель выбрать для русского языка?</b> Qwen и Gemma пишут по-русски лучше остальных популярных моделей.</p>
+<p><b>Работает ли Ollama без интернета?</b> Да, после скачивания модели интернет не нужен.</p>
+<p><b>Что такое Ollama Cloud?</b> Запуск больших моделей на серверах Ollama с меткой cloud в названии модели, оплата кредитами.</p>
+<p>Официальные страницы и источники: <a href="https://ollama.com/" target="_blank" rel="noopener">Ollama</a>, <a href="https://ollama.com/download" target="_blank" rel="noopener">скачать Ollama</a>, <a href="https://ollama.com/library?sort=popular" target="_blank" rel="noopener">библиотека моделей</a>, <a href="https://ollama.com/pricing" target="_blank" rel="noopener">тарифы</a>, <a href="https://docs.ollama.com/" target="_blank" rel="noopener">документация</a>, <a href="https://github.com/ollama/ollama" target="_blank" rel="noopener">Ollama на GitHub</a>.</p>
+<h2 id="sec-8">Что делать дальше</h2>
+<p>Локальная модель это хороший способ разобраться, как устроены нейросети, без подписки. Но чтобы она приносила пользу каждый день, ей нужна задача: писать посты, сценарии, отвечать людям.</p>
+<p>Как я с нейросетями пишу сценарии рилсов и привожу из них людей в блог, рассказал в статье: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=ollama" target="_blank" rel="noopener">миллионы просмотров на Reels, когда сценарии пишет ChatGPT</a>.</p>
+<p>Проверено 17 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/alisa-neyroset/"><span class="rc-cover"><img src="/covers/alisa-neyroset.webp?v=c50c3f0681" alt="Алиса нейросеть: что умеет Алиса AI, как пользоваться бесплатно, Алиса Плюс за 199 ₽" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Алиса нейросеть: что умеет Алиса AI, как пользоваться бесплатно, Алиса Плюс за 199 ₽</span><span class="rc-desc">Алиса AI от Яндекса по шагам: где открыть нейросеть Алиса онлайн, что она умеет…</span></a><a class="gp-related-card" href="/guides/captions-ai/"><span class="rc-cover"><img src="/covers/captions-ai.webp?v=4cd1290cc4" alt="Captions AI: субтитры, eye contact и AI-аватар для рилсов, тарифы 2026 и русский язык" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Captions AI: субтитры, eye contact и AI-аватар для рилсов, тарифы 2026 и русский язык</span><span class="rc-desc">Captions AI по шагам: как сделать субтитры к видео, исправить взгляд в камеру через AI…</span></a><a class="gp-related-card" href="/guides/civitai/"><span class="rc-cover"><img src="/covers/civitai.webp?v=46cf4ec7af" alt="Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026</span><span class="rc-desc">Civitai по шагам: что это за сайт, как скачать checkpoint и LoRA и куда их положить…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-transkribacii/"><span class="rc-cover"><img src="/covers/neyroset-dlya-transkribacii.webp?v=2bf800693e" alt="Нейросеть для транскрибации: перевести аудио и видео в текст на русском, 8 сервисов 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для транскрибации: перевести аудио и видео в текст на русском, 8 сервисов 2026</span><span class="rc-desc">Какая нейросеть для транскрибации подходит для русской речи: Whisper, TurboScribe…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=a1706e44fc"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "ollama";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=52c5b988a6"></script>
+
+
+</body></html>

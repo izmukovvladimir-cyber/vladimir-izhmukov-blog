@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Civitai по шагам: что это за сайт, как скачать checkpoint и LoRA и куда их положить, как генерировать картинки на сайте, что такое Buzz, сколько стоят подписки и чем civitai.com отличается от civitai.red.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/civitai/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026">
+<meta property="og:description" content="Civitai по шагам: что это за сайт, как скачать checkpoint и LoRA и куда их положить, как генерировать картинки на сайте, что такое Buzz, сколько стоят подписки и чем civitai.com отличается от civitai.red.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/civitai/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/civitai.webp?v=46cf4ec7af">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-17T08:30:00Z">
+<meta property="article:modified_time" content="2026-10-17T08:30:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026">
+<meta name="twitter:description" content="Civitai по шагам: что это за сайт, как скачать checkpoint и LoRA и куда их положить, как генерировать картинки на сайте, что такое Buzz, сколько стоят подписки и чем civitai.com отличается от civitai.red.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/civitai.webp?v=46cf4ec7af">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/civitai.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/civitai/#article",
+      "headline": "Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026",
+      "description": "Civitai по шагам: что это за сайт, как скачать checkpoint и LoRA и куда их положить, как генерировать картинки на сайте, что такое Buzz, сколько стоят подписки и чем civitai.com отличается от civitai.red.",
+      "datePublished": "2026-10-17T08:30:00Z",
+      "dateModified": "2026-10-17T08:30:00Z",
+      "inLanguage": "ru",
+      "keywords": "neuroseti, kartinki, instrumenty",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/civitai/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/civitai/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/civitai.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026 Владимир Ижмуков · автор системы роста Instagram через короткие ролики Civitai это крупнейший каталог моделей для генерации картинок: здесь лежат checkpoint-модели, LoRA и эмбеддинги для Stable Diffusion, Flux и других открытых нейросетей, а ещё есть генератор прямо на сайте. Скачивание моделей бесплатное, генерация на сайте идёт за внутреннюю валюту Buzz, подписки стоят от 10 до 50 долларов в месяц. С апреля 2026 года у сайта два адреса: civitai.com для безопасного контента с оплатой картой и civitai.red для всего каталога с оплатой криптовалютой. Ниже показываю, как скачать и поставить модель, как пользоваться генератором и что изменилось в правилах. Что лежит на Civitai | Тип | Что это | Зачем | |---|---|---| | Checkpoint | полная модель, несколько гигабайт | задаёт общий стиль и качество картинок | | LoRA | небольшая надстройка, обычно десятки или сотни мегабайт | добавляет стиль, персонажа, предмет или эффект поверх модели | | Embedding | очень маленький файл | слово-подсказка, которое тянет за собой нужный образ | | Workflows | готовые схемы | цепочки для ComfyUI | Чтобы LoRA работала, нужна совместимая с ней базовая модель. На странице каждой LoRA указано, под какую основу она обучена: SD 1.5, SDXL, Flux и другие. Как скачать модель с Civitai 1. Откройте страницу модели и проверьте поле Base Model, оно должно совпадать с вашей основой. 2. Выберите версию и нажмите Download. Файл придёт в формате .safetensors. 3. Положите файл в нужную папку вашей программы: - checkpoint в Automatic1111 кладут в models/Stable-diffusion, в ComfyUI в models/checkpoints; - LoRA в Automatic1111 кладут в models/Lora, в ComfyUI в models/loras. 4. Перезапустите программу или обновите список моделей. 5. Скопируйте с той же страницы рекомендуемые настройки и слова-триггеры, без них LoRA часто не проявляется. Какие программы запускают эти модели у вас на компьютере, разобрал в статьях про Stable Diffusion и про ComfyUI. Генерация на сайте Если своей видеокарты нет, картинки можно делать прямо на Civitai. Выбираете модель, добавляете LoRA, пишете запрос и платите за генерацию Buzz. Что такое Buzz Buzz это внутренняя валюта сайта, с 2026 года она бывает трёх цветов: - зелёный покупается картой и тратится только на безопасный контент на civitai.com; - жёлтый покупается криптовалютой и работает на civitai.red; - синий начисляется бесплатно за активность на сайте. Курс Buzz к доллару на открытой странице не указан, его видно только после входа. Тарифы Civitai | Тариф | Цена | Buzz в месяц | Картинок за одно задание | Приватных моделей | |---|---|---|---|---| | Bronze | 10 $ в месяц | 10 000 | 8 | 3 | | Silver | 25 $ в месяц | 25 000 | 10 | 10 | | Gold | 50 $ в месяц | 50 000 | 12 | 100 | Во всех тарифах приоритетная генерация и нет рекламы. С конца августа 2026 года появилась подписка, которую оплачивают самими Buzz. Что изменилось в правилах 1. Два домена. С 9 апреля 2026 года civitai.com показывает только безопасный контент и принимает карты, civitai.red хранит весь каталог и принимает криптовалюту. Аккаунт, модели и LoRA общие. 2. Реальные люди. В 2025 году с сайта удалили модели и картинки с внешностью реальных людей под давлением платёжных систем и новых законов. 3. Оплата. В мае 2025 года процессинг отключил приём карт, сайт перешёл на криптовалюту. В 2026 году карты снова принимаются на civitai.com. 4. Страны. С 24 июля 2025 года сайт закрыт для Великобритании из-за местного закона о безопасности в сети. Civitai из России Официальной блокировки Civitai в России я не нашёл. Российские карты сайт не принимает. Работает ли он у вас без VPN, зависит от провайдера, проверьте сами, открыв civitai.com. Если нужен генератор картинок с оплатой проще и без установки моделей, посмотрите Kandinsky и Leonardo AI. Частые вопросы Civitai бесплатный? Скачивать модели бесплатно. Генерация на сайте идёт за Buzz, синие Buzz можно заработать активностью. Как установить LoRA с Civitai? Скачать файл .safetensors, положить в models/Lora для Automatic1111 или в models/loras для ComfyUI, выбрать совместимую базовую модель и добавить слово-триггер в запрос. Что такое civitai.red? Второй адрес сайта с полным каталогом, включая контент для взрослых, оплата там криптовалютой. Почему LoRA не работает? Чаще всего не совпадает базовая модель или в запросе нет слова-триггера с её страницы. Как оплатить Civitai из России? Российские карты сайт не принимает. Синие Buzz можно получить бесплатно за активность. Можно ли использовать картинки в коммерции? Это зависит от лицензии конкретной модели, она указана на её странице. Официальные страницы и источники: Civitai, тарифы, объявление о двух доменах. Что делать дальше Своя модель и свой стиль картинок хорошо работают в каруселях и обложках, если за ними стоит мысль, ради которой человек листает до конца. Как я делаю карусели и ролики, которые приводят людей в блог, рассказал в статье: миллионы просмотров на Reels, когда сценарии пишет…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/civitai/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/civitai.webp?v=46cf4ec7af" alt="Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Civitai по шагам: что это за сайт, как скачать checkpoint и LoRA и куда их положить, как генерировать картинки на сайте, что такое Buzz, сколько стоят подписки и чем civitai.com отличается от civitai.red.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Civitai это крупнейший каталог моделей для генерации картинок: здесь лежат checkpoint-модели, LoRA и эмбеддинги для Stable Diffusion, Flux и других открытых нейросетей, а ещё есть генератор прямо на сайте. Скачивание моделей бесплатное, генерация на сайте идёт за внутреннюю валюту Buzz, подписки стоят от 10 до 50 долларов в месяц. С апреля 2026 года у сайта два адреса: civitai.com для безопасного контента с оплатой картой и civitai.red для всего каталога с оплатой криптовалютой.</p>
+<p>Ниже показываю, как скачать и поставить модель, как пользоваться генератором и что изменилось в правилах.</p>
+<h2 id="sec-0">Что лежит на Civitai</h2>
+<table class="gp-table"><thead><tr><th>Тип</th><th>Что это</th><th>Зачем</th></tr></thead><tbody><tr><td>Checkpoint</td><td>полная модель, несколько гигабайт</td><td>задаёт общий стиль и качество картинок</td></tr><tr><td>LoRA</td><td>небольшая надстройка, обычно десятки или сотни мегабайт</td><td>добавляет стиль, персонажа, предмет или эффект поверх модели</td></tr><tr><td>Embedding</td><td>очень маленький файл</td><td>слово-подсказка, которое тянет за собой нужный образ</td></tr><tr><td>Workflows</td><td>готовые схемы</td><td>цепочки для ComfyUI</td></tr></tbody></table>
+<p>Чтобы LoRA работала, нужна совместимая с ней базовая модель. На странице каждой LoRA указано, под какую основу она обучена: SD 1.5, SDXL, Flux и другие.</p>
+<h2 id="sec-1">Как скачать модель с Civitai</h2>
+<ol><li>Откройте страницу модели и проверьте поле Base Model, оно должно совпадать с вашей основой.</li><li>Выберите версию и нажмите Download. Файл придёт в формате .safetensors.</li><li>Положите файл в нужную папку вашей программы:</li></ol>
+<ul><li>checkpoint в Automatic1111 кладут в models/Stable-diffusion, в ComfyUI в models/checkpoints;</li><li>LoRA в Automatic1111 кладут в models/Lora, в ComfyUI в models/loras.</li></ul>
+<ol><li>Перезапустите программу или обновите список моделей.</li><li>Скопируйте с той же страницы рекомендуемые настройки и слова-триггеры, без них LoRA часто не проявляется.</li></ol>
+<p>Какие программы запускают эти модели у вас на компьютере, разобрал в статьях <a href="/guides/stable-diffusion/">про Stable Diffusion</a> и <a href="/guides/comfyui/">про ComfyUI</a>.</p>
+<h2 id="sec-2">Генерация на сайте</h2>
+<p>Если своей видеокарты нет, картинки можно делать прямо на Civitai. Выбираете модель, добавляете LoRA, пишете запрос и платите за генерацию Buzz.</p>
+<h3>Что такое Buzz</h3>
+<p>Buzz это внутренняя валюта сайта, с 2026 года она бывает трёх цветов:</p>
+<ul><li><b>зелёный</b> покупается картой и тратится только на безопасный контент на civitai.com;</li><li><b>жёлтый</b> покупается криптовалютой и работает на civitai.red;</li><li><b>синий</b> начисляется бесплатно за активность на сайте.</li></ul>
+<p>Курс Buzz к доллару на открытой странице не указан, его видно только после входа.</p>
+<h2 id="sec-3">Тарифы Civitai</h2>
+<table class="gp-table"><thead><tr><th>Тариф</th><th>Цена</th><th>Buzz в месяц</th><th>Картинок за одно задание</th><th>Приватных моделей</th></tr></thead><tbody><tr><td>Bronze</td><td>10 $ в месяц</td><td>10 000</td><td>8</td><td>3</td></tr><tr><td>Silver</td><td>25 $ в месяц</td><td>25 000</td><td>10</td><td>10</td></tr><tr><td>Gold</td><td>50 $ в месяц</td><td>50 000</td><td>12</td><td>100</td></tr></tbody></table>
+<p>Во всех тарифах приоритетная генерация и нет рекламы. С конца августа 2026 года появилась подписка, которую оплачивают самими Buzz.</p>
+<h2 id="sec-4">Что изменилось в правилах</h2>
+<ol><li><b>Два домена.</b> С 9 апреля 2026 года civitai.com показывает только безопасный контент и принимает карты, civitai.red хранит весь каталог и принимает криптовалюту. Аккаунт, модели и LoRA общие.</li><li><b>Реальные люди.</b> В 2025 году с сайта удалили модели и картинки с внешностью реальных людей под давлением платёжных систем и новых законов.</li><li><b>Оплата.</b> В мае 2025 года процессинг отключил приём карт, сайт перешёл на криптовалюту. В 2026 году карты снова принимаются на civitai.com.</li><li><b>Страны.</b> С 24 июля 2025 года сайт закрыт для Великобритании из-за местного закона о безопасности в сети.</li></ol>
+<h2 id="sec-5">Civitai из России</h2>
+<p>Официальной блокировки Civitai в России я не нашёл. Российские карты сайт не принимает. Работает ли он у вас без VPN, зависит от провайдера, проверьте сами, открыв civitai.com.</p>
+<p>Если нужен генератор картинок с оплатой проще и без установки моделей, посмотрите <a href="/guides/kandinsky/">Kandinsky</a> и <a href="/guides/leonardo-ai/">Leonardo AI</a>.</p>
+<h2 id="sec-6">Частые вопросы</h2>
+<p><b>Civitai бесплатный?</b> Скачивать модели бесплатно. Генерация на сайте идёт за Buzz, синие Buzz можно заработать активностью.</p>
+<p><b>Как установить LoRA с Civitai?</b> Скачать файл .safetensors, положить в models/Lora для Automatic1111 или в models/loras для ComfyUI, выбрать совместимую базовую модель и добавить слово-триггер в запрос.</p>
+<p><b>Что такое civitai.red?</b> Второй адрес сайта с полным каталогом, включая контент для взрослых, оплата там криптовалютой.</p>
+<p><b>Почему LoRA не работает?</b> Чаще всего не совпадает базовая модель или в запросе нет слова-триггера с её страницы.</p>
+<p><b>Как оплатить Civitai из России?</b> Российские карты сайт не принимает. Синие Buzz можно получить бесплатно за активность.</p>
+<p><b>Можно ли использовать картинки в коммерции?</b> Это зависит от лицензии конкретной модели, она указана на её странице.</p>
+<p>Официальные страницы и источники: <a href="https://civitai.com/" target="_blank" rel="noopener">Civitai</a>, <a href="https://civitai.com/pricing" target="_blank" rel="noopener">тарифы</a>, <a href="https://civitai.com/articles/28369" target="_blank" rel="noopener">объявление о двух доменах</a>.</p>
+<h2 id="sec-7">Что делать дальше</h2>
+<p>Своя модель и свой стиль картинок хорошо работают в каруселях и обложках, если за ними стоит мысль, ради которой человек листает до конца.</p>
+<p>Как я делаю карусели и ролики, которые приводят людей в блог, рассказал в статье: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=civitai" target="_blank" rel="noopener">миллионы просмотров на Reels, когда сценарии пишет ChatGPT</a>.</p>
+<p>Проверено 17 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/alisa-neyroset/"><span class="rc-cover"><img src="/covers/alisa-neyroset.webp?v=c50c3f0681" alt="Алиса нейросеть: что умеет Алиса AI, как пользоваться бесплатно, Алиса Плюс за 199 ₽" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Алиса нейросеть: что умеет Алиса AI, как пользоваться бесплатно, Алиса Плюс за 199 ₽</span><span class="rc-desc">Алиса AI от Яндекса по шагам: где открыть нейросеть Алиса онлайн, что она умеет…</span></a><a class="gp-related-card" href="/guides/captions-ai/"><span class="rc-cover"><img src="/covers/captions-ai.webp?v=4cd1290cc4" alt="Captions AI: субтитры, eye contact и AI-аватар для рилсов, тарифы 2026 и русский язык" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Captions AI: субтитры, eye contact и AI-аватар для рилсов, тарифы 2026 и русский язык</span><span class="rc-desc">Captions AI по шагам: как сделать субтитры к видео, исправить взгляд в камеру через AI…</span></a><a class="gp-related-card" href="/guides/ollama/"><span class="rc-cover"><img src="/covers/ollama.webp?v=c8b70743d6" alt="Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026</span><span class="rc-desc">Ollama по шагам: установка на Windows, Mac и Linux, какую модель выбрать (Llama, Qwen…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-transkribacii/"><span class="rc-cover"><img src="/covers/neyroset-dlya-transkribacii.webp?v=2bf800693e" alt="Нейросеть для транскрибации: перевести аудио и видео в текст на русском, 8 сервисов 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для транскрибации: перевести аудио и видео в текст на русском, 8 сервисов 2026</span><span class="rc-desc">Какая нейросеть для транскрибации подходит для русской речи: Whisper, TurboScribe…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=a1706e44fc"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "civitai";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=52c5b988a6"></script>
+
+
+</body></html>

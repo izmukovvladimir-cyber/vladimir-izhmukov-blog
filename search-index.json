@@ -42,6 +42,33 @@
     ]
   },
   {
+    "slug": "algoritmy-instagram",
+    "title": "Алгоритмы Инстаграм в 2026: как ранжируются лента, Reels, Stories и рекомендации",
+    "desc": "Как работают алгоритмы Инстаграм в 2026 году: три главных сигнала по словам Адама Моссери, что важно для ленты, Reels, Stories и рекомендаций, правило оригинального контента, лимит 5 хештегов и длина Reels до 3 минут.",
+    "category": "Instagram и рост",
+    "level": "Новичок",
+    "min": 8,
+    "url": "/guides/algoritmy-instagram/",
+    "tags": [
+      "instagram",
+      "reels",
+      "prodvizhenie"
+    ]
+  },
+  {
+    "slug": "alisa-neyroset",
+    "title": "Алиса нейросеть: что умеет Алиса AI, как пользоваться бесплатно, Алиса Плюс за 199 ₽",
+    "desc": "Алиса AI от Яндекса по шагам: где открыть нейросеть Алиса онлайн, что она умеет (тексты, картинки, оживление фото, документы, агенты), что бесплатно, что даёт Алиса Плюс за 199 ₽ и чем отличается Алиса Про.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/alisa-neyroset/",
+    "tags": [
+      "neuroseti",
+      "instrumenty"
+    ]
+  },
+  {
     "slug": "avtovoronka",
     "title": "Автоворонка: что это, как работает и как сделать автоворонку продаж в Telegram и Instagram",
     "desc": "Автоворонка простыми словами: что это такое, из каких этапов состоит, примеры автоворонок для экспертов, как сделать автоворонку в Telegram и Instagram и какие ошибки съедают продажи.",
@@ -107,6 +134,20 @@
       "video",
       "instrumenty",
       "instagram"
+    ]
+  },
+  {
+    "slug": "captions-ai",
+    "title": "Captions AI: субтитры, eye contact и AI-аватар для рилсов, тарифы 2026 и русский язык",
+    "desc": "Captions AI по шагам: как сделать субтитры к видео, исправить взгляд в камеру через AI Eye Contact, смонтировать ролик AI Edit, сделать аватара и дубляж на русский. Сколько стоит подписка и что есть бесплатно.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/captions-ai/",
+    "tags": [
+      "neuroseti",
+      "video",
+      "instrumenty"
     ]
   },
   {
@@ -202,6 +243,20 @@
     "tags": [
       "reels",
       "instagram"
+    ]
+  },
+  {
+    "slug": "civitai",
+    "title": "Civitai: как скачать модель и LoRA, генерация на сайте, Buzz и тарифы 2026",
+    "desc": "Civitai по шагам: что это за сайт, как скачать checkpoint и LoRA и куда их положить, как генерировать картинки на сайте, что такое Buzz, сколько стоят подписки и чем civitai.com отличается от civitai.red.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/civitai/",
+    "tags": [
+      "neuroseti",
+      "kartinki",
+      "instrumenty"
     ]
   },
   {
@@ -830,6 +885,19 @@
     ]
   },
   {
+    "slug": "kak-nabrat-podpischikov-v-telegram",
+    "title": "Как набрать подписчиков в Телеграм канал в 2026: 7 способов без накрутки",
+    "desc": "Как набрать подписчиков в Телеграм в 2026 году: короткие ролики, Telegram Ads, посевы и взаимопиар, папки, лид-магнит через бота, первые 200 человек вручную. Что запрещено и за что Telegram снимает подписчиков.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 8,
+    "url": "/guides/kak-nabrat-podpischikov-v-telegram/",
+    "tags": [
+      "telegram",
+      "prodvizhenie"
+    ]
+  },
+  {
     "slug": "kak-napisat-promt",
     "title": "Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу",
     "desc": "Как написать промпт для нейросети: пять частей рабочего запроса, приёмы для текста и картинок, частые ошибки и готовые шаблоны, которые можно забрать и применить сразу.",
@@ -1375,6 +1443,19 @@
       "video",
       "instagram",
       "kontent"
+    ]
+  },
+  {
+    "slug": "monetizaciya-telegram-kanala",
+    "title": "Монетизация Телеграм канала в 2026: реклама 50%, звёзды, платная подписка и правила РКН",
+    "desc": "Как заработать на Телеграм канале в 2026 году: официальная монетизация Telegram Ads с долей 50% от 1000 подписчиков, платные реакции и подписки за звёзды, платные и предложенные посты, реклама через биржи, реестр РКН и маркировка erid.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 9,
+    "url": "/guides/monetizaciya-telegram-kanala/",
+    "tags": [
+      "telegram",
+      "monetizaciya"
     ]
   },
   {
@@ -2432,6 +2513,20 @@
     ]
   },
   {
+    "slug": "neyroset-dlya-transkribacii",
+    "title": "Нейросеть для транскрибации: перевести аудио и видео в текст на русском, 8 сервисов 2026",
+    "desc": "Какая нейросеть для транскрибации подходит для русской речи: Whisper, TurboScribe, Yandex SpeechKit, Telegram, Google Документы. Лимиты бесплатных планов, цены 2026 и как расшифровать видео с YouTube и Reels.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/neyroset-dlya-transkribacii/",
+    "tags": [
+      "neuroseti",
+      "tekst",
+      "instrumenty"
+    ]
+  },
+  {
     "slug": "neyroset-dlya-trenera",
     "title": "Нейросеть для тренера: программы, разборы клиентов и контент для блога",
     "desc": "Нейросеть для тренера и фитнес-специалиста: как собирать программы под клиента, вести переписку, готовить материалы и снимать ролики для блога, не тратя вечера.",
@@ -2493,6 +2588,20 @@
       "neuroseti",
       "instrumenty",
       "vizual"
+    ]
+  },
+  {
+    "slug": "neyroset-dlya-uluchsheniya-kachestva-video",
+    "title": "Нейросеть для улучшения качества видео: 7 сервисов, апскейл до 4K, цены 2026",
+    "desc": "Какая нейросеть улучшит качество видео: Topaz Video, HitPaw VikPea, CapCut, Vmake, Media.io, Video2X. Что умеет каждая, где бесплатно, сколько стоит и что работает из России.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/neyroset-dlya-uluchsheniya-kachestva-video/",
+    "tags": [
+      "neuroseti",
+      "video",
+      "instrumenty"
     ]
   },
   {
@@ -2675,6 +2784,20 @@
       "instagram",
       "reels",
       "ohvat"
+    ]
+  },
+  {
+    "slug": "ollama",
+    "title": "Ollama: как установить и запустить нейросеть на своём компьютере, модели и команды 2026",
+    "desc": "Ollama по шагам: установка на Windows, Mac и Linux, какую модель выбрать (Llama, Qwen, Gemma, DeepSeek), сколько нужно памяти, основные команды, приложение с чатом и тарифы облака Ollama.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 8,
+    "url": "/guides/ollama/",
+    "tags": [
+      "neuroseti",
+      "instrumenty",
+      "agenty"
     ]
   },
   {
@@ -2870,6 +2993,20 @@
       "neuroseti",
       "video",
       "instrumenty"
+    ]
+  },
+  {
+    "slug": "probnye-rils",
+    "title": "Пробные рилс в Инстаграм: что это, как включить и почему нет кнопки, 2026",
+    "desc": "Пробные рилс (Trial Reels) в Instagram по шагам: как включить пробный режим, кто видит ролик, где смотреть статистику через 24 часа, как выпустить ролик на всех вручную или автоматически за 72 часа и почему у вас нет кнопки.",
+    "category": "Instagram и рост",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/probnye-rils/",
+    "tags": [
+      "instagram",
+      "reels",
+      "prodvizhenie"
     ]
   },
   {

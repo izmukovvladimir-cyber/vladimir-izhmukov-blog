@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/kontent/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -87,6 +87,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/besplatnye-neyroseti/</loc>
     <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/bing-image-creator/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -145,6 +151,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/chatpdf/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/chto-takoe-rils/</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -165,6 +177,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/claude-neyroset/</loc>
     <lastmod>2026-10-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/clipchamp/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -535,6 +553,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/kapwing/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/karusel-v-instagram/</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -625,6 +649,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/lm-studio/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/lovable/</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -645,6 +675,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/manus-ai/</loc>
     <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/microsoft-designer/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1159,6 +1195,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-storis/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/neyroset-dlya-subtitrov/</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -1471,6 +1513,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/reklama-v-telegram/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/remini/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -1627,6 +1675,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/ugc-kontent/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/upscayl/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -1683,6 +1737,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/whisper/</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/windsurf/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

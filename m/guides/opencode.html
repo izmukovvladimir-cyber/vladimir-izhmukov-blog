@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>OpenCode: бесплатный ИИ-агент для кода в терминале, как установить OpenCode CLI, что такое Zen и Go в 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="OpenCode это открытый ИИ-агент для программирования в терминале, на десктопе и в браузере. Разбираю установку OpenCode CLI, бесплатные модели, подписки Zen и Go, подключение MCP и skills.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/opencode/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="OpenCode: бесплатный ИИ-агент для кода в терминале, как установить OpenCode CLI, что такое Zen и Go в 2026">
+<meta property="og:description" content="OpenCode это открытый ИИ-агент для программирования в терминале, на десктопе и в браузере. Разбираю установку OpenCode CLI, бесплатные модели, подписки Zen и Go, подключение MCP и skills.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/opencode/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/opencode.webp?v=ff043b5e82">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="OpenCode: бесплатный ИИ-агент для кода в терминале, как установить OpenCode CLI, что такое Zen и Go в 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-25T08:00:00Z">
+<meta property="article:modified_time" content="2026-10-25T08:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenCode: бесплатный ИИ-агент для кода в терминале, как установить OpenCode CLI, что такое Zen и Go в 2026">
+<meta name="twitter:description" content="OpenCode это открытый ИИ-агент для программирования в терминале, на десктопе и в браузере. Разбираю установку OpenCode CLI, бесплатные модели, подписки Zen и Go, подключение MCP и skills.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/opencode.webp?v=ff043b5e82">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/opencode.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/opencode/#article",
+      "headline": "OpenCode: бесплатный ИИ-агент для кода в терминале, как установить OpenCode CLI, что такое Zen и Go в 2026",
+      "description": "OpenCode это открытый ИИ-агент для программирования в терминале, на десктопе и в браузере. Разбираю установку OpenCode CLI, бесплатные модели, подписки Zen и Go, подключение MCP и skills.",
+      "datePublished": "2026-10-25T08:00:00Z",
+      "dateModified": "2026-10-25T08:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neyroseti, kod, agenty",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/opencode/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/opencode/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/opencode.webp",
+      "articleSection": "Нейросети для контента",
+      "articleBody": "OpenCode: ИИ-агент для кода в терминале Владимир Ижмуков · автор системы роста Instagram через короткие ролики OpenCode это бесплатный открытый ИИ-агент для программирования: он читает ваш проект, пишет и правит код, запускает команды и работает с любой моделью, от Claude и GPT до бесплатных моделей и локальных через Ollama. Его ставят одной командой в терминал, а ещё есть десктопное приложение и веб-версия. Платить приходится только за модель: через OpenCode Zen по факту расхода или подпиской OpenCode Go за $10 в месяц. В сентябре 2026 года вышла версия 2.0, в октябре уже 2.1. Ниже разберу установку, тарифы, MCP и skills. Что такое OpenCode OpenCode делает команда Anomaly, код открыт на GitHub под лицензией MIT. По сути это та же идея, что у Claude Code и Codex: вы пишете задачу словами, агент сам ходит по файлам проекта, предлагает правки и выполняет команды. Главное отличие в том, что OpenCode не привязан к одной компании. Сайт заявляет больше 75 провайдеров моделей, плюс вход по подписке GitHub Copilot или ChatGPT Plus и Pro. | Где работает | Что это | |---|---| | OpenCode CLI | основной режим, агент прямо в терминале с текстовым интерфейсом | | Десктоп | приложение для macOS, Windows и Linux, пока в бете | | Веб | интерфейс в браузере, с версии 2.0 общий фоновый сервис с терминалом | | Расширения для IDE | подключение к редактору кода | Два встроенных агента Внутри OpenCode два режима, они переключаются клавишей Tab: - build работает с полным доступом: пишет файлы и запускает команды; - plan только читает проект и спрашивает разрешения перед командами в терминале, удобно сначала обсудить план, а потом отдать его в работу. Есть и подагент @general для поиска и сложных многошаговых задач. Как установить OpenCode CLI Самый быстрый путь это официальный скрипт. На macOS и Linux откройте терминал и выполните curl -fsSL https://opencode.ai/v2/install | bash. Остальные способы: 1. Через npm: npm i -g @opencode/cli@latest (подойдут и bun, pnpm, yarn). 2. Через Homebrew: brew install anomalyco/tap/opencode-v2, эта формула всегда свежая. 3. На Arch Linux: sudo pacman -S opencode. 4. Десктоп на macOS: brew install --cask opencode-desktop, для Windows и Linux установщики лежат на opencode.ai. После установки зайдите в папку проекта и наберите opencode. Откроется интерфейс агента, где задача пишется обычным текстом. Важный момент с версиями Версия 2.0 вышла отдельным npm-пакетом @opencode/cli. По данным обзоров, старый пакет opencode-ai продолжает отдавать ветку 1.x, поэтому если после установки у вас старая версия, проверьте, какой пакет стоит. Плагины от первой версии во второй нужно переносить. OpenCode бесплатно: какие модели работают без оплаты Сам агент бесплатный. Бесплатно работают и модели из списка Zen с пометкой Free, часть из них запускается даже без аккаунта. На 25 октября 2026 года в списке есть Big Pickle, GLM-5.3-Flash Free, DeepSeek V4.1 Flash Free, Nemotron и другие. Набор меняется: команда прямо пишет, что бесплатные модели даются на ограниченное время. Две оговорки, которые стоит знать до начала работы: - на бесплатных моделях сайт предупреждает, что данные сохраняются, а модель Beam Free хранит их 30 дней, поэтому коммерческий код туда лучше не отправлять; - бесплатные модели можно отключить целиком переменной окружения OPENCODE DISABLE FREE MODELS=1. Ещё один бесплатный путь это локальные модели через Ollama: тогда код вообще не уходит с вашего компьютера, но нужна мощная видеокарта. OpenCode Zen и OpenCode Go: в чём разница | | Zen | Go | Go Plus | |---|---|---|---| | Как платите | пополняете баланс и платите за токены | подписка | подписка | | Цена | по факту расхода, комиссия за пополнение 4,6% + $0,31 | $10 в месяц | $40 в месяц | | Модели | отобранные командой, платные и бесплатные | 30 моделей с лимитом на каждую | те же модели, лимиты выше | | Кому | командам, кто хочет считать каждый доллар | одному человеку на каждый день | тем, кому Go не хватает | Как устроены лимиты Go У каждой модели в подписке свой бюджет в долларах на месяц, и он режется на окна: 20% можно потратить за 5 часов, 50% за неделю, 100% за месяц. Например, Kimi K3.1 Pro в Go даёт около 147 запросов за пятичасовое окно, GLM-5.3 около 220. Если лимит кончился, можно включить Extra Usage, тогда дальше списывается баланс Zen. Подписка рассчитана на одного человека, отменить её можно в любой момент, а деньги возвращают, если списание было в последние 14 дней и лимитом вы не пользовались. Цены Zen за миллион токенов | Модель | Вход | Выход | |---|---|---| | Qwen3.6 Plus | $0,50 | $3,00 | | Kimi K2.6 | $0,95 | $4,00 | | GLM 5.3 | $1,40 | $4,40 | | DeepSeek V4 Pro | $1,74 | $3,48 | | Claude Sonnet 5.5 | $2 | $10 | | Claude Opus 5.5 | $4 | $20 | Страница Zen в документации сейчас называется OpenCode Console, а в меню сайта осталось прежнее имя Zen. Официального объявления о переименовании я не нашёл, по смыслу это одно и то же. Как подключить модель 1. Запустите opencode и введите команду /connect. 2. Выберите провайдера: Zen,…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Нейросети для контента",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "OpenCode: бесплатный ИИ-агент для кода в терминале, как установить OpenCode CLI, что такое Zen и Go в 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/opencode/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="cur" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/opencode.webp?v=ff043b5e82" alt="OpenCode: бесплатный ИИ-агент для кода в терминале, как установить OpenCode CLI, что такое Zen и Go в 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">OpenCode: бесплатный ИИ-агент для кода в терминале, как установить OpenCode CLI, что такое Zen и Go в 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">OpenCode это открытый ИИ-агент для программирования в терминале, на десктопе и в браузере. Разбираю установку OpenCode CLI, бесплатные модели, подписки Zen и Go, подключение MCP и skills.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>OpenCode это бесплатный открытый ИИ-агент для программирования: он читает ваш проект, пишет и правит код, запускает команды и работает с любой моделью, от Claude и GPT до бесплатных моделей и локальных через Ollama. Его ставят одной командой в терминал, а ещё есть десктопное приложение и веб-версия. Платить приходится только за модель: через OpenCode Zen по факту расхода или подпиской OpenCode Go за $10 в месяц. В сентябре 2026 года вышла версия 2.0, в октябре уже 2.1. Ниже разберу установку, тарифы, MCP и skills.</p>
+<h2 id="sec-0">Что такое OpenCode</h2>
+<p>OpenCode делает команда Anomaly, код открыт на GitHub под лицензией MIT. По сути это та же идея, что у Claude Code и Codex: вы пишете задачу словами, агент сам ходит по файлам проекта, предлагает правки и выполняет команды. Главное отличие в том, что OpenCode не привязан к одной компании. Сайт заявляет больше 75 провайдеров моделей, плюс вход по подписке GitHub Copilot или ChatGPT Plus и Pro.</p>
+<table class="gp-table"><thead><tr><th>Где работает</th><th>Что это</th></tr></thead><tbody><tr><td>OpenCode CLI</td><td>основной режим, агент прямо в терминале с текстовым интерфейсом</td></tr><tr><td>Десктоп</td><td>приложение для macOS, Windows и Linux, пока в бете</td></tr><tr><td>Веб</td><td>интерфейс в браузере, с версии 2.0 общий фоновый сервис с терминалом</td></tr><tr><td>Расширения для IDE</td><td>подключение к редактору кода</td></tr></tbody></table>
+<h3>Два встроенных агента</h3>
+<p>Внутри OpenCode два режима, они переключаются клавишей Tab:</p>
+<ul><li><b>build</b> работает с полным доступом: пишет файлы и запускает команды;</li><li><b>plan</b> только читает проект и спрашивает разрешения перед командами в терминале, удобно сначала обсудить план, а потом отдать его в работу.</li></ul>
+<p>Есть и подагент @general для поиска и сложных многошаговых задач.</p>
+<h2 id="sec-1">Как установить OpenCode CLI</h2>
+<p>Самый быстрый путь это официальный скрипт. На macOS и Linux откройте терминал и выполните <code>curl -fsSL <a href="https://opencode.ai/v2/install" target="_blank" rel="noopener">https://opencode.ai/v2/install</a> | bash</code>. Остальные способы:</p>
+<ol><li>Через npm: <code>npm i -g @opencode/cli@latest</code> (подойдут и bun, pnpm, yarn).</li><li>Через Homebrew: <code>brew install anomalyco/tap/opencode-v2</code>, эта формула всегда свежая.</li><li>На Arch Linux: <code>sudo pacman -S opencode</code>.</li><li>Десктоп на macOS: <code>brew install --cask opencode-desktop</code>, для Windows и Linux установщики лежат на opencode.ai.</li></ol>
+<p>После установки зайдите в папку проекта и наберите <code>opencode</code>. Откроется интерфейс агента, где задача пишется обычным текстом.</p>
+<h3>Важный момент с версиями</h3>
+<p>Версия 2.0 вышла отдельным npm-пакетом @opencode/cli. По данным обзоров, старый пакет opencode-ai продолжает отдавать ветку 1.x, поэтому если после установки у вас старая версия, проверьте, какой пакет стоит. Плагины от первой версии во второй нужно переносить.</p>
+<h2 id="sec-2">OpenCode бесплатно: какие модели работают без оплаты</h2>
+<p>Сам агент бесплатный. Бесплатно работают и модели из списка Zen с пометкой Free, часть из них запускается даже без аккаунта. На 25 октября 2026 года в списке есть Big Pickle, GLM-5.3-Flash Free, DeepSeek V4.1 Flash Free, Nemotron и другие. Набор меняется: команда прямо пишет, что бесплатные модели даются на ограниченное время.</p>
+<p>Две оговорки, которые стоит знать до начала работы:</p>
+<ul><li>на бесплатных моделях сайт предупреждает, что данные сохраняются, а модель Beam Free хранит их 30 дней, поэтому коммерческий код туда лучше не отправлять;</li><li>бесплатные модели можно отключить целиком переменной окружения OPENCODE_DISABLE_FREE_MODELS=1.</li></ul>
+<p>Ещё один бесплатный путь это локальные модели через <a href="/guides/ollama/">Ollama</a>: тогда код вообще не уходит с вашего компьютера, но нужна мощная видеокарта.</p>
+<h2 id="sec-3">OpenCode Zen и OpenCode Go: в чём разница</h2>
+<table class="gp-table"><thead><tr><th></th><th>Zen</th><th>Go</th><th>Go Plus</th></tr></thead><tbody><tr><td>Как платите</td><td>пополняете баланс и платите за токены</td><td>подписка</td><td>подписка</td></tr><tr><td>Цена</td><td>по факту расхода, комиссия за пополнение 4,6% + $0,31</td><td>$10 в месяц</td><td>$40 в месяц</td></tr><tr><td>Модели</td><td>отобранные командой, платные и бесплатные</td><td>30 моделей с лимитом на каждую</td><td>те же модели, лимиты выше</td></tr><tr><td>Кому</td><td>командам, кто хочет считать каждый доллар</td><td>одному человеку на каждый день</td><td>тем, кому Go не хватает</td></tr></tbody></table>
+<h3>Как устроены лимиты Go</h3>
+<p>У каждой модели в подписке свой бюджет в долларах на месяц, и он режется на окна: 20% можно потратить за 5 часов, 50% за неделю, 100% за месяц. Например, Kimi K3.1 Pro в Go даёт около 147 запросов за пятичасовое окно, GLM-5.3 около 220. Если лимит кончился, можно включить Extra Usage, тогда дальше списывается баланс Zen. Подписка рассчитана на одного человека, отменить её можно в любой момент, а деньги возвращают, если списание было в последние 14 дней и лимитом вы не пользовались.</p>
+<h3>Цены Zen за миллион токенов</h3>
+<table class="gp-table"><thead><tr><th>Модель</th><th>Вход</th><th>Выход</th></tr></thead><tbody><tr><td>Qwen3.6 Plus</td><td>$0,50</td><td>$3,00</td></tr><tr><td>Kimi K2.6</td><td>$0,95</td><td>$4,00</td></tr><tr><td>GLM 5.3</td><td>$1,40</td><td>$4,40</td></tr><tr><td>DeepSeek V4 Pro</td><td>$1,74</td><td>$3,48</td></tr><tr><td>Claude Sonnet 5.5</td><td>$2</td><td>$10</td></tr><tr><td>Claude Opus 5.5</td><td>$4</td><td>$20</td></tr></tbody></table>
+<p>Страница Zen в документации сейчас называется OpenCode Console, а в меню сайта осталось прежнее имя Zen. Официального объявления о переименовании я не нашёл, по смыслу это одно и то же.</p>
+<h2 id="sec-4">Как подключить модель</h2>
+<ol><li>Запустите opencode и введите команду /connect.</li><li>Выберите провайдера: Zen, OpenCode Go, OpenRouter или другой.</li><li>Вставьте ключ из консоли провайдера.</li><li>Командой /models выберите модель для работы.</li></ol>
+<p>Если у вас уже есть подписка ChatGPT Plus или GitHub Copilot, её можно подключить вместо отдельного ключа. Для доступа к сотням моделей через один ключ удобен <a href="/guides/openrouter/">OpenRouter</a>.</p>
+<h2 id="sec-5">OpenCode MCP и skills</h2>
+<p>MCP-серверы дают агенту новые инструменты: доступ к базе данных, браузеру, Figma и другим сервисам. В конфиге OpenCode сервер бывает локальным (type local, запускается на вашем компьютере) и удалённым (type remote, по адресу в интернете). Для удалённых серверов вход через OAuth проходит автоматически.</p>
+<p>Skills это готовые инструкции под типовые задачи. В документации есть отдельный раздел Agent Skills, а в журнале изменений сказано, что OpenCode находит skills из папки .claude. Значит, наборы, собранные под Claude Code, можно переиспользовать.</p>
+<h2 id="sec-6">OpenCode из России</h2>
+<p>Доступность сайта, консоли и оплаты Zen и Go российскими картами я не проверял. По документации Go обработка запросов по умолчанию идёт в регионах Европа и США, а модель Beam Free прямо недоступна в ряде стран, в том числе в России. Сам агент открытый и ставится без ограничений, поэтому рабочий вариант для России это локальные модели через Ollama или провайдер, к которому у вас уже есть доступ.</p>
+<h2 id="sec-7">OpenCode или Claude Code, Codex и Cline</h2>
+<table class="gp-table"><thead><tr><th>Агент</th><th>Чем выделяется</th></tr></thead><tbody><tr><td>OpenCode</td><td>открытый код, любая модель, бесплатные модели в комплекте</td></tr><tr><td><a href="/guides/claude-code/">Claude Code</a></td><td>агент Anthropic, сильнее всего с моделями Claude</td></tr><tr><td><a href="/guides/codex/">Codex</a></td><td>агент OpenAI, работает по подписке ChatGPT</td></tr><tr><td><a href="/guides/cline/">Cline</a></td><td>агент внутри VS Code</td></tr><tr><td><a href="/guides/gemini-cli/">Gemini CLI</a></td><td>агент Google в терминале</td></tr></tbody></table>
+<p>Если вы не хотите зависеть от одной компании и хотите сравнивать модели на своих задачах, OpenCode удобнее остальных. Если работаете только с Claude, проще взять Claude Code.</p>
+<h2 id="sec-8">Минусы OpenCode</h2>
+<ul><li>Бесплатные модели меняются, и на них данные сохраняются.</li><li>Во второй версии по обзорам не работает LSP-диагностика. Плагины первой версии надо переносить.</li><li>Публичные контракты SDK и плагинов поменялись в версии 2.1 от 20 октября, расширения сторонних авторов могут отставать.</li><li>Оплату из России я не проверял.</li></ul>
+<h2 id="sec-9">Частые вопросы</h2>
+<p><b>Что такое OpenCode?</b> Это открытый бесплатный ИИ-агент для программирования, который работает в терминале, на десктопе и в браузере с любой моделью.</p>
+<p><b>OpenCode бесплатный?</b> Сам агент бесплатный, есть бесплатные модели в Zen. Платные модели оплачиваются по факту через Zen или подпиской Go за $10 в месяц.</p>
+<p><b>Как установить OpenCode CLI?</b> Одной командой из официального скрипта на opencode.ai или через npm пакетом @opencode/cli, затем команда opencode в папке проекта.</p>
+<p><b>Что такое OpenCode Zen?</b> Это способ платить за отобранные модели по факту расхода: пополняете баланс и тратите его на токены.</p>
+<p><b>Сколько стоит OpenCode Go?</b> $10 в месяц, у тарифа Go Plus $40. Лимиты считаются по каждой модели отдельно.</p>
+<p><b>Работает ли OpenCode с MCP?</b> Да, поддерживаются локальные и удалённые MCP-серверы, для удалённых OAuth проходит автоматически.</p>
+<h2 id="sec-10">Что делать дальше</h2>
+<p>Агенты для кода сегодня собирают сайты, ботов и лендинги за вечер, и я сам так делаю страницы под свои воронки. Но код это только половина. Вторая половина это люди, которые на эту страницу придут, и самый быстрый их поток для эксперта сейчас дают рилсы с кодовым словом.</p>
+<p>Как я связываю ролики, кодовые слова и страницы в одну систему, я разобрал здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=opencode" target="_blank" rel="noopener">как вести Reels с ChatGPT и получать заявки</a>. Там готовые запросы для сценариев и хуков, которые можно повторить на своём блоге уже на этой неделе.</p>
+<p>Тарифы, модели и установка сверены по <a href="https://opencode.ai" target="_blank" rel="noopener">сайту OpenCode</a>, <a href="https://opencode.ai/docs/go/" target="_blank" rel="noopener">документации Go</a>, <a href="https://opencode.ai/docs/zen/" target="_blank" rel="noopener">документации Zen</a>, <a href="https://opencode.ai/docs/mcp-servers/" target="_blank" rel="noopener">странице MCP</a> и <a href="https://opencode.ai/changelog" target="_blank" rel="noopener">журналу изменений</a>. Проверено 25 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/google-antigravity/"><span class="rc-cover"><img src="/covers/google-antigravity.webp?v=fd0c74bd3e" alt="Google Antigravity: что это, агентная IDE Google, Antigravity 2.0, бесплатный план и доступ из России в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Google Antigravity: что это, агентная IDE Google, Antigravity 2.0, бесплатный план и доступ из России в 2026</span><span class="rc-desc">Google Antigravity это агентная платформа разработки от Google: приложение для…</span></a><a class="gp-related-card" href="/guides/qwen-code/"><span class="rc-cover"><img src="/covers/qwen-code.webp?v=d5f46ef32c" alt="Qwen Code: ИИ-агент для кода от Alibaba, установка CLI, API-ключ, Coding Plan и что стало с бесплатным доступом в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Qwen Code: ИИ-агент для кода от Alibaba, установка CLI, API-ключ, Coding Plan и что стало с бесплатным доступом в 2026</span><span class="rc-desc">Qwen Code это открытый ИИ-агент для программирования в терминале от команды Qwen.</span></a><a class="gp-related-card" href="/guides/cline/"><span class="rc-cover"><img src="/covers/cline.webp?v=009ce7efe3" alt="Cline: бесплатный ИИ-агент для кода в VS Code, установка, настройка, Cline CLI и ClinePass в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Cline: бесплатный ИИ-агент для кода в VS Code, установка, настройка, Cline CLI и ClinePass в 2026</span><span class="rc-desc">Cline это открытый ИИ-агент, который сам правит файлы проекта и запускает команды в…</span></a><a class="gp-related-card" href="/guides/gemini-cli/"><span class="rc-cover"><img src="/covers/gemini-cli.webp?v=5db844b792" alt="Gemini CLI: что это, как установить, лимиты и почему с июня 2026 его заменил Antigravity CLI" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Gemini CLI: что это, как установить, лимиты и почему с июня 2026 его заменил Antigravity CLI</span><span class="rc-desc">Gemini CLI это открытый ИИ-агент Google для терминала.</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=073a143fe1"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "opencode";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=52c5b988a6"></script>
+
+
+</body></html>

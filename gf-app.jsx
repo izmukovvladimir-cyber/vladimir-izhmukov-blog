@@ -96,7 +96,7 @@ const START_MAP = {
   "kontent-plan-na-nedelyu": "algoritm",
   "prodavat-cherez-blog": "product",
 };
-const START_DEFAULT = "statya";
+const START_DEFAULT = "blog-statya";
 // Current article slug, read from the URL at render AND at click time, so the
 // link is right both in the prerendered HTML and after client-side navigation.
 function currentTouch() {

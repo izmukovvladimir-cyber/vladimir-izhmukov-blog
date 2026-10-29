@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Forge UI: Stable Diffusion WebUI Forge и Forge Neo, что это, как скачать, Flux и отличия от AUTOMATIC1111 в 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Forge это ускоренная версия интерфейса AUTOMATIC1111 с поддержкой Flux, а Forge Neo его живой форк с Qwen-Image, Flux.2-Klein, Z-Image и Wan 2.2. Разбираю, чем они отличаются, как скачать и установить, что делать, если Flux тормозит, и какой Forge выбрать в 2026 году.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/forge-ui/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Forge UI: Stable Diffusion WebUI Forge и Forge Neo, что это, как скачать, Flux и отличия от AUTOMATIC1111 в 2026">
+<meta property="og:description" content="Forge это ускоренная версия интерфейса AUTOMATIC1111 с поддержкой Flux, а Forge Neo его живой форк с Qwen-Image, Flux.2-Klein, Z-Image и Wan 2.2. Разбираю, чем они отличаются, как скачать и установить, что делать, если Flux тормозит, и какой Forge выбрать в 2026 году.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/forge-ui/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/forge-ui.webp?v=cd91bb5e9e">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Forge UI: Stable Diffusion WebUI Forge и Forge Neo, что это, как скачать, Flux и отличия от AUTOMATIC1111 в 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-29T08:00:00Z">
+<meta property="article:modified_time" content="2026-10-29T08:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Forge UI: Stable Diffusion WebUI Forge и Forge Neo, что это, как скачать, Flux и отличия от AUTOMATIC1111 в 2026">
+<meta name="twitter:description" content="Forge это ускоренная версия интерфейса AUTOMATIC1111 с поддержкой Flux, а Forge Neo его живой форк с Qwen-Image, Flux.2-Klein, Z-Image и Wan 2.2. Разбираю, чем они отличаются, как скачать и установить, что делать, если Flux тормозит, и какой Forge выбрать в 2026 году.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/forge-ui.webp?v=cd91bb5e9e">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/forge-ui.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/forge-ui/#article",
+      "headline": "Forge UI: Stable Diffusion WebUI Forge и Forge Neo, что это, как скачать, Flux и отличия от AUTOMATIC1111 в 2026",
+      "description": "Forge это ускоренная версия интерфейса AUTOMATIC1111 с поддержкой Flux, а Forge Neo его живой форк с Qwen-Image, Flux.2-Klein, Z-Image и Wan 2.2. Разбираю, чем они отличаются, как скачать и установить, что делать, если Flux тормозит, и какой Forge выбрать в 2026 году.",
+      "datePublished": "2026-10-29T08:00:00Z",
+      "dateModified": "2026-10-29T08:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neyroseti, kartinki, stable-diffusion",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/forge-ui/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/forge-ui/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/forge-ui.webp",
+      "articleSection": "Нейросети для контента",
+      "articleBody": "Forge UI: быстрый Stable Diffusion WebUI с Flux Владимир Ижмуков · автор системы роста Instagram через короткие ролики Forge UI, или Stable Diffusion WebUI Forge, это ускоренная версия интерфейса AUTOMATIC1111 от автора ControlNet и Fooocus. Он быстрее, бережнее к видеопамяти и умеет Flux. Оригинальный Forge не обновляется с 26 июня 2025 года. Развивается его форк Forge Neo, релиз 2.31 вышел 21 октября 2026 года. Оба бесплатны и работают на твоём компьютере. Что такое Forge Forge сделал разработчик lllyasviel. Название взято по аналогии с Minecraft Forge: это платформа поверх Stable Diffusion WebUI. Forge построен на коде AUTOMATIC1111 версии 1.10.1, поэтому интерфейс почти тот же, и большинство расширений совместимы. Forge Neo это форк от разработчика Haoming02. Он продолжает последнюю версию Forge и добавляет свежие модели, релизы выходят раз в одну-две недели. Forge или Forge Neo | Что сравниваем | Forge | Forge Neo | |---|---|---| | Обновления | заморожен с 26.06.2025 | релиз 2.31 от 21.10.2026. | | Flux | NF4 и GGUF | Flux Kontext и Flux.2-Klein. | | Новые модели | нет | Qwen-Image, Z-Image, Chroma, Lumina. | | Видео | нет | Wan 2.2 14B. | | SD3 и NF4 | есть | удалены. | | Установка | один архив | git clone и Python 3.13. | Для новых моделей в 2026 году бери Neo. Оригинальный Forge есть смысл держать, только если у тебя под него собраны рабочие сценарии. Что умеет Forge - Скорость. Работает быстрее AUTOMATIC1111 и экономнее по памяти. - Flux. Форматы NF4 и GGUF, ползунок GPU Weight, LoRA для Flux. - Пресеты в Neo. Сохраняют модель и все параметры. - Ускорители в Neo. SageAttention, FlashAttention, Radial Attention для Wan 2.2. - Расширения. Большая часть расширений AUTOMATIC1111 работает. ControlNet для Flux в оригинальном Forge так и не сделали. Как скачать и установить Forge Оригинальный Forge одним архивом 1. Открой репозиторий Forge на GitHub. 2. Скачай архив webui forge cu121 torch231.7z, это рекомендованная сборка с CUDA 12.1. 3. Распакуй его, внутри уже есть git и Python. 4. Запусти update.bat, затем run.bat. Есть сборка с CUDA 12.4 и PyTorch 2.4. Авторы пишут, что она быстрее, но с ней может сломаться MSVC и не работать xformers. Forge Neo 1. Скачай ветку neo из репозитория Forge Neo командой git clone. 2. Поставь Python 3.13, рекомендуемый способ через менеджер uv. 3. Добавь флаг uv в файл webui-user.bat. 4. Запусти webui-user.bat. Старым видеокартам, которые не поддерживают свежий PyTorch, придётся ставить версии вручную. Частые ошибки в Forge - Flux тормозит. Понизь GPU Weight, по словам автора это решает 99% проблем. - Холст не двигается. В Gradio 4 холст двигается правой кнопкой мыши. - Модель Qwen Edit или Kontext не определяется. В Neo в имени файла должны быть слова qwen и edit или kontext. - Пропала функция в Neo. SD2, SD3, NF4 и обучение Textual Inversion там удалены, вопросы про них авторы не принимают. Forge на русском Интерфейс на английском. Оригинальный Forge работает с русской локализацией от AUTOMATIC1111. Для Neo совместимость я не проверял. Работает ли Forge в России Forge работает локально, VPN для генерации не нужен. Установка тянет файлы с GitHub, PyPI и Hugging Face, их доступность с российского адреса я не проверял. Минусы Forge - Оригинал заморожен, для новых моделей нужен Neo. - В Neo удалили часть функций, включая SD3 и NF4. - Установка Neo сложнее, нужен Python 3.13. - Интерфейс на английском. Чем заменить Forge | Программа | Чем отличается | |---|---| | AUTOMATIC1111 | оригинальный интерфейс, без Flux, почти не обновляется. | | ComfyUI | узловой интерфейс, сложнее, новые модели первыми. | | Fooocus | проще всех, только SDXL. | | SwarmUI | простой интерфейс поверх ComfyUI. | Общая картина по моделям и способам запуска собрана в обзоре Stable Diffusion, а про модели Flux есть отдельный обзор Flux. Частые вопросы Forge UI что это? Ускоренная версия интерфейса AUTOMATIC1111 от автора ControlNet и Fooocus с поддержкой Flux. Как скачать Forge UI? Оригинал одним архивом из релизов на GitHub, Forge Neo через git clone ветки neo. Forge Neo что это? Активный форк Forge с Qwen-Image, Flux.2-Klein, Z-Image и Wan 2.2, релизы раз в одну-две недели. Forge или AUTOMATIC1111? Forge построен на коде AUTOMATIC1111, интерфейс тот же, но быстрее и с Flux. Работает ли Flux в Forge? Да. В оригинале форматы NF4 и GGUF, в Neo Flux Kontext и Flux.2-Klein, NF4 там удалён. Stable Diffusion WebUI Forge и Web UI Forge одно и то же? Да, это разные написания одного проекта. Forge UI Roblox это то же самое? Нет, это другие проекты для Roblox и Minecraft, к нейросетям они не относятся. Что делать дальше Forge Neo сейчас самый удобный способ попробовать свежие модели у себя на компьютере, включая видео на Wan 2.2. Для блога это значит одно: картинки и ролики можно делать без подписок и лимитов. Остаётся главное, придумать, что показать и что сказать. Как я пишу сценарии роликов через ChatGPT, разобрал здесь: как вести Reels с ChatGPT и получать заявки. Внутри готовые запросы для хуков. Функции и…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Нейросети для контента",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Forge UI: Stable Diffusion WebUI Forge и Forge Neo, что это, как скачать, Flux и отличия от AUTOMATIC1111 в 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/forge-ui/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{defer:true,webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script data-gfmr-ref>(function(){var r=document.referrer,s=0;try{var o=JSON.parse(sessionStorage.getItem('gfmr_ref')||'null');if(o){sessionStorage.removeItem('gfmr_ref');var a=Date.now()-o.t;if(o.u===location.pathname&&typeof o.t==='number'&&a>=0&&a<120000){r=typeof o.r==='string'?o.r:'';s=1;}}}catch(e){}ym(110633946,'hit',location.href,(r||s)?{referer:r}:{});})();</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="cur" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/forge-ui.webp?v=cd91bb5e9e" alt="Forge UI: Stable Diffusion WebUI Forge и Forge Neo, что это, как скачать, Flux и отличия от AUTOMATIC1111 в 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Forge UI: Stable Diffusion WebUI Forge и Forge Neo, что это, как скачать, Flux и отличия от AUTOMATIC1111 в 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Forge это ускоренная версия интерфейса AUTOMATIC1111 с поддержкой Flux, а Forge Neo его живой форк с Qwen-Image, Flux.2-Klein, Z-Image и Wan 2.2. Разбираю, чем они отличаются, как скачать и установить, что делать, если Flux тормозит, и какой Forge выбрать в 2026 году.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Forge UI, или Stable Diffusion WebUI Forge, это ускоренная версия интерфейса AUTOMATIC1111 от автора ControlNet и Fooocus. Он быстрее, бережнее к видеопамяти и умеет Flux. Оригинальный Forge не обновляется с 26 июня 2025 года. Развивается его форк Forge Neo, релиз 2.31 вышел 21 октября 2026 года. Оба бесплатны и работают на твоём компьютере.</p>
+<h2 id="sec-0">Что такое Forge</h2>
+<p>Forge сделал разработчик lllyasviel. Название взято по аналогии с Minecraft Forge: это платформа поверх Stable Diffusion WebUI. Forge построен на коде AUTOMATIC1111 версии 1.10.1, поэтому интерфейс почти тот же, и большинство расширений совместимы.</p>
+<p>Forge Neo это форк от разработчика Haoming02. Он продолжает последнюю версию Forge и добавляет свежие модели, релизы выходят раз в одну-две недели.</p>
+<h3>Forge или Forge Neo</h3>
+<table class="gp-table"><thead><tr><th>Что сравниваем</th><th>Forge</th><th>Forge Neo</th></tr></thead><tbody><tr><td>Обновления</td><td>заморожен с 26.06.2025</td><td>релиз 2.31 от 21.10.2026.</td></tr><tr><td>Flux</td><td>NF4 и GGUF</td><td>Flux Kontext и Flux.2-Klein.</td></tr><tr><td>Новые модели</td><td>нет</td><td>Qwen-Image, Z-Image, Chroma, Lumina.</td></tr><tr><td>Видео</td><td>нет</td><td>Wan 2.2 14B.</td></tr><tr><td>SD3 и NF4</td><td>есть</td><td>удалены.</td></tr><tr><td>Установка</td><td>один архив</td><td>git clone и Python 3.13.</td></tr></tbody></table>
+<p>Для новых моделей в 2026 году бери Neo. Оригинальный Forge есть смысл держать, только если у тебя под него собраны рабочие сценарии.</p>
+<h2 id="sec-1">Что умеет Forge</h2>
+<ul><li><b>Скорость.</b> Работает быстрее AUTOMATIC1111 и экономнее по памяти.</li><li><b>Flux.</b> Форматы NF4 и GGUF, ползунок GPU Weight, <a href="/guides/lora-neyroset/">LoRA</a> для Flux.</li><li><b>Пресеты в Neo.</b> Сохраняют модель и все параметры.</li><li><b>Ускорители в Neo.</b> SageAttention, FlashAttention, Radial Attention для Wan 2.2.</li><li><b>Расширения.</b> Большая часть расширений AUTOMATIC1111 работает.</li></ul>
+<p>ControlNet для Flux в оригинальном Forge так и не сделали.</p>
+<h2 id="sec-2">Как скачать и установить Forge</h2>
+<h3>Оригинальный Forge одним архивом</h3>
+<ol><li>Открой <a href="https://github.com/lllyasviel/stable-diffusion-webui-forge" target="_blank" rel="noopener">репозиторий Forge на GitHub</a>.</li><li>Скачай архив webui_forge_cu121_torch231.7z, это рекомендованная сборка с CUDA 12.1.</li><li>Распакуй его, внутри уже есть git и Python.</li><li>Запусти update.bat, затем run.bat.</li></ol>
+<p>Есть сборка с CUDA 12.4 и PyTorch 2.4. Авторы пишут, что она быстрее, но с ней может сломаться MSVC и не работать xformers.</p>
+<h3>Forge Neo</h3>
+<ol><li>Скачай ветку neo из <a href="https://github.com/Haoming02/sd-webui-forge-classic/tree/neo" target="_blank" rel="noopener">репозитория Forge Neo</a> командой git clone.</li><li>Поставь Python 3.13, рекомендуемый способ через менеджер uv.</li><li>Добавь флаг uv в файл webui-user.bat.</li><li>Запусти webui-user.bat.</li></ol>
+<p>Старым видеокартам, которые не поддерживают свежий PyTorch, придётся ставить версии вручную.</p>
+<h2 id="sec-3">Частые ошибки в Forge</h2>
+<ul><li><b>Flux тормозит.</b> Понизь GPU Weight, по словам автора это решает 99% проблем.</li><li><b>Холст не двигается.</b> В Gradio 4 холст двигается правой кнопкой мыши.</li><li><b>Модель Qwen Edit или Kontext не определяется.</b> В Neo в имени файла должны быть слова qwen и edit или kontext.</li><li><b>Пропала функция в Neo.</b> SD2, SD3, NF4 и обучение Textual Inversion там удалены, вопросы про них авторы не принимают.</li></ul>
+<h2 id="sec-4">Forge на русском</h2>
+<p>Интерфейс на английском. Оригинальный Forge работает с русской локализацией от AUTOMATIC1111. Для Neo совместимость я не проверял.</p>
+<h2 id="sec-5">Работает ли Forge в России</h2>
+<p>Forge работает локально, VPN для генерации не нужен. Установка тянет файлы с GitHub, PyPI и Hugging Face, их доступность с российского адреса я не проверял.</p>
+<h2 id="sec-6">Минусы Forge</h2>
+<ul><li>Оригинал заморожен, для новых моделей нужен Neo.</li><li>В Neo удалили часть функций, включая SD3 и NF4.</li><li>Установка Neo сложнее, нужен Python 3.13.</li><li>Интерфейс на английском.</li></ul>
+<h2 id="sec-7">Чем заменить Forge</h2>
+<table class="gp-table"><thead><tr><th>Программа</th><th>Чем отличается</th></tr></thead><tbody><tr><td><a href="/guides/automatic1111/">AUTOMATIC1111</a></td><td>оригинальный интерфейс, без Flux, почти не обновляется.</td></tr><tr><td><a href="/guides/comfyui/">ComfyUI</a></td><td>узловой интерфейс, сложнее, новые модели первыми.</td></tr><tr><td><a href="/guides/fooocus/">Fooocus</a></td><td>проще всех, только SDXL.</td></tr><tr><td>SwarmUI</td><td>простой интерфейс поверх ComfyUI.</td></tr></tbody></table>
+<p>Общая картина по моделям и способам запуска собрана в <a href="/guides/stable-diffusion/">обзоре Stable Diffusion</a>, а про модели Flux есть отдельный <a href="/guides/flux-neyroset/">обзор Flux</a>.</p>
+<h2 id="sec-8">Частые вопросы</h2>
+<p><b>Forge UI что это?</b> Ускоренная версия интерфейса AUTOMATIC1111 от автора ControlNet и Fooocus с поддержкой Flux.</p>
+<p><b>Как скачать Forge UI?</b> Оригинал одним архивом из релизов на GitHub, Forge Neo через git clone ветки neo.</p>
+<p><b>Forge Neo что это?</b> Активный форк Forge с Qwen-Image, Flux.2-Klein, Z-Image и Wan 2.2, релизы раз в одну-две недели.</p>
+<p><b>Forge или AUTOMATIC1111?</b> Forge построен на коде AUTOMATIC1111, интерфейс тот же, но быстрее и с Flux.</p>
+<p><b>Работает ли Flux в Forge?</b> Да. В оригинале форматы NF4 и GGUF, в Neo Flux Kontext и Flux.2-Klein, NF4 там удалён.</p>
+<p><b>Stable Diffusion WebUI Forge и Web UI Forge одно и то же?</b> Да, это разные написания одного проекта.</p>
+<p><b>Forge UI Roblox это то же самое?</b> Нет, это другие проекты для Roblox и Minecraft, к нейросетям они не относятся.</p>
+<h2 id="sec-9">Что делать дальше</h2>
+<p>Forge Neo сейчас самый удобный способ попробовать свежие модели у себя на компьютере, включая видео на Wan 2.2. Для блога это значит одно: картинки и ролики можно делать без подписок и лимитов. Остаётся главное, придумать, что показать и что сказать.</p>
+<p>Как я пишу сценарии роликов через ChatGPT, разобрал здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=forge-ui" target="_blank" rel="noopener">как вести Reels с ChatGPT и получать заявки</a>. Внутри готовые запросы для хуков.</p>
+<p>Функции и установка сверены по <a href="https://github.com/lllyasviel/stable-diffusion-webui-forge" target="_blank" rel="noopener">репозиторию Forge</a>, <a href="https://github.com/Haoming02/sd-webui-forge-classic/tree/neo" target="_blank" rel="noopener">репозиторию Forge Neo</a> и <a href="https://github.com/Haoming02/sd-webui-forge-classic/releases" target="_blank" rel="noopener">списку релизов Neo</a>. Проверено 29 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/automatic1111/"><span class="rc-cover"><img src="/covers/automatic1111.webp?v=c87c2547f4" alt="AUTOMATIC1111: что это, Stable Diffusion WebUI, как скачать и установить, portable-версия и требования к видеокарте в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">AUTOMATIC1111: что это, Stable Diffusion WebUI, как скачать и установить, portable-версия и требования к видеокарте в 2026</span><span class="rc-desc">AUTOMATIC1111 это бесплатный веб-интерфейс для Stable Diffusion, который работает на…</span></a><a class="gp-related-card" href="/guides/fooocus/"><span class="rc-cover"><img src="/covers/fooocus.webp?v=eb052f2b48" alt="Fooocus: нейросеть для картинок, как скачать и установить бесплатно, Google Colab, как пользоваться и есть ли онлайн в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Fooocus: нейросеть для картинок, как скачать и установить бесплатно, Google Colab, как пользоваться и есть ли онлайн в 2026</span><span class="rc-desc">Fooocus это бесплатная программа для генерации картинок на SDXL, которая работает на…</span></a><a class="gp-related-card" href="/guides/lora-neyroset/"><span class="rc-cover"><img src="/covers/lora-neyroset.webp?v=1fcf3e8111" alt="LoRA в нейросети: что это простыми словами, как обучить свою LoRA, где скачать и что такое LoRA для Wan в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">LoRA в нейросети: что это простыми словами, как обучить свою LoRA, где скачать и что такое LoRA для Wan в 2026</span><span class="rc-desc">LoRA это маленький файл, который учит большую нейросеть новому лицу, предмету или стилю…</span></a><a class="gp-related-card" href="/guides/perchance/"><span class="rc-cover"><img src="/covers/perchance.webp?v=e3c00019d4" alt="Perchance AI: бесплатный генератор картинок и историй без регистрации, как пользоваться на русском в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Perchance AI: бесплатный генератор картинок и историй без регистрации, как пользоваться на русском в 2026</span><span class="rc-desc">Perchance это сайт с тысячами генераторов от сообщества, самый известный из них рисует…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=48734b45e8"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "forge-ui";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=a2f5dd0b64"></script>
+
+
+</body></html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>YandexART: нейросеть Яндекса для картинок, связь с Шедеврумом, API и версии в 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="YandexART это модель Яндекса для генерации изображений. Разбираю, как она связана с Шедеврумом и Алисой, что изменилось в версии 2.5, как работает API и что такое Alice AI ART.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/yandexart/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="YandexART: нейросеть Яндекса для картинок, связь с Шедеврумом, API и версии в 2026">
+<meta property="og:description" content="YandexART это модель Яндекса для генерации изображений. Разбираю, как она связана с Шедеврумом и Алисой, что изменилось в версии 2.5, как работает API и что такое Alice AI ART.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/yandexart/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/yandexart.webp?v=8758fbaed6">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="YandexART: нейросеть Яндекса для картинок, связь с Шедеврумом, API и версии в 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-10-31T08:00:00Z">
+<meta property="article:modified_time" content="2026-10-31T08:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YandexART: нейросеть Яндекса для картинок, связь с Шедеврумом, API и версии в 2026">
+<meta name="twitter:description" content="YandexART это модель Яндекса для генерации изображений. Разбираю, как она связана с Шедеврумом и Алисой, что изменилось в версии 2.5, как работает API и что такое Alice AI ART.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/yandexart.webp?v=8758fbaed6">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/yandexart.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/yandexart/#article",
+      "headline": "YandexART: нейросеть Яндекса для картинок, связь с Шедеврумом, API и версии в 2026",
+      "description": "YandexART это модель Яндекса для генерации изображений. Разбираю, как она связана с Шедеврумом и Алисой, что изменилось в версии 2.5, как работает API и что такое Alice AI ART.",
+      "datePublished": "2026-10-31T08:00:00Z",
+      "dateModified": "2026-10-31T08:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neyroseti, yandex, kartinki",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/yandexart/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/yandexart/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/yandexart.webp",
+      "articleSection": "Нейросети для контента",
+      "articleBody": "YandexART: модель Яндекса для генерации картинок Владимир Ижмуков · автор системы роста Instagram через короткие ролики YandexART это генеративная модель изображений от Яндекса, которая работает в Алисе и Шедевруме. Обычному человеку проще всего попробовать её через эти сервисы, разработчику через API в Yandex AI Studio. В актуальной витрине Яндекса сейчас говорится уже про Alice AI ART, поэтому старое название и новое стоит различать. Что такое YandexART Главная путаница в том, что YandexART это модель, а Шедеврум это сервис с лентой и приложением. Модель рисует картинку, сервис даёт удобный экран и публикации. Обзор людям про приложение я вынес в отдельную статью про Шедеврум. Версия 2.5 вышла 20 марта 2025 года. В октябре 2025 Яндекс представил семейство Alice AI с моделями LLM, VLM и ART, а в мае 2026 обновил Alice AI ART в AI Studio. Официального заявления «YandexART заменён на Alice AI ART» я не нашёл, при этом в документации API идентификатор yandex-art встречается. Что умеет модель - Точность по промпту. В версии 2.5 в запросе можно задать количество объектов, форму, цвет и размер. - Надписи на латинице. По обзору стали на 30% лучше, чем в 2.0. - Обучение. Заявлен набор примерно из 1 млрд пар «изображение и описание». - Версия 2.5 Pro. Более детальные, похожие на фото картинки и улучшение до 4K. - Русские надписи. У Alice AI ART заявлено 7-9 слов в большинстве изображений, у 2.5 подтверждена только латиница. - Культурный контекст. Alice AI ART обучали с учётом русскоязычных запросов. Как попробовать YandexART онлайн 1. Откройте Шедеврум или попросите Алису нарисовать картинку. 2. Опишите сцену на русском: кто в кадре, где находится, какой свет и стиль. 3. Если нужна надпись, делайте её короткой и проверяйте каждую букву. 4. Сравните варианты и уточните запрос там, где модель ошиблась. 5. Для обработки в работе подключайте API, про него ниже. Можно ли скачать YandexART Отдельной программы я не нашёл. Есть приложение Шедеврум в RuStore, а сама модель работает на серверах Яндекса. Сколько стоит YandexART | Способ | Цена | Что важно | |---|---|---| | Шедеврум и Алиса, базовая версия | Бесплатно по обзору 2025 года | Лимит 70 попыток в вебе в том же обзоре. | | Шедеврум Про | 100 ₽ в месяц, первая неделя бесплатно | Цена на март 2025, только для подписчиков Яндекс Плюс. | | API в Yandex AI Studio | Оплата за каждый запрос | Точную цену генерации я не прочитал, страницы отдают капчу. | Шедеврум Про по обзорам 2025 года давал 2.5 Pro, 4K, отсутствие водяных знаков, отдельную очередь и 6 картинок вместо 2. Перед оплатой проверьте цену в самом приложении, за полтора года она могла измениться. YandexART API API работает асинхронно: вы отправляете запрос, получаете операцию и забираете результат позже. Адрес модели выглядит как art:// /yandex-art/latest, соотношение сторон задаётся параметрами widthRatio и heightRatio. Для работы нужен сервисный аккаунт с ролью, в материалах AI Studio названа ai.playground.user или выше. В выдаче официальной документации указано 10 бесплатных запросов в сутки, полностью страницу я прочитать не смог, поэтому сверьте перед запуском. Обзор на dev.to называет хранение результатов 3 дня и квоты около 500 изображений в минуту и 5 000 в день, это вторичный источник. Начинать лучше с инструкции Yandex Cloud. Версии YandexART | Версия | Что известно | |---|---| | 2.0 | Предыдущее поколение, с ним сравнивают 2.5. | | 2.5 | Март 2025, точнее следует промпту, латиница на 30% лучше. | | 2.5 Pro | Детальнее, улучшение до 4K, по подписке Шедеврум Про. | | Alice AI ART | Май 2026, по заявлению компании качество в три раза выше прошлого поколения. | Запросы «yandexart 2.7» и «yandexart exp» я проверял, подтверждения таким версиям не нашёл, поэтому ничего про них не пишу. Обзоры про 2.5 иногда показывают даты июля и августа 2026, это шапка сайта. Реальная дата выхода 20 марта 2025. YandexART и YandexGPT Названия похожи, задачи разные. YandexGPT это текстовая модель, YandexART рисует картинки. Поэтому запрос «yandexart gpt» обычно означает смешение двух продуктов. Работает ли YandexART в России Это российский сервис, поэтому VPN по смыслу не нужен. Шедеврум Про оплачивается в рублях. Прямой проверки с российского IP у меня не было, сервер находится вне России. Минусы YandexART - Разберётесь не сразу: модель, приложение и новое название Alice AI ART живут параллельно. - Цена API на открытых страницах мне недоступна из-за капчи. - Русский текст на картинке подтверждён только у Alice AI ART, в 2.5 речь про латиницу. - Какая модель стоит в Шедевруме сегодня, официально я не подтвердил. - Цифры по Шедеврум Про старые, им полтора года. Чем заменить YandexART | Сервис | Чем отличается | |---|---| | Kandinsky | Тоже российская модель, от Сбера, доступна в GigaChat. | | Шедеврум | Приложение и лента поверх моделей Яндекса. | | Midjourney | Зарубежная платная модель. | | Nano Banana | Зарубежная модель Google. | Общая картина есть в подборке нейросетей для генерации изображений. Частые вопросы YandexART…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Нейросети для контента",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "YandexART: нейросеть Яндекса для картинок, связь с Шедеврумом, API и версии в 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/yandexart/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/yandexart/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "YandexART и Шедеврум, как связаны?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Шедеврум работает на моделях Яндекса, версия 2.5 была доступна всем его пользователям. Какая модель стоит там сегодня, официально я не подтвердил."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли YandexART API?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, через Yandex AI Studio, запросы обрабатываются асинхронно."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Где YandexART онлайн?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Через Алису, Шедеврум и Yandex AI Studio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чем YandexART 2.5 отличается от 2.0?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Точнее следует промпту, а надписи на латинице стали лучше на 30% по обзору."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Существует ли YandexART 2.7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Подтверждения я не нашёл."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{defer:true,webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script data-gfmr-ref>(function(){var r=document.referrer,s=0;try{var o=JSON.parse(sessionStorage.getItem('gfmr_ref')||'null');if(o){sessionStorage.removeItem('gfmr_ref');var a=Date.now()-o.t;if(o.u===location.pathname&&typeof o.t==='number'&&a>=0&&a<120000){r=typeof o.r==='string'?o.r:'';s=1;}}}catch(e){}ym(110633946,'hit',location.href,(r||s)?{referer:r}:{});})();</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="cur" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/yandexart.webp?v=8758fbaed6" alt="YandexART: нейросеть Яндекса для картинок, связь с Шедеврумом, API и версии в 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">YandexART: нейросеть Яндекса для картинок, связь с Шедеврумом, API и версии в 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">YandexART это модель Яндекса для генерации изображений. Разбираю, как она связана с Шедеврумом и Алисой, что изменилось в версии 2.5, как работает API и что такое Alice AI ART.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>YandexART это генеративная модель изображений от Яндекса, которая работает в Алисе и Шедевруме. Обычному человеку проще всего попробовать её через эти сервисы, разработчику через API в Yandex AI Studio. В актуальной витрине Яндекса сейчас говорится уже про Alice AI ART, поэтому старое название и новое стоит различать.</p>
+<h2 id="sec-0">Что такое YandexART</h2>
+<p>Главная путаница в том, что YandexART это модель, а Шедеврум это сервис с лентой и приложением. Модель рисует картинку, сервис даёт удобный экран и публикации. Обзор людям про приложение я вынес в отдельную статью <a href="/guides/shedevrum/">про Шедеврум</a>.</p>
+<p>Версия 2.5 вышла 20 марта 2025 года. В октябре 2025 Яндекс представил семейство Alice AI с моделями LLM, VLM и ART, а в мае 2026 обновил Alice AI ART в AI Studio. Официального заявления «YandexART заменён на Alice AI ART» я не нашёл, при этом в документации API идентификатор <code>yandex-art</code> встречается.</p>
+<h3>Что умеет модель</h3>
+<ul><li><b>Точность по промпту.</b> В версии 2.5 в запросе можно задать количество объектов, форму, цвет и размер.</li><li><b>Надписи на латинице.</b> По обзору стали на 30% лучше, чем в 2.0.</li><li><b>Обучение.</b> Заявлен набор примерно из 1 млрд пар «изображение и описание».</li><li><b>Версия 2.5 Pro.</b> Более детальные, похожие на фото картинки и улучшение до 4K.</li><li><b>Русские надписи.</b> У Alice AI ART заявлено 7-9 слов в большинстве изображений, у 2.5 подтверждена только латиница.</li><li><b>Культурный контекст.</b> Alice AI ART обучали с учётом русскоязычных запросов.</li></ul>
+<h2 id="sec-1">Как попробовать YandexART онлайн</h2>
+<ol><li>Откройте <a href="https://shedevrum.ai/" target="_blank" rel="noopener">Шедеврум</a> или попросите Алису нарисовать картинку.</li><li>Опишите сцену на русском: кто в кадре, где находится, какой свет и стиль.</li><li>Если нужна надпись, делайте её короткой и проверяйте каждую букву.</li><li>Сравните варианты и уточните запрос там, где модель ошиблась.</li><li>Для обработки в работе подключайте API, про него ниже.</li></ol>
+<h3>Можно ли скачать YandexART</h3>
+<p>Отдельной программы я не нашёл. Есть приложение Шедеврум в <a href="https://www.rustore.ru/catalog/app/com.yandex.shedevrus" target="_blank" rel="noopener">RuStore</a>, а сама модель работает на серверах Яндекса.</p>
+<h2 id="sec-2">Сколько стоит YandexART</h2>
+<table class="gp-table"><thead><tr><th>Способ</th><th>Цена</th><th>Что важно</th></tr></thead><tbody><tr><td>Шедеврум и Алиса, базовая версия</td><td>Бесплатно по обзору 2025 года</td><td>Лимит 70 попыток в вебе в том же обзоре.</td></tr><tr><td>Шедеврум Про</td><td>100 ₽ в месяц, первая неделя бесплатно</td><td>Цена на март 2025, только для подписчиков Яндекс Плюс.</td></tr><tr><td>API в Yandex AI Studio</td><td>Оплата за каждый запрос</td><td>Точную цену генерации я не прочитал, страницы отдают капчу.</td></tr></tbody></table>
+<p>Шедеврум Про по обзорам 2025 года давал 2.5 Pro, 4K, отсутствие водяных знаков, отдельную очередь и 6 картинок вместо 2. Перед оплатой проверьте цену в самом приложении, за полтора года она могла измениться.</p>
+<h2 id="sec-3">YandexART API</h2>
+<p>API работает асинхронно: вы отправляете запрос, получаете операцию и забираете результат позже. Адрес модели выглядит как <code>art://&lt;folder_ID&gt;/yandex-art/latest</code>, соотношение сторон задаётся параметрами widthRatio и heightRatio. Для работы нужен сервисный аккаунт с ролью, в материалах AI Studio названа ai.playground.user или выше.</p>
+<p>В выдаче официальной документации указано 10 бесплатных запросов в сутки, полностью страницу я прочитать не смог, поэтому сверьте перед запуском. Обзор на dev.to называет хранение результатов 3 дня и квоты около 500 изображений в минуту и 5 000 в день, это вторичный источник.</p>
+<p>Начинать лучше с <a href="https://yandex.cloud/en/docs/foundation-models/operations/yandexart/request" target="_blank" rel="noopener">инструкции Yandex Cloud</a>.</p>
+<h2 id="sec-4">Версии YandexART</h2>
+<table class="gp-table"><thead><tr><th>Версия</th><th>Что известно</th></tr></thead><tbody><tr><td>2.0</td><td>Предыдущее поколение, с ним сравнивают 2.5.</td></tr><tr><td>2.5</td><td>Март 2025, точнее следует промпту, латиница на 30% лучше.</td></tr><tr><td>2.5 Pro</td><td>Детальнее, улучшение до 4K, по подписке Шедеврум Про.</td></tr><tr><td>Alice AI ART</td><td>Май 2026, по заявлению компании качество в три раза выше прошлого поколения.</td></tr></tbody></table>
+<p>Запросы «yandexart 2.7» и «yandexart exp» я проверял, подтверждения таким версиям не нашёл, поэтому ничего про них не пишу. Обзоры про 2.5 иногда показывают даты июля и августа 2026, это шапка сайта. Реальная дата выхода 20 марта 2025.</p>
+<h2 id="sec-5">YandexART и YandexGPT</h2>
+<p>Названия похожи, задачи разные. <a href="/guides/yandexgpt/">YandexGPT</a> это текстовая модель, YandexART рисует картинки. Поэтому запрос «yandexart gpt» обычно означает смешение двух продуктов.</p>
+<h2 id="sec-6">Работает ли YandexART в России</h2>
+<p>Это российский сервис, поэтому VPN по смыслу не нужен. Шедеврум Про оплачивается в рублях. Прямой проверки с российского IP у меня не было, сервер находится вне России.</p>
+<h2 id="sec-7">Минусы YandexART</h2>
+<ul><li>Разберётесь не сразу: модель, приложение и новое название Alice AI ART живут параллельно.</li><li>Цена API на открытых страницах мне недоступна из-за капчи.</li><li>Русский текст на картинке подтверждён только у Alice AI ART, в 2.5 речь про латиницу.</li><li>Какая модель стоит в Шедевруме сегодня, официально я не подтвердил.</li><li>Цифры по Шедеврум Про старые, им полтора года.</li></ul>
+<h2 id="sec-8">Чем заменить YandexART</h2>
+<table class="gp-table"><thead><tr><th>Сервис</th><th>Чем отличается</th></tr></thead><tbody><tr><td><a href="/guides/kandinsky/">Kandinsky</a></td><td>Тоже российская модель, от Сбера, доступна в GigaChat.</td></tr><tr><td><a href="/guides/shedevrum/">Шедеврум</a></td><td>Приложение и лента поверх моделей Яндекса.</td></tr><tr><td><a href="/guides/midjourney/">Midjourney</a></td><td>Зарубежная платная модель.</td></tr><tr><td><a href="/guides/nano-banana/">Nano Banana</a></td><td>Зарубежная модель Google.</td></tr></tbody></table>
+<p>Общая картина есть в подборке <a href="/guides/neyroset-dlya-generacii-izobrazheniy/">нейросетей для генерации изображений</a>.</p>
+<h2 id="sec-9">Частые вопросы</h2>
+<h3>YandexART и Шедеврум, как связаны?</h3>
+<p>Шедеврум работает на моделях Яндекса, версия 2.5 была доступна всем его пользователям. Какая модель стоит там сегодня, официально я не подтвердил.</p>
+<h3>Есть ли YandexART API?</h3>
+<p>Да, через Yandex AI Studio, запросы обрабатываются асинхронно.</p>
+<h3>Где YandexART онлайн?</h3>
+<p>Через Алису, Шедеврум и Yandex AI Studio.</p>
+<h3>Чем YandexART 2.5 отличается от 2.0?</h3>
+<p>Точнее следует промпту, а надписи на латинице стали лучше на 30% по обзору.</p>
+<h3>Существует ли YandexART 2.7?</h3>
+<p>Подтверждения я не нашёл.</p>
+<h2 id="sec-10">Что делать дальше</h2>
+<p>Картинки ускоряют производство, но охват приносит хук и формат. Я использую нейросети как конвейер под короткие ролики и карусели, которые ведут людей в бота и дальше к заявкам.</p>
+<p>Как я делаю такие ролики через ChatGPT, разобрал здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=yandexart" target="_blank" rel="noopener">как вести Reels с ChatGPT и получать заявки</a>. Внутри готовые запросы для хуков и сценариев.</p>
+<p>Сведения сверены по <a href="https://yandex.cloud/ru/blog/alice-ai-art" target="_blank" rel="noopener">блогу Yandex Cloud об Alice AI ART</a>, <a href="https://yandex.cloud/en/docs/foundation-models/operations/yandexart/request" target="_blank" rel="noopener">документации по запросу к модели</a>, обзорам <a href="https://kod.ru/yandex-art-2-5" target="_blank" rel="noopener">Kod.ru</a> и <a href="https://3dnews.ru/1120048/yandeks-predstavil-iihudognika-yandexart-25-s-povishennoy-tochnostyu-i-storublyovuyu-podpisku-shedevrum-pro" target="_blank" rel="noopener">3DNews</a>. Проверено 31 октября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/alisa-pro/"><span class="rc-cover"><img src="/covers/alisa-pro.webp?v=a7cf77eda5" alt="Алиса Про: что это, сколько стоит подписка и чем отличается от Яндекс Плюс в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Алиса Про: что это, сколько стоит подписка и чем отличается от Яндекс Плюс в 2026</span><span class="rc-desc">Алиса Про это ассистент для почты и документов в тарифах Яндекс 360.</span></a><a class="gp-related-card" href="/guides/deep-dream-generator/"><span class="rc-cover"><img src="/covers/deep-dream-generator.webp?v=b7d3a52cc6" alt="Deep Dream Generator: нейросеть для картинок и видео, цены, бесплатная энергия и русский язык в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Deep Dream Generator: нейросеть для картинок и видео, цены, бесплатная энергия и русский язык в 2026</span><span class="rc-desc">Deep Dream Generator собирает больше 30 моделей картинок и видео в одном сайте.</span></a><a class="gp-related-card" href="/guides/dreamstudio/"><span class="rc-cover"><img src="/covers/dreamstudio.webp?v=667b8a5cb2" alt="DreamStudio: что стало с нейросетью Stable Diffusion от Stability AI, Brand Studio, цены и чем заменить в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">DreamStudio: что стало с нейросетью Stable Diffusion от Stability AI, Brand Studio, цены и чем заменить в 2026</span><span class="rc-desc">Сайт DreamStudio теперь открывает Brand Studio, новый сервис Stability AI для брендов.</span></a><a class="gp-related-card" href="/guides/automatic1111/"><span class="rc-cover"><img src="/covers/automatic1111.webp?v=c87c2547f4" alt="AUTOMATIC1111: что это, Stable Diffusion WebUI, как скачать и установить, portable-версия и требования к видеокарте в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">AUTOMATIC1111: что это, Stable Diffusion WebUI, как скачать и установить, portable-версия и требования к видеокарте в 2026</span><span class="rc-desc">AUTOMATIC1111 это бесплатный веб-интерфейс для Stable Diffusion, который работает на…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=9908e8512d"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "yandexart";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=a2f5dd0b64"></script>
+
+
+</body></html>

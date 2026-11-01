@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aider: что это, как установить и подключить модель, цена и аналоги в 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=6bdd1edf62">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Aider это бесплатный ИИ-помощник для кода в терминале с открытым исходным кодом. Показываю установку, запуск, выбор модели, автокоммиты, расходы на API и чем он отличается от Claude Code.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/aider/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Aider: что это, как установить и подключить модель, цена и аналоги в 2026">
+<meta property="og:description" content="Aider это бесплатный ИИ-помощник для кода в терминале с открытым исходным кодом. Показываю установку, запуск, выбор модели, автокоммиты, расходы на API и чем он отличается от Claude Code.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/aider/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/aider.webp?v=012edf311c">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Aider: что это, как установить и подключить модель, цена и аналоги в 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-11-01T08:00:00Z">
+<meta property="article:modified_time" content="2026-11-01T08:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aider: что это, как установить и подключить модель, цена и аналоги в 2026">
+<meta name="twitter:description" content="Aider это бесплатный ИИ-помощник для кода в терминале с открытым исходным кодом. Показываю установку, запуск, выбор модели, автокоммиты, расходы на API и чем он отличается от Claude Code.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/aider.webp?v=012edf311c">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/aider.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/aider/#article",
+      "headline": "Aider: что это, как установить и подключить модель, цена и аналоги в 2026",
+      "description": "Aider это бесплатный ИИ-помощник для кода в терминале с открытым исходным кодом. Показываю установку, запуск, выбор модели, автокоммиты, расходы на API и чем он отличается от Claude Code.",
+      "datePublished": "2026-11-01T08:00:00Z",
+      "dateModified": "2026-11-01T08:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "neyroseti, kod, vaybkoding",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/aider/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/aider/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/aider.webp",
+      "articleSection": "Нейросети для контента",
+      "articleBody": "Aider: бесплатный ИИ-напарник для кода в терминале Владимир Ижмуков · автор системы роста Instagram через короткие ролики Aider это открытая программа, которая работает в терминале, читает ваш проект и правит код прямо в файлах, сохраняя изменения в git. Сама она бесплатна по лицензии Apache-2.0, а платить нужно только за запросы к выбранной модели, либо запускать локальную модель. Ниже показываю установку, первые команды и типичные ошибки. Сразу про омонимы: в подсказках рядом встречаются французский глагол aider и ноутбуки MSI Raider, к программе они отношения не имеют. Что такое Aider Aider появился в мае 2023 года, его репозиторий Aider-AI/aider собрал около 49 900 звёзд на GitHub. Автором обзоры называют Пола Готье. Это инструмент для разработчиков и тех, кто не боится терминала: графического окна здесь нет, работа идёт в консоли. Что умеет Aider - Правки в файлах. Модель сразу меняет код проекта. - Карта репозитория. Даёт модели контекст по всему проекту. - 100+ языков программирования. - Автокоммиты. Каждая правка сохраняется в git с описанием. - Линтеры и тесты. После правок можно запускать проверки и исправлять найденное. - Дополнительный контекст. Голосовой ввод, картинки и веб-страницы. - Почти любая модель. Claude, OpenAI, Gemini, DeepSeek, OpenRouter, а также локальные через Ollama и LM Studio. Как установить Aider Нужен Python версии от 3.8 до 3.13. Команды взяты из официальной инструкции: 1. Поставьте установщик: python -m pip install aider-install. 2. Запустите его: aider-install. Затем перейдите в папку проекта и запустите программу с нужной моделью: 1. Откройте папку: cd ваш-проект. 2. Запустите Aider: aider --model sonnet --api-key anthropic=ВАШ КЛЮЧ. Для других провайдеров команда строится так же. Для быстрой пробы есть образ Docker, Codespaces и Replit. Ключ не стоит хранить в репозитории и показывать на скриншотах. Как пользоваться Aider 1. Создайте отдельную ветку git: git checkout -b aider-test. Aider сам делает коммиты, и отдельная ветка убережёт основную историю. 2. Добавьте только нужные файлы командой /add имя файла. Чем меньше лишнего в контексте, тем дешевле запрос. 3. Опишите задачу обычными словами, можно по-русски. 4. Посмотрите предложенные изменения и получившийся коммит. 5. Если результат не понравился, отмените его командой /undo. 6. Запустите тесты и прочитайте код, прежде чем сливать ветку. Какую модель выбрать На сайте проекта рекомендованы Claude 3.7 Sonnet, DeepSeek R1 и V3, OpenAI o1, o3-mini и GPT-4o. Поддержка более новых моделей, в том числе Claude 4.x и GPT-5.x, описана в истории изменений основной ветки. Слабые локальные модели часто ломают формат правок, и документация об этом предупреждает в разделе о проблемах с редактированием файлов. Начните с сильной облачной модели на маленькой задаче, а потом сравните её с локальной. Сколько стоит Aider | Что | Цена | |---|---| | Программа Aider | Бесплатно, лицензия Apache-2.0 | | Подписка | Отсутствует | | Облачная модель | По тарифу провайдера, платите за запросы | | Локальная модель | Без оплаты API, но нужен подходящий компьютер | Цены моделей у каждого провайдера свои, поэтому заранее смотрите их страницу. Большие репозитории и длинные чаты быстро расходуют токены, поэтому следите за стоимостью в выводе программы и начинайте новый чат для новой задачи. Aider на русском Интерфейс и документация на английском, русского перевода я не нашёл. Задачу можно писать по-русски, понимание зависит от выбранной модели. Если русский выходит хуже, напишите задачу по-английски, а комментарии попросите на нужном вам языке. Работает ли Aider в России Сам Aider это локальная программа, и в его лицензии нет ограничений по странам. Сложности возникают на стороне моделей: проверьте списки поддерживаемых стран у провайдера и способы оплаты. Прямой проверки с российского IP у меня не было, доступность PyPI и GitHub из России я тоже не проверял. Практичные варианты: локальная модель через Ollama или LM Studio, OpenRouter и другие совместимые с OpenAI шлюзы. Aider принимает любой такой API. Минусы Aider - Подписки нет, но запросы к модели всё равно стоят денег. - Работа только в терминале, новичкам будет непривычно. - Автокоммиты засоряют историю, если не работать в отдельной ветке. - Слабые модели часто ломают формат правок. - Темп релизов снизился: последний релиз на GitHub вышел 9 августа 2025 года, версия 0.86.2 на PyPI от 12 февраля 2026 года, основная ветка обновлялась 22 мая 2026 года. Поэтому поддержка самых новых моделей иногда появляется в основной ветке раньше, чем в релизе. Чем заменить Aider | Сервис | Чем отличается | |---|---| | Claude Code | Терминальный агент от Anthropic, работает с её моделями. | | Cline | Расширение VS Code с агентным режимом и множеством моделей. | | OpenCode | Терминальный агент с открытым кодом и широким выбором моделей. | | Codex | Терминальный агент OpenAI. | | Gemini CLI | Терминальный агент Google с бесплатной квотой. | | Cursor | Полноценная ИИ-среда разработки, для тех, кто хочет окно вместо…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Нейросети для контента",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Aider: что это, как установить и подключить модель, цена и аналоги в 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/aider/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/aider/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Aider, что это?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Это бесплатный ИИ-помощник для программирования, который работает в терминале и правит код в git-репозитории."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Где скачать Aider?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Устанавливается через pip install aider-install, исходный код лежит на GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит Aider?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Сама программа бесплатна. Вы платите провайдеру модели или запускаете локальную модель."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работает ли Aider с локальными моделями?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, через Ollama и LM Studio, но слабые модели могут ломать правки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Aider это агент?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Он сам читает файлы, правит код, делает коммиты и запускает проверки, а вы подтверждаете решения. По автономности, насколько я понимаю, он уступает Claude Code, но это моя личная оценка, официального сравнения я не видел."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=9dfdb633f2" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{defer:true,webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script data-gfmr-ref>(function(){var r=document.referrer,s=0;try{var o=JSON.parse(sessionStorage.getItem('gfmr_ref')||'null');if(o){sessionStorage.removeItem('gfmr_ref');var a=Date.now()-o.t;if(o.u===location.pathname&&typeof o.t==='number'&&a>=0&&a<120000){r=typeof o.r==='string'?o.r:'';s=1;}}}catch(e){}ym(110633946,'hit',location.href,(r||s)?{referer:r}:{});})();</script>
+<script id="brand-data">window.__BRAND={"brandName":"Владимир Ижмуков","domain":{"site":"https://blog.vladimir-izhmukov.ru","apex":"https://vladimir-izhmukov.ru"},"author":{"name":"Владимир Ижмуков","url":"https://t.me/izhmukov_777","legal":"Владимир Ижмуков","legalEntity":"Владимир Ижмуков"},"telegram":{"url":"https://t.me/izhmukov_777","name":"Владимир Ижмуков","channelUrl":"https://t.me/Ai_realshift","channelName":"AI Realshift"},"palette":{"ink":"#16180f","accent":"#bff03a","offwhite":"#ffffff","bgLight":"#f6f4ec","bgDark":"#14150f"},"fonts":{"display":"Inter Tight","body":"Inter","mono":"JetBrains Mono","serif":"PT Serif","googleHref":"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"},"funnel":{"mode":"community","ctaText":"Забрать материалы в боте","targetUrl":"https://t.me/izhmukov777_bot","offerText":"Бесплатные материалы по Reels и нейросетям: промпты, гайды, разборы. Забирай в боте.","ctaTitle":"Забирай материалы в боте","ctaSub":"Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.","bullets":["Готовые промпты под Reels, хуки и длинные описания","Разборы, почему одни ролики залетают, а другие нет","Гайды по нейросетям для контента, коротко и по делу"],"ctaFine":"","docs":{"privacy":"https://blog.vladimir-izhmukov.ru/policy/"}},"home":{"heroImage":"/covers/_home-hero.webp","eyebrow":"База знаний Владимира Ижмукова","title":"Как расти в Instagram через короткие ролики и превращать внимание в заявки","description":"Разборы, методики и готовые инструменты для экспертов, которые хотят набрать подписчиков с нуля, разогнать охваты и продавать через блог. Без съёмочной команды и рекламного бюджета.","metaDescription":"База знаний Владимира Ижмукова: как набрать подписчиков в Instagram с нуля, снимать Рилс без съёмок нейросетями, разогнать охваты и продавать через блог. Реальные методики и цифры.","ctaText":"Смотреть статьи","ctaHref":"/library/"},"categories":[{"id":"instagram","name":"Instagram и рост","lead":"Как набирать подписчиков с нуля, разгонять охваты и делать Рилс, которые досматривают до конца."},{"id":"neyroseti","name":"Нейросети для контента","lead":"Какие нейросети реально помогают в контенте и как снимать ролики без съёмок."},{"id":"kontent","name":"Контент и воронки","lead":"Как планировать контент на неделю и превращать читателей блога в заявки и продажи."}],"library":{"nav":"Статьи","eyebrow":"ВСЕ СТАТЬИ","title":"Статьи о росте в Instagram и нейросетях для контента","lead":"Разборы механики Reels, готовые промпты и системы, по которым блог растёт с нуля. Ищи по поиску, категориям или уровню."},"assets":{"avatar":"/images/logo-vladimir.png","aboutHero":"/covers/_home-hero.webp"}};</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="cur" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/aider.webp?v=012edf311c" alt="Aider: что это, как установить и подключить модель, цена и аналоги в 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Aider: что это, как установить и подключить модель, цена и аналоги в 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Aider это бесплатный ИИ-помощник для кода в терминале с открытым исходным кодом. Показываю установку, запуск, выбор модели, автокоммиты, расходы на API и чем он отличается от Claude Code.</p><div class="gp-article-body"><p>_Владимир Ижмуков · автор системы роста Instagram через короткие ролики_</p>
+<p>Aider это открытая программа, которая работает в терминале, читает ваш проект и правит код прямо в файлах, сохраняя изменения в git. Сама она бесплатна по лицензии Apache-2.0, а платить нужно только за запросы к выбранной модели, либо запускать локальную модель. Ниже показываю установку, первые команды и типичные ошибки.</p>
+<p>Сразу про омонимы: в подсказках рядом встречаются французский глагол aider и ноутбуки MSI Raider, к программе они отношения не имеют.</p>
+<h2 id="sec-0">Что такое Aider</h2>
+<p>Aider появился в мае 2023 года, его репозиторий <a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener">Aider-AI/aider</a> собрал около 49 900 звёзд на GitHub. Автором обзоры называют Пола Готье. Это инструмент для разработчиков и тех, кто не боится терминала: графического окна здесь нет, работа идёт в консоли.</p>
+<h3>Что умеет Aider</h3>
+<ul><li><b>Правки в файлах.</b> Модель сразу меняет код проекта.</li><li><b>Карта репозитория.</b> Даёт модели контекст по всему проекту.</li><li><b>100+ языков программирования.</b></li><li><b>Автокоммиты.</b> Каждая правка сохраняется в git с описанием.</li><li><b>Линтеры и тесты.</b> После правок можно запускать проверки и исправлять найденное.</li><li><b>Дополнительный контекст.</b> Голосовой ввод, картинки и веб-страницы.</li><li><b>Почти любая модель.</b> Claude, OpenAI, Gemini, DeepSeek, OpenRouter, а также локальные через Ollama и LM Studio.</li></ul>
+<h2 id="sec-1">Как установить Aider</h2>
+<p>Нужен Python версии от 3.8 до 3.13. Команды взяты из <a href="https://aider.chat/docs/install.html" target="_blank" rel="noopener">официальной инструкции</a>:</p>
+<ol><li>Поставьте установщик: <code>python -m pip install aider-install</code>.</li><li>Запустите его: <code>aider-install</code>.</li></ol>
+<p>Затем перейдите в папку проекта и запустите программу с нужной моделью:</p>
+<ol><li>Откройте папку: <code>cd ваш-проект</code>.</li><li>Запустите Aider: <code>aider --model sonnet --api-key anthropic=ВАШ_КЛЮЧ</code>.</li></ol>
+<p>Для других провайдеров команда строится так же. Для быстрой пробы есть образ Docker, Codespaces и Replit. Ключ не стоит хранить в репозитории и показывать на скриншотах.</p>
+<h2 id="sec-2">Как пользоваться Aider</h2>
+<ol><li>Создайте отдельную ветку git: <code>git checkout -b aider-test</code>. Aider сам делает коммиты, и отдельная ветка убережёт основную историю.</li><li>Добавьте только нужные файлы командой <code>/add имя_файла</code>. Чем меньше лишнего в контексте, тем дешевле запрос.</li><li>Опишите задачу обычными словами, можно по-русски.</li><li>Посмотрите предложенные изменения и получившийся коммит.</li><li>Если результат не понравился, отмените его командой <code>/undo</code>.</li><li>Запустите тесты и прочитайте код, прежде чем сливать ветку.</li></ol>
+<h3>Какую модель выбрать</h3>
+<p>На сайте проекта рекомендованы Claude 3.7 Sonnet, DeepSeek R1 и V3, OpenAI o1, o3-mini и GPT-4o. Поддержка более новых моделей, в том числе Claude 4.x и GPT-5.x, описана в истории изменений основной ветки. Слабые локальные модели часто ломают формат правок, и документация об этом предупреждает в разделе о проблемах с редактированием файлов. Начните с сильной облачной модели на маленькой задаче, а потом сравните её с локальной.</p>
+<h2 id="sec-3">Сколько стоит Aider</h2>
+<table class="gp-table"><thead><tr><th>Что</th><th>Цена</th></tr></thead><tbody><tr><td>Программа Aider</td><td>Бесплатно, лицензия Apache-2.0</td></tr><tr><td>Подписка</td><td>Отсутствует</td></tr><tr><td>Облачная модель</td><td>По тарифу провайдера, платите за запросы</td></tr><tr><td>Локальная модель</td><td>Без оплаты API, но нужен подходящий компьютер</td></tr></tbody></table>
+<p>Цены моделей у каждого провайдера свои, поэтому заранее смотрите их страницу. Большие репозитории и длинные чаты быстро расходуют токены, поэтому следите за стоимостью в выводе программы и начинайте новый чат для новой задачи.</p>
+<h2 id="sec-4">Aider на русском</h2>
+<p>Интерфейс и документация на английском, русского перевода я не нашёл. Задачу можно писать по-русски, понимание зависит от выбранной модели. Если русский выходит хуже, напишите задачу по-английски, а комментарии попросите на нужном вам языке.</p>
+<h2 id="sec-5">Работает ли Aider в России</h2>
+<p>Сам Aider это локальная программа, и в его лицензии нет ограничений по странам. Сложности возникают на стороне моделей: проверьте списки поддерживаемых стран у провайдера и способы оплаты. Прямой проверки с российского IP у меня не было, доступность PyPI и GitHub из России я тоже не проверял.</p>
+<p>Практичные варианты: локальная модель через <a href="/guides/ollama/">Ollama</a> или <a href="/guides/lm-studio/">LM Studio</a>, <a href="/guides/openrouter/">OpenRouter</a> и другие совместимые с OpenAI шлюзы. Aider принимает любой такой API.</p>
+<h2 id="sec-6">Минусы Aider</h2>
+<ul><li>Подписки нет, но запросы к модели всё равно стоят денег.</li><li>Работа только в терминале, новичкам будет непривычно.</li><li>Автокоммиты засоряют историю, если не работать в отдельной ветке.</li><li>Слабые модели часто ломают формат правок.</li><li>Темп релизов снизился: последний релиз на GitHub вышел 9 августа 2025 года, версия 0.86.2 на PyPI от 12 февраля 2026 года, основная ветка обновлялась 22 мая 2026 года.</li></ul>
+<p>Поэтому поддержка самых новых моделей иногда появляется в основной ветке раньше, чем в релизе.</p>
+<h2 id="sec-7">Чем заменить Aider</h2>
+<table class="gp-table"><thead><tr><th>Сервис</th><th>Чем отличается</th></tr></thead><tbody><tr><td><a href="/guides/claude-code/">Claude Code</a></td><td>Терминальный агент от Anthropic, работает с её моделями.</td></tr><tr><td><a href="/guides/cline/">Cline</a></td><td>Расширение VS Code с агентным режимом и множеством моделей.</td></tr><tr><td><a href="/guides/opencode/">OpenCode</a></td><td>Терминальный агент с открытым кодом и широким выбором моделей.</td></tr><tr><td><a href="/guides/codex/">Codex</a></td><td>Терминальный агент OpenAI.</td></tr><tr><td><a href="/guides/gemini-cli/">Gemini CLI</a></td><td>Терминальный агент Google с бесплатной квотой.</td></tr><tr><td><a href="/guides/cursor-ai/">Cursor</a></td><td>Полноценная ИИ-среда разработки, для тех, кто хочет окно вместо терминала.</td></tr></tbody></table>
+<p>Новичкам советую начать с разбора <a href="/guides/vaybkoding/">вайбкодинга</a>, а общий обзор вариантов есть в статье про <a href="/guides/neyroset-dlya-koda/">нейросети для кода</a>.</p>
+<h2 id="sec-8">Частые вопросы</h2>
+<h3>Aider, что это?</h3>
+<p>Это бесплатный ИИ-помощник для программирования, который работает в терминале и правит код в git-репозитории.</p>
+<h3>Где скачать Aider?</h3>
+<p>Устанавливается через <code>pip install aider-install</code>, исходный код лежит на <a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener">GitHub</a>.</p>
+<h3>Сколько стоит Aider?</h3>
+<p>Сама программа бесплатна. Вы платите провайдеру модели или запускаете локальную модель.</p>
+<h3>Работает ли Aider с локальными моделями?</h3>
+<p>Да, через Ollama и LM Studio, но слабые модели могут ломать правки.</p>
+<h3>Aider это агент?</h3>
+<p>Он сам читает файлы, правит код, делает коммиты и запускает проверки, а вы подтверждаете решения. По автономности, насколько я понимаю, он уступает Claude Code, но это моя личная оценка, официального сравнения я не видел.</p>
+<h2 id="sec-9">Что делать дальше</h2>
+<p>Я использую ИИ-агентов и для контента, и для автоматизации: они собирают данные, ведут ботов и помогают с воронками. Людей в эту систему приводят короткие ролики, где человек пишет кодовое слово и попадает в бота.</p>
+<p>Как я делаю такие ролики через ChatGPT, разобрал здесь: <a href="https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=aider" target="_blank" rel="noopener">как вести Reels с ChatGPT и получать заявки</a>. Внутри готовые запросы для хуков и сценариев.</p>
+<p>Факты сверены по <a href="https://aider.chat/" target="_blank" rel="noopener">сайту Aider</a>, <a href="https://aider.chat/docs/install.html" target="_blank" rel="noopener">инструкции по установке</a>, <a href="https://aider.chat/docs/faq.html" target="_blank" rel="noopener">FAQ</a>, <a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener">репозитории на GitHub</a> и <a href="https://pypi.org/project/aider-chat/" target="_blank" rel="noopener">PyPI</a>. Проверено 1 ноября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/blackbox-ai/"><span class="rc-cover"><img src="/covers/blackbox-ai.webp?v=c0ba6edcea" alt="Blackbox AI: что это за нейросеть для кода, что с ней стало в 2026 и чем заменить" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Blackbox AI: что это за нейросеть для кода, что с ней стало в 2026 и чем заменить</span><span class="rc-desc">Blackbox AI начинался как помощник для кода в VS Code, а в 2026 году стал корпоративной…</span></a><a class="gp-related-card" href="/guides/replit/"><span class="rc-cover"><img src="/covers/replit.webp?v=63e2cbfa2e" alt="Replit и Replit Agent: что это, как пользоваться и сколько стоит в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Replit и Replit Agent: что это, как пользоваться и сколько стоит в 2026</span><span class="rc-desc">Replit это среда разработки в браузере, где Replit Agent собирает приложение по…</span></a><a class="gp-related-card" href="/guides/tabnine/"><span class="rc-cover"><img src="/covers/tabnine.webp?v=946f539444" alt="Tabnine: что стало с нейросетью для кода после покупки Tricentis, можно ли скачать и бесплатно, чем заменить в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Tabnine: что стало с нейросетью для кода после покупки Tricentis, можно ли скачать и бесплатно, чем заменить в 2026</span><span class="rc-desc">Tabnine был популярным ИИ-помощником программиста, но в 2026 году его купила Tricentis…</span></a><a class="gp-related-card" href="/guides/github-copilot/"><span class="rc-cover"><img src="/covers/github-copilot.webp?v=763fa7b84f" alt="GitHub Copilot: цены 2026, бесплатный план Free, Copilot для студентов, CLI и доступ из России" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">GitHub Copilot: цены 2026, бесплатный план Free, Copilot для студентов, CLI и доступ из России</span><span class="rc-desc">GitHub Copilot это ИИ-помощник для кода от GitHub.</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="/image-slot.js?v=9309434cb0"></script>
+  <script src="/minisearch.min.js?v=e6162fca99"></script>
+  <script src="/guides-data.js?v=c7009bd031"></script>
+  <script>window.__GF_VIEW = "mobile"; window.__GF_CAT = "home";</script>
+  <script>window.__GF_ROUTE = "aider";</script>
+  <script type="text/babel" src="/gf-app.jsx?v=a2f5dd0b64"></script>
+
+
+</body></html>

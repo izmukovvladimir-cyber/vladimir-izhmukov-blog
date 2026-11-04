@@ -139,6 +139,19 @@
     ]
   },
   {
+    "slug": "animaker",
+    "title": "Animaker: нейросеть для анимации онлайн на русском, тарифы и что даёт бесплатный план в 2026",
+    "desc": "Animaker это онлайн-конструктор анимированных и AI-видео. Разбираю, есть ли animaker.com на русском, нужно ли что-то скачивать, сколько стоят Starter, Pro и Max, что такое Animaker Voice и где подвох бесплатного плана.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 8,
+    "url": "/guides/animaker/",
+    "tags": [
+      "neyroseti",
+      "video"
+    ]
+  },
+  {
     "slug": "artbreeder",
     "title": "Artbreeder: как смешивать и создавать картинки нейросетью, бесплатно и из России",
     "desc": "Что такое Artbreeder, как создавать портреты и пейзажи смешиванием изображений, сколько даёт бесплатный план, режим Collage и работа из России.",
@@ -578,6 +591,19 @@
       "neuroseti",
       "instrumenty",
       "avtomatizaciya"
+    ]
+  },
+  {
+    "slug": "colossyan",
+    "title": "Colossyan: нейросеть для обучающих видео с AI-аватаром, цены, бесплатный план и аналоги в 2026",
+    "desc": "Colossyan (Colossyan Creator) делает обучающие видео с AI-ведущим из текста, PDF или презентации. Разбираю, что умеет нейросеть, что даёт бесплатный план Starter, сколько стоит Professional, есть ли русский и какие у Colossyan аналоги.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/colossyan/",
+    "tags": [
+      "neyroseti",
+      "video"
     ]
   },
   {
@@ -1140,6 +1166,19 @@
     ]
   },
   {
+    "slug": "gauth",
+    "title": "Gauth AI (Gauthmath): что это, как скачать, сколько стоит Plus и есть ли на русском в 2026",
+    "desc": "Gauth это AI-помощник по домашним заданиям от владельца TikTok. Разбираю, что умеет Gauth AI, как скачать приложение Gauth: AI Study Companion, сколько стоит Gauth Plus и как работать с ним из России.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/gauth/",
+    "tags": [
+      "neyroseti",
+      "ucheba"
+    ]
+  },
+  {
     "slug": "gemini-cli",
     "title": "Gemini CLI: что это, как установить, лимиты и почему с июня 2026 его заменил Antigravity CLI",
     "desc": "Gemini CLI это открытый ИИ-агент Google для терминала. С 18 июня 2026 года бесплатные пользователи и подписчики Google AI Pro и Ultra переведены на Antigravity CLI. Разбираю, кому Gemini CLI ещё доступен, лимиты, установку и чем заменить.",
@@ -1472,6 +1511,19 @@
       "neyroseti",
       "foto",
       "video"
+    ]
+  },
+  {
+    "slug": "hix-ai",
+    "title": "HIX AI: нейросеть-агент и humanizer HIX Bypass, чат на русском и цены в 2026",
+    "desc": "HIX AI это сингапурская платформа с AI-агентом, писателем, слайдами и видео, а HIX Bypass её humanizer. Разбираю, есть ли HIX AI chat на русском, связан ли он с ChatGPT, сколько стоят Pro, Max и Bypass и что дают бесплатно.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/hix-ai/",
+    "tags": [
+      "neyroseti",
+      "teksty"
     ]
   },
   {
@@ -2058,6 +2110,19 @@
       "neuroseti",
       "video",
       "instrumenty"
+    ]
+  },
+  {
+    "slug": "knowt",
+    "title": "Knowt AI: бесплатный аналог Quizlet с карточками и конспектами, цены Ultra в 2026",
+    "desc": "Knowt это сервис карточек и AI-конспектов, который называет себя бесплатной альтернативой Quizlet. Разбираю, что умеет Knowt AI, что бесплатно на knowt.com, сколько стоит Ultra и как перенести карточки из Quizlet.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/knowt/",
+    "tags": [
+      "neyroseti",
+      "ucheba"
     ]
   },
   {
@@ -4269,6 +4334,19 @@
     ]
   },
   {
+    "slug": "originality-ai",
+    "title": "Originality AI: детектор нейросетевого текста и плагиата, бесплатная проверка и цены в 2026",
+    "desc": "Originality.ai проверяет текст на нейросеть и плагиат. Разбираю, есть ли Originality AI free, сколько стоит Pro, насколько точен Originality AI detector, проверяет ли он русский текст и где он ошибается.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/originality-ai/",
+    "tags": [
+      "neyroseti",
+      "teksty"
+    ]
+  },
+  {
     "slug": "otlozhennyy-posting",
     "title": "Отложенный постинг в Инстаграм, Телеграм и ВК: как сделать в 2026",
     "desc": "Отложенный постинг это публикация, которую вы готовите заранее и ставите на нужное время. Показываю по шагам, как запланировать пост и рилс в Instagram, сообщение в Телеграм-канале и запись ВКонтакте, и когда нужен сервис автопостинга.",
@@ -4781,6 +4859,19 @@
     ]
   },
   {
+    "slug": "quizgecko",
+    "title": "QuizGecko: нейросеть для тестов и карточек, регистрация, цены и работа на русском в 2026",
+    "desc": "QuizGecko делает тест, карточки и конспект из текста, файла или ссылки. Разбираю, как зарегистрироваться, что даёт бесплатный план, сколько стоит Premium и Ultra и как сделать тест на русском.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/quizgecko/",
+    "tags": [
+      "neyroseti",
+      "ucheba"
+    ]
+  },
+  {
     "slug": "quizlet",
     "title": "Quizlet: что это, как пользоваться карточками, бесплатно или нет, Quizlet Plus и оплата из России в 2026",
     "desc": "Quizlet это платформа для учёбы по карточкам с режимами Learn, тестами, играми и ИИ-заметками. Разбираю, что доступно бесплатно, сколько стоит Quizlet Plus, как создать набор и тест, работает ли Quizlet в России и чем его заменить.",
@@ -5075,6 +5166,19 @@
     ]
   },
   {
+    "slug": "riverside-fm",
+    "title": "Riverside fm: запись подкастов и бесплатная транскрипция (transcription), цены Riverside в 2026",
+    "desc": "Riverside (бывший Riverside.fm) записывает подкасты и интервью с гостями в 4K и делает транскрипцию на 100+ языках. Разбираю бесплатный транскрибатор Riverside fm transcribe, тарифы Pro и Grow и чем Riverside полезен блогеру.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 7,
+    "url": "/guides/riverside-fm/",
+    "tags": [
+      "neyroseti",
+      "video"
+    ]
+  },
+  {
     "slug": "runway-neyroset",
     "title": "Runway нейросеть: как сделать видео из текста и фото в 2026 году",
     "desc": "Runway по шагам: модель Gen-4.5, видео из текста и из картинки, вертикальный формат 9:16 для рилсов, длина роликов до 10 секунд, тарифы и кредиты, работа из России и промпты для кинематографичных кадров.",
@@ -5310,6 +5414,19 @@
       "neyroseti",
       "tekst",
       "detektor-ii"
+    ]
+  },
+  {
+    "slug": "socratic",
+    "title": "Socratic by Google в 2026: приложение закрыто, чем заменить и есть ли Socratic на русском",
+    "desc": "Socratic by Google больше не скачать: приложение убрали из App Store и Google Play, сайт ведёт на Google Lens. Разбираю, что случилось, чем заменить Socratic для домашки и почему «Socratic AI» в сторах это клоны.",
+    "category": "Нейросети для контента",
+    "level": "Новичок",
+    "min": 6,
+    "url": "/guides/socratic/",
+    "tags": [
+      "neyroseti",
+      "ucheba"
     ]
   },
   {
@@ -5995,6 +6112,20 @@
       "video",
       "neuroseti",
       "instrumenty"
+    ]
+  },
+  {
+    "slug": "warp-terminal",
+    "title": "Warp terminal: как скачать для Windows, Linux и macOS, цены и AI-агент в 2026",
+    "desc": "Warp это терминал со встроенным AI-агентом. Разбираю, как скачать Warp terminal для Windows, Linux и macOS, что бесплатно, сколько стоят Build и Max, где исходники на GitHub и как он работает с русской раскладкой.",
+    "category": "Нейросети для контента",
+    "level": "Средний",
+    "min": 8,
+    "url": "/guides/warp-terminal/",
+    "tags": [
+      "neyroseti",
+      "programmirovanie",
+      "ai-agenty"
     ]
   },
   {

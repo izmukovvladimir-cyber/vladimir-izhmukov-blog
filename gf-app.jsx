@@ -117,6 +117,53 @@ const utm = (m) => (FUNNEL_IS_TELEGRAM
   ? `${FUNNEL_URL}?start=${startFor(currentTouch())}`
   : `${FUNNEL_URL}/?utm_source=guides&utm_medium=${m}&utm_campaign=space&utm_content=${SLUG}`);
 
+// Article bot CTA with ONE fixed deep link (funnel.botStartParam, #1803). When
+// set, three article CTAs (under the title, after the 2nd H2, the final block)
+// point at ?start=<param>, carry data-gf-place=top|mid|end, report a Metrika
+// goal on click and are skipped by the per-article branch rewrite below. Unset
+// = every CTA stays exactly as before.
+const BOT_START = FUNNEL_IS_TELEGRAM && FUNNEL.botStartParam ? String(FUNNEL.botStartParam) : "";
+const BOT_URL = BOT_START ? `${FUNNEL_URL}?start=${encodeURIComponent(BOT_START)}` : "";
+const BOT_TEXT = FUNNEL.botCtaText || CTA_TEXT;
+const BOT_CAPTION = FUNNEL.botCtaCaption || "";
+const BOT_GOAL = FUNNEL.botGoal || "blog_bot_click";
+const METRIKA_ID = BRAND.metrika ? Number(BRAND.metrika) : 0;
+const escHtml = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+// Raw-HTML twin of <BotCta>, for the CTA spliced into the article body string.
+function botCtaHtml(place) {
+  return `<div class="gf-botcta" data-gf-botcta="${place}"><a class="cta-btn" href="${escHtml(BOT_URL)}" data-gf-place="${place}">${escHtml(BOT_TEXT)} →</a>`
+    + (BOT_CAPTION ? `<span class="gf-botcta-cap">${escHtml(BOT_CAPTION)}</span>` : "") + `</div>`;
+}
+// Mid CTA goes right after the closing tag of the 2nd <h2>; fewer than 2 H2 = none.
+function withMidCta(html) {
+  if (!BOT_URL || !html) return html;
+  let at = 0;
+  for (let i = 0; i < 2; i++) {
+    const j = html.indexOf("</h2>", at);
+    if (j < 0) return html;
+    at = j + 5;
+  }
+  return html.slice(0, at) + botCtaHtml("mid") + html.slice(at);
+}
+function BotCta({ place }) {
+  if (!BOT_URL) return null;
+  return (
+    <div className="gf-botcta" data-gf-botcta={place}>
+      <a className="cta-btn" href={BOT_URL} data-gf-place={place}>{BOT_TEXT} →</a>
+      {BOT_CAPTION && <span className="gf-botcta-cap">{BOT_CAPTION}</span>}
+    </div>
+  );
+}
+function wireBotGoal() {
+  document.addEventListener("click", (e) => {
+    const a = e.target && e.target.closest && e.target.closest("a[data-gf-place]");
+    if (!a) return;
+    try {
+      if (METRIKA_ID && typeof window.ym === "function") window.ym(METRIKA_ID, "reachGoal", BOT_GOAL, { place: a.getAttribute("data-gf-place") });
+    } catch (_) {}
+  }, true);
+}
+
 // UTM forwarding (prince 2026-06-17): a visitor who arrives from the IG bio link
 // (?utm_source=instagram…) must keep that origin across blog navigation, and the
 // community CTA must pass the REAL source to edgelab.space — not «guides» (which
@@ -154,6 +201,7 @@ function wireUTMForward() {
     // t.me must stay untouched.
     if (FUNNEL_IS_TELEGRAM) {
       if (u.pathname.replace(/\/+$/, "") !== FUNNEL_PATH) return;
+      if (a.hasAttribute("data-gf-place")) return; // fixed deep link (BOT_START)
       u.search = "";
       u.searchParams.set("start", startFor(touch));
       a.href = u.toString();
@@ -173,7 +221,7 @@ function wireUTMForward() {
 }
 // Wire unconditionally when a DOM exists — each helper guards its own sessionStorage
 // access, so organic «guides» forwarding still works even if storage is unavailable.
-try { if (typeof window !== "undefined" && window.document) { captureInboundUTM(); wireUTMForward(); } } catch (_) {}
+try { if (typeof window !== "undefined" && window.document) { captureInboundUTM(); wireUTMForward(); if (BOT_URL) wireBotGoal(); } } catch (_) {}
 
 // M-theme: persist the chosen theme across pages. Default light; dark sticks.
 // getStoredTheme seeds React state from localStorage; applyTheme mirrors the
@@ -436,8 +484,17 @@ function CtaDark({ grid, social }) {
         {CTA_BULLETS.map((b, i) => <div className="b" key={i}><span className="m"></span>{b}</div>)}
       </div>
       <div className="cta-foot">
-        <a className="cta-btn" href={utm("cta")}>{COMMUNITY_UI ? <React.Fragment>Вступить в {BRAND_NB} →</React.Fragment> : `${CTA_TEXT} →`}</a>
-        {CTA_FINE && <span className="cta-fine">{CTA_FINE}</span>}
+        {BOT_URL ? (
+          <React.Fragment>
+            <a className="cta-btn" href={BOT_URL} data-gf-place="end">{BOT_TEXT} →</a>
+            {BOT_CAPTION && <span className="cta-fine">{BOT_CAPTION}</span>}
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <a className="cta-btn" href={utm("cta")}>{COMMUNITY_UI ? <React.Fragment>Вступить в {BRAND_NB} →</React.Fragment> : `${CTA_TEXT} →`}</a>
+            {CTA_FINE && <span className="cta-fine">{CTA_FINE}</span>}
+          </React.Fragment>
+        )}
       </div>
       {social && COMMUNITY_UI && (
         <div className="cta-social"><span className="live-dot"></span>В чате сейчас 320+ участников и их агенты</div>
@@ -456,8 +513,17 @@ function CtaLime() {
         {CTA_BULLETS.map((b, i) => <div className="b" key={i}><span className="m"></span>{b}</div>)}
       </div>
       <div className="cta-foot">
-        <a className="cta-btn" href={utm("cta")}>{COMMUNITY_UI ? <React.Fragment>Вступить в {BRAND_NB} →</React.Fragment> : `${CTA_TEXT} →`}</a>
-        {CTA_FINE && <span className="cta-fine">{CTA_FINE}</span>}
+        {BOT_URL ? (
+          <React.Fragment>
+            <a className="cta-btn" href={BOT_URL} data-gf-place="end">{BOT_TEXT} →</a>
+            {BOT_CAPTION && <span className="cta-fine">{BOT_CAPTION}</span>}
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <a className="cta-btn" href={utm("cta")}>{COMMUNITY_UI ? <React.Fragment>Вступить в {BRAND_NB} →</React.Fragment> : `${CTA_TEXT} →`}</a>
+            {CTA_FINE && <span className="cta-fine">{CTA_FINE}</span>}
+          </React.Fragment>
+        )}
       </div>
     </div>
   );
@@ -867,6 +933,7 @@ function Content({ article, cta, rich }) {
         <h1 className="gp-h1">{a.title}</h1>
         <CopyPageButton slug={a.slug} />
       </div>
+      <BotCta place="top" />
       <Byline meta={a.min ? a.min + " мин чтения" : ""} />
       <p className="gp-desc">{a.desc}</p>
       {!isArticle && rich && a.tldr && <Tldr text={a.tldr} />}
@@ -878,7 +945,7 @@ function Content({ article, cta, rich }) {
               <StepsGuide steps={a.steps} />
             </React.Fragment>
           )}
-          <div className="gp-article-body" dangerouslySetInnerHTML={{ __html: a.bodyHtml }} />
+          <div className="gp-article-body" dangerouslySetInnerHTML={{ __html: withMidCta(a.bodyHtml) }} />
           {!isArticle && a.outcome && <Callout label="РЕЗУЛЬТАТ">{a.outcome}</Callout>}
         </React.Fragment>
       ) : (
@@ -1112,6 +1179,7 @@ function MobileArticle({ article, initialTheme }) {
           )}
           <div className="m-bc">{a.type === "article" ? "Статьи" : "Гайды / " + a.crumbMid}</div>
           <h1 className="m-h1">{a.title}</h1>
+          <BotCta place="top" />
           <div className="m-copyrow"><CopyPageButton slug={a.slug} /></div>
           <Byline meta={a.min ? a.min + " мин чтения" : ""} />
           <p className="m-desc">{a.desc}</p>
@@ -1121,7 +1189,7 @@ function MobileArticle({ article, initialTheme }) {
               {a.type !== "article" && a.steps && a.steps.length > 0 && (
                 <React.Fragment><h2>Что понадобится</h2><StepsGuide steps={a.steps} /></React.Fragment>
               )}
-              <div className="gp-article-body" dangerouslySetInnerHTML={{ __html: a.bodyHtml }} />
+              <div className="gp-article-body" dangerouslySetInnerHTML={{ __html: withMidCta(a.bodyHtml) }} />
               {a.type !== "article" && a.outcome && <Callout label="РЕЗУЛЬТАТ">{a.outcome}</Callout>}
             </React.Fragment>
           ) : (
@@ -1137,7 +1205,12 @@ function MobileArticle({ article, initialTheme }) {
             <div className="cta-brand"><Logo /></div>
             <div className="ttl">{CTA_TITLE}</div>
             <div className="sub">{COMMUNITY_UI ? "Внедрять проще в закрытом AI-комьюнити." : CTA_SUB}</div>
-            <a className="btn" href={utm("cta")}>{CTA_TEXT} →</a>
+            {BOT_URL ? (
+              <React.Fragment>
+                <a className="btn" href={BOT_URL} data-gf-place="end">{BOT_TEXT} →</a>
+                {BOT_CAPTION && <div className="m-cta-cap">{BOT_CAPTION}</div>}
+              </React.Fragment>
+            ) : <a className="btn" href={utm("cta")}>{CTA_TEXT} →</a>}
           </div>
           )}
           <RelatedGuides items={a.related} />

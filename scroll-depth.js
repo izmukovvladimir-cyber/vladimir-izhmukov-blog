@@ -135,7 +135,12 @@
         if (!a) return;
         var goal = goalFor(a.getAttribute("href") || a.href || "");
         if (!goal) return;
-        if (typeof window.ym === "function" && YM) window.ym(YM, "reachGoal", goal);
+        // Bot CTAs placed by gf-app.jsx (#1803) carry data-gf-place=top|mid|end.
+        var place = a.getAttribute("data-gf-place");
+        if (typeof window.ym === "function" && YM) {
+          if (place) window.ym(YM, "reachGoal", goal, { place: place });
+          else window.ym(YM, "reachGoal", goal);
+        }
         if (typeof window.gtag === "function")
           window.gtag("event", goal, { page_path: location.pathname });
       } catch (err) {}

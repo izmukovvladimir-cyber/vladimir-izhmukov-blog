@@ -119,15 +119,13 @@ const utm = (m) => (FUNNEL_IS_TELEGRAM
 
 // Article bot CTA with ONE fixed deep link (funnel.botStartParam, #1803). When
 // set, three article CTAs (under the title, after the 2nd H2, the final block)
-// point at ?start=<param>, carry data-gf-place=top|mid|end, report a Metrika
-// goal on click and are skipped by the per-article branch rewrite below. Unset
-// = every CTA stays exactly as before.
+// point at ?start=<param>, carry data-gf-place=top|mid|end (scroll-depth.js
+// adds it to its blog_bot_click goal) and are skipped by the per-article branch
+// rewrite below. Unset = every CTA stays exactly as before.
 const BOT_START = FUNNEL_IS_TELEGRAM && FUNNEL.botStartParam ? String(FUNNEL.botStartParam) : "";
 const BOT_URL = BOT_START ? `${FUNNEL_URL}?start=${encodeURIComponent(BOT_START)}` : "";
 const BOT_TEXT = FUNNEL.botCtaText || CTA_TEXT;
 const BOT_CAPTION = FUNNEL.botCtaCaption || "";
-const BOT_GOAL = FUNNEL.botGoal || "blog_bot_click";
-const METRIKA_ID = BRAND.metrika ? Number(BRAND.metrika) : 0;
 const escHtml = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 // Raw-HTML twin of <BotCta>, for the CTA spliced into the article body string.
 function botCtaHtml(place) {
@@ -153,15 +151,6 @@ function BotCta({ place }) {
       {BOT_CAPTION && <span className="gf-botcta-cap">{BOT_CAPTION}</span>}
     </div>
   );
-}
-function wireBotGoal() {
-  document.addEventListener("click", (e) => {
-    const a = e.target && e.target.closest && e.target.closest("a[data-gf-place]");
-    if (!a) return;
-    try {
-      if (METRIKA_ID && typeof window.ym === "function") window.ym(METRIKA_ID, "reachGoal", BOT_GOAL, { place: a.getAttribute("data-gf-place") });
-    } catch (_) {}
-  }, true);
 }
 
 // UTM forwarding (prince 2026-06-17): a visitor who arrives from the IG bio link
@@ -221,7 +210,7 @@ function wireUTMForward() {
 }
 // Wire unconditionally when a DOM exists — each helper guards its own sessionStorage
 // access, so organic «guides» forwarding still works even if storage is unavailable.
-try { if (typeof window !== "undefined" && window.document) { captureInboundUTM(); wireUTMForward(); if (BOT_URL) wireBotGoal(); } } catch (_) {}
+try { if (typeof window !== "undefined" && window.document) { captureInboundUTM(); wireUTMForward(); } } catch (_) {}
 
 // M-theme: persist the chosen theme across pages. Default light; dark sticks.
 // getStoredTheme seeds React state from localStorage; applyTheme mirrors the

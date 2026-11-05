@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/library/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/neyroseti/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -373,8 +373,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/deep-nostalgia/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/deepai/</loc>
     <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/deepbrain-ai/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -699,6 +711,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/hix-ai/</loc>
     <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/hotpot-ai/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1033,6 +1051,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/lexica-art/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/lichnyy-brend/</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -1101,6 +1125,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/luminar-neo/</loc>
     <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/mage-space/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1251,6 +1281,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/napkin-ai/</loc>
     <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/nero-ai/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2029,6 +2065,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/photolab/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/photoleap/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -2055,6 +2097,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/photoshop-ai/</loc>
     <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/pi-ai/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2443,6 +2491,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/snapedit/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/socratic/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -2541,6 +2595,12 @@
   <url>
     <loc>https://blog.vladimir-izhmukov.ru/guides/tactiq/</loc>
     <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.vladimir-izhmukov.ru/guides/talkie-ai/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

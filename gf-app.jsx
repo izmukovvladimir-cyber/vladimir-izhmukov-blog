@@ -126,14 +126,25 @@ const BOT_START = FUNNEL_IS_TELEGRAM && FUNNEL.botStartParam ? String(FUNNEL.bot
 const BOT_URL = BOT_START ? `${FUNNEL_URL}?start=${encodeURIComponent(BOT_START)}` : "";
 const BOT_TEXT = FUNNEL.botCtaText || CTA_TEXT;
 const BOT_CAPTION = FUNNEL.botCtaCaption || "";
+// Per-article override (frontmatter bot_cta_text / bot_cta_start → a.botText /
+// a.botStart, #1844c): text and ?start= of all three CTAs of that article. Unset =
+// the brand values above; no brand bot link = no override either.
+const BOT_DEFAULT = { url: BOT_URL, text: BOT_TEXT };
+function botFor(a) {
+  if (!BOT_URL || !a || (!a.botText && !a.botStart)) return BOT_DEFAULT;
+  return {
+    url: a.botStart ? `${FUNNEL_URL}?start=${encodeURIComponent(a.botStart)}` : BOT_URL,
+    text: a.botText || BOT_TEXT,
+  };
+}
 const escHtml = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 // Raw-HTML twin of <BotCta>, for the CTA spliced into the article body string.
-function botCtaHtml(place) {
-  return `<div class="gf-botcta" data-gf-botcta="${place}"><a class="cta-btn" href="${escHtml(BOT_URL)}" data-gf-place="${place}">${escHtml(BOT_TEXT)} →</a>`
+function botCtaHtml(place, bot = BOT_DEFAULT) {
+  return `<div class="gf-botcta" data-gf-botcta="${place}"><a class="cta-btn" href="${escHtml(bot.url)}" data-gf-place="${place}">${escHtml(bot.text)} →</a>`
     + (BOT_CAPTION ? `<span class="gf-botcta-cap">${escHtml(BOT_CAPTION)}</span>` : "") + `</div>`;
 }
 // Mid CTA goes right after the closing tag of the 2nd <h2>; fewer than 2 H2 = none.
-function withMidCta(html) {
+function withMidCta(html, bot = BOT_DEFAULT) {
   if (!BOT_URL || !html) return html;
   let at = 0;
   for (let i = 0; i < 2; i++) {
@@ -141,13 +152,27 @@ function withMidCta(html) {
     if (j < 0) return html;
     at = j + 5;
   }
-  return html.slice(0, at) + botCtaHtml("mid") + html.slice(at);
+  return html.slice(0, at) + botCtaHtml("mid", bot) + html.slice(at);
 }
-function BotCta({ place }) {
+// Per-article top CTA placement (frontmatter bot_cta_top → a.botTop): "p1" splices
+// it right after the first content </p> of the body, "p0" right before that <p>.
+// A leading all-italic byline paragraph (_Имя · .._) is not content and is skipped.
+function withTopCta(html, mode, bot = BOT_DEFAULT) {
+  if (!BOT_URL || !html || (mode !== "p1" && mode !== "p0")) return html;
+  const re = /<p>([\s\S]*?)<\/p>/g;
+  let m;
+  while ((m = re.exec(html))) {
+    if (/^\s*(_[^<]*_|<em>[\s\S]*<\/em>)\s*$/.test(m[1])) continue;
+    const at = mode === "p0" ? m.index : m.index + m[0].length;
+    return html.slice(0, at) + botCtaHtml("top", bot) + html.slice(at);
+  }
+  return html;
+}
+function BotCta({ place, bot = BOT_DEFAULT }) {
   if (!BOT_URL) return null;
   return (
     <div className="gf-botcta" data-gf-botcta={place}>
-      <a className="cta-btn" href={BOT_URL} data-gf-place={place}>{BOT_TEXT} →</a>
+      <a className="cta-btn" href={bot.url} data-gf-place={place}>{bot.text} →</a>
       {BOT_CAPTION && <span className="gf-botcta-cap">{BOT_CAPTION}</span>}
     </div>
   );
@@ -462,7 +487,7 @@ function Sidebar({ mini, group, items, active }) {
 }
 
 /* ---------- end CTA ---------- */
-function CtaDark({ grid, social }) {
+function CtaDark({ grid, social, bot = BOT_DEFAULT }) {
   if (!FUNNEL_ON) return null;
   return (
     <div className={"cta-dark" + (grid ? " grid" : "")}>
@@ -475,7 +500,7 @@ function CtaDark({ grid, social }) {
       <div className="cta-foot">
         {BOT_URL ? (
           <React.Fragment>
-            <a className="cta-btn" href={BOT_URL} data-gf-place="end">{BOT_TEXT} →</a>
+            <a className="cta-btn" href={bot.url} data-gf-place="end">{bot.text} →</a>
             {BOT_CAPTION && <span className="cta-fine">{BOT_CAPTION}</span>}
           </React.Fragment>
         ) : (
@@ -671,6 +696,9 @@ function guideToArticle(g) {
     steps: g.steps || [],
     outcome: g.outcome || "",
     bodyHtml: g.bodyHtml || "",
+    botTop: g.botTop || "",
+    botText: g.botText || "",
+    botStart: g.botStart || "",
     // «Похожие материалы» (recirculation block) — resolve related slugs → full guides.
     related: (g.related || []).map((s) => GF_BY_SLUG[s]).filter(Boolean),
   };
@@ -912,6 +940,7 @@ function Content({ article, cta, rich }) {
   const isReal = !!a.bodyHtml; // real MDX-backed guide vs demo JSX article
   const navHref = (slug) => (slug ? GUIDE_HREF(slug) : undefined);
   const isArticle = a.type === "article";
+  const bot = botFor(a);
   return (
     <div className={"gp-content" + (isArticle ? " read-article" : "")}>
       {a.cover && (
@@ -922,7 +951,7 @@ function Content({ article, cta, rich }) {
         <h1 className="gp-h1">{a.title}</h1>
         <CopyPageButton slug={a.slug} />
       </div>
-      <BotCta place="top" />
+      {!a.botTop && <BotCta place="top" bot={bot} />}
       <Byline meta={a.min ? a.min + " мин чтения" : ""} />
       <p className="gp-desc">{a.desc}</p>
       {!isArticle && rich && a.tldr && <Tldr text={a.tldr} />}
@@ -934,7 +963,7 @@ function Content({ article, cta, rich }) {
               <StepsGuide steps={a.steps} />
             </React.Fragment>
           )}
-          <div className="gp-article-body" dangerouslySetInnerHTML={{ __html: withMidCta(a.bodyHtml) }} />
+          <div className="gp-article-body" dangerouslySetInnerHTML={{ __html: withMidCta(withTopCta(a.bodyHtml, a.botTop, bot), bot) }} />
           {!isArticle && a.outcome && <Callout label="РЕЗУЛЬТАТ">{a.outcome}</Callout>}
         </React.Fragment>
       ) : (
@@ -950,7 +979,7 @@ function Content({ article, cta, rich }) {
         </React.Fragment>
       )}
 
-      {cta}
+      {cta && React.cloneElement(cta, { bot })}
 
       <RelatedGuides items={a.related} />
 
@@ -1149,6 +1178,7 @@ function MobileC({ initialTheme, scroll, demoScrolled }) {
 }
 function MobileArticle({ article, initialTheme }) {
   const a = article || ARTICLES.claude;
+  const bot = botFor(a);
   const [theme, setTheme] = useState(getStoredTheme(initialTheme));
   const night = theme === "dark";
   return (
@@ -1168,7 +1198,7 @@ function MobileArticle({ article, initialTheme }) {
           )}
           <div className="m-bc">{a.type === "article" ? "Статьи" : "Гайды / " + a.crumbMid}</div>
           <h1 className="m-h1">{a.title}</h1>
-          <BotCta place="top" />
+          {!a.botTop && <BotCta place="top" bot={bot} />}
           <div className="m-copyrow"><CopyPageButton slug={a.slug} /></div>
           <Byline meta={a.min ? a.min + " мин чтения" : ""} />
           <p className="m-desc">{a.desc}</p>
@@ -1178,7 +1208,7 @@ function MobileArticle({ article, initialTheme }) {
               {a.type !== "article" && a.steps && a.steps.length > 0 && (
                 <React.Fragment><h2>Что понадобится</h2><StepsGuide steps={a.steps} /></React.Fragment>
               )}
-              <div className="gp-article-body" dangerouslySetInnerHTML={{ __html: withMidCta(a.bodyHtml) }} />
+              <div className="gp-article-body" dangerouslySetInnerHTML={{ __html: withMidCta(withTopCta(a.bodyHtml, a.botTop, bot), bot) }} />
               {a.type !== "article" && a.outcome && <Callout label="РЕЗУЛЬТАТ">{a.outcome}</Callout>}
             </React.Fragment>
           ) : (
@@ -1196,7 +1226,7 @@ function MobileArticle({ article, initialTheme }) {
             <div className="sub">{COMMUNITY_UI ? "Внедрять проще в закрытом AI-комьюнити." : CTA_SUB}</div>
             {BOT_URL ? (
               <React.Fragment>
-                <a className="btn" href={BOT_URL} data-gf-place="end">{BOT_TEXT} →</a>
+                <a className="btn" href={bot.url} data-gf-place="end">{bot.text} →</a>
                 {BOT_CAPTION && <div className="m-cta-cap">{BOT_CAPTION}</div>}
               </React.Fragment>
             ) : <a className="btn" href={utm("cta")}>{CTA_TEXT} →</a>}

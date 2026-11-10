@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Как сделать стикеры в Телеграм самому: из фото, из видео, анимированные и на компьютере — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=26130666a3">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Как сделать стикеры в Телеграм самому на телефоне (айфон и андроид) и на ПК: встроенный редактор стикеров из фото, бот @Stickers, видеостикеры из видео в WEBM, анимированные стикеры TGS и требования к размерам. Проверено 10 ноября 2026.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/stikery-telegram/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Как сделать стикеры в Телеграм самому: из фото, из видео, анимированные и на компьютере">
+<meta property="og:description" content="Как сделать стикеры в Телеграм самому на телефоне (айфон и андроид) и на ПК: встроенный редактор стикеров из фото, бот @Stickers, видеостикеры из видео в WEBM, анимированные стикеры TGS и требования к размерам. Проверено 10 ноября 2026.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/stikery-telegram/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/stikery-telegram.webp?v=9ae26ec63a">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Как сделать стикеры в Телеграм самому: из фото, из видео, анимированные и на компьютере">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-11-10T08:00:00Z">
+<meta property="article:modified_time" content="2026-11-10T08:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Как сделать стикеры в Телеграм самому: из фото, из видео, анимированные и на компьютере">
+<meta name="twitter:description" content="Как сделать стикеры в Телеграм самому на телефоне (айфон и андроид) и на ПК: встроенный редактор стикеров из фото, бот @Stickers, видеостикеры из видео в WEBM, анимированные стикеры TGS и требования к размерам. Проверено 10 ноября 2026.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/stikery-telegram.webp?v=9ae26ec63a">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/stikery-telegram.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/stikery-telegram/#article",
+      "headline": "Как сделать стикеры в Телеграм самому: из фото, из видео, анимированные и на компьютере",
+      "description": "Как сделать стикеры в Телеграм самому на телефоне (айфон и андроид) и на ПК: встроенный редактор стикеров из фото, бот @Stickers, видеостикеры из видео в WEBM, анимированные стикеры TGS и требования к размерам. Проверено 10 ноября 2026.",
+      "datePublished": "2026-11-10T08:00:00Z",
+      "dateModified": "2026-11-10T08:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "telegram",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/stikery-telegram/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/stikery-telegram/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/stikery-telegram.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Как сделать стикеры в Телеграм самому Сделать стикеры в Телеграм самому проще всего встроенным редактором стикеров: в любом чате откройте панель стикеров в поле ввода, нажмите (+) и выберите фото, из которого получится стикер с текстом, рисунком и эмодзи. Для своего набора стикеров из готовых картинок или видео Telegram даёт бот @Stickers: в нём загружают файлы PNG, WEBP или WEBM и собирают из них пак. 3 способа сделать стикеры в Телеграм | Способ | Что нужно | Подходит для | |---|---|---| | Редактор стикеров в чате | Только Telegram и фото на телефоне | Быстрый стикер из своего фото | | Бот @Stickers | Готовые картинки или видео нужного размера | Свой набор стикеров или эмодзи | | Свой редактор и загрузка в @Stickers | Графический или видеоредактор | Анимированные и видеостикеры | Все три способа официальные, они описаны на странице Telegram о стикерах. Сторонние приложения тоже умеют переносить стикеры в Telegram, для этого у Telegram есть отдельный механизм импорта. Как сделать стикеры в Телеграмме из фото на телефоне Встроенный редактор стикеров Telegram превращает любое фото с телефона в стикер. По описанию Telegram порядок такой: 1. Откройте любой чат. 2. В поле ввода откройте панель стикеров. 3. Нажмите кнопку (+). 4. Выберите фото с телефона. 5. Добавьте текст, рисунок или эмодзи, если нужно. 6. Сохраните стикер и отправьте его в чат. В том же редакторе можно собрать из своих стикеров набор и поделиться им с друзьями. Отдельные программы для этого не нужны. Как сделать свой набор стикеров через бот @Stickers Бот @Stickers это официальный инструмент Telegram для наборов стикеров и эмодзи. В нём создают и редактируют наборы, смотрят статистику использования, а работать с ним можно через мини-приложение или текстовыми командами. Порядок для своего набора: 1. Подготовьте картинки по требованиям ниже. 2. Откройте @Stickers в Telegram. 3. Создайте новый набор стикеров или эмодзи. 4. Загрузите подготовленные файлы PNG, WEBP или WEBM. 5. Поделитесь готовым набором с друзьями или подписчиками. Картинки для набора удобнее готовить в редакторе на компьютере, а загружать их через @Stickers. Требования к стикерам Telegram Telegram принимает файлы для стикеров только по своим правилам. Сводная таблица со страницы Telegram о стикерах: | Тип | Формат | Размер | Ограничения | |---|---|---|---| | Статичный стикер | PNG или WEBP | Одна сторона ровно 512 px, другая до 512 px | Прозрачный фон по желанию | | Видеостикер | WEBM, кодек VP9 | Одна сторона ровно 512 px, другая до 512 px | До 3 с, до 30 кадров в секунду, до 256 КБ, без звука | | Анимированный стикер | TGS | Холст 512x512 px | До 3 с, 60 кадров в секунду, до 64 КБ, анимация зациклена | | Эмодзи, картинка | PNG или WEBP | Ровно 100x100 px | Как у статичных | | Эмодзи, видео | WEBM, кодек VP9 | Ровно 100x100 px | Как у видеостикеров | Совет от самого Telegram для статичных стикеров: прозрачный фон, белая обводка и чёрная тень помогают стикеру выделяться в чате. Как сделать стикеры в Телеграм из видео Видеостикер в Telegram это короткий зацикленный ролик в формате WEBM. Порядок: 1. Выберите кусок видео до 3 секунд. 2. В видеоредакторе обрежьте кадр так, чтобы одна сторона была ровно 512 px, а другая не больше 512 px. 3. Уберите звук: видеостикер должен быть без звуковой дорожки. 4. Экспортируйте в WEBM с кодеком VP9, частота до 30 кадров в секунду. 5. Проверьте вес: файл не больше 256 КБ. 6. Загрузите файл в @Stickers. Видеостикеры работают в Telegram версии 8.5 и выше. Уложить 3 секунды в 256 КБ проще, когда фон простой и в кадре мало движения. Если вы снимаете видео на телефон, исходник удобно подготовить в мобильном редакторе. Как я монтирую ролики на телефоне, разобрано в статье как монтировать видео на телефоне. Как сделать анимированные стикеры в Телеграм Анимированные стикеры Telegram это векторная анимация в собственном формате TGS. Telegram описывает такой путь: 1. Нарисуйте персонажа в векторном редакторе, из которого можно перенести объекты в Adobe After Effects. 2. Анимируйте в After Effects на холсте 512x512 px, объекты не выходят за холст, длина до 3 секунд, 60 кадров в секунду, анимация зациклена. 3. Экспортируйте через плагин Bodymovin-TG, версию Bodymovin для Telegram, в формат TGS, итоговый вес до 64 КБ. 4. Загрузите файл в @Stickers. Часть функций After Effects в анимированных стикерах запрещена, полный список Telegram приводит на странице о стикерах. Для первого набора проще начать с видеостикеров: их делают из обычного ролика. Частые вопросы Как сделать стикеры в Телеграмме самому? В любом чате откройте панель стикеров, нажмите (+) и выберите фото. Для набора из своих картинок используйте бот @Stickers. Как сделать стикеры в Телеграм из фото на телефоне? Через встроенный редактор стикеров: панель стикеров в поле ввода, кнопка (+), выбор фото, затем текст, рисунок или эмодзи. Как сделать стикеры в Телеграм из видео? Обрежьте видео до 3 секунд, одна сторона ровно 512 px, другая до 512 px, частота до 30 кадров в секунду, уберите звук,…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Как сделать стикеры в Телеграм самому: из фото, из видео, анимированные и на компьютере",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/stikery-telegram/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/stikery-telegram/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как сделать стикеры в Телеграмме самому?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В любом чате откройте панель стикеров, нажмите (+) и выберите фото. Для набора из своих картинок используйте бот @Stickers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как сделать стикеры в Телеграм из фото на телефоне?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Через встроенный редактор стикеров: панель стикеров в поле ввода, кнопка (+), выбор фото, затем текст, рисунок или эмодзи."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как сделать стикеры в Телеграм из видео?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Обрежьте видео до 3 секунд, одна сторона ровно 512 px, другая до 512 px, частота до 30 кадров в секунду, уберите звук, экспортируйте в WEBM с кодеком VP9 до 256 КБ и загрузите в @Stickers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как сделать стикеры в Телеграм на ПК?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Подготовьте файлы PNG, WEBP или WEBM в редакторе на компьютере и загрузите их через бот @Stickers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какого размера должен быть стикер в Телеграм?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Для статичных и видеостикеров одна сторона ровно 512 px, другая до 512 px. Анимированный стикер TGS делается на холсте ровно 512x512 px. Статичные эмодзи и видеоэмодзи ровно 100x100 px."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли сделать свои эмодзи в Телеграм?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Создать набор эмодзи может каждый. Добавлять и использовать чужие наборы эмодзи в обычных чатах могут пользователи Telegram Premium. Видят анимированные эмодзи все, а в чате «Избранное» по блогу Telegram любые пользовательские эмодзи бесплатно может использовать каждый."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=91fb0fbb3f" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{defer:true,webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script data-gfmr-ref>(function(){var r=document.referrer,s=0;try{var o=JSON.parse(sessionStorage.getItem('gfmr_ref')||'null');if(o){sessionStorage.removeItem('gfmr_ref');var a=Date.now()-o.t;if(o.u===location.pathname&&typeof o.t==='number'&&a>=0&&a<120000){r=typeof o.r==='string'?o.r:'';s=1;}}}catch(e){}ym(110633946,'hit',location.href,(r||s)?{referer:r}:{});})();</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/stikery-telegram.webp?v=9ae26ec63a" alt="Как сделать стикеры в Телеграм самому: из фото, из видео, анимированные и на компьютере" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Как сделать стикеры в Телеграм самому: из фото, из видео, анимированные и на компьютере</h1><div class="gf-botcta" data-gf-botcta="top"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=otmena" data-gf-place="top">Забрать 7 бесплатных замен платным нейросетям →</a><span class="gf-botcta-cap">Гайд в Telegram-боте, бесплатно</span></div><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Как сделать стикеры в Телеграм самому на телефоне (айфон и андроид) и на ПК: встроенный редактор стикеров из фото, бот @Stickers, видеостикеры из видео в WEBM, анимированные стикеры TGS и требования к размерам. Проверено 10 ноября 2026.</p><div class="gp-article-body"><p>Сделать стикеры в Телеграм самому проще всего встроенным редактором стикеров: в любом чате откройте панель стикеров в поле ввода, нажмите (+) и выберите фото, из которого получится стикер с текстом, рисунком и эмодзи. Для своего набора стикеров из готовых картинок или видео Telegram даёт бот @Stickers: в нём загружают файлы PNG, WEBP или WEBM и собирают из них пак.</p>
+<h2 id="sec-0">3 способа сделать стикеры в Телеграм</h2>
+<table class="gp-table"><thead><tr><th>Способ</th><th>Что нужно</th><th>Подходит для</th></tr></thead><tbody><tr><td>Редактор стикеров в чате</td><td>Только Telegram и фото на телефоне</td><td>Быстрый стикер из своего фото</td></tr><tr><td>Бот @Stickers</td><td>Готовые картинки или видео нужного размера</td><td>Свой набор стикеров или эмодзи</td></tr><tr><td>Свой редактор и загрузка в @Stickers</td><td>Графический или видеоредактор</td><td>Анимированные и видеостикеры</td></tr></tbody></table>
+<p>Все три способа официальные, они описаны на странице Telegram о стикерах. Сторонние приложения тоже умеют переносить стикеры в Telegram, для этого у Telegram есть отдельный механизм импорта.</p>
+<h2 id="sec-1">Как сделать стикеры в Телеграмме из фото на телефоне</h2><div class="gf-botcta" data-gf-botcta="mid"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=otmena" data-gf-place="mid">Забрать 7 бесплатных замен платным нейросетям →</a><span class="gf-botcta-cap">Гайд в Telegram-боте, бесплатно</span></div>
+<p>Встроенный редактор стикеров Telegram превращает любое фото с телефона в стикер. По описанию Telegram порядок такой:</p>
+<ol><li>Откройте любой чат.</li><li>В поле ввода откройте панель стикеров.</li><li>Нажмите кнопку (+).</li><li>Выберите фото с телефона.</li><li>Добавьте текст, рисунок или эмодзи, если нужно.</li><li>Сохраните стикер и отправьте его в чат.</li></ol>
+<p>В том же редакторе можно собрать из своих стикеров набор и поделиться им с друзьями. Отдельные программы для этого не нужны.</p>
+<h2 id="sec-2">Как сделать свой набор стикеров через бот @Stickers</h2>
+<p>Бот @Stickers это официальный инструмент Telegram для наборов стикеров и эмодзи. В нём создают и редактируют наборы, смотрят статистику использования, а работать с ним можно через мини-приложение или текстовыми командами.</p>
+<p>Порядок для своего набора:</p>
+<ol><li>Подготовьте картинки по требованиям ниже.</li><li>Откройте @Stickers в Telegram.</li><li>Создайте новый набор стикеров или эмодзи.</li><li>Загрузите подготовленные файлы PNG, WEBP или WEBM.</li><li>Поделитесь готовым набором с друзьями или подписчиками.</li></ol>
+<p>Картинки для набора удобнее готовить в редакторе на компьютере, а загружать их через @Stickers.</p>
+<h2 id="sec-3">Требования к стикерам Telegram</h2>
+<p>Telegram принимает файлы для стикеров только по своим правилам. Сводная таблица со страницы Telegram о стикерах:</p>
+<table class="gp-table"><thead><tr><th>Тип</th><th>Формат</th><th>Размер</th><th>Ограничения</th></tr></thead><tbody><tr><td>Статичный стикер</td><td>PNG или WEBP</td><td>Одна сторона ровно 512 px, другая до 512 px</td><td>Прозрачный фон по желанию</td></tr><tr><td>Видеостикер</td><td>WEBM, кодек VP9</td><td>Одна сторона ровно 512 px, другая до 512 px</td><td>До 3 с, до 30 кадров в секунду, до 256 КБ, без звука</td></tr><tr><td>Анимированный стикер</td><td>TGS</td><td>Холст 512x512 px</td><td>До 3 с, 60 кадров в секунду, до 64 КБ, анимация зациклена</td></tr><tr><td>Эмодзи, картинка</td><td>PNG или WEBP</td><td>Ровно 100x100 px</td><td>Как у статичных</td></tr><tr><td>Эмодзи, видео</td><td>WEBM, кодек VP9</td><td>Ровно 100x100 px</td><td>Как у видеостикеров</td></tr></tbody></table>
+<p>Совет от самого Telegram для статичных стикеров: прозрачный фон, белая обводка и чёрная тень помогают стикеру выделяться в чате.</p>
+<h2 id="sec-4">Как сделать стикеры в Телеграм из видео</h2>
+<p>Видеостикер в Telegram это короткий зацикленный ролик в формате WEBM. Порядок:</p>
+<ol><li>Выберите кусок видео до 3 секунд.</li><li>В видеоредакторе обрежьте кадр так, чтобы одна сторона была ровно 512 px, а другая не больше 512 px.</li><li>Уберите звук: видеостикер должен быть без звуковой дорожки.</li><li>Экспортируйте в WEBM с кодеком VP9, частота до 30 кадров в секунду.</li><li>Проверьте вес: файл не больше 256 КБ.</li><li>Загрузите файл в @Stickers.</li></ol>
+<p>Видеостикеры работают в Telegram версии 8.5 и выше. Уложить 3 секунды в 256 КБ проще, когда фон простой и в кадре мало движения.</p>
+<p>Если вы снимаете видео на телефон, исходник удобно подготовить в мобильном редакторе. Как я монтирую ролики на телефоне, разобрано в статье <a href="/guides/kak-montirovat-video-na-telefone/">как монтировать видео на телефоне</a>.</p>
+<h2 id="sec-5">Как сделать анимированные стикеры в Телеграм</h2>
+<p>Анимированные стикеры Telegram это векторная анимация в собственном формате TGS. Telegram описывает такой путь:</p>
+<ol><li>Нарисуйте персонажа в векторном редакторе, из которого можно перенести объекты в Adobe After Effects.</li><li>Анимируйте в After Effects на холсте 512x512 px, объекты не выходят за холст, длина до 3 секунд, 60 кадров в секунду, анимация зациклена.</li><li>Экспортируйте через плагин Bodymovin-TG, версию Bodymovin для Telegram, в формат TGS, итоговый вес до 64 КБ.</li><li>Загрузите файл в @Stickers.</li></ol>
+<p>Часть функций After Effects в анимированных стикерах запрещена, полный список Telegram приводит на странице о стикерах. Для первого набора проще начать с видеостикеров: их делают из обычного ролика.</p>
+<h2 id="sec-6">Частые вопросы</h2>
+<h3>Как сделать стикеры в Телеграмме самому?</h3>
+<p>В любом чате откройте панель стикеров, нажмите (+) и выберите фото. Для набора из своих картинок используйте бот @Stickers.</p>
+<h3>Как сделать стикеры в Телеграм из фото на телефоне?</h3>
+<p>Через встроенный редактор стикеров: панель стикеров в поле ввода, кнопка (+), выбор фото, затем текст, рисунок или эмодзи.</p>
+<h3>Как сделать стикеры в Телеграм из видео?</h3>
+<p>Обрежьте видео до 3 секунд, одна сторона ровно 512 px, другая до 512 px, частота до 30 кадров в секунду, уберите звук, экспортируйте в WEBM с кодеком VP9 до 256 КБ и загрузите в @Stickers.</p>
+<h3>Как сделать стикеры в Телеграм на ПК?</h3>
+<p>Подготовьте файлы PNG, WEBP или WEBM в редакторе на компьютере и загрузите их через бот @Stickers.</p>
+<h3>Какого размера должен быть стикер в Телеграм?</h3>
+<p>Для статичных и видеостикеров одна сторона ровно 512 px, другая до 512 px. Анимированный стикер TGS делается на холсте ровно 512x512 px. Статичные эмодзи и видеоэмодзи ровно 100x100 px.</p>
+<h3>Можно ли сделать свои эмодзи в Телеграм?</h3>
+<p>Создать набор эмодзи может каждый. Добавлять и использовать чужие наборы эмодзи в обычных чатах могут пользователи Telegram Premium. Видят анимированные эмодзи все, а в чате «Избранное» по блогу Telegram любые пользовательские эмодзи бесплатно может использовать каждый.</p>
+<h2 id="sec-7">Что делать дальше</h2>
+<p>Сделайте 3-5 стикеров со своим лицом или фразами из ваших роликов и отправьте набор подписчикам канала. У меня под роликами настроена автоматизация: зритель пишет в комментарии кодовое слово, которое я назвал в ролике, получает материал в боте и приглашение в канал.</p>
+<p>Тарифы на создание таких роликов на странице <a href="https://vladimir-izhmukov.ru/tarify/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=stikery-telegram" target="_blank" rel="noopener">Рилс-Магнит</a>.</p>
+<p>Источники: <a href="https://core.telegram.org/stickers" target="_blank" rel="noopener">страница Telegram о стикерах и эмодзи</a>, <a href="https://core.telegram.org/import-stickers" target="_blank" rel="noopener">импорт стикеров из других приложений</a>. Проверено 10 ноября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=otmena" data-gf-place="end">Забрать 7 бесплатных замен платным нейросетям →</a><div class="m-cta-cap">Гайд в Telegram-боте, бесплатно</div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/zvezdy-telegram/"><span class="rc-cover"><img src="/covers/zvezdy-telegram.webp?v=e4b483edbf" alt="Звёзды Телеграм: что это, как купить, как получить в канале и как вывести в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Звёзды Телеграм: что это, как купить, как получить в канале и как вывести в 2026</span><span class="rc-desc">Звёзды Телеграм (Telegram Stars) это внутренняя валюта для оплаты цифровых товаров в…</span></a><a class="gp-related-card" href="/guides/kruzhok-telegram/"><span class="rc-cover"><img src="/covers/kruzhok-telegram.webp?v=2efa7b2434" alt="Как записать кружок в Телеграм 2026: на айфоне, андроиде и компьютере, без удержания кнопки и с музыкой" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как записать кружок в Телеграм 2026: на айфоне, андроиде и компьютере, без удержания кнопки и с музыкой</span><span class="rc-desc">Как записать кружок в Телеграм: как переключиться с голосового на видео, как записать…</span></a><a class="gp-related-card" href="/guides/kak-sdelat-opros-telegram/"><span class="rc-cover"><img src="/covers/kak-sdelat-opros-telegram.webp?v=64e0877ad6" alt="Как сделать опрос в телеграм канале в 2026: с телефона и компьютера, викторина, таймер и картинки" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как сделать опрос в телеграм канале в 2026: с телефона и компьютера, викторина, таймер и картинки</span><span class="rc-desc">Как сделать опрос в телеграм канале на iPhone, Android и компьютере: до 12 вариантов…</span></a><a class="gp-related-card" href="/guides/nazvanie-telegram-kanala/"><span class="rc-cover"><img src="/covers/nazvanie-telegram-kanala.webp?v=c70d6f4b38" alt="Название для телеграм канала в 2026: 80+ идей по темам, правила, лимит символов и как сменить" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Название для телеграм канала в 2026: 80+ идей по темам, правила, лимит символов и как сменить</span><span class="rc-desc">Название для телеграм канала: сколько символов можно, чем название отличается от…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+
+
+<script src="/gf-light.js?v=8a6303ab2e" defer data-gf-light></script>
+</body></html>

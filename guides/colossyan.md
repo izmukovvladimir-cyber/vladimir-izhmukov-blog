@@ -67,7 +67,6 @@ Colossyan основали в 2020 году Доминик Мате Ковач, 
 | [HeyGen](/guides/heygen/) | Сильнее в маркетинговых роликах, клонах себя и переводе видео. |
 | [D-ID](/guides/d-id-neyroset/) | Говорящее фото по одной картинке, проще и дешевле. |
 | [Vidnoz](/guides/vidnoz/) | Щедрый бесплатный план, аватары попроще. |
-| [Hedra](/guides/hedra-ai/) | Выразительные персонажи для креатива, без SCORM. |
 
 Все варианты сравнил в подборке [нейросетей для говорящего аватара](/guides/govoryashchiy-avatar-neyroset/), а про курсы для сотрудников есть статья о [нейросетях для обучения](/guides/neyroset-dlya-obucheniya/).
 
@@ -91,7 +90,7 @@ Professional стоит $59 в месяц при оплате за год, Enter
 
 ### Какие у Colossyan аналоги?
 
-Synthesia, HeyGen, D-ID, Vidnoz и Hedra.
+Synthesia, HeyGen, D-ID и Vidnoz.
 
 ## Что делать дальше
 

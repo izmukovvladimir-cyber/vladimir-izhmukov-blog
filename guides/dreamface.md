@@ -77,7 +77,7 @@ DreamFace это приложение и сайт dreamfaceapp.com, где не�
 
 ### Говорящий аватар
 
-Если нужен аватар, который читает ваш текст для экспертного контента, сравните DreamFace с [HeyGen](/guides/heygen/), [Hedra](/guides/hedra-ai/) и обзором [говорящий аватар нейросеть](/guides/govoryashchiy-avatar-neyroset/). Для замены персонажа в видео подойдёт [Viggle AI](/guides/viggle-ai/).
+Если нужен аватар, который читает ваш текст для экспертного контента, сравните DreamFace с [HeyGen](/guides/heygen/) и обзором [говорящий аватар нейросеть](/guides/govoryashchiy-avatar-neyroset/). Для замены персонажа в видео подойдёт [Viggle AI](/guides/viggle-ai/).
 
 ## Минусы DreamFace
 

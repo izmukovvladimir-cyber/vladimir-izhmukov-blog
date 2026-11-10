@@ -74,7 +74,7 @@ Viggle AI это нейросеть, которая подставляет ва�
 
 ### Похожие сервисы
 
-Если нужно оживить портрет или сделать говорящую голову, посмотрите [Hedra](/guides/hedra-ai/), подборку [как оживить фото нейросетью](/guides/kak-ozhivit-foto-neyrosetyu/) и статью про [говорящий аватар](/guides/govoryashchiy-avatar-neyroset/). Для общей анимации подойдут [Pika](/guides/pika-ai/) и [Dzine](/guides/dzine-ai/).
+Если нужно оживить портрет или сделать говорящую голову, посмотрите подборку [как оживить фото нейросетью](/guides/kak-ozhivit-foto-neyrosetyu/) и статью про [говорящий аватар](/guides/govoryashchiy-avatar-neyroset/). Для общей анимации подойдут [Pika](/guides/pika-ai/) и [Dzine](/guides/dzine-ai/).
 
 ## Минусы Viggle AI
 

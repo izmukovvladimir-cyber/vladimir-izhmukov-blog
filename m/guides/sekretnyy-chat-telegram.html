@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Секретный чат в Телеграм: как создать, чем отличается от обычного, таймер самоуничтожения и ключ шифрования в 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=26130666a3">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Что такое секретный чат в Telegram и как его создать: сквозное шифрование, почему переписка видна только на одном устройстве, таймер самоуничтожения, скриншоты, ключ шифрования и что будет при выходе из аккаунта. Проверено по Telegram FAQ 18 ноября 2026.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/sekretnyy-chat-telegram/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Секретный чат в Телеграм: как создать, чем отличается от обычного, таймер самоуничтожения и ключ шифрования в 2026">
+<meta property="og:description" content="Что такое секретный чат в Telegram и как его создать: сквозное шифрование, почему переписка видна только на одном устройстве, таймер самоуничтожения, скриншоты, ключ шифрования и что будет при выходе из аккаунта. Проверено по Telegram FAQ 18 ноября 2026.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/sekretnyy-chat-telegram/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/sekretnyy-chat-telegram.webp?v=9f73b6e269">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Секретный чат в Телеграм: как создать, чем отличается от обычного, таймер самоуничтожения и ключ шифрования в 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-11-18T08:00:00Z">
+<meta property="article:modified_time" content="2026-11-18T08:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Секретный чат в Телеграм: как создать, чем отличается от обычного, таймер самоуничтожения и ключ шифрования в 2026">
+<meta name="twitter:description" content="Что такое секретный чат в Telegram и как его создать: сквозное шифрование, почему переписка видна только на одном устройстве, таймер самоуничтожения, скриншоты, ключ шифрования и что будет при выходе из аккаунта. Проверено по Telegram FAQ 18 ноября 2026.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/sekretnyy-chat-telegram.webp?v=9f73b6e269">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/sekretnyy-chat-telegram.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/sekretnyy-chat-telegram/#article",
+      "headline": "Секретный чат в Телеграм: как создать, чем отличается от обычного, таймер самоуничтожения и ключ шифрования в 2026",
+      "description": "Что такое секретный чат в Telegram и как его создать: сквозное шифрование, почему переписка видна только на одном устройстве, таймер самоуничтожения, скриншоты, ключ шифрования и что будет при выходе из аккаунта. Проверено по Telegram FAQ 18 ноября 2026.",
+      "datePublished": "2026-11-18T08:00:00Z",
+      "dateModified": "2026-11-18T08:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "telegram",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/sekretnyy-chat-telegram/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/sekretnyy-chat-telegram/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/sekretnyy-chat-telegram.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Секретный чат в Телеграм Секретный чат в Telegram это переписка со сквозным шифрованием: прочитать её можете только вы и собеседник, даже Telegram её расшифровать не может. Чтобы его начать, откройте профиль человека, нажмите «…» и выберите «Начать секретный чат». Такой чат живёт только на том устройстве, где вы его создали. Дальше по порядку: как создать, чем он отличается от обычного чата, таймер самоуничтожения, скриншоты, ключ шифрования и что будет при выходе из аккаунта. Секретный чат в 5 фактах Секретный чат Telegram это переписка со сквозным шифрованием, которая живёт только на одном устройстве каждого участника и не хранится в облаке. Вот 5 фактов о нём из FAQ Telegram: 1. Читать переписку могут 2 человека, вы и собеседник, третьему ключа нет. 2. Чат живёт только на одном устройстве каждого участника: у вас на том, где вы его начали. 3. Переслать из него сообщение нельзя ни в 1 другой чат. 4. Таймер самоуничтожения действует на сообщения, отправленные после того, как вы его включили. 5. При выходе из аккаунта пропадают все секретные чаты, облачные остаются. Как создать секретный чат в Telegram Секретный чат в Telegram создаётся из профиля собеседника. По FAQ Telegram, нужно пройти 3 шага: 1. Откройте профиль человека, с которым хотите переписываться. 2. Нажмите «…». 3. Выберите «Начать секретный чат». С одним и тем же человеком можно завести сколько угодно секретных чатов. Каждый из них будет доступен только на устройстве, где вы его начали. Чем секретный чат отличается от обычного Обычный чат Telegram это облачный чат: сообщения хранятся в облаке Telegram в зашифрованном виде и доступны на всех ваших устройствах. Секретный чат по FAQ Telegram использует шифрование между двумя устройствами и в облако не попадает. | | Обычный чат | Секретный чат | |---|---|---| | Шифрование | клиент-сервер, хранится в облаке | сквозное, между 2 устройствами | | Где доступен | на всех ваших устройствах | только на устройстве, где начат | | Удаление сообщений | у себя или у обоих | приложению собеседника приходит команда удалить тоже | | При выходе из аккаунта | остаётся | пропадает | По FAQ Telegram, все сообщения в Telegram шифруются, разница в способе. Облачные чаты удобны тем, что переписка доступна с любого вашего устройства, даже если вы потеряли телефон. Секретные чаты в облако Telegram не попадают. Как работает таймер самоуничтожения Таймер самоуничтожения секретного чата Telegram это настройка, после которой сообщение исчезает с обоих устройств через заданное время, а отсчёт начинается, когда сообщение показалось на экране собеседника. По FAQ Telegram, в секретных чатах таймер доступен для всех типов сообщений, отправленных после его включения. В обычных чатах по блогу Telegram есть отдельное автоудаление, его отсчёт идёт с момента отправки. Как включить таймер Нажмите значок часов и выберите срок. По FAQ Telegram, на iPhone значок находится в поле ввода, на Android в верхней панели. Когда начинается отсчёт Отсчёт идёт с момента, когда сообщение показалось на экране собеседника, то есть когда сообщение получило две галочки. Когда время выходит, сообщение исчезает у обоих. На какие сообщения действует таймер Только на сообщения, отправленные после того, как вы включили таймер. На более ранние сообщения он не действует. Можно ли сделать скриншот секретного чата Telegram старается предупредить о скриншоте в секретном чате, но гарантии нет. По FAQ Telegram, на некоторых системах, в первую очередь на части Android-устройств, надёжно отследить скриншот невозможно, и уведомление можно обойти. Есть и простой способ, против которого не поможет ни одна настройка: сфотографировать экран другим телефоном. Поэтому по FAQ Telegram чувствительное лучше отправлять только тем, кому вы доверяете. Что такое ключ шифрования в секретном чате Ключ шифрования в секретном чате Telegram это секретные данные, которыми ваши устройства шифруют и расшифровывают сообщения; устройства получают их при создании чата через обмен по протоколу Диффи-Хеллмана. По FAQ Telegram, приложение показывает картинку, которая визуализирует этот ключ. 1. Найдите в секретном чате картинку ключа шифрования. 2. Сравните её с картинкой, которую видит собеседник. 3. Если картинки совпадают при сверке, которой вы доверяете, по FAQ Telegram атака «человек посередине» не пройдёт. Сравнивать надёжнее всего при личной встрече, советует FAQ Telegram. Что будет с секретным чатом при выходе из аккаунта Секретные чаты Telegram пропадают, когда вы выходите из аккаунта на устройстве, потому что хранятся только на нём. По FAQ Telegram, при выходе вы теряете все секретные чаты и все сообщения в них, а облачные чаты остаются. Выход при этом не удаляет сообщения у собеседника. Если вы хотите, чтобы переписка исчезла и у него, по FAQ Telegram сначала выберите «Очистить историю», и только потом выходите. Ограничения секретных чатов Секретный чат в Telegram защищает переписку сквозным шифрованием, и у этого есть цена в удобстве. Вот 3 вещи, которые стоит знать до того, как…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Секретный чат в Телеграм: как создать, чем отличается от обычного, таймер самоуничтожения и ключ шифрования в 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/sekretnyy-chat-telegram/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/sekretnyy-chat-telegram/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Видит ли собеседник, что я начал секретный чат?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Секретный чат создаётся между вашими 2 устройствами, поэтому он появляется и у собеседника."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли открыть секретный чат на другом устройстве?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. По FAQ Telegram, секретный чат доступен только на устройстве, где он начат."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли переслать сообщение из секретного чата?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. По FAQ Telegram, сообщения из секретных чатов пересылать нельзя."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему все чаты не сделать секретными?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Telegram объясняет это в FAQ так: облачные чаты позволяют не терять доступ к переписке при смене или потере телефона, а при сквозном шифровании, по оценке Telegram, у восстановления истории на новом устройстве нет удобного решения."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сработает ли таймер на старые сообщения?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. По FAQ Telegram, таймер действует только на сообщения, отправленные после его включения."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=91fb0fbb3f" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{defer:true,webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script data-gfmr-ref>(function(){var r=document.referrer,s=0;try{var o=JSON.parse(sessionStorage.getItem('gfmr_ref')||'null');if(o){sessionStorage.removeItem('gfmr_ref');var a=Date.now()-o.t;if(o.u===location.pathname&&typeof o.t==='number'&&a>=0&&a<120000){r=typeof o.r==='string'?o.r:'';s=1;}}}catch(e){}ym(110633946,'hit',location.href,(r||s)?{referer:r}:{});})();</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/sekretnyy-chat-telegram.webp?v=9f73b6e269" alt="Секретный чат в Телеграм: как создать, чем отличается от обычного, таймер самоуничтожения и ключ шифрования в 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Секретный чат в Телеграм: как создать, чем отличается от обычного, таймер самоуничтожения и ключ шифрования в 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Что такое секретный чат в Telegram и как его создать: сквозное шифрование, почему переписка видна только на одном устройстве, таймер самоуничтожения, скриншоты, ключ шифрования и что будет при выходе из аккаунта. Проверено по Telegram FAQ 18 ноября 2026.</p><div class="gp-article-body"><div class="gf-botcta" data-gf-botcta="top"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=grafik" data-gf-place="top">Забрать план первой недели: 10 рилсов по дням →</a><span class="gf-botcta-cap">Гайд в Telegram-боте, бесплатно</span></div><p>Секретный чат в Telegram это переписка со сквозным шифрованием: прочитать её можете только вы и собеседник, даже Telegram её расшифровать не может. Чтобы его начать, откройте профиль человека, нажмите «…» и выберите «Начать секретный чат». Такой чат живёт только на том устройстве, где вы его создали.</p>
+<p>Дальше по порядку: как создать, чем он отличается от обычного чата, таймер самоуничтожения, скриншоты, ключ шифрования и что будет при выходе из аккаунта.</p>
+<h2 id="sec-0">Секретный чат в 5 фактах</h2>
+<p>Секретный чат Telegram это переписка со сквозным шифрованием, которая живёт только на одном устройстве каждого участника и не хранится в облаке. Вот 5 фактов о нём из FAQ Telegram:</p>
+<ol><li>Читать переписку могут 2 человека, вы и собеседник, третьему ключа нет.</li><li>Чат живёт только на одном устройстве каждого участника: у вас на том, где вы его начали.</li><li>Переслать из него сообщение нельзя ни в 1 другой чат.</li><li>Таймер самоуничтожения действует на сообщения, отправленные после того, как вы его включили.</li><li>При выходе из аккаунта пропадают все секретные чаты, облачные остаются.</li></ol>
+<h2 id="sec-1">Как создать секретный чат в Telegram</h2><div class="gf-botcta" data-gf-botcta="mid"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=grafik" data-gf-place="mid">Забрать план первой недели: 10 рилсов по дням →</a><span class="gf-botcta-cap">Гайд в Telegram-боте, бесплатно</span></div>
+<p>Секретный чат в Telegram создаётся из профиля собеседника. По FAQ Telegram, нужно пройти 3 шага:</p>
+<ol><li>Откройте профиль человека, с которым хотите переписываться.</li><li>Нажмите «…».</li><li>Выберите «Начать секретный чат».</li></ol>
+<p>С одним и тем же человеком можно завести сколько угодно секретных чатов. Каждый из них будет доступен только на устройстве, где вы его начали.</p>
+<h2 id="sec-2">Чем секретный чат отличается от обычного</h2>
+<p>Обычный чат Telegram это облачный чат: сообщения хранятся в облаке Telegram в зашифрованном виде и доступны на всех ваших устройствах. Секретный чат по FAQ Telegram использует шифрование между двумя устройствами и в облако не попадает.</p>
+<table class="gp-table"><thead><tr><th></th><th>Обычный чат</th><th>Секретный чат</th></tr></thead><tbody><tr><td>Шифрование</td><td>клиент-сервер, хранится в облаке</td><td>сквозное, между 2 устройствами</td></tr><tr><td>Где доступен</td><td>на всех ваших устройствах</td><td>только на устройстве, где начат</td></tr><tr><td>Удаление сообщений</td><td>у себя или у обоих</td><td>приложению собеседника приходит команда удалить тоже</td></tr><tr><td>При выходе из аккаунта</td><td>остаётся</td><td>пропадает</td></tr></tbody></table>
+<p>По FAQ Telegram, все сообщения в Telegram шифруются, разница в способе. Облачные чаты удобны тем, что переписка доступна с любого вашего устройства, даже если вы потеряли телефон. Секретные чаты в облако Telegram не попадают.</p>
+<h2 id="sec-3">Как работает таймер самоуничтожения</h2>
+<p>Таймер самоуничтожения секретного чата Telegram это настройка, после которой сообщение исчезает с обоих устройств через заданное время, а отсчёт начинается, когда сообщение показалось на экране собеседника. По FAQ Telegram, в секретных чатах таймер доступен для всех типов сообщений, отправленных после его включения. В обычных чатах по блогу Telegram есть отдельное автоудаление, его отсчёт идёт с момента отправки.</p>
+<h3>Как включить таймер</h3>
+<p>Нажмите значок часов и выберите срок. По FAQ Telegram, на iPhone значок находится в поле ввода, на Android в верхней панели.</p>
+<h3>Когда начинается отсчёт</h3>
+<p>Отсчёт идёт с момента, когда сообщение показалось на экране собеседника, то есть когда сообщение получило две галочки. Когда время выходит, сообщение исчезает у обоих.</p>
+<h3>На какие сообщения действует таймер</h3>
+<p>Только на сообщения, отправленные после того, как вы включили таймер. На более ранние сообщения он не действует.</p>
+<h2 id="sec-4">Можно ли сделать скриншот секретного чата</h2>
+<p>Telegram старается предупредить о скриншоте в секретном чате, но гарантии нет. По FAQ Telegram, на некоторых системах, в первую очередь на части Android-устройств, надёжно отследить скриншот невозможно, и уведомление можно обойти.</p>
+<p>Есть и простой способ, против которого не поможет ни одна настройка: сфотографировать экран другим телефоном. Поэтому по FAQ Telegram чувствительное лучше отправлять только тем, кому вы доверяете.</p>
+<h2 id="sec-5">Что такое ключ шифрования в секретном чате</h2>
+<p>Ключ шифрования в секретном чате Telegram это секретные данные, которыми ваши устройства шифруют и расшифровывают сообщения; устройства получают их при создании чата через обмен по протоколу Диффи-Хеллмана. По FAQ Telegram, приложение показывает картинку, которая визуализирует этот ключ.</p>
+<ol><li>Найдите в секретном чате картинку ключа шифрования.</li><li>Сравните её с картинкой, которую видит собеседник.</li><li>Если картинки совпадают при сверке, которой вы доверяете, по FAQ Telegram атака «человек посередине» не пройдёт.</li></ol>
+<p>Сравнивать надёжнее всего при личной встрече, советует FAQ Telegram.</p>
+<h2 id="sec-6">Что будет с секретным чатом при выходе из аккаунта</h2>
+<p>Секретные чаты Telegram пропадают, когда вы выходите из аккаунта на устройстве, потому что хранятся только на нём. По FAQ Telegram, при выходе вы теряете все секретные чаты и все сообщения в них, а облачные чаты остаются.</p>
+<p>Выход при этом не удаляет сообщения у собеседника. Если вы хотите, чтобы переписка исчезла и у него, по FAQ Telegram сначала выберите «Очистить историю», и только потом выходите.</p>
+<h2 id="sec-7">Ограничения секретных чатов</h2>
+<p>Секретный чат в Telegram защищает переписку сквозным шифрованием, и у этого есть цена в удобстве. Вот 3 вещи, которые стоит знать до того, как переносить туда важную переписку:</p>
+<ul><li>переписку не открыть на другом вашем устройстве;</li><li>сообщения нельзя переслать в другой чат;</li><li>при выходе из аккаунта переписка пропадает, а без устройства, где начат чат, к ней нет доступа.</li></ul>
+<h2 id="sec-8">Частые вопросы</h2>
+<p>Секретный чат в Telegram создаётся из профиля собеседника: «…» и «Начать секретный чат».</p>
+<h3>Видит ли собеседник, что я начал секретный чат?</h3>
+<p>Да. Секретный чат создаётся между вашими 2 устройствами, поэтому он появляется и у собеседника.</p>
+<h3>Можно ли открыть секретный чат на другом устройстве?</h3>
+<p>Нет. По FAQ Telegram, секретный чат доступен только на устройстве, где он начат.</p>
+<h3>Можно ли переслать сообщение из секретного чата?</h3>
+<p>Нет. По FAQ Telegram, сообщения из секретных чатов пересылать нельзя.</p>
+<h3>Почему все чаты не сделать секретными?</h3>
+<p>Telegram объясняет это в FAQ так: облачные чаты позволяют не терять доступ к переписке при смене или потере телефона, а при сквозном шифровании, по оценке Telegram, у восстановления истории на новом устройстве нет удобного решения.</p>
+<h3>Сработает ли таймер на старые сообщения?</h3>
+<p>Нет. По FAQ Telegram, таймер действует только на сообщения, отправленные после его включения.</p>
+<h2 id="sec-9">Что делать дальше</h2>
+<p>Если вы ведёте блог или продаёте через Telegram, и вам нужен доступ к рабочей переписке с нескольких устройств, используйте обычные облачные чаты. Кто может видеть ваш номер и где это настраивается, разобрано в статье <a href="/guides/kak-skryt-nomer-telegram/">как скрыть номер в Telegram</a>. По FAQ Telegram, эти настройки не скрывают номер от людей, у которых он уже сохранён в контактах.</p>
+<p>Описание системы коротких роликов Владимира Ижмукова есть на странице <a href="https://vladimir-izhmukov.ru/tarify/?utm_source=baza&amp;utm_medium=article&amp;utm_campaign=sekretnyy-chat-telegram" target="_blank" rel="noopener">Рилс-Магнит</a>.</p>
+<p>Источники: <a href="https://telegram.org/faq" target="_blank" rel="noopener">Telegram FAQ</a>, раздел Secret Chats и вопрос о выходе из аккаунта; блог Telegram <a href="https://telegram.org/blog/autodelete-inv2" target="_blank" rel="noopener">об автоудалении</a>. Проверено 18 ноября 2026 года.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=grafik" data-gf-place="end">Забрать план первой недели: 10 рилсов по дням →</a><div class="m-cta-cap">Гайд в Telegram-боте, бесплатно</div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/kak-ochistit-kesh-telegram/"><span class="rc-cover"><img src="/covers/kak-ochistit-kesh-telegram.webp?v=2efd096e1c" alt="Как очистить кэш Телеграм на телефоне: что удалится, что останется, автоочистка и лимит памяти в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как очистить кэш Телеграм на телефоне: что удалится, что останется, автоочистка и лимит памяти в 2026</span><span class="rc-desc">Как очистить кэш Telegram и освободить память телефона: путь «Настройки, Данные и…</span></a><a class="gp-related-card" href="/guides/kak-pomenyat-yazyk-v-telegram/"><span class="rc-cover"><img src="/covers/kak-pomenyat-yazyk-v-telegram.webp?v=6fc2d546c7" alt="Как поменять язык в Телеграм на русский: настройки, ссылка t.me/setlanguage/ru и перевод сообщений в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как поменять язык в Телеграм на русский: настройки, ссылка t.me/setlanguage/ru и перевод сообщений в 2026</span><span class="rc-desc">Как поменять язык в Telegram на русский: раздел «Язык» в настройках, ссылка…</span></a><a class="gp-related-card" href="/guides/kak-udalit-kanal-telegram/"><span class="rc-cover"><img src="/covers/kak-udalit-kanal-telegram.webp?v=882b6b1c55" alt="Как удалить канал в Телеграм: где кнопка, что будет с подписчиками и как передать канал другому в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как удалить канал в Телеграм: где кнопка, что будет с подписчиками и как передать канал другому в 2026</span><span class="rc-desc">Как удалить свой канал в Telegram: кнопка «Удалить канал» в профиле и в настройках…</span></a><a class="gp-related-card" href="/guides/kak-zablokirovat-v-telegram/"><span class="rc-cover"><img src="/covers/kak-zablokirovat-v-telegram.webp?v=af62522e8d" alt="Как заблокировать человека в Телеграм: где кнопка, что он увидит, чёрный список и как разблокировать в 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как заблокировать человека в Телеграм: где кнопка, что он увидит, чёрный список и как разблокировать в 2026</span><span class="rc-desc">Как заблокировать человека в Telegram: кнопка «Заблокировать» в профиле, что видит…</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+
+
+<script src="/gf-light.js?v=8a6303ab2e" defer data-gf-light></script>
+</body></html>

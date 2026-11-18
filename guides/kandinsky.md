@@ -100,19 +100,33 @@ Kandinsky можно запустить на своём сервере: код K
 
 Коротко: Kandinsky работает в ГигаЧате, видео со звуком там доступно с 6 октября 2026 года, модели для разработчиков открыты на GitHub.
 
-**Kandinsky бесплатный?** По официальному каналу ГигаЧата, видео на Kandinsky 6.0 Video Pro можно генерировать бесплатно и без VPN, а по странице Kandinsky Lab бесплатно и редактирование картинок в Kandinsky 6 Image Pro. Бесплатный режим по соглашению ГигаЧата только для личного некоммерческого использования.
+### Kandinsky бесплатный?
 
-**Где сейчас работает Kandinsky?** Для пользователей внутри ГигаЧата: на сайте giga.chat и в приложении.
+По официальному каналу ГигаЧата, видео на Kandinsky 6.0 Video Pro можно генерировать бесплатно и без VPN, а по странице Kandinsky Lab бесплатно и редактирование картинок в Kandinsky 6 Image Pro. Бесплатный режим по соглашению ГигаЧата только для личного некоммерческого использования.
 
-**Кто создал Kandinsky?** Сбер, открытые модели выходят под названием Kandinsky Lab.
+### Где сейчас работает Kandinsky?
 
-**Можно ли скачать Kandinsky?** Да, если вы разработчик: код Kandinsky 6.0 открыт на GitHub под лицензией MIT, веса лежат на Hugging Face. Обычному пользователю скачивать ничего не нужно.
+Для пользователей внутри ГигаЧата: на сайте giga.chat и в приложении.
 
-**Где попробовать Kandinsky 6.0 Video, кроме ГигаЧата?** По README на GitHub, у Kandinsky Lab есть демо Kandinsky 6.0 Pro Distill на Hugging Face Spaces.
+### Кто создал Kandinsky?
 
-**Kandinsky делает видео?** Да, Kandinsky 6.0 Video делает ролики по 5 секунд сразу со звуком, по тексту или по картинке.
+Сбер, открытые модели выходят под названием Kandinsky Lab.
 
-**Kandinsky понимает русский?** Да: по странице Kandinsky Lab, Kandinsky 6 Image Pro работает с запросами на английском и русском, а в официальных примерах ГигаЧата запросы написаны по-русски.
+### Можно ли скачать Kandinsky?
+
+Да, если вы разработчик: код Kandinsky 6.0 открыт на GitHub под лицензией MIT, веса лежат на Hugging Face. Обычному пользователю скачивать ничего не нужно.
+
+### Где попробовать Kandinsky 6.0 Video, кроме ГигаЧата?
+
+По README на GitHub, у Kandinsky Lab есть демо Kandinsky 6.0 Pro Distill на Hugging Face Spaces.
+
+### Kandinsky делает видео?
+
+Да, Kandinsky 6.0 Video делает ролики по 5 секунд сразу со звуком, по тексту или по картинке.
+
+### Kandinsky понимает русский?
+
+Да: по странице Kandinsky Lab, Kandinsky 6 Image Pro работает с запросами на английском и русском, а в официальных примерах ГигаЧата запросы написаны по-русски.
 
 Официальные страницы и источники: [ГигаЧат](https://giga.chat/), [пост ГигаЧата о Kandinsky 6.0 Video](https://t.me/official_gigachat/3052), [пост ГигаЧата о Kandinsky 6.0 Image](https://t.me/official_gigachat/2674), [Kandinsky 6.0 на GitHub](https://github.com/kandinskylab/kandinsky-6), [режимы генерации Kandinsky 6.0](https://github.com/kandinskylab/kandinsky-6/blob/main/docs/generation_modes.md), [Kandinsky 5.0 на GitHub](https://github.com/kandinskylab/kandinsky-5), [страница проекта Kandinsky Lab](https://kandinskylab.ai/). Проверено 18 ноября 2026.
 

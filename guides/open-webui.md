@@ -6,16 +6,29 @@ Open WebUI это платформа для работы с нейросетям
 
 ## Что такое Open WebUI
 
-Open WebUI это self-hosted платформа: она работает на вашем компьютере или сервере. В README проект описан как расширяемая платформа, рассчитанная на работу полностью офлайн. Интерфейс открывается в браузере, а модели вы подключаете сами.
+Open WebUI это self-hosted платформа: она работает на вашем компьютере или сервере. В README проект описан как расширяемая платформа, рассчитанная на работу полностью офлайн. Офлайн она работает с локальной моделью, например через Ollama: если выбрать для чата облачную модель, Open WebUI отправит запрос и его контекст её провайдеру. Интерфейс открывается в браузере, а модели вы подключаете сами.
 
-Цифры проекта на 18 ноября 2026 года по GitHub:
+Цифры проекта на 26 ноября 2026 года по GitHub:
 
 | Что | Значение |
 |---|---|
-| Звёзды репозитория | около 159 тыс. |
-| Последний релиз | v0.13.4, 17 ноября 2026 |
-| Предыдущий релиз | v0.13.3, 8 ноября 2026 |
+| Звёзды репозитория | около 159,6 тыс. |
+| Последний релиз | v0.13.5, 25 ноября 2026 |
+| Предыдущий релиз | v0.13.4, 17 ноября 2026 |
 | Поддерживаемый Python | 3.11 и 3.12, Python 3.13 не поддерживается |
+
+## Где скачать Open WebUI
+
+Скачивать Open WebUI стоит только из официальных мест проекта: репозитория на GitHub, каталога PyPI, реестра образов ghcr.io и репозитория настольного приложения. Сборки с файлообменников и из чатов я не ставлю. По [документации о подключении провайдера](https://docs.openwebui.com/getting-started/quick-start/connect-a-provider/), Open WebUI отправляет ваши сообщения выбранному провайдеру, а для подключения в него вводят адрес и, когда он нужен, ключ API.
+
+| Что скачать | Где лежит | Что там на 26 ноября 2026 |
+|---|---|---|
+| Пакет для Python | [pypi.org/project/open-webui](https://pypi.org/project/open-webui/) | версия 0.13.5, Python от 3.11 и ниже 3.13 |
+| Образ Docker | ghcr.io/open-webui/open-webui | теги `:main`, `:slim`, `:cuda`, `:ollama`, `:dev` и закреплённые версии |
+| Исходный код и релизы | [github.com/open-webui/open-webui/releases](https://github.com/open-webui/open-webui/releases) | v0.13.5 от 25 ноября 2026 |
+| Настольное приложение | [github.com/open-webui/desktop/releases](https://github.com/open-webui/desktop/releases) | v0.1.4 от 2 ноября 2026: установщики .exe для Windows, .dmg и .zip для macOS, .deb, .AppImage, .snap и .flatpak для Linux |
+
+Если вы не работали с терминалом, начните с настольного приложения: для Windows это файл `open-webui-x64-setup.exe` (или `open-webui-arm64-setup.exe` для процессоров ARM) на странице релизов. Pip и Docker нужны тем, кто ставит Open WebUI на сервер или хочет управлять версией сам.
 
 ## Как установить Open WebUI
 
@@ -42,7 +55,7 @@ Open WebUI можно установить через Python, Docker или на
 
 `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main`
 
-После запуска интерфейс открывается по адресу localhost:3000. Документация советует сразу задать постоянный ключ WEBUI_SECRET_KEY (параметр `-e WEBUI_SECRET_KEY=ваш-ключ`), иначе после обновлений придётся входить заново. Параметр `-v open-webui:/app/backend/data` подключает том Docker: по документации об обновлении, данные (чаты, пользователи, настройки, загрузки) лежат в томе или локальной базе, отдельно от контейнера.
+После запуска интерфейс открывается по адресу localhost:3000. Документация советует сразу задать постоянный ключ WEBUI_SECRET_KEY (параметр `-e WEBUI_SECRET_KEY=ваш-ключ`), и использовать то же значение при следующих запусках: если при пересоздании контейнера ключ сменится, сеансы сбросятся и придётся входить заново. Параметр `-v open-webui:/app/backend/data` подключает том Docker: по документации об обновлении, данные (чаты, пользователи, настройки, загрузки) лежат в томе или локальной базе, отдельно от контейнера.
 
 Какой образ выбрать, по README:
 
@@ -65,20 +78,20 @@ Open WebUI можно установить через Python, Docker или на
 Open WebUI обновляется командой `pip install -U open-webui` при установке через pip или заменой образа при установке через Docker:
 
 1. **Установка через pip.** Выполните `pip install -U open-webui` и перезапустите `open-webui serve`.
-2. **Установка через Docker.** По [инструкции по обновлению](https://docs.openwebui.com/getting-started/updating/): остановите и удалите контейнер, скачайте свежий образ командой `docker pull ghcr.io/open-webui/open-webui:main` и создайте контейнер заново с тем же томом. Данные в томе при удалении контейнера сохраняются.
-3. **Чтобы не разлогинивало после каждого обновления,** документация советует задать переменную WEBUI_SECRET_KEY.
+2. **Установка через Docker.** По [инструкции по обновлению](https://docs.openwebui.com/getting-started/updating/): остановите и удалите контейнер, скачайте свежий образ с тем же тегом, с которым создан контейнер (для `:main` это `docker pull ghcr.io/open-webui/open-webui:main`), и создайте контейнер заново с тем же томом и тем же тегом. Если вы закрепили версию тегом вида `:vX.Y.Z`, укажите новую версию. Данные в томе при удалении контейнера сохраняются.
+3. **Чтобы сеансы не сбрасывались при пересоздании контейнера,** документация советует задать постоянную переменную WEBUI_SECRET_KEY и передавать то же значение при каждом запуске.
 
 Перед обновлением документация советует сделать резервную копию данных, особенно перед релизами с миграциями базы, которые трудно откатить.
 
 ## Как подключить Ollama к Open WebUI
 
-Ollama на другом сервере подключается к Open WebUI переменной OLLAMA_BASE_URL при запуске контейнера, пример из README:
+Ollama подключается к Open WebUI по адресу работающего сервера Ollama: его задают переменной OLLAMA_BASE_URL при запуске контейнера или в разделе администратора Settings → Connections. Для Ollama на другом сервере пример из README:
 
 `-e OLLAMA_BASE_URL=http://your-ollama-server:11434`
 
-Подключение можно задать и после запуска: по документации, в настройках администратора есть раздел подключений, где указывается адрес Ollama. Как поставить Ollama и выбрать модель, я писал в статье [Ollama](/guides/ollama/), есть отдельная статья и про [LM Studio](/guides/lm-studio/).
+Подключение можно задать и после запуска: по документации, адрес Ollama указывается в настройках администратора, раздел Settings → Connections → Manage Ollama API Connections. Как поставить Ollama и выбрать модель, я писал в статье [Ollama](/guides/ollama/), есть отдельная статья и про [LM Studio](/guides/lm-studio/).
 
-Облачные модели подключаются через API, совместимые с OpenAI: в README для этого есть, например, переменная `OPENAI_API_KEY`. Отдельно я разбирал [OpenRouter](/guides/openrouter/).
+Облачные модели подключаются через API, совместимые с OpenAI: в README для этого есть, например, переменная `OPENAI_API_KEY` для ключа OpenAI; для другого совместимого сервиса указывают также его адрес. Отдельно я разбирал [OpenRouter](/guides/openrouter/).
 
 ## Лицензия Open WebUI
 
@@ -107,11 +120,11 @@ Open WebUI распространяется под собственной лиц
 
 ### Как установить Open WebUI на Windows?
 
-README предлагает для Windows настольное приложение. Установку через Docker и pip README описывает без отдельных шагов для Windows.
+Проще всего через настольное приложение: на странице [релизов open-webui/desktop](https://github.com/open-webui/desktop/releases) скачайте `open-webui-x64-setup.exe` и запустите установщик. Установку через Docker и pip README описывает без отдельных шагов для Windows.
 
 ### Где скачать Open WebUI?
 
-Код и инструкции лежат в репозитории open-webui на GitHub, образы Docker публикуются в ghcr.io, настольное приложение в репозитории open-webui/desktop.
+Код и релизы лежат в репозитории open-webui на GitHub, пакет для pip в каталоге PyPI, образы Docker в ghcr.io, настольное приложение для Windows, macOS и Linux в репозитории open-webui/desktop. Таблица со всеми адресами есть в разделе «Где скачать Open WebUI».
 
 ### Как обновить Open WebUI?
 
@@ -119,7 +132,7 @@ README предлагает для Windows настольное приложен
 
 ### Какая последняя версия Open WebUI?
 
-На 18 ноября 2026 года последний релиз на GitHub v0.13.4, опубликован 17 ноября 2026 года.
+На 26 ноября 2026 года последний релиз на GitHub v0.13.5, опубликован 25 ноября 2026 года.
 
 ### На каком адресе открывается Open WebUI?
 
@@ -131,8 +144,8 @@ README предлагает для Windows настольное приложен
 
 ## Что делать дальше
 
-Open WebUI устанавливается командой `pip install open-webui` и запускается командой `open-webui serve`, если Python уже стоит, или одной командой `docker run`, если стоит Docker. Следующий шаг: запустите команду из README, создайте аккаунт администратора и подключите Ollama или ключ своего провайдера.
+Open WebUI устанавливается командой `pip install open-webui` и запускается командой `open-webui serve`, если в выбранном окружении установлен Python 3.11 или 3.12, или одной командой `docker run`, если стоит Docker. Следующий шаг: запустите команду из README, создайте аккаунт администратора и подключите Ollama или ключ своего провайдера.
 
 Как я веду рилсы с помощью ChatGPT, от сценария до подписи, я показываю в разборе [как вести Reels с ChatGPT](https://vladimir-izhmukov.ru/reels-chatgpt/?utm_source=baza&utm_medium=article&utm_campaign=open-webui).
 
-Источники: [README репозитория Open WebUI](https://github.com/open-webui/open-webui), [быстрый старт](https://docs.openwebui.com/getting-started/quick-start/), [инструкция по обновлению](https://docs.openwebui.com/getting-started/updating/), [текст лицензии](https://github.com/open-webui/open-webui/blob/main/LICENSE), [страница релизов](https://github.com/open-webui/open-webui/releases). Проверено 18 ноября 2026.
+Источники: [README репозитория Open WebUI](https://github.com/open-webui/open-webui), [быстрый старт](https://docs.openwebui.com/getting-started/quick-start/), [инструкция по обновлению](https://docs.openwebui.com/getting-started/updating/), [текст лицензии](https://github.com/open-webui/open-webui/blob/main/LICENSE), [страница релизов](https://github.com/open-webui/open-webui/releases), [пакет на PyPI](https://pypi.org/project/open-webui/), [релизы настольного приложения](https://github.com/open-webui/desktop/releases). Проверено 26 ноября 2026.

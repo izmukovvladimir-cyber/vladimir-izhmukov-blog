@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026 — Владимир Ижмуков</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/gf-styles.css?v=26130666a3">
+  <script>try{if(localStorage.getItem("gfTheme")==="dark")document.documentElement.classList.add("theme-dark");}catch(e){}</script>
+<style>
+  html, body { margin:0; background:var(--bg-light,#FAF7F2); }
+</style>
+<meta name="description" content="Claude Skills – это папки с файлом SKILL.md, которые Claude может выбрать сам, если задача подходит под описание. Где лежат скиллы в Claude Code, как поставить набор скиллов Anthropic, как включить скиллы в claude.ai, как написать свой скилл и что проверить в чужом.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://blog.vladimir-izhmukov.ru/guides/claude-skills/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Владимир Ижмуков">
+<meta property="og:title" content="Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026">
+<meta property="og:description" content="Claude Skills – это папки с файлом SKILL.md, которые Claude может выбрать сам, если задача подходит под описание. Где лежат скиллы в Claude Code, как поставить набор скиллов Anthropic, как включить скиллы в claude.ai, как написать свой скилл и что проверить в чужом.">
+<meta property="og:url" content="https://blog.vladimir-izhmukov.ru/guides/claude-skills/">
+<meta property="og:image" content="https://blog.vladimir-izhmukov.ru/covers/claude-skills.webp?v=19557a19fd">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2026-11-28T08:00:00Z">
+<meta property="article:modified_time" content="2026-11-28T08:00:00Z">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026">
+<meta name="twitter:description" content="Claude Skills – это папки с файлом SKILL.md, которые Claude может выбрать сам, если задача подходит под описание. Где лежат скиллы в Claude Code, как поставить набор скиллов Anthropic, как включить скиллы в claude.ai, как написать свой скилл и что проверить в чужом.">
+<meta name="twitter:image" content="https://blog.vladimir-izhmukov.ru/covers/claude-skills.webp?v=19557a19fd">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="text/markdown" href="/guides/claude-skills.md">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://blog.vladimir-izhmukov.ru/#organization",
+      "name": "Владимир Ижмуков",
+      "url": "https://vladimir-izhmukov.ru",
+      "logo": "https://blog.vladimir-izhmukov.ru/images/logo-vladimir.png",
+      "sameAs": [
+        "https://t.me/izhmukov_777",
+        "https://vladimir-izhmukov.ru"
+      ]
+    },
+    {
+      "@type": [
+        "Article",
+        "TechArticle"
+      ],
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/claude-skills/#article",
+      "headline": "Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026",
+      "description": "Claude Skills – это папки с файлом SKILL.md, которые Claude может выбрать сам, если задача подходит под описание. Где лежат скиллы в Claude Code, как поставить набор скиллов Anthropic, как включить скиллы в claude.ai, как написать свой скилл и что проверить в чужом.",
+      "datePublished": "2026-11-28T08:00:00Z",
+      "dateModified": "2026-11-28T08:00:00Z",
+      "inLanguage": "ru",
+      "keywords": "claude, neyroseti",
+      "author": {
+        "@type": "Person",
+        "name": "Владимир Ижмуков",
+        "url": "https://t.me/izhmukov_777"
+      },
+      "publisher": {
+        "@id": "https://blog.vladimir-izhmukov.ru/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.vladimir-izhmukov.ru/guides/claude-skills/"
+      },
+      "url": "https://blog.vladimir-izhmukov.ru/guides/claude-skills/",
+      "image": "https://blog.vladimir-izhmukov.ru/covers/claude-skills.webp",
+      "articleSection": "Claude Code",
+      "articleBody": "Скиллы Claude: что это и как ими пользоваться Владимир Ижмуков · автор системы роста Instagram через короткие ролики Скилл Claude (Claude Skill, по-русски «навык») – это папка с файлом SKILL.md: в начале файла записаны имя и описание, дальше инструкции, а рядом могут лежать скрипты, справочники и шаблоны. Для своего скилла создайте такую папку и запишите в SKILL.md шаги задачи; в Claude Code личный скилл лежит по пути ~/.claude/skills/\u003cимя /SKILL.md, готовый набор Anthropic ставят как плагин командой /plugin install, и Claude может выбрать скилл сам, если задача подходит под описание. В claude.ai при включённом выполнении кода встроенные навыки для PDF, Word, Excel и PowerPoint Claude применяет автоматически, примеры скиллов включают в Customize → Skills, а свой скилл загружают туда же ZIP-файлом. Ниже по документации Anthropic на 28 ноября 2026 года разобрано, где лежат скиллы в Claude Code, как поставить готовый набор Anthropic и как включить скиллы в claude.ai. Дальше о том, как написать свой скилл и что проверить в чужом до установки. В конце расскажу, по какому правилу я сам превращаю повторяющиеся задачи в скиллы. Что такое скилл простыми словами Скилл Claude – это папка с инструкцией SKILL.md для повторяющейся задачи. В обычной сессии Claude Code сначала получает описание доступного скилла, а полную инструкцию читает при вызове. Представьте инструкцию для нового сотрудника, которую он открывает только тогда, когда берётся за конкретную задачу. Когда задача подходит под описание, Claude может выбрать этот скилл, прочитать инструкцию целиком и работать по ней. Документация Anthropic называет это прогрессивной загрузкой и описывает три уровня: | Уровень | Что загружается | Когда | Сколько места | |---|---|---|---| | 1. Метаданные | имя и описание из SKILL.md | при старте обычной сессии, если скилл доступен модели | ориентир Anthropic: около 100 токенов на скилл | | 2. Инструкции | основной текст SKILL.md | когда скилл вызван | ориентир Anthropic для размера инструкции: менее 5 000 токенов | | 3. Ресурсы | другие файлы и скрипты папки | только когда нужны | прочитанный справочник попадает в контекст, а у запущенного скрипта туда попадает только вывод | Благодаря этому до первого вызова в списке доступных скиллов обычно видны только имя и описание. В Claude Code к описанию может добавляться поле when to use, а если описания нет, берётся первая непустая строка Markdown-текста скилла. Исключения есть и в другую сторону. У субагента с заранее подключённым скиллом полная инструкция загружается в контекст сразу при старте. У скилла с отключённым автовызовом описание не попадает в список, доступный модели, хотя вручную его вызвать по-прежнему можно. В Claude Code на список по умолчанию отведено около 1% окна контекста, вместо доли можно задать фиксированное число символов переменной SLASH COMMAND TOOL CHAR BUDGET. Если скиллов слишком много, имена сохраняются, а часть описаний может выпасть. Чем скилл отличается от CLAUDE.md В обычной сессии Claude Code подходящие файлы CLAUDE.md загружаются при запуске, а текст SKILL.md загружается, когда скилл вызван. CLAUDE.md – это файл постоянных инструкций проекта или пользователя. Claude Code подхватывает подходящие файлы из текущей папки и папок выше по дереву, поэтому туда кладут то, что нужно в каждой сессии проекта. Длинную процедуру удобно оформить скиллом, потому что в обычной сессии до первого вызова её текст не занимает место в контексте. Исключение составляет субагент с заранее подключённым скиллом: у него полный текст скилла загружается сразу при старте. После вызова текст скилла остаётся в контексте следующих ходов. У сжатия длинной истории свой предел, и к размеру инструкции он не относится. После сжатия Claude Code заново прикладывает последний вызов каждого скилла, но не больше 5 000 токенов из его начала. Все приложенные скиллы делят общий бюджет 25 000 токенов, поэтому скилл, вызванный давно, может выпасть целиком. Где лежат скиллы в Claude Code Личные скиллы Claude Code хранятся в ~/.claude/skills/ и работают во всех ваших локальных проектах, а скиллы проекта лежат в .claude/skills/ внутри репозитория, и эту папку можно закоммитить для команды. Плагины и корпоративные настройки дают ещё два источника. | Где | Путь | Для кого | |---|---|---| | Личные | ~/.claude/skills/\u003cимя /SKILL.md | все ваши проекты в локальных сессиях на этом компьютере | | Проектные | .claude/skills/\u003cимя /SKILL.md | этот проект, папку можно закоммитить для команды | | Из плагина | \u003cплагин /skills/\u003cимя /SKILL.md | вызываются как /плагин:скилл | Корпоративные скиллы раздаёт администратор через управляемые настройки. Имя скилла в Claude Code по умолчанию берётся из названия папки и становится командой в меню /. Как установить готовые скиллы Anthropic в Claude Code Чтобы поставить готовые скиллы Anthropic в Claude Code, введите в сессии Claude Code команду /plugin marketplace add anthropics/skills, она добавляет маркетплейс (каталог плагинов). Затем откройте карточку набора командой…"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://blog.vladimir-izhmukov.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Гайды",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude Code",
+          "item": "https://blog.vladimir-izhmukov.ru/library/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026",
+          "item": "https://blog.vladimir-izhmukov.ru/guides/claude-skills/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://blog.vladimir-izhmukov.ru/guides/claude-skills/#faq",
+      "inLanguage": "ru",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что такое скиллы в Claude?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Скиллы Claude – это папки с файлом SKILL.md, где записаны имя, описание и инструкции. Claude может выбрать скилл сам, если задача подходит под описание. В Claude Code его можно вызвать и командой /имя-скилла, если ручной вызов не отключён полем user-invocable: false."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как установить скиллы в Claude Code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Добавьте маркетплейс командой /plugin marketplace add anthropics/skills и поставьте набор командой /plugin install document-skills@anthropic-agent-skills. Свой скилл достаточно положить папкой в ~/.claude/skills/ или .claude/skills/ проекта."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Где хранятся скиллы Claude Code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Личные в ~/.claude/skills/\u003cимя /SKILL.md, проектные в .claude/skills/\u003cимя /SKILL.md, скиллы плагинов внутри папки плагина."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли скиллы в бесплатном Claude?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "По справке claude.ai да: на Free можно включать примеры скиллов и загружать свои, а встроенные навыки для документов Claude применяет автоматически. В обзоре платформы Anthropic список для загрузки своих скиллов начинается с Pro, поэтому при сомнении проверьте раздел Customize → Skills в своём аккаунте. Для работы любых скиллов в claude.ai нужно включить выполнение кода."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чем скилл отличается от MCP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Скилл даёт Claude инструкции и файлы для задачи. MCP (Model Context Protocol) – это протокол, через который к Claude подключают внешние сервисы и инструменты. Их можно использовать вместе: скилл описывает, как работать, MCP даёт доступ к данным."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Безопасно ли ставить скиллы из интернета?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Обзор Agent Skills в документации платформы Anthropic советует ставить только свои скиллы или скиллы от Anthropic. Чужой скилл перед установкой нужно прочитать целиком, включая все скрипты, а если он приходит в плагине, проверить и остальные компоненты плагина, в том числе хуки и MCP-серверы."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script src="/scroll-depth.js?v=91fb0fbb3f" data-ym="110633946" defer></script>
+<!-- analytics: Yandex.Metrika 110633946 -->
+<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');ym(110633946,'init',{defer:true,webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true});</script>
+<script data-gfmr-ref>(function(){var r=document.referrer,s=0;try{var o=JSON.parse(sessionStorage.getItem('gfmr_ref')||'null');if(o){sessionStorage.removeItem('gfmr_ref');var a=Date.now()-o.t;if(o.u===location.pathname&&typeof o.t==='number'&&a>=0&&a<120000){r=typeof o.r==='string'?o.r:'';s=1;}}}catch(e){}ym(110633946,'hit',location.href,(r||s)?{referer:r}:{});})();</script>
+<style id="brand-tokens">:root{--accent:#bff03a;--ink:#16180f;--offwhite:#ffffff;--bg-light:#f6f4ec;--bg-dark:#14150f;--font-display:'Inter Tight',sans-serif;--font-body:'Inter',system-ui,sans-serif;--font-ui:'Inter',sans-serif;--font-mono:'JetBrains Mono',monospace;--font-serif:'PT Serif', Georgia, 'Times New Roman', serif}</style>
+</head>
+<body data-content-group="article">
+  <div id="root"><div class="mobile-stage"><div class="phone home theme-light"><div class="gp-m"><div class="gp-header"><div class="gp-head-inner"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><span class="spacer"></span><div class="head-tools"><button class="gp-toggle" type="button"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13.2 9.6A5.6 5.6 0 0 1 6.4 2.8 5.6 5.6 0 1 0 13.2 9.6z" fill="currentColor"></path></svg></button><button class="m-burger" type="button" aria-label="Меню"><span></span><span></span><span></span></button></div></div></div><div class="m-drawer-scrim"><div class="m-drawer"><div class="m-drawer-head"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><button class="m-drawer-close" type="button">✕</button></div><nav class="m-drawer-nav"><a class="" href="/">Главная</a><a class="cur" href="/library/">Статьи</a><a class="" href="/instagram/">Instagram и рост</a><a class="" href="/neyroseti/">Нейросети для контента</a><a class="" href="/kontent/">Контент и воронки</a><a class="" href="/about/">О проекте</a></nav><div class="m-drawer-group">Сообщество</div><div class="m-drawer-foot"><a class="m-drawer-join" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать материалы в боте →</a></div></div></div><div class="m-banner"><span class="m-banner-txt">Забирай материалы в боте</span><a class="m-banner-cta" href="https://t.me/izhmukov777_bot?start=blog-statya">Забрать →</a></div><div class="m-content"><div class="m-cover"><img src="/covers/claude-skills.webp?v=19557a19fd" alt="Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026" loading="eager"></div><div class="m-bc">Статьи</div><h1 class="m-h1">Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026</h1><div class="m-copyrow"><button class="gp-copy" type="button" aria-label="Скопировать страницу для агента">⧉ Скопировать страницу</button></div><a class="gp-byline" href="https://t.me/Ai_realshift" target="_blank" rel="noopener" aria-label="Канал «Записки AI-энтузиаста»"><img class="gp-byline-av" src="/images/logo-vladimir.png" alt="" width="40" height="40" loading="lazy"><span class="gp-byline-txt"><span class="gp-byline-ch">AI Realshift</span><span class="gp-byline-au">Владимир Ижмуков</span></span></a><p class="m-desc">Claude Skills – это папки с файлом SKILL.md, которые Claude может выбрать сам, если задача подходит под описание. Где лежат скиллы в Claude Code, как поставить набор скиллов Anthropic, как включить скиллы в claude.ai, как написать свой скилл и что проверить в чужом.</p><div class="gp-article-body"><p><em>Владимир Ижмуков · автор системы роста Instagram через короткие ролики</em></p>
+<div class="gf-botcta" data-gf-botcta="top"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=grafik" data-gf-place="top">План на неделю: 10 рилсов по дням →</a><span class="gf-botcta-cap">Гайд в Telegram-боте, бесплатно</span></div><p>Скилл Claude (Claude Skill, по-русски «навык») – это папка с файлом <code>SKILL.md</code>: в начале файла записаны имя и описание, дальше инструкции, а рядом могут лежать скрипты, справочники и шаблоны. Для своего скилла создайте такую папку и запишите в <code>SKILL.md</code> шаги задачи; в Claude Code личный скилл лежит по пути <code>~/.claude/skills/&lt;имя&gt;/SKILL.md</code>, готовый набор Anthropic ставят как плагин командой <code>/plugin install</code>, и Claude может выбрать скилл сам, если задача подходит под описание. В claude.ai при включённом выполнении кода встроенные навыки для PDF, Word, Excel и PowerPoint Claude применяет автоматически, примеры скиллов включают в <code>Customize → Skills</code>, а свой скилл загружают туда же ZIP-файлом.</p>
+<p>Ниже по документации Anthropic на 28 ноября 2026 года разобрано, где лежат скиллы в Claude Code, как поставить готовый набор Anthropic и как включить скиллы в claude.ai. Дальше о том, как написать свой скилл и что проверить в чужом до установки. В конце расскажу, по какому правилу я сам превращаю повторяющиеся задачи в скиллы.</p>
+<h2 id="sec-0">Что такое скилл простыми словами</h2>
+<p>Скилл Claude – это папка с инструкцией <code>SKILL.md</code> для повторяющейся задачи. В обычной сессии Claude Code сначала получает описание доступного скилла, а полную инструкцию читает при вызове. Представьте инструкцию для нового сотрудника, которую он открывает только тогда, когда берётся за конкретную задачу. Когда задача подходит под описание, Claude может выбрать этот скилл, прочитать инструкцию целиком и работать по ней.</p>
+<p>Документация Anthropic называет это прогрессивной загрузкой и описывает три уровня:</p>
+<table class="gp-table"><thead><tr><th>Уровень</th><th>Что загружается</th><th>Когда</th><th>Сколько места</th></tr></thead><tbody><tr><td>1. Метаданные</td><td>имя и описание из SKILL.md</td><td>при старте обычной сессии, если скилл доступен модели</td><td>ориентир Anthropic: около 100 токенов на скилл</td></tr><tr><td>2. Инструкции</td><td>основной текст SKILL.md</td><td>когда скилл вызван</td><td>ориентир Anthropic для размера инструкции: менее 5 000 токенов</td></tr><tr><td>3. Ресурсы</td><td>другие файлы и скрипты папки</td><td>только когда нужны</td><td>прочитанный справочник попадает в контекст, а у запущенного скрипта туда попадает только вывод</td></tr></tbody></table>
+<p>Благодаря этому до первого вызова в списке доступных скиллов обычно видны только имя и описание. В Claude Code к описанию может добавляться поле <code>when_to_use</code>, а если описания нет, берётся первая непустая строка Markdown-текста скилла. Исключения есть и в другую сторону. У субагента с заранее подключённым скиллом полная инструкция загружается в контекст сразу при старте. У скилла с отключённым автовызовом описание не попадает в список, доступный модели, хотя вручную его вызвать по-прежнему можно. В Claude Code на список по умолчанию отведено около 1% окна контекста, вместо доли можно задать фиксированное число символов переменной <code>SLASH_COMMAND_TOOL_CHAR_BUDGET</code>. Если скиллов слишком много, имена сохраняются, а часть описаний может выпасть.</p>
+<h2 id="sec-1">Чем скилл отличается от CLAUDE.md</h2><div class="gf-botcta" data-gf-botcta="mid"><a class="cta-btn" href="https://t.me/izhmukov777_bot?start=grafik" data-gf-place="mid">План на неделю: 10 рилсов по дням →</a><span class="gf-botcta-cap">Гайд в Telegram-боте, бесплатно</span></div>
+<p>В обычной сессии Claude Code подходящие файлы <code>CLAUDE.md</code> загружаются при запуске, а текст <code>SKILL.md</code> загружается, когда скилл вызван. CLAUDE.md – это файл постоянных инструкций проекта или пользователя. Claude Code подхватывает подходящие файлы из текущей папки и папок выше по дереву, поэтому туда кладут то, что нужно в каждой сессии проекта. Длинную процедуру удобно оформить скиллом, потому что в обычной сессии до первого вызова её текст не занимает место в контексте. Исключение составляет субагент с заранее подключённым скиллом: у него полный текст скилла загружается сразу при старте.</p>
+<p>После вызова текст скилла остаётся в контексте следующих ходов. У сжатия длинной истории свой предел, и к размеру инструкции он не относится. После сжатия Claude Code заново прикладывает последний вызов каждого скилла, но не больше 5 000 токенов из его начала. Все приложенные скиллы делят общий бюджет 25 000 токенов, поэтому скилл, вызванный давно, может выпасть целиком.</p>
+<h2 id="sec-2">Где лежат скиллы в Claude Code</h2>
+<p>Личные скиллы Claude Code хранятся в <code>~/.claude/skills/</code> и работают во всех ваших локальных проектах, а скиллы проекта лежат в <code>.claude/skills/</code> внутри репозитория, и эту папку можно закоммитить для команды. Плагины и корпоративные настройки дают ещё два источника.</p>
+<table class="gp-table"><thead><tr><th>Где</th><th>Путь</th><th>Для кого</th></tr></thead><tbody><tr><td>Личные</td><td><code>~/.claude/skills/&lt;имя&gt;/SKILL.md</code></td><td>все ваши проекты в локальных сессиях на этом компьютере</td></tr><tr><td>Проектные</td><td><code>.claude/skills/&lt;имя&gt;/SKILL.md</code></td><td>этот проект, папку можно закоммитить для команды</td></tr><tr><td>Из плагина</td><td><code>&lt;плагин&gt;/skills/&lt;имя&gt;/SKILL.md</code></td><td>вызываются как <code>/плагин:скилл</code></td></tr></tbody></table>
+<p>Корпоративные скиллы раздаёт администратор через управляемые настройки. Имя скилла в Claude Code по умолчанию берётся из названия папки и становится командой в меню <code>/</code>.</p>
+<h2 id="sec-3">Как установить готовые скиллы Anthropic в Claude Code</h2>
+<p>Чтобы поставить готовые скиллы Anthropic в Claude Code, введите в сессии Claude Code команду <code>/plugin marketplace add anthropics/skills</code>, она добавляет маркетплейс (каталог плагинов). Затем откройте карточку набора командой <code>/plugin install document-skills@anthropic-agent-skills</code> и выберите область установки: выбор области и запускает установку. Два набора из этого репозитория ставятся так:</p>
+<ol><li>В сессии Claude Code добавьте маркетплейс: <code>/plugin marketplace add anthropics/skills</code>.</li><li>Выберите один набор: <code>/plugin install document-skills@anthropic-agent-skills</code> для документов или <code>/plugin install example-skills@anthropic-agent-skills</code> для примеров. Нужны оба набора, выполните обе команды по очереди.</li><li>Если открывшаяся карточка показывает список компонентов, посмотрите, что плагин поставит. Карточка плагина из стороннего каталога может вместо списка сообщить, что состав определится при установке, а состав этих двух наборов заранее виден в манифесте репозитория. Затем выберите область установки: для себя, для проекта или только локально. Выбор области запускает установку, после неё Claude Code показывает сводку.</li></ol>
+<p>Что полезно знать про установку:</p>
+<ul><li><code>/plugin install</code> с именем плагина и маркетплейса открывает в сессии карточку этого плагина, а <code>/plugin</code> без имени открывает каталог плагинов из подключённых маркетплейсов.</li><li>Если сводка сообщает, что нужна команда <code>/reload-plugins</code>, Claude Code обычно выполняет её сам. Если перезагрузка привела бы к сбросу кэша запросов, он заранее предупредит и оставит плагин в ожидании до <code>/reload-plugins --force</code>.</li><li>В области проекта настройку включения можно передать команде через Git, а файлы плагина каждый участник скачивает у себя.</li><li>Из обычного терминала плагин ставит команда <code>claude plugin install &lt;плагин&gt;@&lt;маркетплейс&gt;</code>, которая без параметра <code>--scope</code> устанавливает его для пользователя.</li><li>Официальный маркетплейс Anthropic <code>claude-plugins-official</code> Claude Code добавляет сам при первом интерактивном запуске в терминале.</li></ul>
+<p>В открытом репозитории <a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">anthropics/skills</a> на 28 ноября 2026 года 19 скиллов, среди них docx, pdf, pptx, xlsx, skill-creator, mcp-builder и frontend-design. Два набора из инструкции выше вместе дают 16 из 19: в <code>document-skills</code> четыре скилла, в <code>example-skills</code> двенадцать, ещё три лежат отдельными плагинами.</p>
+<p>Сам репозиторий предупреждает, что эти скиллы выложены для демонстрации и обучения, поэтому поведение в вашей задаче может отличаться от описания.</p>
+<h2 id="sec-4">Как включить скиллы в claude.ai</h2>
+<p>Скиллы в личном аккаунте claude.ai работают только при включённом выполнении кода, а дальше путь зависит от вида скилла. Встроенные навыки для PDF, Word, Excel и PowerPoint Claude применяет автоматически, когда задача их требует, отдельно включать их не нужно. Примеры скиллов от Anthropic включают переключателями в <code>Customize → Skills</code>, а собственный скилл загружают туда же ZIP-архивом. Порядок для личного аккаунта:</p>
+<ol><li>Откройте Settings, затем Capabilities, и включите выполнение кода (<code>Code execution and file creation</code>, в обновлённых настройках переключатель называется <code>Create and edit files</code>). После этого встроенные навыки для документов уже работают.</li><li>Чтобы включить примеры, перейдите в Customize, затем Skills, и включите нужные переключателями.</li><li>Чтобы загрузить свой скилл, упакуйте его папку в ZIP, в том же разделе нажмите «+», затем «Create skill» и «Upload a skill».</li></ol>
+<p>В командных планах Team и Enterprise доступность скиллов задаёт организация: на Team скиллы по умолчанию включены на уровне организации, а на Enterprise владелец проверяет настройки по пути <code>Organization settings → Plugins &amp; skills → Policy</code>. При разрешающей политике участники сами включают примеры и загружают личные скиллы. На индивидуальных планах Free, Pro, Max и Ultra справка Anthropic разрешает и включать примеры скиллов, и загружать свои. В обзоре платформы Anthropic список планов для загрузки собственных скиллов начинается с Pro, так что источники расходятся.</p>
+<h2 id="sec-5">Как написать свой скилл</h2>
+<p>Чтобы написать переносимый скилл Claude, создайте папку и положите в неё <code>SKILL.md</code>. YAML-шапка – это блок между двумя строками <code>---</code> в начале <code>SKILL.md</code>; для переносимого скилла укажите в нём <code>name</code> и <code>description</code>, а ниже запишите шаги задачи. Минимальный пример: папка <code>reels-caption/</code>, а в ней один файл <code>SKILL.md</code>.</p>
+<p>Внутри <code>SKILL.md</code> сначала идёт шапка в формате YAML, потом инструкции обычным текстом. Для примера шапка состоит из четырёх строк:</p>
+<ul><li><code>---</code></li><li><code>name: reels-caption</code></li><li><code>description: Пишет подпись к рилсу по транскрипту ролика. Используй, когда просят капшен, подпись или описание к рилсу.</code></li><li><code>---</code></li></ul>
+<p>Под шапкой записаны шаги:</p>
+<ol><li>Прочитай транскрипт и найди главную мысль ролика.</li><li>Первая строка подписи повторяет хук ролика.</li><li>Дальше две-три строки пользы.</li><li>Последняя строка: призыв написать боту кодовое слово.</li></ol>
+<p>На что обратить внимание:</p>
+<ul><li><b>Описание помогает Claude выбрать скилл.</b> Claude ориентируется на поле <code>description</code>, поэтому там нужно написать и что скилл делает, и когда его применять, словами, которыми вы сами ставите задачу.</li><li><b>В Claude Code поля шапки необязательны</b>, документация советует заполнить хотя бы <code>description</code>. Можно добавить, например, <code>allowed-tools</code> или запрет на автоматический вызов.</li><li><b>Имя в шапке совпадает с названием папки.</b> Так требует открытый стандарт скиллов, поэтому в примере папка и поле <code>name</code> называются одинаково.</li><li><b>В Skills API <code>name</code> и <code>description</code> обязательны:</b> <code>name</code> до 64 символов, только строчные латинские буквы, цифры и дефис, без слов anthropic и claude, <code>description</code> непустое, до 1024 символов; XML-теги в обоих полях запрещены.</li><li><b>Описание не оставляйте пустым.</b> Если поле <code>description</code> отсутствует, Claude Code берёт первую непустую строку Markdown-текста, поэтому начните основной текст с фразы о том, что делает скилл.</li><li><b>Длинное выносите в отдельные файлы.</b> Справочник или шаблон положите рядом и сошлитесь на него из SKILL.md, тогда файл остаётся за пределами основной инструкции, и Claude может прочитать его по ссылке.</li></ul>
+<p>В наборе примеров Anthropic есть скилл skill-creator, с ним свой скилл можно собрать в диалоге.</p>
+<h2 id="sec-6">Скиллы через API</h2>
+<p>В запросе к Messages API Anthropic укажите до 20 скиллов в параметре <code>container.skills</code> и подключите инструмент выполнения кода. Контейнер – это изолированная среда, в которой выполняется код скиллов.</p>
+<p>Готовые скиллы Anthropic для документов называются <code>pptx</code>, <code>xlsx</code>, <code>docx</code> и <code>pdf</code>, свои загружаются запросом <code>POST /v1/skills</code>, общий размер файлов без сжатия меньше 30 МБ. Внутри контейнера API нет доступа в интернет и нельзя ставить пакеты, это стоит учитывать, когда пишете скрипты для скилла.</p>
+<p>В API свои скиллы загружаются отдельно, со скиллами claude.ai они не связаны. Про Claude Code источники Anthropic расходятся. <a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview#cross-surface-availability" target="_blank" rel="noopener">Обзор платформы</a> описывает скиллы Claude Code как отдельные и от claude.ai, и от API. <a href="https://code.claude.com/docs/en/skills#skills-synced-from-claudeai" target="_blank" rel="noopener">Документация самого Claude Code</a> описывает одностороннюю загрузку, и дальше поведение приведено по ней.</p>
+<p>Скиллы из claude.ai подтягиваются в сессию в терминале, если войти тем же аккаунтом claude.ai, в их числе готовые pdf и xlsx. Фоновая синхронизация в сессиях терминала работает с версии 2.1.273, при включённой синхронизации и получении флагов функций Anthropic. В более ранних версиях скиллы скачивались только в неинтерактивном запуске <code>-p</code> с переменной <code>CLAUDE_CODE_SYNC_SKILLS=1</code>. Правки локальных файлов обратно в claude.ai не уходят. Встроенные скиллы Claude Code (bundled skills) вроде <code>/code-review</code> и <code>/loop</code> там есть и без этого.</p>
+<h2 id="sec-7">Работают ли скиллы в других нейросетях</h2>
+<p>Скилл Claude можно перенести в приложение с поддержкой Agent Skills, если там доступны нужные скиллу инструменты и зависимости. Agent Skills – это открытый стандарт папок с <code>SKILL.md</code>: формат разработала Anthropic и выпустила его как открытый стандарт с собственным сайтом agentskills.io, а Claude Code следует этому стандарту.</p>
+<p>В каталоге Agent Skills на agentskills.io перечислены клиенты с поддержкой формата. На 28 ноября 2026 года в этом каталоге 46 записей, среди них Cursor, GitHub Copilot, VS Code, Gemini CLI, ChatGPT и Codex от OpenAI (одна общая запись), <a href="/guides/opencode/">OpenCode</a>, Goose и Kiro. Общую часть скилла, папку с SKILL.md, именем и описанием, можно перенести в такой инструмент, а дополнительные поля Claude Code там могут не работать. Поддержку в конкретном клиенте стоит проверить по его документации, а скрипту из скилла в другом приложении могут понадобиться свои пакеты, инструменты и доступ к сети.</p>
+<h2 id="sec-8">Как проверить чужой скилл перед установкой</h2>
+<p>Обзор Agent Skills в документации платформы Anthropic советует ставить скиллы только из доверенных источников, то есть свои или от самой Anthropic. Вредоносный скилл может привести к утечке данных и чужому доступу к системе, поэтому установку скилла документация сравнивает с установкой программы. Перед установкой:</p>
+<ol><li>Откройте и прочитайте SKILL.md целиком.</li><li>Прочитайте каждый скрипт в папке, особенно места, где он ходит в сеть или читает файлы вне проекта.</li><li>Посмотрите поле <code>allowed-tools</code>: на ход, в котором вызван скилл, оно разрешает перечисленные инструменты без отдельного подтверждения, если организационная политика допускает такие правила.</li><li>Проверьте остальные файлы: шаблоны, картинки и прочие вложения.</li><li>Проверьте, кто автор и есть ли у репозитория история изменений.</li></ol>
+<p>Если скилл приходит в составе плагина, проверки одной папки скилла мало. Документация Claude Code предупреждает, что установка плагина добавляет его скиллы, агентов, хуки и MCP-серверы, а хуки и MCP-серверы плагин может запускать. Поэтому перед установкой прочитайте в карточке плагина блок «Will install» со списком компонентов, а у плагина из незнакомого каталога, где вместо списка написано, что состав определится при установке, откройте его файлы в репозитории.</p>
+<p>По моему правилу сторонний скилл должен пройти проверку на опасные команды до установки.</p>
+<h2 id="sec-9">Как я использую скиллы</h2>
+<p>Я, Владимир Ижмуков, оформляю процедуру в скилл Claude Code, когда дважды объяснил её агенту: это моё личное правило. При следующей похожей задаче Claude Code может выбрать скилл по описанию, а если не выбрал, его можно вызвать командой <code>/имя-скилла</code>.</p>
+<h2 id="sec-10">Частые вопросы</h2>
+<p>Короткие ответы на вопросы, которые чаще всего задают про скиллы Claude, с опорой на документацию Anthropic.</p>
+<h3>Что такое скиллы в Claude?</h3>
+<p>Скиллы Claude – это папки с файлом <code>SKILL.md</code>, где записаны имя, описание и инструкции. Claude может выбрать скилл сам, если задача подходит под описание. В Claude Code его можно вызвать и командой <code>/имя-скилла</code>, если ручной вызов не отключён полем <code>user-invocable: false</code>.</p>
+<h3>Как установить скиллы в Claude Code?</h3>
+<p>Добавьте маркетплейс командой <code>/plugin marketplace add anthropics/skills</code> и поставьте набор командой <code>/plugin install document-skills@anthropic-agent-skills</code>. Свой скилл достаточно положить папкой в <code>~/.claude/skills/</code> или <code>.claude/skills/</code> проекта.</p>
+<h3>Где хранятся скиллы Claude Code?</h3>
+<p>Личные в <code>~/.claude/skills/&lt;имя&gt;/SKILL.md</code>, проектные в <code>.claude/skills/&lt;имя&gt;/SKILL.md</code>, скиллы плагинов внутри папки плагина.</p>
+<h3>Есть ли скиллы в бесплатном Claude?</h3>
+<p>По справке claude.ai да: на Free можно включать примеры скиллов и загружать свои, а встроенные навыки для документов Claude применяет автоматически. В обзоре платформы Anthropic список для загрузки своих скиллов начинается с Pro, поэтому при сомнении проверьте раздел <code>Customize → Skills</code> в своём аккаунте. Для работы любых скиллов в claude.ai нужно включить выполнение кода.</p>
+<h3>Чем скилл отличается от MCP?</h3>
+<p>Скилл даёт Claude инструкции и файлы для задачи. MCP (Model Context Protocol) – это протокол, через который к Claude подключают внешние сервисы и инструменты. Их можно использовать вместе: скилл описывает, как работать, MCP даёт доступ к данным.</p>
+<h3>Безопасно ли ставить скиллы из интернета?</h3>
+<p>Обзор Agent Skills в документации платформы Anthropic советует ставить только свои скиллы или скиллы от Anthropic. Чужой скилл перед установкой нужно прочитать целиком, включая все скрипты, а если он приходит в плагине, проверить и остальные компоненты плагина, в том числе хуки и MCP-серверы.</p>
+<h2 id="sec-11">Что делать дальше</h2>
+<p>Первый личный скилл Claude Code начните с одной повторяющейся задачи: создайте для неё файл <code>~/.claude/skills/&lt;имя&gt;/SKILL.md</code>. Три шага:</p>
+<ol><li>Выберите задачу, которую вы объясняли Claude уже дважды.</li><li>Создайте папку <code>~/.claude/skills/&lt;имя&gt;/</code> и положите в неё <code>SKILL.md</code> с описанием, где сказано, что скилл делает и когда его применять.</li><li>Вызовите скилл по имени командой <code>/имя-скилла</code> и проверьте, что результат соответствует инструкции.</li></ol>
+<p>Если вы только начинаете с Claude, сначала посмотрите, как устроен сам <a href="/guides/claude-code/">Claude Code</a>.</p>
+<p>Как я строю путь от ролика до заявки, рассказал на странице <a href="https://vladimir-izhmukov.ru/tarify/" target="_blank" rel="noopener">Рилс-Магнит</a>.</p>
+<h2 id="sec-12">Источники</h2>
+<ul><li><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">Anthropic: обзор Agent Skills</a>.</li><li><a href="https://code.claude.com/docs/en/skills" target="_blank" rel="noopener">Документация Claude Code: скиллы</a>.</li><li><a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener">Документация Claude Code: загрузка CLAUDE.md</a>.</li><li><a href="https://code.claude.com/docs/en/plugins/install" target="_blank" rel="noopener">Документация Claude Code: установка плагинов</a>.</li><li><a href="https://code.claude.com/docs/en/sub-agents" target="_blank" rel="noopener">Документация Claude Code: субагенты и предзагрузка скиллов</a>.</li><li><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">Репозиторий anthropics/skills на GitHub</a>.</li><li><a href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" target="_blank" rel="noopener">Справка Anthropic: скиллы в Claude</a>.</li><li><a href="https://platform.claude.com/docs/en/api/skills-guide" target="_blank" rel="noopener">Anthropic API: руководство по скиллам</a>.</li><li><a href="https://agentskills.io" target="_blank" rel="noopener">Открытый стандарт Agent Skills</a>.</li></ul>
+<p>Редакционная отметка: статья сверена с документацией Anthropic, справкой Claude и репозиторием anthropics/skills 28 ноября 2026 года. Установку в каждом интерфейсе по шагам я в этот день не повторял, и мои личные правила из статьи по журналам не сверялись.</p></div><div class="m-cta"><div class="cta-brand"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a></div><div class="ttl">Забирай материалы в боте</div><div class="sub">Статья прочитана. Дальше самое полезное я отдаю в боте: промпты, гайды и разборы, по которым можно работать сразу.</div><a class="btn" href="https://t.me/izhmukov777_bot?start=grafik" data-gf-place="end">План на неделю: 10 рилсов по дням →</a><div class="m-cta-cap">Гайд в Telegram-боте, бесплатно</div></div><section class="gp-related"><h2>Читайте дальше</h2><div class="gp-related-grid"><a class="gp-related-card" href="/guides/neyroset-dlya-trenera/"><span class="rc-cover"><img src="/covers/neyroset-dlya-trenera.webp?v=7b8a0139ec" alt="Нейросеть для тренера: программы, разборы клиентов и контент для блога" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для тренера: программы, разборы клиентов и контент для блога</span><span class="rc-desc">Нейросеть для тренера и фитнес-специалиста: как собирать программы под клиента, вести…</span></a><a class="gp-related-card" href="/guides/kak-napisat-promt/"><span class="rc-cover"><img src="/covers/kak-napisat-promt.webp?v=2836d1291d" alt="Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Как написать промпт: структура запроса, из-за которой нейросеть отвечает по делу</span><span class="rc-desc">Как написать промпт для нейросети: пять частей рабочего запроса, приёмы для текста и…</span></a><a class="gp-related-card" href="/guides/neyroset-dlya-obrabotki-foto/"><span class="rc-cover"><img src="/covers/neyroset-dlya-obrabotki-foto.webp?v=7aab559ad6" alt="Нейросеть для обработки фото: что она умеет и как ей пользоваться" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">Нейросеть для обработки фото: что она умеет и как ей пользоваться</span><span class="rc-desc">Нейросеть для обработки фото: убрать фон и лишние предметы, поднять качество старого…</span></a><a class="gp-related-card" href="/guides/yandexgpt/"><span class="rc-cover"><img src="/covers/yandexgpt.webp?v=15674f37a8" alt="YandexGPT (Яндекс GPT): как пользоваться нейросетью бесплатно онлайн и без VPN, где открыть Алису AI и сколько стоит API, 2026" loading="lazy"></span><span class="rc-type">Статья</span><span class="rc-title">YandexGPT (Яндекс GPT): как пользоваться нейросетью бесплатно онлайн и без VPN, где открыть Алису AI и сколько стоит API, 2026</span><span class="rc-desc">Яндекс GPT что это: семейство языковых моделей Яндекса.</span></a></div></section></div><div class="m-footer"><a href="/" class="el-logo" aria-label="Владимир Ижмуков — на главную"><span class="a">владимир</span><span class="sq"></span><span class="b">ижмуков</span></a><div class="m-foot-cols"><div class="col"><div class="h">Разделы</div><a href="/instagram/">Instagram и рост</a><a href="/neyroseti/">Нейросети для контента</a><a href="/kontent/">Контент и воронки</a></div><div class="col"><div class="h">Проект</div><a href="/library/">Все гайды</a><a href="/about/">О проекте</a></div><div class="col"><div class="h">Документы</div><a href="https://blog.vladimir-izhmukov.ru/policy/" target="_blank" rel="noopener">Политика</a></div></div><div class="m-foot-bottom">© 2026 ВЛАДИМИР ИЖМУКОВ<br>Владимир Ижмуков</div></div></div></div></div></div>
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" fill="#0A0A0A"></rect>
+      <rect x="30" y="30" width="40" height="40" fill="#D4FF00"></rect>
+    </svg>
+  </template>
+
+
+
+<script src="/gf-light.js?v=8a6303ab2e" defer data-gf-light></script>
+</body></html>

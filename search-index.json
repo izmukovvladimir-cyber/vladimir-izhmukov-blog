@@ -598,6 +598,19 @@
     ]
   },
   {
+    "slug": "claude-skills",
+    "title": "Скиллы Claude (Claude Skills): что это, как установить в Claude Code и claude.ai, как написать свой SKILL.md, 2026",
+    "desc": "Claude Skills – это папки с файлом SKILL.md, которые Claude может выбрать сам, если задача подходит под описание. Где лежат скиллы в Claude Code, как поставить набор скиллов Anthropic, как включить скиллы в claude.ai, как написать свой скилл и что проверить в чужом.",
+    "category": "Claude Code",
+    "level": "Новичок",
+    "min": 9,
+    "url": "/guides/claude-skills/",
+    "tags": [
+      "claude",
+      "neyroseti"
+    ]
+  },
+  {
     "slug": "cleanup-pictures",
     "title": "Cleanup.pictures: нейросеть для удаления объектов с фото, цены и версия на русском в 2026",
     "desc": "Cleanup.pictures убирает с фото людей, предметы, текст и дефекты кистью в браузере. Разбираю лимит 720 px, тариф Pro за $5, отличие от Clipdrop и аналоги.",
